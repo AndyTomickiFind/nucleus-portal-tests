@@ -115,8 +115,16 @@ const prodConfig: TestConfig = {
   name: `prod`,
   expect: {
     timeout: 4000
+  },
+  use: {
+    ...defaultConfig.use,
+    httpCredentials: {
+      username: process.env.PROD_USER,
+      password: process.env.PROD_PASS,
+    }
   }
 };
+
 // set config for dev
 const devConfig: TestConfig = {
   baseUrl: 'portal.dev.nucleusmvp.com/login',
@@ -124,8 +132,16 @@ const devConfig: TestConfig = {
   name: `dev`,
   expect: {
     timeout: 4000
+  },
+  use: {
+    ...defaultConfig.use,
+    httpCredentials: {
+      username: process.env.DEV_USER,
+      password: process.env.DEV_PASS,
+    }
   }
 };
+
 // set config for stage
 const stageConfig: TestConfig = {
   baseUrl: `portal.staging.nucleusmvp.com/login`,
@@ -137,8 +153,8 @@ const stageConfig: TestConfig = {
   use: {
     ...defaultConfig.use,
     httpCredentials: {
-      username: process.env.DEV_USER,
-      password: process.env.DEV_PASS,
+      username: process.env.STAGE_USER,
+      password: process.env.STAGE_PASS,
     }
   }
 };
