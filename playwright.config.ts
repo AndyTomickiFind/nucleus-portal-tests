@@ -165,7 +165,7 @@ const config: TestConfig = {
   ...defaultConfig,
   ...(environment.toLowerCase() === 'prod'
     ? prodConfig
-    : environment === 'dev'
+    : environment.toLowerCase() === 'dev'
       ? devConfig
       : environment.toLowerCase() === 'stage'
         ? stageConfig
