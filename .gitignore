@@ -1,0 +1,6 @@
+/test-results/
+/playwright-report/
+/.idea/
+/allure-results/
+/node_modules/
+/tests/page-objects/components/
