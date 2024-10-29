@@ -1,5 +1,4 @@
 import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
-import {test} from "../../fixtures/fixtures";
 import {BasePage} from "../base.page";
 
 export class HeaderComponent extends BasePage {
@@ -8,6 +7,10 @@ export class HeaderComponent extends BasePage {
     readonly testInfo: TestInfo;
     readonly menubar: Locator;
     readonly menubarItemHome: Locator;
+    readonly menubarItemToplists: Locator;
+    readonly menubarItemShortReviews: Locator;
+    readonly menubarItemPartners: Locator;
+    readonly menubarItemDatabase: Locator;
 
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
@@ -17,22 +20,19 @@ export class HeaderComponent extends BasePage {
         this.testInfo = testInfo;
         this.menubar = page.locator("//div[@class='MuiBox-root mui-0']");
         this.menubarItemHome = page.locator("//a[.='Home']");
-        this.menubarItemHome = page.locator("//a[.='Toplists']");
-        this.menubarItemHome = page.locator("//a[.='Short Reviews']");
-        this.menubarItemHome = page.locator("//button[.='Partners']");
-        this.menubarItemHome = page.locator("//button[.='Database']");
+        this.menubarItemToplists = page.locator("//a[.='Toplists']");
+        this.menubarItemShortReviews = page.locator("//a[.='Short Reviews']");
+        this.menubarItemPartners = page.locator("//button[.='Partners']");
+        this.menubarItemDatabase = page.locator("//button[.='Database']");
     }
 
 
-    async toHaveMenuItems(menuItems: string[]) {
-        const count = menuItems.length;
-        for (let i = 0; i < count; i++) {
-            await test.step(`Verify menu item - ${menuItems[i]} `, async () => {
-                const textContent = await this.menubar.textContent();
-                console.log('Actual text: ' + textContent)
-                expect(textContent.trim().toLowerCase()).toContain(menuItems[i].trim().toLowerCase());
-            });
-        }
+    async toHaveMenuItems() {
+        await expect(this.menubarItemHome).toContainText("Home");
+        await expect(this.menubarItemToplists).toContainText("Toplists");
+        await expect(this.menubarItemShortReviews).toContainText("Short Reviews");
+        await expect(this.menubarItemPartners).toContainText("Partners");
+        await expect(this.menubarItemDatabase).toContainText("Database");
     }
 
 }

@@ -17,14 +17,7 @@ test.describe('HOME subpage - ${config.name} ', {tag: ['@dev']}, () => {
     });
 
     test('verify that the expected menu items are displayed and clickable', async ({headerComponent}) => {
-        const menuItems = [
-            'HOME',
-            'TOPLISTS',
-            'SHORT REVIEWS',
-            'PARTNERS',
-            'DATABASE',
-        ];
-        await headerComponent.toHaveMenuItems(menuItems)
+        await headerComponent.toHaveMenuItems()
     });
 
 
