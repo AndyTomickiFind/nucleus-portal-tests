@@ -1,15 +1,13 @@
-import config from '../../playwright.config';
 import {test} from "../fixtures/fixtures";
 import {expect} from "@playwright/test";
+import config from "../../playwright.config";
 
 
-test.describe('HOME subpage - ${config.name} ', {tag: ['@dev']}, () => {
+test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
 
-    test.beforeEach(async ({LoginPage}) => {
-        await LoginPage.navigateToNucleusPortal();
-        await test.step('Login using Google credentials', async () => {  //to be replaced with a proper login method [not via ui]
-            await LoginPage.login(config.use.httpCredentials.username, config.use.httpCredentials.password);
-        });
+    test.beforeEach(async ({HomePage}) => {
+        await HomePage.page.goto(`https://${config.baseUrl}`);
+        await HomePage.page.click('button[tabindex="0"]');
     });
 
     test('check the title', async ({HomePage}) => {

@@ -4,3 +4,5 @@
 /allure-results/
 /node_modules/
 /tests/page-objects/components/
+/.env
+/playwright/.auth/user.json
