@@ -6,13 +6,15 @@ const authFile = path.join(__dirname, '../playwright/.auth/user.json');
 
 setup('authenticate', async ({page}) => {
     await page.goto(`https://${config.baseUrl}`);
-    // await this.context.addCookies([{name: 'access_token', value: process.env.DEV_ACCESS_TOKEN, url: `https://${config.baseUrl}`}]);
-    // await this.context.addCookies([{name: 'refresh_token', value: process.env.DEV_REFRESH_TOKEN, url: `https://${config.baseUrl}`}]);
+    await page.context().addCookies([{name: 'access_token', value: process.env.DEV_ACCESS_TOKEN, url: `https://${config.baseUrl}`}]);
+    await page.context().addCookies([{name: 'refresh_token', value: process.env.DEV_REFRESH_TOKEN, url: `https://${config.baseUrl}`}]);
     await page.click('button[tabindex="0"]');
     await page.fill('input[type="email"]', config.use.httpCredentials.username);
     await page.click('#identifierNext');
+    //await page.waitForTimeout(20000); // wait for captcha
     await page.fill('input[type="password"]', config.use.httpCredentials.password);
     await page.click('#passwordNext');
+
     await page.waitForLoadState();
     await page.waitForSelector('//*[.="Hello Nucleus"]');
     await page.context().storageState({path: authFile});

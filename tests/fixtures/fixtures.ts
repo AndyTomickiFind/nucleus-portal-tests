@@ -6,12 +6,12 @@ import {MenuComponent} from "../page-objects/components/menuComponent";
 
 export const test = base.extend<{
     HomePage: HomePage,
-    headerComponent: MenuComponent,
+    menuComponent: MenuComponent,
 }>({
     HomePage: async ({ page, context }, use, testInfo) => {
         await use(new HomePage(page, context, testInfo));
     },
-    headerComponent: async ({ page, context }, use, testInfo) => {
+    menuComponent: async ({ page, context }, use, testInfo) => {
         await use(new MenuComponent(page, context, testInfo));
     },
 });
