@@ -5,10 +5,13 @@ import config from "../playwright.config";
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');
 
 setup('authenticate', async ({page}) => {
+    await page.setExtraHTTPHeaders({
+        "x-tooling-bypass-auth": process.env.BYPASS_AUTH,
+    });
     await page.goto(`https://${config.baseUrl}`);
-    await page.context().addCookies([{name: 'access_token', value: process.env.DEV_ACCESS_TOKEN, url: `https://${config.baseUrl}`}]);
-    await page.context().addCookies([{name: 'refresh_token', value: process.env.DEV_REFRESH_TOKEN, url: `https://${config.baseUrl}`}]);
-    await page.click('button[tabindex="0"]');
+    // await page.context().addCookies([{name: 'access_token', value: process.env.DEV_ACCESS_TOKEN, url: `https://${config.baseUrl}`}]);
+    // await page.context().addCookies([{name: 'refresh_token', value: process.env.DEV_REFRESH_TOKEN, url: `https://${config.baseUrl}`}]);
+    await page.getByRole('button', { name: 'google logo Sign in with' }).click(); //login with Google button
     await page.fill('input[type="email"]', config.use.httpCredentials.username);
     await page.click('#identifierNext');
     //await page.waitForTimeout(20000); // wait for captcha

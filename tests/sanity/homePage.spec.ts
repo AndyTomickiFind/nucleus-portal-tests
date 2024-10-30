@@ -7,7 +7,7 @@ test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
 
     test.beforeEach(async ({HomePage}) => {
         await HomePage.page.goto(`https://${config.baseUrl}`);
-        await HomePage.page.click('button[tabindex="0"]');
+        await HomePage.page.getByRole('button', { name: 'google logo Sign in with' }).click(); //login with Google button
     });
 
     test('check the title', async ({HomePage}) => {
@@ -19,11 +19,7 @@ test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
         await menuComponent.checkDataPointItems()
     });
 
-
     test('check the welcome banner', async ({HomePage}) => {
         await HomePage.checkWelcomeBanner("Hello Nucleus");
     });
-
-
-
 });

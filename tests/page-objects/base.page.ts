@@ -7,8 +7,6 @@ import {
     test,
     TestInfo, TestType
 } from "@playwright/test";
-import config from "../../playwright.config";
-
 
 export abstract class BasePage {
     readonly context: BrowserContext
@@ -23,18 +21,6 @@ export abstract class BasePage {
         this.aiArgs = { page, test };
     }
 
-    async navigateTo(url: string) {
-        await test.step(`Navigate to ${url} `, async () => {
-            // abort requests to analytics and other unnecessary services
-            await this.context.route(/(analytics|cloudflareinsights|omappapi|amplitude|hotjar)/, route => route.abort());
-            // Set headers for Cloudflare bypass
-            // await this.page.setExtraHTTPHeaders({
-            //     'x-tooling-bypass-auth': process.env.BYPASS_AUTH
-            // });
-            await this.page.goto(url);
-            await this.page.waitForLoadState();
-        });
-    }
 
     async takeAndAttachScreenshot(name: string, path: string, testInfo: TestInfo, locator?: Locator) {
         await test.step("Take screenshot", async () => {

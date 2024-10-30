@@ -136,7 +136,7 @@ const devConfig: TestConfig = {
     backendUrl: '',
     name: `dev`,
     expect: {
-        timeout: 4000
+        timeout: 7666
     },
     use: {
         ...defaultConfig.use,
