@@ -13,9 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@playwright/test": "^1.42.1"
+    "@playwright/test": "^1.42.1",
+    "playwright": "^1.48.2",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@types/node": "^20.11.23",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -23,16 +27,18 @@
     "allure-commandline": "^2.30.0",
     "allure-playwright": "^3.0.0-beta.10",
     "dotenv": "16.4.5",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-playwright": "^1.5.2",
     "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.11.0",
     "npm-check-updates": "^16.14.15",
     "playwright-slack-report": "^1.1.72",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.12.2"
   }
 }

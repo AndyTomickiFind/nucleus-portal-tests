@@ -81,7 +81,7 @@ const defaultConfig: PlaywrightTestConfig = {
     /* Configure projects for major browsers */
     projects: [
         // Setup project
-        {name: 'setup', testMatch: /.*\.setup\.ts/},
+        {name: 'setup', testMatch: '../'+/.*\.setup\.ts/},
         {
             name: 'local-chrome',
             use: {
@@ -92,7 +92,7 @@ const defaultConfig: PlaywrightTestConfig = {
                     height: 1080
                 },
                 launchOptions: {
-                    slowMo: 0
+                    slowMo: 0,
                 },
 
             },
@@ -115,7 +115,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
 // set config for prod
 const prodConfig: TestConfig = {
-    baseUrl: 'portal.nucleusmvp.com/login',
+    baseUrl: 'portal.nucleusmvp.com',
     backendUrl: '',
     name: `prod`,
     expect: {
@@ -132,7 +132,7 @@ const prodConfig: TestConfig = {
 
 // set config for dev
 const devConfig: TestConfig = {
-    baseUrl: 'portal.dev.nucleusmvp.com/login',
+    baseUrl: 'portal.dev.nucleusmvp.com',
     backendUrl: '',
     name: `dev`,
     expect: {
@@ -149,7 +149,7 @@ const devConfig: TestConfig = {
 
 // set config for stage
 const stageConfig: TestConfig = {
-    baseUrl: `portal.staging.nucleusmvp.com/login`,
+    baseUrl: `portal.staging.nucleusmvp.com`,
     backendUrl: '',
     name: `stage`,
     expect: {

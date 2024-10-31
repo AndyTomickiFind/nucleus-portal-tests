@@ -7,7 +7,6 @@ test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
 
     test.beforeEach(async ({HomePage}) => {
         await HomePage.page.goto(`https://${config.baseUrl}`);
-        await HomePage.page.getByRole('button', { name: 'google logo Sign in with' }).click(); //login with Google button
     });
 
     test('check the title', async ({HomePage}) => {
