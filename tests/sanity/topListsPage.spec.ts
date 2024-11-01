@@ -315,9 +315,21 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: ['@dev']}, () => {
 
     test('check the data grid', async ({components}) => {
         await test.step("Data grid table to be visible", async () => {
-            await components.clickItemFromCombobox(components.productCombobox, "ccn.com")
+            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
             await expect(components.dataGrid).toBeVisible();
         })
     });
 
+    test('check the search by Country', async ({components}) => {
+        await test.step("Andys toplist must be visible when selecting Malta on ccn.com", async () => {
+            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
+            await components.clickItemFromCombobox(components.countriesCombobox, "Malta");
+            await expect(components.dataGridCell("name", 1)).toContainText("Andys Toplist");
+            await expect(components.dataGridCell("domains", 1)).toContainText("ccn.com");
+            await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
+            await expect(components.dataGridCell("subType", 1)).toContainText("Default");
+            await expect(components.dataGridCell("status", 1)).toContainText("Published");
+            await expect(components.dataGridCell("updatedAt", 1)).toContainText("10/24/2024, 4:26:36 PM");
+        })
+    });
 });

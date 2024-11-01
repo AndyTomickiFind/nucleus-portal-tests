@@ -12,7 +12,11 @@ export class components extends BasePage {
     readonly verticalCombobox: Locator;
     readonly subVerticalCombobox: Locator;
     readonly dataGrid: Locator;
+    readonly dataGridRow: Locator;
 
+    dataGridCell( column: string, rowNumber: number): Locator {
+        return this.page.locator(`//div[@data-rowindex="${rowNumber-1}"]//div[@data-field="${column}"]`)
+    }
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -25,6 +29,7 @@ export class components extends BasePage {
         this.verticalCombobox = page.getByTestId('type-select');
         this.subVerticalCombobox = page.getByTestId('sub-type-select');
         this.dataGrid = page.locator('//div[contains(@class, "MuiDataGrid-root")]');
+        this.dataGridRow = page.getByRole("row");
     }
 
 
@@ -47,7 +52,6 @@ export class components extends BasePage {
         await comboboxLocator.click();
         const itemLocator: Locator = this.page.getByRole('option', { name: item, exact: true })
         await itemLocator.click();
-        await this.page.keyboard.press('Escape');
     }
 
 }
