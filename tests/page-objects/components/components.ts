@@ -11,6 +11,8 @@ export class components extends BasePage {
     readonly countriesCombobox: Locator;
     readonly verticalCombobox: Locator;
     readonly subVerticalCombobox: Locator;
+    readonly dataGrid: Locator;
+
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -22,6 +24,7 @@ export class components extends BasePage {
         this.countriesCombobox = page.getByTestId('country-code-select');
         this.verticalCombobox = page.getByTestId('type-select');
         this.subVerticalCombobox = page.getByTestId('sub-type-select');
+        this.dataGrid = page.locator('//div[contains(@class, "MuiDataGrid-root")]');
     }
 
 
@@ -40,4 +43,13 @@ export class components extends BasePage {
         await this.page.keyboard.press('Escape');
     }
 
+    async clickItemFromCombobox(comboboxLocator: Locator, item: string): Promise<void> {
+        await comboboxLocator.click();
+        const itemLocator: Locator = this.page.getByRole('option', { name: item, exact: true })
+        await itemLocator.click();
+        await this.page.keyboard.press('Escape');
+    }
+
 }
+
+
