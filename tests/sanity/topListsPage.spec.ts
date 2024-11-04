@@ -332,4 +332,19 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: ['@dev']}, () => {
             await expect(components.dataGridCell("updatedAt", 1)).toContainText("10/24/2024, 4:26:36 PM");
         })
     });
+
+    test('pagination and Data Grid items', async ({components}) => {
+        await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
+        await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
+        await test.step("Select 25 items per page", async () => {
+            await components.checkRowsInDataGrid(25);
+        });
+        await test.step("Select 15 items per page", async () => {
+            await components.checkRowsInDataGrid(15);
+        });
+        await test.step("Select 10 items per page", async () => {
+            await components.checkRowsInDataGrid(10);
+        });
+    });
+
 });
