@@ -338,13 +338,32 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: ['@dev']}, () => {
         await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
         await test.step("Select 25 items per page", async () => {
             await components.checkRowsInDataGrid(25);
+            await expect(components.displayedRowsLabel).toContainText("1–25 of ");
         });
         await test.step("Select 15 items per page", async () => {
             await components.checkRowsInDataGrid(15);
+            await expect(components.displayedRowsLabel).toContainText("1–15 of ");
         });
         await test.step("Select 10 items per page", async () => {
             await components.checkRowsInDataGrid(10);
+            await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
+        await test.step("Check Next Page and Previous Page buttons", async () => {
+            await components.nextPageButton.click();
+            await expect(components.displayedRowsLabel).toContainText("11–20 of ");
+            await components.nextPageButton.click();
+            await expect(components.displayedRowsLabel).toContainText("21–30 of ");
+            await components.previousPageButton.click();
+            await expect(components.displayedRowsLabel).toContainText("11–20 of ");
+            await components.previousPageButton.click();
+            await expect(components.displayedRowsLabel).toContainText("1–10 of ");
+        });
+    });
+
+    //COPY TOPLIST - TO DO
+
+    test('new Toplist', async ({components}) => {
+        await components.newButton.click();
     });
 
 });

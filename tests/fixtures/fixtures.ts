@@ -1,8 +1,9 @@
 import { test as base } from '@playwright/test';
 import {HomePage} from "../page-objects/home.page";
 import {MenuComponent} from "../page-objects/components/menuComponent";
-import {ToplistsPage} from "../page-objects/topLists.page";
+import {ToplistsPage} from "../page-objects/toplists.page";
 import {components} from "../page-objects/components/components";
+import {NewToplistPage} from "../page-objects/newToplist.page";
 
 
 
@@ -10,13 +11,17 @@ export const test = base.extend<{
     HomePage: HomePage,
     ToplistsPage: ToplistsPage,
     menuComponent: MenuComponent,
-    components: components
+    components: components,
+    NewToplistPage: NewToplistPage
 }>({
     HomePage: async ({ page, context }, use, testInfo) => {
         await use(new HomePage(page, context, testInfo));
     },
     ToplistsPage: async ({ page, context }, use, testInfo) => {
         await use(new ToplistsPage(page, context, testInfo));
+    },
+    NewToplistPage: async ({ page, context }, use, testInfo) => {
+        await use(new NewToplistPage(page, context, testInfo));
     },
     menuComponent: async ({ page, context }, use, testInfo) => {
         await use(new MenuComponent(page, context, testInfo));

@@ -1,5 +1,5 @@
 import {BasePage} from "./base.page";
-import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
+import {BrowserContext, Page, TestInfo} from "@playwright/test";
 
 
 export class ToplistsPage extends BasePage {

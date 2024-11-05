@@ -14,11 +14,11 @@ export class components extends BasePage {
     readonly dataGrid: Locator;
     readonly dataGridRow: Locator;
     readonly rowsPerPageDropdown: Locator;
-
-
-    dataGridCell( column: string, rowNumber: number): Locator {
-        return this.page.locator(`//div[@data-rowindex="${rowNumber-1}"]//div[@data-field="${column}"]`)
-    }
+    readonly previousPageButton: Locator;
+    readonly nextPageButton: Locator;
+    readonly displayedRowsLabel: Locator;
+    readonly newButton: Locator;
+    readonly divider: Locator;
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -32,9 +32,17 @@ export class components extends BasePage {
         this.subVerticalCombobox = page.getByTestId('sub-type-select');
         this.dataGrid = page.locator('//div[contains(@class, "MuiDataGrid-root")]');
         this.dataGridRow = page.getByRole("row");
-        this.rowsPerPageDropdown = page.locator("//p[.='Rows per page:']/..//*[@role='combobox']")
+        this.rowsPerPageDropdown = page.locator("//p[.='Rows per page:']/..//*[@role='combobox']");
+        this.nextPageButton = page.locator("//button[@aria-label='Go to next page']");
+        this.previousPageButton = page.locator("//button[@aria-label='Go to previous page']");
+        this.displayedRowsLabel = page.locator("//p[@class='MuiTablePagination-displayedRows mui-1chpzqh']");
+        this.newButton = page.locator("//button[@aria-label='New']");
+        this.divider = page.getByRole('separator');
     }
 
+    dataGridCell(column: string, rowNumber: number): Locator {
+        return this.page.locator(`//div[@data-rowindex="${rowNumber - 1}"]//div[@data-field="${column}"]`)
+    }
 
     async checkAlertBanner(bannerText: string) {
         await expect(this.alertBanner).toContainText(bannerText);
@@ -44,7 +52,7 @@ export class components extends BasePage {
     async checkCombobox(comboboxLocator: Locator, expectedItems: string[]): Promise<void> {
         await comboboxLocator.click();
         for (const item of expectedItems) {
-            const itemLocator: Locator = this.page.getByRole('option', { name: item, exact: true })
+            const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
             await expect(itemLocator).toContainText(item);
             await itemLocator.click({trial: true});
         }
@@ -53,11 +61,11 @@ export class components extends BasePage {
 
     async clickItemFromCombobox(comboboxLocator: Locator, item: string): Promise<void> {
         await comboboxLocator.click();
-        const itemLocator: Locator = this.page.getByRole('option', { name: item, exact: true })
+        const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
         await itemLocator.click();
     }
 
-    async checkRowsInDataGrid(rowsCount: number){
+    async checkRowsInDataGrid(rowsCount: number) {
         await this.clickItemFromCombobox(this.rowsPerPageDropdown, rowsCount.toString());
 
         for (let row = 1; row <= rowsCount; row++) {
@@ -70,6 +78,13 @@ export class components extends BasePage {
         }
     }
 
+    async checkDividers(dividersLabels: string[]) {
+        for (const dividerLabel of dividersLabels) {
+            const dividerLocator = this.divider.and(this.page.locator(`//*[.='${dividerLabel}']`));
+            await dividerLocator.scrollIntoViewIfNeeded();
+            await expect(dividerLocator).toBeVisible();
+        }
+    }
 }
 
 
