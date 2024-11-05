@@ -88,8 +88,8 @@ const defaultConfig: PlaywrightTestConfig = {
                 ...devices['Desktop Chrome'],
                 storageState: 'playwright/.auth/user.json',
                 viewport: {
-                    width: 1920,
-                    height: 1080
+                    width: 1600,
+                    height: 800
                 },
                 launchOptions: {
                     slowMo: 0,
