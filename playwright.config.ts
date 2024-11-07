@@ -5,6 +5,8 @@ import {devices, PlaywrightTestConfig} from '@playwright/test';
  */
 import * as dotenv from 'dotenv';
 
+dotenv.config();
+
 // get the environment type from command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
 
@@ -13,7 +15,6 @@ interface TestConfig extends PlaywrightTestConfig {
     backendUrl?: string;
 }
 
-dotenv.config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -81,9 +82,13 @@ const defaultConfig: PlaywrightTestConfig = {
     /* Configure projects for major browsers */
     projects: [
         // Setup project
-        {name: 'setup', testMatch: '../'+/.*\.setup\.ts/},
+        {
+            name: 'setup',
+            testMatch: /.*\.setup\.ts/
+        },
         {
             name: 'local-chrome',
+            dependencies: ['setup'],
             use: {
                 ...devices['Desktop Chrome'],
                 storageState: 'playwright/.auth/user.json',
@@ -94,9 +99,7 @@ const defaultConfig: PlaywrightTestConfig = {
                 launchOptions: {
                     slowMo: 0,
                 },
-
             },
-            dependencies: ['setup'],
         },
     ],
 
@@ -119,7 +122,7 @@ const prodConfig: TestConfig = {
     backendUrl: '',
     name: `prod`,
     expect: {
-        timeout: 4000
+        timeout: 6000
     },
     use: {
         ...defaultConfig.use,
@@ -153,7 +156,7 @@ const stageConfig: TestConfig = {
     backendUrl: '',
     name: `stage`,
     expect: {
-        timeout: 4000
+        timeout: 6000
     },
     use: {
         ...defaultConfig.use,

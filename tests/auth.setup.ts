@@ -16,7 +16,7 @@ setup('authenticate', async ({page}) => {
     await page.click('#identifierNext');
 
     console.log('Detecting capcha...');
-    const passwordInput = page.locator('input[type="password"]');
+    const passwordInput = page.locator('input[type="password"]').first();
     if (await page.locator('//img[@id="captchaimg"]').count() > 0) { // wait for captcha
         console.log('Captcha detected!');
         await expect(passwordInput).toBeVisible({timeout: 60_000})

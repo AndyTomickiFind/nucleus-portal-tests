@@ -14,7 +14,17 @@ export class NewToplistPage extends BasePage {
     readonly appliesToProductCombobox: Locator;
     readonly coinsCombobox: Locator;
     readonly advancedFiltersAccordion: Locator;
-    // ... adv filters
+    readonly casinoProductsCombobox: Locator;
+    readonly licensesCombobox: Locator;
+    readonly anonymousPlayCheckbox: Locator;
+    readonly provablyFairCheckbox: Locator;
+    readonly softwareProvidersCombobox: Locator;
+    readonly depositMethodsCombobox: Locator;
+    readonly sportsCombobox: Locator;
+    readonly newDepositMethodButton: Locator;
+    readonly newDepositMethodCancelButton: Locator;
+    readonly newDepositMethodCreateButton: Locator;
+    readonly promotionTypesCombobox: Locator;
     readonly addOverrideButton: Locator;
     readonly cancelButton: Locator;
     readonly createButton: Locator;
@@ -34,7 +44,17 @@ export class NewToplistPage extends BasePage {
         this.appliesToProductCombobox = page.getByTestId("toplist-products-autocomplete-field");
         this.coinsCombobox = page.getByTestId("toplist-form-filters-casinos-coins-autocomplete-field");
         this.advancedFiltersAccordion = page.getByTestId("toplist-form-advanced-filters-accordion");
-        // ...
+        this.casinoProductsCombobox = page.getByTestId("toplist-form-filters-casinos-products-autocomplete");
+        this.licensesCombobox = page.getByTestId("toplist-form-filters-casinos-licenses-autocomplete");
+        this.anonymousPlayCheckbox = page.getByTestId("toplist-form-filters-casinos-anonymous-play-checkbox");
+        this.provablyFairCheckbox = page.getByTestId("toplist-form-filters-casinos-provably-fair-checkbox");
+        this.softwareProvidersCombobox = page.getByTestId("toplist-form-filters-casinos-slot-providers-autocomplete");
+        this.depositMethodsCombobox = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete");
+        this.sportsCombobox = page.getByTestId("toplist-form-filters-casinos-sports-autocomplete");
+        this.newDepositMethodButton = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete-new-button");
+        this.newDepositMethodCancelButton = page.getByTestId("deposit-method-cancel-button");
+        this.newDepositMethodCreateButton = page.getByTestId("deposit-method-submit-button");
+        this.promotionTypesCombobox = page.getByTestId("toplist-form-filters-casinos-promotion-types-autocomplete");
         this.addOverrideButton = page.getByTestId("add-override-button");
         this.cancelButton = page.getByTestId("toplist-cancel-button");
         this.createButton = page.getByTestId("toplist-submit-button");

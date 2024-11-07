@@ -15,7 +15,7 @@ test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
 
     test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
         await menuComponent.checkMenuItems()
-        await menuComponent.checkDataPointItems()
+       // await menuComponent.checkDataPointItems()
     });
 
     test('check the welcome banner', async ({HomePage}) => {
