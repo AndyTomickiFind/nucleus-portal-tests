@@ -4,6 +4,7 @@ import {MenuComponent} from "../page-objects/components/menuComponent";
 import {ToplistsPage} from "../page-objects/toplists.page";
 import {components} from "../page-objects/components/components";
 import {NewToplistPage} from "../page-objects/newToplist.page";
+import {ShortReviewsPage} from "../page-objects/shortReviews.page";
 
 
 
@@ -12,7 +13,8 @@ export const test = base.extend<{
     ToplistsPage: ToplistsPage,
     menuComponent: MenuComponent,
     components: components,
-    NewToplistPage: NewToplistPage
+    NewToplistPage: NewToplistPage,
+    ShortReviewsPage: ShortReviewsPage
 }>({
     HomePage: async ({ page, context }, use, testInfo) => {
         await use(new HomePage(page, context, testInfo));
@@ -22,6 +24,9 @@ export const test = base.extend<{
     },
     NewToplistPage: async ({ page, context }, use, testInfo) => {
         await use(new NewToplistPage(page, context, testInfo));
+    },
+    ShortReviewsPage: async ({ page, context }, use, testInfo) => {
+        await use(new ShortReviewsPage(page, context, testInfo));
     },
     menuComponent: async ({ page, context }, use, testInfo) => {
         await use(new MenuComponent(page, context, testInfo));

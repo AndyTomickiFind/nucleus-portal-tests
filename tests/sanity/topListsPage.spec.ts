@@ -2,7 +2,7 @@ import {test} from "../fixtures/fixtures";
 import {expect} from "@playwright/test";
 import config from "../../playwright.config";
 
-test.describe(`TOPLISTS subpage - ${config.name} `, {tag: ['@${config.name}']}, () => {
+test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({ToplistsPage, menuComponent}) => {
         await ToplistsPage.page.goto(`https://${config.baseUrl}`);

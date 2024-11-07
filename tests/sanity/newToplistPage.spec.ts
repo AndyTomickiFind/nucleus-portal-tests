@@ -3,7 +3,7 @@ import {expect} from "@playwright/test";
 import config from "../../playwright.config";
 
 
-test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: ['@dev']}, () => {
+test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({NewToplistPage}) => {
         await NewToplistPage.page.goto(`https://${config.baseUrl}/toplists/new`);

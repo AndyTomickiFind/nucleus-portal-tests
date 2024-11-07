@@ -3,7 +3,7 @@ import {expect} from "@playwright/test";
 import config from "../../playwright.config";
 
 
-test.describe(`HOME subpage - ${config.name} `, {tag: ['@dev']}, () => {
+test.describe(`HOME subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({HomePage}) => {
         await HomePage.page.goto(`https://${config.baseUrl}`);

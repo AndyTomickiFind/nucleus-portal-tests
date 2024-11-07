@@ -3,8 +3,18 @@ import * as path from "node:path";
 import config from "../playwright.config";
 
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');
+// const fileExists = (filePath: string): boolean => {
+//     try {
+//         fs.accessSync(filePath, fs.constants.F_OK);
+//         return true;
+//     } catch (error) {
+//         return false;
+//     }
+// };
 
 setup('authenticate', async ({page}) => {
+    // test.skip(fileExists(authFile),'Auth data stored, no need to setup auth');
+
     await page.setExtraHTTPHeaders({
         "x-tooling-bypass-auth": process.env.BYPASS_AUTH,
     });
