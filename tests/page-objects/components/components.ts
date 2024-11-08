@@ -44,6 +44,11 @@ export class components extends BasePage {
         return this.page.locator(`//div[@data-rowindex="${rowNumber - 1}"]//div[@data-field="${column}"]`)
     }
 
+    async dblClickDataGridRow(rowNumber: number): Promise<void> {
+        const dataGridRow = this.page.locator(`//div[@data-rowindex="${rowNumber - 1}"]`);
+        await this.dataGrid.locator(dataGridRow).dblclick();
+    }
+
     async checkAlertBanner(bannerText: string) {
         await expect(this.alertBanner).toContainText(bannerText);
     }
@@ -83,6 +88,13 @@ export class components extends BasePage {
             const dividerLocator = this.divider.and(this.page.locator(`//*[.='${dividerLabel}']`));
             await dividerLocator.scrollIntoViewIfNeeded();
             await expect(dividerLocator).toBeVisible();
+        }
+    }
+
+    //check if element contains all the strings
+    async elementContainsLabels(elementLocator: Locator, labels: string[]) {
+        for (const label of labels) {
+            await expect(elementLocator).toContainText(label);
         }
     }
 }

@@ -10,6 +10,11 @@ export class ShortReviewsPage extends BasePage {
     readonly statusCombobox: Locator;
     readonly toplistProductCombobox: Locator;  //topilist ;)
 
+    // Short Review Editor:
+    readonly gridTopBox: Locator;
+    readonly englishTranslationRichTextEditor: Locator
+    readonly saveButton: Locator;
+
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
         this.testInfo = testInfo;
@@ -18,6 +23,10 @@ export class ShortReviewsPage extends BasePage {
         this.statusCombobox = page.getByTestId('short-review-status-filter');
         this.toplistProductCombobox = page.getByTestId('short-review-product-filter');
 
+        // Short Review Editor:
+        this.gridTopBox = page.locator('//div[contains(@class, "MuiPaper-outlined")]');
+        this.englishTranslationRichTextEditor = page.getByTestId("short-review-content-translation-rich-text-editor-container-0");
+        this.saveButton = page.getByTestId("short-review-submit-button");
     }
 
     async checkWelcomeBanner(bannerText: string) {
