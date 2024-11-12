@@ -1,6 +1,7 @@
 import {test} from "../fixtures/fixtures";
 import {expect} from "@playwright/test";
 import config from "../../playwright.config";
+import {timeDifference} from "../common/helpers";
 
 
 test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
@@ -51,39 +52,27 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
 
     test('check the Multi Grid', async ({components, ShortReviewsPage}) => {
         await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
-
+        await components.dataGridCell("partnerName", 1).click();    //sort by partner name
+        await ShortReviewsPage.page.waitForLoadState();             //
+        await components.dataGridCell("partnerName", 1).click();    //
         await test.step("Check each of the fields in a row", async () => {
             await expect(components.dataGridCell("toplistName", 1)).toContainText("QA Toplist");
-            await expect(components.dataGridCell("partnerName", 1)).toContainText("Dunder Casino");
-            await expect(components.dataGridCell("status", 1)).toContainText("Todo");
-            await expect(components.dataGridCell("assignedTo", 1)).toContainText("");
+            await expect(components.dataGridCell("partnerName", 1)).toContainText("Dreamz");
+            await expect(components.dataGridCell("status", 1)).toContainText("Created");
+            await expect(components.dataGridCell("assignedTo", 1)).toHaveText("");
             await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2024,");
             await expect(components.dataGridCell("actions", 1)).toHaveText("Approve");
         })
     });
 
-    function parseDate(dateString: string): Date {
-        const [datePart, timePart, period] = dateString.split(/[ ,]+/);
-        const [month, day, year] = datePart.split('/').map(Number);
-        // eslint-disable-next-line prefer-const
-        let [hours, minutes, seconds] = timePart.split(':').map(Number);
 
-        if (period === 'PM' && hours !== 12) {
-            hours += 12;
-        } else if (period === 'AM' && hours === 12) {
-            hours = 0;
-        }
+    test('edit Short Review', {
+        annotation: {
+            type: 'issue',
+            description: 'https://findco.atlassian.net/browse/DEV-5219',
+        },
+    }, async ({components, ShortReviewsPage}) => {
 
-        return new Date(year, month - 1, day, hours, minutes, seconds);
-    }
-    function timeDifference(dateStr1: string, dateStr2: string): number {
-        const date1 = parseDate(dateStr1);
-        const date2 = parseDate(dateStr2);
-        return Math.abs(date1.getTime() - date2.getTime()); // 10 seconds
-    }
-
-
-    test('edit Short Review', async ({components, ShortReviewsPage}) => {
         await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
         await components.dblClickDataGridRow(2);
         await test.step("Check elements", async () => {

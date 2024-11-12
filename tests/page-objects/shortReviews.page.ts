@@ -10,6 +10,7 @@ export class ShortReviewsPage extends BasePage {
     readonly statusCombobox: Locator;
     readonly toplistProductCombobox: Locator;  //topilist ;)
 
+
     // Short Review Editor:
     readonly gridTopBox: Locator;
     readonly englishTranslationRichTextEditor: Locator
