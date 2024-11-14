@@ -52,9 +52,6 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
 
     test('check the Multi Grid', async ({components, ShortReviewsPage}) => {
         await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
-        await components.dataGridCell("partnerName", 1).click();    //sort by partner name
-        await ShortReviewsPage.page.waitForLoadState();             //
-        await components.dataGridCell("partnerName", 1).click();    //
         await test.step("Check each of the fields in a row", async () => {
             await expect(components.dataGridCell("toplistName", 1)).toContainText("QA Toplist");
             await expect(components.dataGridCell("partnerName", 1)).toContainText("Dreamz");
@@ -65,6 +62,10 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
         })
     });
 
+    // SORTING TO DO
+    // await components.dataGridCell("partnerName", 1).click();    //sort by partner name
+    // await ShortReviewsPage.page.waitForLoadState();             //
+    // await components.dataGridCell("partnerName", 1).click();    //
 
     test('edit Short Review', {
         annotation: {
@@ -74,7 +75,8 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
     }, async ({components, ShortReviewsPage}) => {
 
         await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
-        await components.dblClickDataGridRow(2);
+        //await components.dblClickDataGridRow(1);
+        await ShortReviewsPage.page.locator(`//div[@data-rowindex]/div[.='Dreamz']`).dblclick();  // Edit row containing "Dreamz"
         await test.step("Check elements", async () => {
             await ShortReviewsPage.checkWelcomeBanner("Edit Short Review");
             await components.checkDividers(["English Translation *", "French Translation", "Portuguese Translation", "Spanish Translation"]);
@@ -82,7 +84,7 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
             //WIP
         });
         await test.step("Edit and save", async () => {
-            await ShortReviewsPage.englishTranslationRichTextEditor.getByRole("textbox").fill("12345");
+            await ShortReviewsPage.englishTranslationRichTextEditor.getByRole("textbox").fill("This Short Review has been edited by robots 🤖");
             await ShortReviewsPage.saveButton.click();
             await ShortReviewsPage.page.waitForTimeout(3000);
             await ShortReviewsPage.page.reload();

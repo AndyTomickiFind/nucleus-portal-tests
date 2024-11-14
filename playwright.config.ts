@@ -7,7 +7,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-// get the environment type from command line. If none, set it to dev
+// Get the environment type from the command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
 
 interface TestConfig extends PlaywrightTestConfig {
@@ -168,7 +168,7 @@ const stageConfig: TestConfig = {
 };
 
 
-// config object with default configuration and environment specific configuration
+// config object with default configuration and environment-specific configuration
 const config: TestConfig = {
     ...defaultConfig,
     ...(environment.toLowerCase() === 'prod'
