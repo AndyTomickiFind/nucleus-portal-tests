@@ -1,4 +1,4 @@
-import {devices, PlaywrightTestConfig} from '@playwright/test';
+import {PlaywrightTestConfig} from '@playwright/test';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -12,7 +12,7 @@ const environment = process.env.TEST_ENV || 'dev';
 
 interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
-    backendUrl?: string;
+    toplistServiceV1Uri?: string;
 }
 
 
@@ -88,9 +88,9 @@ const defaultConfig: PlaywrightTestConfig = {
         },
         {
             name: 'local-chrome',
-            dependencies: ['setup'],
+             dependencies: ['setup'],
             use: {
-                ...devices['Desktop Chrome'],
+               // ...devices['Desktop Chrome'],
                 storageState: 'playwright/.auth/user.json',
                 viewport: {
                     width: 1600,
@@ -119,7 +119,7 @@ const defaultConfig: PlaywrightTestConfig = {
 // set config for prod
 const prodConfig: TestConfig = {
     baseUrl: 'portal.nucleusmvp.com',
-    backendUrl: '',
+    toplistServiceV1Uri: '',
     name: `prod`,
     expect: {
         timeout: 6000
@@ -136,7 +136,7 @@ const prodConfig: TestConfig = {
 // set config for dev
 const devConfig: TestConfig = {
     baseUrl: 'portal.dev.nucleusmvp.com',
-    backendUrl: '',
+    toplistServiceV1Uri: 'dev.nucleusmvp.com',
     name: `dev`,
     expect: {
         timeout: 6000
@@ -153,7 +153,7 @@ const devConfig: TestConfig = {
 // set config for stage
 const stageConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
-    backendUrl: '',
+    toplistServiceV1Uri: 'staging.nucleusmvp.com',
     name: `stage`,
     expect: {
         timeout: 6000
