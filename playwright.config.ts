@@ -1,9 +1,6 @@
 import {PlaywrightTestConfig} from '@playwright/test';
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
 import * as dotenv from 'dotenv';
+import {devices} from "playwright";
 
 dotenv.config();
 
@@ -46,6 +43,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
     /* Opt out of parallel tests on CI. */
     workers: process.env.CI ? 1 : undefined,
+
 
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     reporter: process.env.CI ?
@@ -90,7 +88,7 @@ const defaultConfig: PlaywrightTestConfig = {
             name: 'local-chrome',
              dependencies: ['setup'],
             use: {
-               // ...devices['Desktop Chrome'],
+                ...devices['Desktop Chrome'],
                 storageState: 'playwright/.auth/user.json',
                 viewport: {
                     width: 1600,

@@ -18,7 +18,7 @@ test('GET /api/v1/toplists/{id}/lean', async ({ request }, testInfo) => {
 
     await logResponse(response, testInfo);
 
-    expect(response.status()).toBe(200); // Customize based on the expected status code
+    expect(response.status()).toBe(200);
     const responseBody = await response.json();
     expect(responseBody).toMatchObject({
         // Add expected response body

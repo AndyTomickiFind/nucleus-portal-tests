@@ -3,21 +3,20 @@
   "version": "0.0.1",
   "description": "Nucleus portal E2E tests",
   "scripts": {
-    "test:local:sanity:dev": "npm run lint && LOCAL=true TEST_ENV=dev npx playwright test tests/sanity --project=local-chrome --grep @prod",
+    "test:local:sanity:dev": "npm run lint && LOCAL=true TEST_ENV=dev npx playwright test tests/sanity --project=local-chrome --grep @dev",
     "clean:playwright-report": "rimraf playwright-report*",
     "clean:test-results": "rimraf test-results",
     "clean:temp": "npm run clean:playwright-report && npm run clean:test-results",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . *.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@playwright/test": "^1.42.1",
-    "playwright": "^1.48.2",
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0",
     "playwright-extra": "^4.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "swagger-parser": "^10.0.3"
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
