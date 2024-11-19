@@ -21,8 +21,6 @@ test('GET /api/v1/partners', async ({request}, testInfo) => {
     expect(response.status()).toBe(200); // Customize based on the expected status code
     const responseBody = await response.json();
 
-    const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/responses_${process.env.TEST_ENV}/partners.json`, 'utf-8'))
-    expect(responseBody).toMatchObject(
-        fullExpectedResponse
-    );
+    const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/partners.json`, 'utf-8'))
+    expect(responseBody).toMatchObject(fullExpectedResponse);
 });

@@ -2,9 +2,11 @@
 import { test, expect } from '@playwright/test';
 import { logResponse } from '../../src/logger';
 import config from "../../playwright.config";
+import fs from "fs";
 
 test('GET /api/v1/partners/{id}', async ({ request }, testInfo) => {
-    const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/partners/65f49a8206037feabc1b597c`, {
+    const testData = JSON.parse(fs.readFileSync(`tests/api/testData_${process.env.TEST_ENV}/partnersIds.json`, 'utf-8'));
+    const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/partners/${testData._id}`, {
         headers: {
             // Add headers if needed
         },
@@ -18,9 +20,8 @@ test('GET /api/v1/partners/{id}', async ({ request }, testInfo) => {
 
     await logResponse(response, testInfo);
 
-    expect(response.status()).toBe(200); // Customize based on the expected status code
+    expect(response.status()).toBe(200);
+    const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/partnersDetails.json`, 'utf-8'))
     const responseBody = await response.json();
-    expect(responseBody).toMatchObject({
-        // Add expected response body
-    });
+    expect(responseBody).toMatchObject(fullExpectedResponse);
 });

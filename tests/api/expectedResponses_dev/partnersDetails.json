@@ -1,0 +1,1734 @@
+{
+  "partnerDetails": {
+    "id": "65f49a8206037feabc1b597c",
+    "name": "0X Bet",
+    "description": "",
+    "landingPageUrl": "https://0x.bet",
+    "yearFounded": 2022,
+    "operatedBy": [
+      "Casbit Group N.V."
+    ],
+    "bonuses": [],
+    "rating": 4,
+    "homepageImageDesktop": {
+      "url": "/wp-content/uploads/2022/08/0x-bet-review-1.png"
+    },
+    "homepageImageMobile": {
+      "url": "/wp-content/uploads/2022/08/0x-bet-review.png"
+    },
+    "logo": {
+      "url": "/wp-content/uploads/2022/08/0x-bet-review-2.png"
+    },
+    "prosCons": {
+      "pros": [
+        {
+          "content": "<p>You will have a hard time finding negative online reviews about 0X Bet that are legitimate.</p>\n",
+          "title": "<p>Reputation.</p>\n",
+          "field": "reputation",
+          "id": "65f49a8206037feabc1b59a2"
+        },
+        {
+          "content": "<p>Players can quickly chat with the support team and have their issues resolved.</p>\n",
+          "title": "<p>Customer Support.</p>\n",
+          "field": "customer_support",
+          "id": "65f49a8206037feabc1b59a9"
+        },
+        {
+          "content": "<p>There is plenty of appealing promotions on 0X Bet.</p>\n",
+          "title": "<p>Promotions.</p>\n",
+          "field": "promotions",
+          "id": "65f49a8206037feabc1b59b0"
+        },
+        {
+          "content": "<p>The list of benefits for VIPs on 0X Bet is long, and includes: cash bonuses, account manager, exclusive events, faster withdrawals, frequent exclusive bonuses, gifts sent at home, increased withdrawals limits, frequent cashback.</p>\n",
+          "title": "<p>VIP Program.</p>\n",
+          "field": "vip_program",
+          "id": "65f49a8206037feabc1b59b7"
+        },
+        {
+          "content": "<p>If you like private play, 0X Bet has you covered as it allows anonymous gaming.</p>\n",
+          "title": "<p>Anonymous Gaming.</p>\n",
+          "field": "anonymous_play",
+          "id": "65f49a8206037feabc1b59be"
+        },
+        {
+          "content": "<p>It is really easy to navigate 0X Bet&#8216;s platform.</p>\n",
+          "title": "<p>Ease of use.</p>\n",
+          "field": "ease_of_use",
+          "id": "65f49a8206037feabc1b59c5"
+        },
+        {
+          "content": "<p>0X Bet keeps players visually interested with a nicely designed theme.</p>\n",
+          "title": "<p>Theme &amp; Design.</p>\n",
+          "field": "Theme_&_design",
+          "id": "65f49a8206037feabc1b59cc"
+        },
+        {
+          "content": "<p>0X Bet is a great pick if you like playing on your mobile.</p>\n",
+          "title": "<p>Mobile Experience.</p>\n",
+          "field": "mobile_experience",
+          "id": "65f49a8206037feabc1b59d3"
+        },
+        {
+          "content": "<p>0X Bet takes the stress out of creating an online account. Registration is almost instant.</p>\n",
+          "title": "<p><strong>Instant Registration.</strong></p>\n",
+          "field": "easy_registration",
+          "id": "65f49a8206037feabc1b59da"
+        }
+      ],
+      "cons": [
+        {
+          "content": "<p>0X Bet is licensed in Curaçao. It&#8217;s not the best, so it is a sign that further investigation into the site&#8217;s reputation is required.</p>\n",
+          "title": "<p>License.</p>\n",
+          "field": "license",
+          "id": "65f49a8206037feabc1b599b"
+        }
+      ]
+    },
+    "coins": [
+      {
+        "id": "65f49a7d06037feabc190772",
+        "name": "Bitcoin",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+        "shortname": "BTC"
+      },
+      {
+        "id": "65f49a7d06037feabc190777",
+        "name": "Ethereum",
+        "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+        "shortname": "ETH"
+      },
+      {
+        "id": "65f49a7d06037feabc19077c",
+        "name": "Tether",
+        "logo": "/wp-content/uploads/2021/06/tether.svg",
+        "shortname": "USDT"
+      },
+      {
+        "id": "65f49a7d06037feabc190781",
+        "name": "Dogecoin",
+        "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+        "shortname": "DOGE"
+      },
+      {
+        "id": "65f49a7d06037feabc190786",
+        "name": "Litecoin",
+        "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+        "shortname": "LTC"
+      },
+      {
+        "id": "65f49a7d06037feabc19078b",
+        "name": "Bitcoin Cash",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+        "shortname": "BCH"
+      },
+      {
+        "id": "65f49a7d06037feabc190790",
+        "name": "TRON",
+        "logo": "/wp-content/uploads/2021/06/tron.svg",
+        "shortname": "TRX"
+      },
+      {
+        "id": "65f49a7d06037feabc190795",
+        "name": "Binance Coin",
+        "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+        "shortname": "BNB"
+      },
+      {
+        "id": "65f49a7d06037feabc19079a",
+        "name": "XRP",
+        "logo": "/wp-content/uploads/2021/06/xrp.svg",
+        "shortname": "XRP"
+      },
+      {
+        "id": "65f49a7d06037feabc19079f",
+        "name": "Cardano",
+        "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+        "shortname": "ADA"
+      },
+      {
+        "id": "65f49a7d06037feabc1907a4",
+        "name": "Neo",
+        "logo": "/wp-content/uploads/2021/06/neo.svg",
+        "shortname": "NEO"
+      },
+      {
+        "id": "65f49a7d06037feabc1907a9",
+        "name": "Binance USD",
+        "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+        "shortname": "BUSD"
+      },
+      {
+        "id": "65f49a7d06037feabc1907ae",
+        "name": "CasinoCoin",
+        "logo": "/wp-content/uploads/2021/06/casinocoin-csc.svg",
+        "shortname": "CSC"
+      },
+      {
+        "id": "65f49a7d06037feabc1907b3",
+        "name": "Crypto Snack",
+        "logo": "/wp-content/uploads/2022/07/snack.png",
+        "shortname": "SNACK"
+      }
+    ],
+    "licenses": [
+      {
+        "id": "65f49a7c06037feabc18f2ab",
+        "name": "Curaçao",
+        "logo": "/wp-content/uploads/2020/08/curacao-gaming-control-board.png"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "features": [
+      {
+        "id": "65f49a7d06037feabc19074e",
+        "name": "2FA"
+      },
+      {
+        "id": "65f49a7d06037feabc190753",
+        "name": "SSL Encryption"
+      }
+    ],
+    "allowedCountries": [
+      "XK",
+      "IM",
+      "JE",
+      "SS",
+      "SX",
+      "RS",
+      "SH",
+      "SH",
+      "PS",
+      "ME",
+      "GG",
+      "AX",
+      "ZW",
+      "ZM",
+      "YE",
+      "EH",
+      "VG",
+      "VN",
+      "VE",
+      "VU",
+      "UZ",
+      "UY",
+      "US",
+      "GB",
+      "UG",
+      "TV",
+      "TC",
+      "TM",
+      "TR",
+      "TN",
+      "TT",
+      "TO",
+      "TK",
+      "TG",
+      "TH",
+      "TZ",
+      "TJ",
+      "TW",
+      "SY",
+      "CH",
+      "SE",
+      "SZ",
+      "SJ",
+      "SR",
+      "SD",
+      "SH",
+      "LK",
+      "ES",
+      "GS",
+      "ZA",
+      "SO",
+      "SB",
+      "SI",
+      "SK",
+      "SG",
+      "SL",
+      "SC",
+      "SN",
+      "ST",
+      "SM",
+      "WS",
+      "VC",
+      "LC",
+      "KN",
+      "RW",
+      "RO",
+      "PT",
+      "PL",
+      "PN",
+      "PH",
+      "PE",
+      "PY",
+      "PG",
+      "PA",
+      "PW",
+      "NO",
+      "NF",
+      "NU",
+      "NG",
+      "NE",
+      "NI",
+      "NZ",
+      "NC",
+      "AN",
+      "NL",
+      "NP",
+      "NR",
+      "NA",
+      "MM",
+      "MZ",
+      "MA",
+      "MS",
+      "MN",
+      "MC",
+      "MD",
+      "FM",
+      "MX",
+      "YT",
+      "MU",
+      "MR",
+      "MQ",
+      "MH",
+      "MT",
+      "ML",
+      "MV",
+      "MY",
+      "MW",
+      "MG",
+      "MK",
+      "MO",
+      "LU",
+      "LT",
+      "LI",
+      "LY",
+      "LR",
+      "LS",
+      "LV",
+      "LA",
+      "KG",
+      "KR",
+      "KP",
+      "KI",
+      "KE",
+      "KZ",
+      "JP",
+      "JM",
+      "IT",
+      "IE",
+      "ID",
+      "IN",
+      "IS",
+      "HU",
+      "HK",
+      "HN",
+      "VA",
+      "HM",
+      "HT",
+      "GY",
+      "GW",
+      "GN",
+      "GT",
+      "GP",
+      "GD",
+      "GL",
+      "GR",
+      "GI",
+      "GH",
+      "DE",
+      "GE",
+      "GM",
+      "GA",
+      "FI",
+      "FJ",
+      "FO",
+      "FK",
+      "ET",
+      "EE",
+      "ER",
+      "GQ",
+      "SV",
+      "EG",
+      "EC",
+      "TL",
+      "DO",
+      "DM",
+      "DJ",
+      "DK",
+      "CZ",
+      "CY",
+      "CU",
+      "HR",
+      "CI",
+      "CR",
+      "CK",
+      "CG",
+      "KM",
+      "CO",
+      "CC",
+      "CX",
+      "CN",
+      "CL",
+      "TD",
+      "CF",
+      "CV",
+      "CA",
+      "CM",
+      "BI",
+      "BF",
+      "BG",
+      "IO",
+      "BR",
+      "BV",
+      "BW",
+      "BA",
+      "BO",
+      "BT",
+      "BM",
+      "BJ",
+      "BZ",
+      "BE",
+      "BY",
+      "BB",
+      "BD",
+      "BS",
+      "AZ",
+      "AT",
+      "AU",
+      "AM",
+      "AR",
+      "AG",
+      "AQ",
+      "AI",
+      "AO",
+      "AD",
+      "AL"
+    ],
+    "excludedCountries": [
+      "AF",
+      "DZ",
+      "AS",
+      "AW",
+      "BH",
+      "BQ",
+      "BN",
+      "KH",
+      "KY",
+      "CD",
+      "CW",
+      "FR",
+      "GF",
+      "PF",
+      "TF",
+      "GU",
+      "IR",
+      "IQ",
+      "IL",
+      "JO",
+      "KW",
+      "LB",
+      "MP",
+      "OM",
+      "PK",
+      "PR",
+      "QA",
+      "RE",
+      "RU",
+      "BL",
+      "MF",
+      "PM",
+      "SA",
+      "UA",
+      "AE",
+      "UM",
+      "VI",
+      "WF"
+    ],
+    "depositMethodsGroupedByPaymentType": [
+      {
+        "paymentTypeId": "65f49a7b06037feabc18e1cd",
+        "paymentTypeName": "Cryptocurrencies",
+        "items": [
+          {
+            "id": "65f49a7b06037feabc18e696",
+            "name": "Litecoin",
+            "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e69b",
+            "name": "Dogecoin",
+            "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6a0",
+            "name": "Bitcoin",
+            "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6a5",
+            "name": "Ethereum",
+            "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6aa",
+            "name": "Tether",
+            "logo": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6b4",
+            "name": "XRP",
+            "logo": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6b9",
+            "name": "Cardano",
+            "logo": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6c3",
+            "name": "Bitcoin Cash",
+            "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6c8",
+            "name": "Binance Coin",
+            "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e6fa",
+            "name": "TRON",
+            "logo": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e70e",
+            "name": "Neo",
+            "logo": "/wp-content/uploads/2021/06/neo.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e722",
+            "name": "Binance USD",
+            "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18e8f3",
+            "name": "CasinoCoin",
+            "logo": "/wp-content/uploads/2021/06/casinocoin-csc.svg"
+          },
+          {
+            "id": "65f49a7b06037feabc18ed3c",
+            "name": "Crypto Snack",
+            "logo": "/wp-content/uploads/2022/07/snack.png"
+          }
+        ]
+      },
+      {
+        "paymentTypeId": "65f49a7b06037feabc18e1b5",
+        "paymentTypeName": "e-Wallets",
+        "items": [
+          {
+            "id": "65f49a7b06037feabc18ee09",
+            "name": "MetaMask",
+            "logo": "/wp-content/uploads/2022/08/metamask.png"
+          }
+        ]
+      }
+    ],
+    "withdrawalMethodsGroupedByPaymentType": [
+      {
+        "paymentTypeId": "65f49a7b06037feabc18e1cd",
+        "paymentTypeName": "Cryptocurrencies",
+        "items": [
+          {
+            "id": "65f49a7d06037feabc190226",
+            "name": "Litecoin",
+            "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc19022b",
+            "name": "Dogecoin",
+            "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190230",
+            "name": "Bitcoin",
+            "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190235",
+            "name": "Ethereum",
+            "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc19023a",
+            "name": "Tether",
+            "logo": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190244",
+            "name": "XRP",
+            "logo": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190249",
+            "name": "Cardano",
+            "logo": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190253",
+            "name": "Bitcoin Cash",
+            "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190258",
+            "name": "Binance Coin",
+            "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc19028a",
+            "name": "TRON",
+            "logo": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc190299",
+            "name": "Neo",
+            "logo": "/wp-content/uploads/2021/06/neo.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc1902ad",
+            "name": "Binance USD",
+            "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc19041f",
+            "name": "CasinoCoin",
+            "logo": "/wp-content/uploads/2021/06/casinocoin-csc.svg"
+          },
+          {
+            "id": "65f49a7d06037feabc1906b1",
+            "name": "Crypto Snack",
+            "logo": "/wp-content/uploads/2022/07/snack.png"
+          }
+        ]
+      }
+    ],
+    "type": "casinos",
+    "termsAndConditions": "https://0x.bet/policy/terms-of-use",
+    "products": [
+      "Slots",
+      "Video Poker",
+      "Live Dealer",
+      "Blackjack",
+      "Baccarat",
+      "Bingo",
+      "Keno",
+      "Roulette",
+      "Lotteries",
+      "Craps",
+      "Scratchcards",
+      "Poker",
+      "Dice",
+      "Crash",
+      "Mines",
+      "Plinko",
+      "HiLo",
+      "Limbo",
+      "Financial",
+      "Jackpot",
+      "Slingo"
+    ],
+    "numberOfGames": 1000,
+    "supportLanguages": [
+      "English"
+    ],
+    "welcomeOffer": "30 Free Spins"
+  },
+  "similarPartners": [
+    {
+      "id": "65f49a7e06037feabc1910e3",
+      "name": "Casino1",
+      "logo": {
+        "url": "logo"
+      },
+      "homepageUrl": "bla",
+      "welcomeOffer": "Up to 4000 EUR Welcome Package + 200 Free Spins",
+      "rating": 11,
+      "coins": []
+    },
+    {
+      "id": "65f49a7e06037feabc194655",
+      "name": "Stake",
+      "logo": {
+        "url": "/wp-content/uploads/2021/06/stake-logo-1.png"
+      },
+      "homepageUrl": "https://stake.com/",
+      "welcomeOffer": "10% Cashback — Lifetime duration",
+      "rating": 4.97,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190790",
+          "name": "TRON",
+          "logo": "/wp-content/uploads/2021/06/tron.svg",
+          "shortname": "TRX"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc1907a9",
+          "name": "Binance USD",
+          "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+          "shortname": "BUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc1907b8",
+          "name": "USD Coin",
+          "logo": "/wp-content/uploads/2021/06/usd-coin.svg",
+          "shortname": "USDC"
+        },
+        {
+          "id": "65f49a7d06037feabc1907c7",
+          "name": "SHIBA INU",
+          "logo": "/wp-content/uploads/2021/06/shiba-inu.svg",
+          "shortname": "SHIB"
+        },
+        {
+          "id": "65f49a7d06037feabc19080d",
+          "name": "Dai",
+          "logo": "/wp-content/uploads/2021/06/dai.svg",
+          "shortname": "DAI"
+        },
+        {
+          "id": "65f49a7d06037feabc19081c",
+          "name": "EOS",
+          "logo": "/wp-content/uploads/2021/06/eos.svg",
+          "shortname": "EOS"
+        },
+        {
+          "id": "65f49a7d06037feabc190826",
+          "name": "Chainlink",
+          "logo": "/wp-content/uploads/2021/06/chainlink.svg",
+          "shortname": "LINK"
+        },
+        {
+          "id": "65f49a7d06037feabc19083a",
+          "name": "Polygon",
+          "logo": "/wp-content/uploads/2021/06/polygon-matic.svg",
+          "shortname": "MATIC"
+        },
+        {
+          "id": "65f49a7d06037feabc190858",
+          "name": "Cronos",
+          "logo": "/wp-content/uploads/2022/09/cro.png",
+          "shortname": "CRO"
+        },
+        {
+          "id": "65f49a7d06037feabc19085d",
+          "name": "APEcoin",
+          "logo": "/wp-content/uploads/2021/06/apecoin-ape.svg",
+          "shortname": "APE"
+        },
+        {
+          "id": "65f49a7d06037feabc190862",
+          "name": "The Sandbox",
+          "logo": "/wp-content/uploads/2021/06/the-sandbox.svg",
+          "shortname": "SAND"
+        },
+        {
+          "id": "65f49a7d06037feabc190867",
+          "name": "Uniswap",
+          "logo": "/wp-content/uploads/2021/06/uniswap.svg",
+          "shortname": "UNI"
+        }
+      ]
+    },
+    {
+      "id": "65f49a7f06037feabc19a277",
+      "name": "BC.Game",
+      "logo": {
+        "url": "/wp-content/uploads/2021/11/BC-game-logo.png"
+      },
+      "homepageUrl": "https://bc.game/",
+      "welcomeOffer": "Various promotions",
+      "rating": 4.93,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190790",
+          "name": "TRON",
+          "logo": "/wp-content/uploads/2021/06/tron.svg",
+          "shortname": "TRX"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc19079f",
+          "name": "Cardano",
+          "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+          "shortname": "ADA"
+        },
+        {
+          "id": "65f49a7d06037feabc1907a9",
+          "name": "Binance USD",
+          "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+          "shortname": "BUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc1907b8",
+          "name": "USD Coin",
+          "logo": "/wp-content/uploads/2021/06/usd-coin.svg",
+          "shortname": "USDC"
+        },
+        {
+          "id": "65f49a7d06037feabc1907bd",
+          "name": "Polkadot",
+          "logo": "/wp-content/uploads/2021/06/polkadot-dot.svg",
+          "shortname": "DOT"
+        },
+        {
+          "id": "65f49a7d06037feabc1907c7",
+          "name": "SHIBA INU",
+          "logo": "/wp-content/uploads/2021/06/shiba-inu.svg",
+          "shortname": "SHIB"
+        },
+        {
+          "id": "65f49a7d06037feabc1907d1",
+          "name": "TrueUSD",
+          "logo": "/wp-content/uploads/2021/06/trueusd.svg",
+          "shortname": "TUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc1907d6",
+          "name": "DigiByte",
+          "logo": "/wp-content/uploads/2021/06/digibyte-dgb.svg",
+          "shortname": "DGB"
+        },
+        {
+          "id": "65f49a7d06037feabc1907ea",
+          "name": "Bitcoin Gold",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-gold-btg.svg",
+          "shortname": "BTG"
+        },
+        {
+          "id": "65f49a7d06037feabc1907fe",
+          "name": "Ethereum Classic",
+          "logo": "/wp-content/uploads/2021/06/ethereum-classic-etc.svg",
+          "shortname": "ETC"
+        },
+        {
+          "id": "65f49a7d06037feabc19080d",
+          "name": "Dai",
+          "logo": "/wp-content/uploads/2021/06/dai.svg",
+          "shortname": "DAI"
+        },
+        {
+          "id": "65f49a7d06037feabc19081c",
+          "name": "EOS",
+          "logo": "/wp-content/uploads/2021/06/eos.svg",
+          "shortname": "EOS"
+        },
+        {
+          "id": "65f49a7d06037feabc190821",
+          "name": "Stellar",
+          "logo": "/wp-content/uploads/2021/06/stellar.svg",
+          "shortname": "XLM"
+        },
+        {
+          "id": "65f49a7d06037feabc190826",
+          "name": "Chainlink",
+          "logo": "/wp-content/uploads/2021/06/chainlink.svg",
+          "shortname": "LINK"
+        },
+        {
+          "id": "65f49a7d06037feabc190830",
+          "name": "Solana",
+          "logo": "/wp-content/uploads/2021/06/solana.svg",
+          "shortname": "SOL"
+        },
+        {
+          "id": "65f49a7d06037feabc190835",
+          "name": "Avalanche",
+          "logo": "/wp-content/uploads/2021/06/avalanche-avax.svg",
+          "shortname": "AVAX"
+        },
+        {
+          "id": "65f49a7d06037feabc19083a",
+          "name": "Polygon",
+          "logo": "/wp-content/uploads/2021/06/polygon-matic.svg",
+          "shortname": "MATIC"
+        },
+        {
+          "id": "65f49a7d06037feabc190844",
+          "name": "Cosmos",
+          "logo": "/wp-content/uploads/2021/06/cosmos-atom.svg",
+          "shortname": "ATOM"
+        },
+        {
+          "id": "65f49a7d06037feabc19085d",
+          "name": "APEcoin",
+          "logo": "/wp-content/uploads/2021/06/apecoin-ape.svg",
+          "shortname": "APE"
+        },
+        {
+          "id": "65f49a7d06037feabc190862",
+          "name": "The Sandbox",
+          "logo": "/wp-content/uploads/2021/06/the-sandbox.svg",
+          "shortname": "SAND"
+        },
+        {
+          "id": "65f49a7d06037feabc190867",
+          "name": "Uniswap",
+          "logo": "/wp-content/uploads/2021/06/uniswap.svg",
+          "shortname": "UNI"
+        },
+        {
+          "id": "65f49a7d06037feabc190871",
+          "name": "Algorand",
+          "logo": "/wp-content/uploads/2021/06/algorand-algo.svg",
+          "shortname": "ALGO"
+        },
+        {
+          "id": "65f49a7d06037feabc190876",
+          "name": "Fantom",
+          "logo": "/wp-content/uploads/2021/06/3513.png",
+          "shortname": "FTM"
+        },
+        {
+          "id": "65f49a7d06037feabc190899",
+          "name": "Waves",
+          "logo": "/wp-content/uploads/2021/06/waves.svg",
+          "shortname": "WAVES"
+        },
+        {
+          "id": "65f49a7d06037feabc1908a3",
+          "name": "BitTorrent",
+          "logo": "/wp-content/uploads/2021/06/bittorrent-btt.svg",
+          "shortname": "BTT"
+        },
+        {
+          "id": "65f49a7d06037feabc1908a8",
+          "name": "Zilliqa",
+          "logo": "/wp-content/uploads/2021/06/zilliqa.svg",
+          "shortname": "ZIL"
+        },
+        {
+          "id": "65f49a7d06037feabc1908f8",
+          "name": "Aave",
+          "logo": "/wp-content/uploads/2021/06/aave.svg",
+          "shortname": "AAVE"
+        },
+        {
+          "id": "65f49a7d06037feabc190911",
+          "name": "yearn.finance",
+          "logo": "/wp-content/uploads/2021/06/yearnfinance.svg",
+          "shortname": "YFI"
+        },
+        {
+          "id": "65f49a7d06037feabc190925",
+          "name": "Terra",
+          "logo": "/wp-content/uploads/2021/06/terra-lunc.svg",
+          "shortname": "LUNA"
+        },
+        {
+          "id": "65f49a7d06037feabc19092a",
+          "name": "Ravencoin",
+          "logo": "/wp-content/uploads/2021/06/ravencoin.svg",
+          "shortname": "RVN"
+        },
+        {
+          "id": "65f49a7d06037feabc19092f",
+          "name": "Bitcoin Diamond",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-diamond-bcd.svg",
+          "shortname": "BCD"
+        },
+        {
+          "id": "65f49a7d06037feabc190934",
+          "name": "TomoChain",
+          "logo": "/wp-content/uploads/2021/06/tomochain-tomo.svg",
+          "shortname": "TOMO"
+        },
+        {
+          "id": "65f49a7d06037feabc190939",
+          "name": "HEX",
+          "logo": "/wp-content/uploads/2021/06/hex.svg",
+          "shortname": "HEX"
+        },
+        {
+          "id": "65f49a7d06037feabc19093e",
+          "name": "Axie Infinity",
+          "logo": "/wp-content/uploads/2021/06/axie-infinity-axs.svg",
+          "shortname": "AXS"
+        },
+        {
+          "id": "65f49a7d06037feabc190943",
+          "name": "BigONE Token",
+          "logo": "/wp-content/uploads/2021/06/bigone-token-one.svg",
+          "shortname": "ONE"
+        },
+        {
+          "id": "65f49a7d06037feabc190948",
+          "name": "Gala",
+          "logo": "/wp-content/uploads/2021/06/gala.svg",
+          "shortname": "GALA"
+        },
+        {
+          "id": "65f49a7d06037feabc19094d",
+          "name": "MAGIC",
+          "logo": "/wp-content/uploads/2022/07/magic.png",
+          "shortname": "MAGIC"
+        },
+        {
+          "id": "65f49a7d06037feabc190952",
+          "name": "Ampleforth",
+          "logo": "/wp-content/uploads/2021/06/ampleforth-ampl.svg",
+          "shortname": "AMPL"
+        },
+        {
+          "id": "65f49a7d06037feabc190957",
+          "name": "Banano",
+          "logo": "/wp-content/uploads/2021/06/banano-ban.svg",
+          "shortname": "BAN"
+        },
+        {
+          "id": "65f49a7d06037feabc19095c",
+          "name": "Yield Guild Games",
+          "logo": "/wp-content/uploads/2021/12/yield-guild-games.svg",
+          "shortname": "YGG"
+        },
+        {
+          "id": "65f49a7d06037feabc190961",
+          "name": "BC Lottery",
+          "logo": "/wp-content/uploads/2022/04/BC-Lottery-300x169.jpg",
+          "shortname": "BCL"
+        },
+        {
+          "id": "65f49a7d06037feabc190966",
+          "name": "Toucan Protocol: Base Carbon Tonne",
+          "logo": "/wp-content/uploads/2022/04/Base-Carbon-Tonne.png",
+          "shortname": "BCT"
+        },
+        {
+          "id": "65f49a7d06037feabc19096b",
+          "name": "GM Wagmi",
+          "logo": "/wp-content/uploads/2022/04/GM-Wagmi.png",
+          "shortname": "GM"
+        },
+        {
+          "id": "65f49a7d06037feabc190970",
+          "name": "ConstitutionDAO",
+          "logo": "/wp-content/uploads/2022/04/ConstitutionDAO.png",
+          "shortname": "PEOPLE"
+        },
+        {
+          "id": "65f49a7d06037feabc190975",
+          "name": "Wrapped CryptoKitties",
+          "logo": "/wp-content/uploads/2022/04/WCK.png",
+          "shortname": "WCK"
+        },
+        {
+          "id": "65f49a7d06037feabc19097a",
+          "name": "Janta Bazar Coin",
+          "logo": "/wp-content/uploads/2022/04/JB.png",
+          "shortname": "JB"
+        },
+        {
+          "id": "65f49a7d06037feabc19097f",
+          "name": "STEPN",
+          "logo": "/wp-content/uploads/2022/07/gmt.png",
+          "shortname": "GMT"
+        },
+        {
+          "id": "65f49a7d06037feabc190984",
+          "name": "JPEG'd",
+          "logo": "/wp-content/uploads/2022/07/jpeg.png",
+          "shortname": "JPEG"
+        },
+        {
+          "id": "65f49a7d06037feabc190989",
+          "name": "Tezos",
+          "logo": "/wp-content/uploads/2021/06/tezos.svg",
+          "shortname": "XTZ"
+        },
+        {
+          "id": "65f49a7d06037feabc19098e",
+          "name": "Decred",
+          "logo": "/wp-content/uploads/2021/06/decred-dcr.svg",
+          "shortname": "DCR"
+        },
+        {
+          "id": "65f49a7d06037feabc190993",
+          "name": "Nexo",
+          "logo": "/wp-content/uploads/2021/06/nexo.svg",
+          "shortname": "NEXO"
+        },
+        {
+          "id": "65f49a7d06037feabc190998",
+          "name": "Nano",
+          "logo": "/wp-content/uploads/2021/06/nano.svg",
+          "shortname": "XNO"
+        },
+        {
+          "id": "65f49a7d06037feabc19099d",
+          "name": "Hedera Hashgraph",
+          "logo": "/wp-content/uploads/2021/06/hedera-hashgraph-hbar.svg",
+          "shortname": "HBAR"
+        },
+        {
+          "id": "65f49a7d06037feabc1909a2",
+          "name": "ICON",
+          "logo": "/wp-content/uploads/2021/06/icon-icx.svg",
+          "shortname": "ICX"
+        },
+        {
+          "id": "65f49a7d06037feabc1909a7",
+          "name": "Bitcoin BEP2",
+          "logo": "/wp-content/uploads/2021/06/4023.png",
+          "shortname": "BTCB"
+        },
+        {
+          "id": "65f49a7d06037feabc1909ac",
+          "name": "Wrapped BNB",
+          "logo": "/wp-content/uploads/2021/06/7192.png",
+          "shortname": "WBNB"
+        },
+        {
+          "id": "65f49a7d06037feabc1909b1",
+          "name": "BitDAO",
+          "logo": "/wp-content/uploads/2021/12/BIT.jpg",
+          "shortname": "BIT"
+        },
+        {
+          "id": "65f49a7d06037feabc1909b6",
+          "name": "Gods Unchained",
+          "logo": "/wp-content/uploads/2021/12/GODS.png",
+          "shortname": "GODS"
+        },
+        {
+          "id": "65f49a7d06037feabc1909bb",
+          "name": "The Doge NFT",
+          "logo": "/wp-content/uploads/2021/12/DOG-300x169.jpg",
+          "shortname": "DOG"
+        },
+        {
+          "id": "65f49a7d06037feabc1909c0",
+          "name": "Parachute",
+          "logo": "/wp-content/uploads/2021/06/4051.png",
+          "shortname": "PAR"
+        },
+        {
+          "id": "65f49a7d06037feabc1909c5",
+          "name": "Gstcoin",
+          "logo": "/wp-content/uploads/2021/06/5820.png",
+          "shortname": "GST"
+        },
+        {
+          "id": "65f49a7d06037feabc1909ca",
+          "name": "Bitcoin Atom",
+          "logo": "/wp-content/uploads/2021/06/2387.png",
+          "shortname": "BCA"
+        }
+      ]
+    },
+    {
+      "id": "65f49a7e06037feabc194ae5",
+      "name": "Cloudbet",
+      "logo": {
+        "url": "/wp-content/uploads/2021/06/cloudbet-review-1.png"
+      },
+      "homepageUrl": "https://www.cloudbet.com",
+      "welcomeOffer": "Up to 50000 USD Welcome Package",
+      "rating": 4.87,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079f",
+          "name": "Cardano",
+          "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+          "shortname": "ADA"
+        },
+        {
+          "id": "65f49a7d06037feabc1907a9",
+          "name": "Binance USD",
+          "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+          "shortname": "BUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc1907bd",
+          "name": "Polkadot",
+          "logo": "/wp-content/uploads/2021/06/polkadot-dot.svg",
+          "shortname": "DOT"
+        },
+        {
+          "id": "65f49a7d06037feabc1907fe",
+          "name": "Ethereum Classic",
+          "logo": "/wp-content/uploads/2021/06/ethereum-classic-etc.svg",
+          "shortname": "ETC"
+        },
+        {
+          "id": "65f49a7d06037feabc190808",
+          "name": "Dash",
+          "logo": "/wp-content/uploads/2021/06/dash.svg",
+          "shortname": "DASH"
+        },
+        {
+          "id": "65f49a7d06037feabc19080d",
+          "name": "Dai",
+          "logo": "/wp-content/uploads/2021/06/dai.svg",
+          "shortname": "DAI"
+        },
+        {
+          "id": "65f49a7d06037feabc19081c",
+          "name": "EOS",
+          "logo": "/wp-content/uploads/2021/06/eos.svg",
+          "shortname": "EOS"
+        },
+        {
+          "id": "65f49a7d06037feabc190826",
+          "name": "Chainlink",
+          "logo": "/wp-content/uploads/2021/06/chainlink.svg",
+          "shortname": "LINK"
+        },
+        {
+          "id": "65f49a7d06037feabc190835",
+          "name": "Avalanche",
+          "logo": "/wp-content/uploads/2021/06/avalanche-avax.svg",
+          "shortname": "AVAX"
+        },
+        {
+          "id": "65f49a7d06037feabc190871",
+          "name": "Algorand",
+          "logo": "/wp-content/uploads/2021/06/algorand-algo.svg",
+          "shortname": "ALGO"
+        },
+        {
+          "id": "65f49a7d06037feabc190876",
+          "name": "Fantom",
+          "logo": "/wp-content/uploads/2021/06/3513.png",
+          "shortname": "FTM"
+        },
+        {
+          "id": "65f49a7d06037feabc19087b",
+          "name": "stETH (Lido)",
+          "logo": "/wp-content/uploads/2021/06/8085.png",
+          "shortname": "STETH"
+        }
+      ]
+    },
+    {
+      "id": "65f49a8006037feabc1a4f1e",
+      "name": "Casumo",
+      "logo": {
+        "url": "/wp-content/uploads/2022/04/Casumo-logo.png"
+      },
+      "homepageUrl": "https://www.casumo.com/",
+      "welcomeOffer": "Up to 25 GBP Welcome Package + 20 Free Spins",
+      "rating": 4.86,
+      "coins": []
+    },
+    {
+      "id": "65f49a8106037feabc1b00b8",
+      "name": "Doggo Casino",
+      "logo": {
+        "url": "/wp-content/uploads/2022/06/doggo-casino-logo.png"
+      },
+      "homepageUrl": "https://doggocasino.com",
+      "welcomeOffer": "Up to 500 CAD Welcome Package + 200 Free Spins",
+      "rating": 4.85,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190790",
+          "name": "TRON",
+          "logo": "/wp-content/uploads/2021/06/tron.svg",
+          "shortname": "TRX"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc19079f",
+          "name": "Cardano",
+          "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+          "shortname": "ADA"
+        },
+        {
+          "id": "65f49a7d06037feabc190808",
+          "name": "Dash",
+          "logo": "/wp-content/uploads/2021/06/dash.svg",
+          "shortname": "DASH"
+        }
+      ]
+    },
+    {
+      "id": "65f49a7f06037feabc19e46a",
+      "name": "Mystake",
+      "logo": {
+        "url": "/wp-content/uploads/2022/01/mystake-logo-1.png"
+      },
+      "homepageUrl": "https://mystake.com/en",
+      "welcomeOffer": "Up to 1500 USD Welcome Package",
+      "rating": 4.83,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190790",
+          "name": "TRON",
+          "logo": "/wp-content/uploads/2021/06/tron.svg",
+          "shortname": "TRX"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc1907a9",
+          "name": "Binance USD",
+          "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+          "shortname": "BUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc1907b8",
+          "name": "USD Coin",
+          "logo": "/wp-content/uploads/2021/06/usd-coin.svg",
+          "shortname": "USDC"
+        },
+        {
+          "id": "65f49a7d06037feabc190808",
+          "name": "Dash",
+          "logo": "/wp-content/uploads/2021/06/dash.svg",
+          "shortname": "DASH"
+        },
+        {
+          "id": "65f49a7d06037feabc190817",
+          "name": "Monero",
+          "logo": "/wp-content/uploads/2021/06/monero.svg",
+          "shortname": "XMR"
+        },
+        {
+          "id": "65f49a7d06037feabc190830",
+          "name": "Solana",
+          "logo": "/wp-content/uploads/2021/06/solana.svg",
+          "shortname": "SOL"
+        }
+      ]
+    },
+    {
+      "id": "65f49a8106037feabc1ad01c",
+      "name": "Unibet",
+      "logo": {
+        "url": "/wp-content/uploads/2022/05/unibet-casino-uk-logo.png"
+      },
+      "homepageUrl": "https://www.unibet.com/",
+      "welcomeOffer": "Up to 1000 USD Welcome Package",
+      "rating": 4.83,
+      "coins": []
+    },
+    {
+      "id": "65f49a8106037feabc1af879",
+      "name": "SuperSlots",
+      "logo": {
+        "url": "/wp-content/uploads/2022/06/superslots-casino-logo.png"
+      },
+      "homepageUrl": "https://www.superslots.ag/",
+      "welcomeOffer": "Up to 6000 USD Welcome Package",
+      "rating": 4.82,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc19078b",
+          "name": "Bitcoin Cash",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg",
+          "shortname": "BCH"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc19079f",
+          "name": "Cardano",
+          "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+          "shortname": "ADA"
+        },
+        {
+          "id": "65f49a7d06037feabc1907b8",
+          "name": "USD Coin",
+          "logo": "/wp-content/uploads/2021/06/usd-coin.svg",
+          "shortname": "USDC"
+        },
+        {
+          "id": "65f49a7d06037feabc1907c7",
+          "name": "SHIBA INU",
+          "logo": "/wp-content/uploads/2021/06/shiba-inu.svg",
+          "shortname": "SHIB"
+        },
+        {
+          "id": "65f49a7d06037feabc190821",
+          "name": "Stellar",
+          "logo": "/wp-content/uploads/2021/06/stellar.svg",
+          "shortname": "XLM"
+        },
+        {
+          "id": "65f49a7d06037feabc190826",
+          "name": "Chainlink",
+          "logo": "/wp-content/uploads/2021/06/chainlink.svg",
+          "shortname": "LINK"
+        },
+        {
+          "id": "65f49a7d06037feabc190830",
+          "name": "Solana",
+          "logo": "/wp-content/uploads/2021/06/solana.svg",
+          "shortname": "SOL"
+        },
+        {
+          "id": "65f49a7d06037feabc190835",
+          "name": "Avalanche",
+          "logo": "/wp-content/uploads/2021/06/avalanche-avax.svg",
+          "shortname": "AVAX"
+        },
+        {
+          "id": "65f49a7d06037feabc19083a",
+          "name": "Polygon",
+          "logo": "/wp-content/uploads/2021/06/polygon-matic.svg",
+          "shortname": "MATIC"
+        },
+        {
+          "id": "65f49a7d06037feabc19085d",
+          "name": "APEcoin",
+          "logo": "/wp-content/uploads/2021/06/apecoin-ape.svg",
+          "shortname": "APE"
+        }
+      ]
+    },
+    {
+      "id": "65f49a7e06037feabc19499e",
+      "name": "Sportsbet.io",
+      "logo": {
+        "url": "/wp-content/uploads/2021/05/sportsbet-io-logo.png"
+      },
+      "homepageUrl": "https://sportsbet.io",
+      "welcomeOffer": "No Bonus Available",
+      "rating": 4.79,
+      "coins": [
+        {
+          "id": "65f49a7d06037feabc190772",
+          "name": "Bitcoin",
+          "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg",
+          "shortname": "BTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190777",
+          "name": "Ethereum",
+          "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg",
+          "shortname": "ETH"
+        },
+        {
+          "id": "65f49a7d06037feabc19077c",
+          "name": "Tether",
+          "logo": "/wp-content/uploads/2021/06/tether.svg",
+          "shortname": "USDT"
+        },
+        {
+          "id": "65f49a7d06037feabc190781",
+          "name": "Dogecoin",
+          "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg",
+          "shortname": "DOGE"
+        },
+        {
+          "id": "65f49a7d06037feabc190786",
+          "name": "Litecoin",
+          "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg",
+          "shortname": "LTC"
+        },
+        {
+          "id": "65f49a7d06037feabc190790",
+          "name": "TRON",
+          "logo": "/wp-content/uploads/2021/06/tron.svg",
+          "shortname": "TRX"
+        },
+        {
+          "id": "65f49a7d06037feabc190795",
+          "name": "Binance Coin",
+          "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg",
+          "shortname": "BNB"
+        },
+        {
+          "id": "65f49a7d06037feabc19079a",
+          "name": "XRP",
+          "logo": "/wp-content/uploads/2021/06/xrp.svg",
+          "shortname": "XRP"
+        },
+        {
+          "id": "65f49a7d06037feabc19079f",
+          "name": "Cardano",
+          "logo": "/wp-content/uploads/2021/06/cardano-ada.svg",
+          "shortname": "ADA"
+        },
+        {
+          "id": "65f49a7d06037feabc1907a9",
+          "name": "Binance USD",
+          "logo": "/wp-content/uploads/2021/06/binance-usd-busd.svg",
+          "shortname": "BUSD"
+        },
+        {
+          "id": "65f49a7d06037feabc19083a",
+          "name": "Polygon",
+          "logo": "/wp-content/uploads/2021/06/polygon-matic.svg",
+          "shortname": "MATIC"
+        },
+        {
+          "id": "65f49a7d06037feabc19083f",
+          "name": "The Open Network",
+          "logo": "/wp-content/uploads/2021/06/toncoin.svg",
+          "shortname": "TON"
+        },
+        {
+          "id": "65f49a7d06037feabc19086c",
+          "name": "All Sports",
+          "logo": "/wp-content/uploads/2021/06/all-sports.svg",
+          "shortname": "SOC"
+        }
+      ]
+    }
+  ]
+}
