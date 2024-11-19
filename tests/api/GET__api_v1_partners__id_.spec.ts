@@ -4,7 +4,7 @@ import { logResponse } from '../../src/logger';
 import config from "../../playwright.config";
 import fs from "fs";
 
-test('GET /api/v1/partners/{id}', async ({ request }, testInfo) => {
+test(`[${config.name.toUpperCase()}] GET /api/v1/partners/{id}`, async ({ request }, testInfo) => {
     const testData = JSON.parse(fs.readFileSync(`tests/api/testData_${process.env.TEST_ENV}/partnersIds.json`, 'utf-8'));
     const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/partners/${testData._id}`, {
         headers: {

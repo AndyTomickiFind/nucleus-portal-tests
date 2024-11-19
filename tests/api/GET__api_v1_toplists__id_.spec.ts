@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 import {logResponse} from '../../src/logger';
 import config from "../../playwright.config";
 
-test('GET /api/v1/toplists/{id}', async ({request}, testInfo) => {
+test(`[${config.name.toUpperCase()}] GET /api/v1/toplists/{id}`, async ({request}, testInfo) => {
         const uri = `https://${config.toplistServiceV1Uri}/api/v1/toplists/6719ffdfd4372e0607af539a`;
         console.log("Calling: " + uri)
         const response = await request.get(uri, {

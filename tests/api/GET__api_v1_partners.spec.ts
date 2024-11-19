@@ -3,7 +3,7 @@ import {logResponse} from '../../src/logger';
 import config from '../../playwright.config';
 import fs from 'fs';
 
-test('GET /api/v1/partners', async ({request}, testInfo) => {
+test(`[${config.name.toUpperCase()}] GET /api/v1/partners`, async ({request}, testInfo) => {
     const [response] = await Promise.all([request.get(`https://${config.toplistServiceV1Uri}/api/v1/partners`, {
         headers: {
             // Add headers if needed

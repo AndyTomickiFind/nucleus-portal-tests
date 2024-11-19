@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 import {logResponse} from '../../src/logger';
 import config from "../../playwright.config";
 
-test('GET /v1/health', async ({request}, testInfo) => {
+test(`[${config.name.toUpperCase()}] GET /v1/health`, async ({request}, testInfo) => {
     const response = await request.get(`https://${config.toplistServiceV1Uri}/v1/health`, {
         headers: {
             // Add headers if needed
