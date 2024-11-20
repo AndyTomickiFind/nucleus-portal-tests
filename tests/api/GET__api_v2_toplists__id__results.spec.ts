@@ -1,10 +1,11 @@
-
-import { test, expect } from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import {logResponse} from '../../src/logger';
 import config from "../../playwright.config";
+import fs from "fs";
 
-test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, async ({ request }, testInfo) => {
-    const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v2/toplists/6719ffdfd4372e0607af539a/results`, {
+test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, async ({request}, testInfo) => {
+    const testData = JSON.parse(fs.readFileSync(`tests/api/testData_${process.env.TEST_ENV}/toplistsIds.json`, 'utf-8'));
+    const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v2/toplists/${testData._id}/results`, {
         headers: {
             // Add headers if needed
         },
@@ -18,9 +19,8 @@ test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, async (
 
     await logResponse(response, testInfo);
 
-    expect(response.status()).toBe(200); // Customize based on the expected status code
+    expect(response.status()).toBe(200);
+    const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/results_v2.json`, 'utf-8'))
     const responseBody = await response.json();
-    expect(responseBody).toMatchObject({
-        // Add expected response body
-    });
+    expect(responseBody).toMatchObject(fullExpectedResponse);
 });

@@ -10,6 +10,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/partners`, async ({request}, te
         },
         params: {
             type: "casinos"
+            // add exchanges
         },
         data: {
             // Add body data if needed

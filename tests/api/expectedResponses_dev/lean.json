@@ -1,0 +1,313 @@
+[
+  {
+    "_id": "65f49a7e06037feabc1910ad",
+    "name": "Dunder Casino",
+    "logo": "/wp-content/uploads/2020/10/dunder-logo.png",
+    "coins": [],
+    "rating": 3,
+    "landingPageUrl": "https://www.dunder.com/"
+  },
+  {
+    "_id": "65f49a7e06037feabc195c81",
+    "name": "Avalon78 Casino",
+    "logo": "/wp-content/uploads/2021/06/Avalon78-Casino-logo.png",
+    "coins": [],
+    "rating": 4,
+    "landingPageUrl": "https://www.avalon78.com/"
+  },
+  {
+    "_id": "65f49a7e06037feabc19669e",
+    "name": "Wildz Casino",
+    "logo": "/wp-content/uploads/2021/07/wildz-logo.png",
+    "coins": [],
+    "rating": 4,
+    "landingPageUrl": "https://www.wildz.com/en/"
+  },
+  {
+    "_id": "65f49a7e06037feabc1969d2",
+    "name": "777 Casino",
+    "logo": "/wp-content/uploads/2021/07/777-casino-logo.png",
+    "coins": [],
+    "rating": 4,
+    "landingPageUrl": "https://www.777.com/"
+  },
+  {
+    "_id": "65f49a7f06037feabc1a0581",
+    "name": "4StarsGames",
+    "logo": "/wp-content/uploads/2022/01/4-Stars-Games-logo.png",
+    "coins": [],
+    "rating": 4,
+    "landingPageUrl": "https://www.4starsgames.com/en"
+  },
+  {
+    "_id": "65f49a7f06037feabc1a1f96",
+    "name": "Duelbits",
+    "logo": "/wp-content/uploads/2022/03/Duelbits-logo.png",
+    "coins": [
+      {
+        "id": "65f49a7d06037feabc190772",
+        "name": "Bitcoin",
+        "shortName": "BTC",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190777",
+        "name": "Ethereum",
+        "shortName": "ETH",
+        "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190830",
+        "name": "Solana",
+        "shortName": "SOL",
+        "logo": "/wp-content/uploads/2021/06/solana.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190781",
+        "name": "Dogecoin",
+        "shortName": "DOGE",
+        "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190786",
+        "name": "Litecoin",
+        "shortName": "LTC",
+        "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19078b",
+        "name": "Bitcoin Cash",
+        "shortName": "BCH",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+      }
+    ],
+    "rating": 4,
+    "landingPageUrl": "https://affiliates.duelbits.com/visit/?bta=35112&brand=duelbits"
+  },
+  {
+    "_id": "65f49a8006037feabc1a3ce1",
+    "name": "666 Casino",
+    "logo": "/wp-content/uploads/2022/03/666casino-logo.png",
+    "coins": [],
+    "rating": 4,
+    "landingPageUrl": "https://www.666casino.com"
+  },
+  {
+    "_id": "65f49a8006037feabc1a57a0",
+    "name": "Ditobet",
+    "logo": "/wp-content/uploads/2022/04/Ditobet-logo.png",
+    "coins": [
+      {
+        "id": "65f49a7d06037feabc190772",
+        "name": "Bitcoin",
+        "shortName": "BTC",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190777",
+        "name": "Ethereum",
+        "shortName": "ETH",
+        "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19077c",
+        "name": "Tether",
+        "shortName": "USDT",
+        "logo": "/wp-content/uploads/2021/06/tether.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19079a",
+        "name": "XRP",
+        "shortName": "XRP",
+        "logo": "/wp-content/uploads/2021/06/xrp.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc1907c2",
+        "name": "OmiseGo",
+        "shortName": "OMG",
+        "logo": "/wp-content/uploads/2021/06/omg-network.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a01",
+        "name": "Mithril",
+        "shortName": "MITH",
+        "logo": "/wp-content/uploads/2021/06/mithril-mith.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a06",
+        "name": "Metal",
+        "shortName": "MTL",
+        "logo": "/wp-content/uploads/2021/06/metal-mtl.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a0b",
+        "name": "Aion",
+        "shortName": "AION",
+        "logo": "/wp-content/uploads/2021/06/aion.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a10",
+        "name": "FunFair",
+        "shortName": "FUN",
+        "logo": "/wp-content/uploads/2021/06/funfair-fun.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a15",
+        "name": "Augur",
+        "shortName": "REP",
+        "logo": "/wp-content/uploads/2021/06/augur.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a1a",
+        "name": "Bancor",
+        "shortName": "BNT",
+        "logo": "/wp-content/uploads/2021/06/bancor-network-token-bnt.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc1908ad",
+        "name": "Enjin Coin",
+        "shortName": "ENJ",
+        "logo": "/wp-content/uploads/2021/06/enjin-coin-enj.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190786",
+        "name": "Litecoin",
+        "shortName": "LTC",
+        "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc1908a8",
+        "name": "Zilliqa",
+        "shortName": "ZIL",
+        "logo": "/wp-content/uploads/2021/06/zilliqa.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19078b",
+        "name": "Bitcoin Cash",
+        "shortName": "BCH",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190826",
+        "name": "Chainlink",
+        "shortName": "LINK",
+        "logo": "/wp-content/uploads/2021/06/chainlink.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190a1f",
+        "name": "carVertical",
+        "shortName": "CV",
+        "logo": "/wp-content/uploads/2021/06/2450.png"
+      }
+    ],
+    "rating": 4,
+    "landingPageUrl": "https://sshortly.net/SwcDea"
+  },
+  {
+    "_id": "65f49a8206037feabc1b4878",
+    "name": "500 Casino",
+    "logo": "/wp-content/uploads/2022/08/500-casino-review-1.png",
+    "coins": [
+      {
+        "id": "65f49a7d06037feabc190772",
+        "name": "Bitcoin",
+        "shortName": "BTC",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190777",
+        "name": "Ethereum",
+        "shortName": "ETH",
+        "logo": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19077c",
+        "name": "Tether",
+        "shortName": "USDT",
+        "logo": "/wp-content/uploads/2021/06/tether.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190795",
+        "name": "Binance Coin",
+        "shortName": "BNB",
+        "logo": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19079a",
+        "name": "XRP",
+        "shortName": "XRP",
+        "logo": "/wp-content/uploads/2021/06/xrp.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19079f",
+        "name": "Cardano",
+        "shortName": "ADA",
+        "logo": "/wp-content/uploads/2021/06/cardano-ada.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190830",
+        "name": "Solana",
+        "shortName": "SOL",
+        "logo": "/wp-content/uploads/2021/06/solana.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190835",
+        "name": "Avalanche",
+        "shortName": "AVAX",
+        "logo": "/wp-content/uploads/2021/06/avalanche-avax.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190781",
+        "name": "Dogecoin",
+        "shortName": "DOGE",
+        "logo": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190786",
+        "name": "Litecoin",
+        "shortName": "LTC",
+        "logo": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19078b",
+        "name": "Bitcoin Cash",
+        "shortName": "BCH",
+        "logo": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190821",
+        "name": "Stellar",
+        "shortName": "XLM",
+        "logo": "/wp-content/uploads/2021/06/stellar.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19081c",
+        "name": "EOS",
+        "shortName": "EOS",
+        "logo": "/wp-content/uploads/2021/06/eos.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc190790",
+        "name": "TRON",
+        "shortName": "TRX",
+        "logo": "/wp-content/uploads/2021/06/tron.svg"
+      },
+      {
+        "id": "65f49a7d06037feabc19083a",
+        "name": "Polygon",
+        "shortName": "MATIC",
+        "logo": "/wp-content/uploads/2021/06/polygon-matic.svg"
+      }
+    ],
+    "rating": 4,
+    "landingPageUrl": "https://500.casino/r/REF91570WBE81OJI"
+  },
+  {
+    "_id": "65f49a8206037feabc1b6164",
+    "name": "10Bet",
+    "logo": "/wp-content/uploads/2021/03/10Bet-logo.png",
+    "coins": [],
+    "rating": 3,
+    "landingPageUrl": "https://www.10bet.com/casino"
+  }
+]

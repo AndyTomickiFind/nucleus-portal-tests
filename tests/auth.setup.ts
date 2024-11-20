@@ -10,11 +10,11 @@ setup('authenticate', async ({page}) => {
         "x-tooling-bypass-auth": process.env.BYPASS_AUTH,
     });
 
-    if (fs.existsSync(authFile)) {
-        // await page.goto(`https://${config.baseUrl}/login`);
-        // await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
-        test.skip(true, 'Auth data stored, no need to setup auth');
-    } else {
+    // if (fs.existsSync(authFile)) {
+    //     // await page.goto(`https://${config.baseUrl}/login`);
+    //     // await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
+    //     test.skip(true, 'Auth data stored, no need to setup auth');
+    // } else {
         await page.goto(`https://${config.baseUrl}/login`);
         await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
         await page.fill('input[type="email"]', config.use.httpCredentials.username);
@@ -30,7 +30,7 @@ setup('authenticate', async ({page}) => {
 
         await passwordInput.fill(config.use.httpCredentials.password);
         await page.click('#passwordNext');
-    }
+    // }
 
 
     await page.waitForLoadState();
