@@ -1,6 +1,7 @@
 import {PlaywrightTestConfig} from '@playwright/test';
 import * as dotenv from 'dotenv';
 import {devices} from "playwright";
+import {spec} from "node:test/reporters";
 
 dotenv.config();
 
@@ -84,9 +85,11 @@ const defaultConfig: PlaywrightTestConfig = {
             name: 'setup',
             testMatch: /.*\.setup\.ts/
         },
+
         {
-            name: 'local-chrome',
+            name: 'sanity',
              dependencies: ['setup'],
+            testMatch: 'sanity/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'],
                 storageState: 'playwright/.auth/user.json',
@@ -94,10 +97,12 @@ const defaultConfig: PlaywrightTestConfig = {
                     width: 1600,
                     height: 800
                 },
-                launchOptions: {
-                    slowMo: 0,
-                },
             },
+        },
+
+        {
+            name: 'api',
+            testMatch: 'api/*.spec.ts',
         },
     ],
 

@@ -1666,5 +1666,3205 @@
       "overrides": [],
       "publishedDate": "2024-11-19T11:23:36.561Z"
     }
+  },
+  {
+    "_id": "673dab45b61c2692cb271793",
+    "name": "Copy of [CCN] QA Test - 1",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb27179a",
+    "name": "Copy of [CCN] QA Test - 2",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717a1",
+    "name": "Copy of [CCN] QA Test - 3",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717a9",
+    "name": "Copy of [CCN] QA Test - 4",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717af",
+    "name": "Copy of [CCN] QA Test - 5",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717b5",
+    "name": "Copy of [CCN] QA Test - 6",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717bb",
+    "name": "Copy of [CCN] QA Test - 7",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717c1",
+    "name": "Copy of [CCN] QA Test - 8",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717c7",
+    "name": "Copy of [CCN] QA Test - 9",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717cd",
+    "name": "Copy of [CCN] QA Test - 10",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717d3",
+    "name": "Copy of [CCN] QA Test - 11",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717d9",
+    "name": "Copy of [CCN] QA Test - 12",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab46b61c2692cb2717df",
+    "name": "Copy of [CCN] QA Test - 13",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab47b61c2692cb2717e5",
+    "name": "Copy of [CCN] QA Test - 14",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb2717eb",
+    "name": "Copy of [CCN] QA Test - 15",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb2717f1",
+    "name": "Copy of [CCN] QA Test - 16",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb2717f7",
+    "name": "Copy of [CCN] QA Test - 17",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb2717fd",
+    "name": "Copy of [CCN] QA Test - 18",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb271803",
+    "name": "Copy of [CCN] QA Test - 19",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb271809",
+    "name": "Copy of [CCN] QA Test - 20",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb27180f",
+    "name": "Copy of [CCN] QA Test - 21",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb271815",
+    "name": "Copy of [CCN] QA Test - 22",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb27181b",
+    "name": "Copy of [CCN] QA Test - 23",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb271821",
+    "name": "Copy of [CCN] QA Test - 24",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab48b61c2692cb271827",
+    "name": "Copy of [CCN] QA Test - 25",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb27182d",
+    "name": "Copy of [CCN] QA Test - 26",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271833",
+    "name": "Copy of [CCN] QA Test - 27",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271839",
+    "name": "Copy of [CCN] QA Test - 28",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb27183f",
+    "name": "Copy of [CCN] QA Test - 29",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271845",
+    "name": "Copy of [CCN] QA Test - 30",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb27184b",
+    "name": "Copy of [CCN] QA Test - 31",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271851",
+    "name": "Copy of [CCN] QA Test - 32",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271857",
+    "name": "Copy of [CCN] QA Test - 33",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb27185d",
+    "name": "Copy of [CCN] QA Test - 34",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271863",
+    "name": "Copy of [CCN] QA Test - 35",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271869",
+    "name": "Copy of [CCN] QA Test - 36",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb27186f",
+    "name": "Copy of [CCN] QA Test - 37",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab49b61c2692cb271875",
+    "name": "Copy of [CCN] QA Test - 38",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb27187b",
+    "name": "Copy of [CCN] QA Test - 39",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb271881",
+    "name": "Copy of [CCN] QA Test - 40",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb271887",
+    "name": "Copy of [CCN] QA Test - 41",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb27188d",
+    "name": "Copy of [CCN] QA Test - 42",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb271893",
+    "name": "Copy of [CCN] QA Test - 43",
+    "description": "",
+    "type": "casinos",
+    "subType": "casino",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb271899",
+    "name": "Copy of [CCN] QA Test - 44",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb27189f",
+    "name": "Copy of [CCN] QA Test - 45",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb2718a5",
+    "name": "Copy of [CCN] QA Test - 46",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb2718ab",
+    "name": "Copy of [CCN] QA Test - 47",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb2718b1",
+    "name": "Copy of [CCN] QA Test - 48",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb2718b7",
+    "name": "Copy of [CCN] QA Test - 49",
+    "description": "",
+    "type": "casinos",
+    "subType": "sport",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
+  },
+  {
+    "_id": "673dab4ab61c2692cb2718bd",
+    "name": "Copy of [CCN] QA Test - 50",
+    "description": "",
+    "type": "casinos",
+    "subType": "gambling",
+    "appliesToProducts": [
+      "66029fea55cb98d935e5f2ee"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "PL"
+        ],
+        "results": [
+          "66029feb55cb98d935e67a9b",
+          "66029fea55cb98d935e5f2f5",
+          "66029feb55cb98d935e63c50",
+          "66029feb55cb98d935e6b237",
+          "66029fea55cb98d935e635e8"
+        ],
+        "_id": "6718f1768d13eec2186d71c5"
+      }
+    ],
+    "defaultResults": [
+      "66029fea55cb98d935e63b85",
+      "66029fea55cb98d935e5f71e",
+      "66029fea55cb98d935e5fc90",
+      "66029fea55cb98d935e5f7eb",
+      "66029fea55cb98d935e5f31d"
+    ],
+    "placementsCount": 5,
+    "hasPublishedVersion": true,
+    "publishedVersion": {
+      "overrides": [
+        {
+          "appliesToCountries": [
+            "PL"
+          ],
+          "results": [
+            "66029feb55cb98d935e67a9b",
+            "66029fea55cb98d935e5f2f5",
+            "66029feb55cb98d935e63c50",
+            "66029feb55cb98d935e6b237",
+            "66029fea55cb98d935e635e8"
+          ],
+          "_id": "6718f1768d13eec2186d71c5"
+        }
+      ],
+      "defaultResults": [
+        "66029fea55cb98d935e63b85",
+        "66029fea55cb98d935e5f71e",
+        "66029fea55cb98d935e5fc90",
+        "66029fea55cb98d935e5f7eb",
+        "66029fea55cb98d935e5f31d"
+      ],
+      "placementsCount": 5,
+      "publishedDate": "2024-10-23T13:05:49.200Z",
+      "_id": "6718f1768d13eec2186d71e7"
+    },
+    "status": "published",
+    "createdAt": "2024-10-23T12:52:06.481Z",
+    "updatedAt": "2024-10-23T12:52:06.481Z"
   }
 ]
