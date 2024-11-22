@@ -15,10 +15,11 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
 
     test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
         await menuComponent.checkMenuItems()
-       // await menuComponent.checkDataPointItems()
+        // await menuComponent.checkDataPointItems()
     });
 
     test('check all elements', async ({NewToplistPage, components}) => {
+
         await NewToplistPage.checkNewToplistHeader("New Toplist");
         await test.step("Check horizontal dividers", async () => {
             const dividerLabels: string[] = [
@@ -29,6 +30,7 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             ];
             await components.checkDividers(dividerLabels);
         });
+
 
         await test.step("Check the rest of the elements", async () => {
             await expect(NewToplistPage.nameField).toContainText("Name *");
@@ -46,9 +48,29 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await expect(NewToplistPage.cancelButton).toHaveText("Cancel");
             await expect(NewToplistPage.createButton).toHaveText("Create");
         });
-    });
 
-    test("Check Override modal", async ({NewToplistPage, components}) => {
+        await test.step("Check Casinos Filters", async () => {
+            await NewToplistPage.advancedFiltersAccordion.click();
+            await components.checkDividers(["Promotions"]);
+            await components.checkCombobox(NewToplistPage.casinoProductsCombobox, ["Live Dealer", "Roulette", "Lotteries", "Dice"]); //incomplete
+            await components.checkCombobox(NewToplistPage.licensesCombobox, ["Malta", "Panama", "Sweden", "Not Disclosed"]);         //incomplete
+            await components.checkCombobox(NewToplistPage.softwareProvidersCombobox, ["1Spin4Win", "3Dice", "7777 Gaming", "5Men"]); //incomplete
+            await components.checkCombobox(NewToplistPage.depositMethodsCombobox, ["ATM", "7Eleven", "Aave"]);                            //incomplete
+            await components.checkCombobox(NewToplistPage.sportsCombobox, ["Age of Empires", "Archery", "Angry Birds"]);             //incomplete
+            await components.clickItemFromCombobox(NewToplistPage.appliesToProductCombobox, "ccn.com");
+            await components.checkCombobox(NewToplistPage.promotionTypesCombobox, ["Free bet", "Welcome package", "Cashback", "Free spins", "First deposit"]);
+            await NewToplistPage.anonymousPlayCheckbox.click();
+            await NewToplistPage.provablyFairCheckbox.click();
+        });
+
+        await test.step("Check New Deposit Method", async () => {
+            await NewToplistPage.newDepositMethodButton.click();
+            await components.checkDividers(["General", "Upload Logo", "Name English Translation *", "Name French Translation", "Name Portuguese Translation", "Name Spanish Translation"]);
+
+            await NewToplistPage.newDepositMethodCancelButton.click({trial: true});
+            await NewToplistPage.newDepositMethodCancelButton.click();
+        });
+
         await test.step("Check Override modal", async () => {
             await NewToplistPage.addOverrideButton.click();
 
@@ -112,32 +134,10 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await NewToplistPage.cancelOverrideListButton.click();
         });
 
-        await test.step("Check Casinos Filters", async () => {
-            await NewToplistPage.advancedFiltersAccordion.click();
-            await components.checkDividers(["Promotions"]);
-            await components.checkCombobox(NewToplistPage.casinoProductsCombobox, ["Live Dealer", "Roulette", "Lotteries", "Dice"]); //incomplete
-            await components.checkCombobox(NewToplistPage.licensesCombobox, ["Malta", "Panama", "Sweden", "Not Disclosed"]);         //incomplete
-            await components.checkCombobox(NewToplistPage.softwareProvidersCombobox, ["1Spin4Win", "3Dice", "7777 Gaming", "5Men"]); //incomplete
-            await components.checkCombobox(NewToplistPage.depositMethodsCombobox, ["ATM", "7Eleven", "Aave"]);                            //incomplete
-            await components.checkCombobox(NewToplistPage.sportsCombobox, ["Age of Empires", "Archery", "Angry Birds"]);             //incomplete
-            await components.checkCombobox(NewToplistPage.promotionTypesCombobox, ["Free bet", "Welcome package", "Cashback", "Free spins", "First deposit"]);
-            await NewToplistPage.anonymousPlayCheckbox.click();
-            await NewToplistPage.provablyFairCheckbox.click();
-        });
-
-        await test.step("Check New Deposit Method", async () => {
-            await NewToplistPage.newDepositMethodButton.click();
-            await components.checkDividers(["General", "Upload Logo", "Name English Translation *", "Name French Translation", "Name Portuguese Translation", "Name Spanish Translation"]);
-
-            await NewToplistPage.newDepositMethodCancelButton.click({trial: true});
-            await NewToplistPage.newDepositMethodCancelButton.click();
-        });
-
         //wip
-        await test.step("Check Override modal", async () => {
+        await test.step("---", async () => {
             await NewToplistPage.advancedFiltersAccordion.click();
 
         });
-
     });
 });

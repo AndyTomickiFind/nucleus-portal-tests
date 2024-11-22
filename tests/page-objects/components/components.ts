@@ -55,6 +55,7 @@ export class components extends BasePage {
 
 
     async checkCombobox(comboboxLocator: Locator, expectedItems: string[]): Promise<void> {
+
         await comboboxLocator.click();
         for (const item of expectedItems) {
             const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
