@@ -6,5 +6,5 @@ export async function logResponse(response: APIResponse, context: TestInfo): Pro
         contentType: 'application/json',
         body: responseBody.toString()
     });
-    console.log(responseBody.toString())
+   // console.log(responseBody.toString())
 }
