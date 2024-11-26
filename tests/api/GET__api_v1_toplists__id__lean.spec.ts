@@ -1,10 +1,9 @@
-
-import { test, expect } from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import {logResponse} from '../../src/logger';
 import config from "../../playwright.config";
 import fs from "fs";
 
-test(`[${config.name.toUpperCase()}] GET /api/v1/toplists/{id}/lean`, async ({ request }, testInfo) => {
+test(`[${config.name.toUpperCase()}] GET /api/v1/toplists/{id}/lean`, async ({request}, testInfo) => {
     const testData = JSON.parse(fs.readFileSync(`tests/api/testData_${process.env.TEST_ENV}/toplistsIds.json`, 'utf-8'));
     const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/toplists/${testData._id}/lean`, {
         headers: {

@@ -1,7 +1,7 @@
-import {test} from "../fixtures/fixtures";
+import {test} from "../../fixtures/fixtures";
 import {expect} from "@playwright/test";
-import config from "../../playwright.config";
-import {timeDifference} from "../common/helpers";
+import config from "../../../playwright.config";
+import {timeDifference} from "../../common/helpers";
 
 
 test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
@@ -92,7 +92,7 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
             const date = new Date();
             const expectedUpdateTime = date.toLocaleString();
             const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
-            expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time is not in 10 seconds range`).toBeLessThan(10_000);
+            expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 10 seconds`).toBeLessThan(10_000);
         });
     });
 });

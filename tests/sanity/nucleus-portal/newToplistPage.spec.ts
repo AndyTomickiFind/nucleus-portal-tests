@@ -1,6 +1,6 @@
-import {test} from "../fixtures/fixtures";
+import {test} from "../../fixtures/fixtures";
 import {expect} from "@playwright/test";
-import config from "../../playwright.config";
+import config from "../../../playwright.config";
 
 
 test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
@@ -55,7 +55,7 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await components.checkCombobox(NewToplistPage.casinoProductsCombobox, ["Live Dealer", "Roulette", "Lotteries", "Dice"]); //incomplete
             await components.checkCombobox(NewToplistPage.licensesCombobox, ["Malta", "Panama", "Sweden", "Not Disclosed"]);         //incomplete
             await components.checkCombobox(NewToplistPage.softwareProvidersCombobox, ["1Spin4Win", "3Dice", "7777 Gaming", "5Men"]); //incomplete
-            await components.checkCombobox(NewToplistPage.depositMethodsCombobox, ["ATM", "7Eleven", "Aave"]);                            //incomplete
+            await components.checkCombobox(NewToplistPage.depositMethodsCombobox, ["ATM", "7Eleven", "Aave"]);                       //incomplete
             await components.checkCombobox(NewToplistPage.sportsCombobox, ["Age of Empires", "Archery", "Angry Birds"]);             //incomplete
             await components.clickItemFromCombobox(NewToplistPage.appliesToProductCombobox, "ccn.com");
             await components.checkCombobox(NewToplistPage.promotionTypesCombobox, ["Free bet", "Welcome package", "Cashback", "Free spins", "First deposit"]);

@@ -74,7 +74,8 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */
-        actionTimeout: 8000
+        actionTimeout: 8000,
+        javaScriptEnabled: true,
     },
 
     /* Configure projects for major browsers */
@@ -86,9 +87,9 @@ const defaultConfig: PlaywrightTestConfig = {
         },
 
         {
-            name: 'sanity',
-             dependencies: ['setup'],
-            testMatch: 'sanity/*.spec.ts',
+            name: 'nucleus-portal-sanity',
+            dependencies: ['setup'],
+            testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',
                 storageState: 'playwright/.auth/user.json',
@@ -98,7 +99,19 @@ const defaultConfig: PlaywrightTestConfig = {
                 },
             },
         },
-
+        {
+            name: 'toplists-ui-sanity',
+            //dependencies: ['setup'],
+            testMatch: 'sanity/toplists-ui/*.spec.ts',
+            use: {
+                ...devices['Desktop Chrome'], channel: 'chromium',
+                storageState: 'playwright/.auth/user.json',
+                viewport: {
+                    width: 1600,
+                    height: 800
+                },
+            },
+        },
         {
             name: 'api',
             testMatch: 'api/*.spec.ts',
@@ -152,19 +165,19 @@ const devConfig: TestConfig = {
     }
 };
 
-// set config for stage
-const stageConfig: TestConfig = {
+// set config for staging
+const stagingConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
     toplistServiceV1Uri: 'staging.nucleusmvp.com',
-    name: `stage`,
+    name: `staging`,
     expect: {
         timeout: 6000
     },
     use: {
         ...defaultConfig.use,
         httpCredentials: {
-            username: process.env.STAGE_USER,
-            password: process.env.STAGE_PASS,
+            username: process.env.STAGING_USER,
+            password: process.env.STAGING_PASS,
         }
     }
 };
@@ -177,8 +190,8 @@ const config: TestConfig = {
         ? prodConfig
         : environment.toLowerCase() === 'dev'
             ? devConfig
-            : environment.toLowerCase() === 'stage'
-                ? stageConfig
+            : environment.toLowerCase() === 'staging'
+                ? stagingConfig
                 : {}),
 };
 

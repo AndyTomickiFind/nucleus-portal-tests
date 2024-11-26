@@ -10,10 +10,11 @@ function parseDate(dateString: string): Date {
         hours = 0;
     }
 
-    return new Date(year, month - 1, day, hours, minutes, seconds);
+    return new Date(year, month, day, hours, minutes, seconds);
 }
 export function timeDifference(dateStr1: string, dateStr2: string): number {
     const date1 = parseDate(dateStr1);
     const date2 = parseDate(dateStr2);
     return Math.abs(date1.getTime() - date2.getTime()); // 10 seconds
 }
+

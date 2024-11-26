@@ -50,12 +50,11 @@ export class components extends BasePage {
     }
 
     async checkAlertBanner(bannerText: string) {
-        await expect(this.alertBanner).toContainText(bannerText);
+        await expect(this.alertBanner, `Alert banner should contain text :"${bannerText}"`).toContainText(bannerText);
     }
 
 
     async checkCombobox(comboboxLocator: Locator, expectedItems: string[]): Promise<void> {
-
         await comboboxLocator.click();
         for (const item of expectedItems) {
             const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
@@ -92,10 +91,10 @@ export class components extends BasePage {
         }
     }
 
-    //check if element contains all the strings
+    //check if the element contains all the strings
     async elementContainsLabels(elementLocator: Locator, labels: string[]) {
         for (const label of labels) {
-            await expect(elementLocator).toContainText(label);
+            await expect(elementLocator, `Element should contain text:"${label}"`).toContainText(label);
         }
     }
 }

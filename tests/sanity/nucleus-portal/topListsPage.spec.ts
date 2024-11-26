@@ -1,6 +1,6 @@
-import {test} from "../fixtures/fixtures";
+import {test} from "../../fixtures/fixtures";
 import {expect} from "@playwright/test";
-import config from "../../playwright.config";
+import config from "../../../playwright.config";
 
 test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
@@ -129,7 +129,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
     });
 
     test('pagination and Data Grid items', async ({components}) => {
-        test.skip(process.env.TEST_ENV === 'stage', 'Not enough Toplists in staging env to test pagination');
+        test.skip(process.env.TEST_ENV === 'staging', 'Not enough Toplists in staging env to test pagination');
 
         await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
         await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");

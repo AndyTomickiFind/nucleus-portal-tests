@@ -3,7 +3,7 @@ import {BasePage} from "../base.page";
 
 
 async function verifyAndClickMenuItem(menuItem: Locator, expectedText: string): Promise<void> {
-    await expect(menuItem).toContainText(expectedText);
+    await expect(menuItem, `Menu item should contain text:"${expectedText}"`).toContainText(expectedText);
     await menuItem.click({trial: true});
 }
 
