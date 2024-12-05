@@ -26,15 +26,7 @@ test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () =
             }
         });
         const responseBody = await response.json();
-        const desiredField = responseBody.sites[0].name;
-
-        console.log('Desired Field:', desiredField);
-
-        await expect(ToplistsUI.toplistContainer).toBeVisible();
-        await expect(ToplistsUI.toplistItem, "There must be 10 items in the toplist").toHaveCount(10);
-
-        const item = await ToplistsUI.nthToplistItem(1);
-        await expect(item).toContainText(desiredField);
+        expect(ToplistsUI.compareExpectedToActualElements(responseBody.sites)).toBeTruthy();
     });
 
 
