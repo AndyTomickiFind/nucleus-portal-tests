@@ -12,6 +12,7 @@ function parseDate(dateString: string): Date {
 
     return new Date(year, month, day, hours, minutes, seconds);
 }
+
 export function timeDifference(dateStr1: string, dateStr2: string): number {
     const date1 = parseDate(dateStr1);
     const date2 = parseDate(dateStr2);
