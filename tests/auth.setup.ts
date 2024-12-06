@@ -1,7 +1,7 @@
-import {expect, test, test as setup} from '@playwright/test';
+import {test as setup} from '@playwright/test';
 import * as path from "node:path";
 import config from "../playwright.config";
-import * as fs from "node:fs";
+import {getOTP} from "./totpGenerator";
 
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');
 
@@ -10,28 +10,20 @@ setup('authenticate', async ({page}) => {
         "x-tooling-bypass-auth": process.env.BYPASS_AUTH,
     });
 
-    // if (fs.existsSync(authFile)) {
-    //     // await page.goto(`https://${config.baseUrl}/login`);
-    //     // await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
-    //     test.skip(true, 'Auth data stored, no need to setup auth');
-    // } else {
-        await page.goto(`https://${config.baseUrl}/login`);
-        await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
-        await page.fill('input[type="email"]', config.use.httpCredentials.username);
-        await page.click('#identifierNext');
+    await page.goto(`https://${config.baseUrl}/login`);
+    await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
+    await page.fill('input[type="email"]', config.use.httpCredentials.username);
+    await page.click('#identifierNext');
 
-        console.log('Detecting capcha...');
-        const passwordInput = page.locator('input[type="password"]').first();
-        if (await page.locator('//img[@id="captchaimg"]').count() > 0) { // wait for captcha
-            console.log('Captcha detected!');
-            await expect(passwordInput).toBeVisible({timeout: 60_000})
-            console.log('Captcha solved');
-        }
+    const passwordInput = page.locator('input[type="password"]').first();
 
-        await passwordInput.fill(config.use.httpCredentials.password);
-        await page.click('#passwordNext');
-    // }
-
+    await passwordInput.fill(config.use.httpCredentials.password);
+    await page.click('#passwordNext');
+    await page.locator("//span[.='Try another way']").click();
+    await page.locator("//div[.='Get a verification code from the Google Authenticator app']").first().click();
+    const otp = await getOTP();
+    await page.getByLabel("Enter code").fill(otp);
+    await page.getByLabel("Enter code").press("Enter");
 
     await page.waitForLoadState();
     await page.waitForSelector('//*[.="Hello Nucleus"]');

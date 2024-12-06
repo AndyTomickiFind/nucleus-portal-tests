@@ -13,6 +13,7 @@ test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () =
     });
 
     test('Check Toplist for visibility of elements', async ({ToplistsUI, request}) => {
+        await expect(ToplistsUI.page).toHaveScreenshot();
         const id = "673efb7fdaa386be8b2edc89"; //temporary - staging toplist
         const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/toplists/${id}/results`, {
             headers: {
