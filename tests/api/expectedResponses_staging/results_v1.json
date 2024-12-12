@@ -85,7 +85,7 @@
         "Nepali",
         "Polish",
         "Portuguese",
-        "Romanian",
+        "Moldovan",
         "Russian",
         "Sindhi",
         "Northern Sami",
@@ -510,8 +510,7 @@
       "licenses": [
         "United Kingdom",
         "Ireland",
-        "Gibraltar",
-        "Gibraltar Gambling Commission"
+        "Gibraltar"
       ],
       "yearFounded": 2002,
       "TC": "https://www.32red.com/terms-and-conditions",
@@ -1503,13 +1502,14 @@
     {
       "id": "66029fee55cb98d935e8341e",
       "name": "10Bet",
+      "description": "Text",
       "featuredSnippet": "",
       "logo": {
         "url": "/wp-content/uploads/2021/03/10Bet-logo.png"
       },
       "landingPageUrl": "https://www.10bet.com/casino",
       "finalRating": 3.15,
-      "welcomeOffer": "",
+      "welcomeOffer": "Várias promoções",
       "licenses": [
         "Malta",
         "United Kingdom",
@@ -1519,58 +1519,46 @@
       "TC": "https://www.10bet.com/casino",
       "tableDesign": "",
       "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Live Dealer",
+        "Blackjack",
         "Baccarat",
         "Bingo",
-        "Blackjack",
-        "Craps",
-        "Crash",
-        "Dice",
-        "Financial",
-        "HiLo",
-        "Jackpot",
         "Keno",
-        "Limbo",
-        "Live Dealer",
+        "Roulette",
         "Lotteries",
+        "Craps",
+        "Scratchcards",
+        "Poker",
+        "Dice",
+        "Crash",
         "Mines",
         "Plinko",
-        "Poker",
-        "Roulette",
-        "Scratchcards",
-        "Slots",
-        "Video Poker"
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot"
       ],
       "numberCasinoGames": 7,
       "languages": [
         "English",
-        "German",
         "Norwegian",
+        "German",
         "Swedish"
       ],
       "supportLanguages": [
         "English",
+        "Norwegian",
+        "German",
         "Swedish"
       ],
       "playWithFiat": [
-        {
-          "name": "United States Dollar",
-          "iso": "USD",
-          "image": {
-            "url": "/wp-content/uploads/2020/07/usd.svg"
-          }
-        },
         {
           "name": "Euro",
           "iso": "EUR",
           "image": {
             "url": "/wp-content/uploads/2020/07/eur.svg"
-          }
-        },
-        {
-          "name": "British pound",
-          "iso": "GBP",
-          "image": {
-            "url": "/wp-content/uploads/2020/07/gbp.svg"
           }
         },
         {
@@ -1581,15 +1569,29 @@
           }
         },
         {
-          "name": "Swedish krona",
-          "iso": "SEK",
+          "name": "Norwegian krone",
+          "iso": "NOK",
           "image": {
             "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
           }
         },
         {
-          "name": "Norwegian krone",
-          "iso": "NOK",
+          "name": "United States Dollar",
+          "iso": "USD",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/usd.svg"
+          }
+        },
+        {
+          "name": "British pound",
+          "iso": "GBP",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/gbp.svg"
+          }
+        },
+        {
+          "name": "Swedish krona",
+          "iso": "SEK",
           "image": {
             "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
           }
@@ -1616,7 +1618,15 @@
           }
         }
       ],
-      "depositMethodsCrypto": [],
+      "depositMethodsCrypto": [
+        {
+          "name": "0Chain",
+          "iso": "ZCN",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/2882.png"
+          }
+        }
+      ],
       "homepageImageDesktop": {
         "url": "/wp-content/uploads/2021/03/10bet-review.png"
       },

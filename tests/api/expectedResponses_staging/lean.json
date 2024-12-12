@@ -448,7 +448,14 @@
     "_id": "66029fee55cb98d935e8341e",
     "name": "10Bet",
     "logo": "/wp-content/uploads/2021/03/10Bet-logo.png",
-    "coins": [],
+    "coins": [
+      {
+        "id": "66852242741301b5cf126356",
+        "name": "0Chain",
+        "shortName": "ZCN",
+        "logo": "/wp-content/uploads/2021/06/2882.png"
+      }
+    ],
     "rating": 3,
     "landingPageUrl": "https://www.10bet.com/casino"
   },
