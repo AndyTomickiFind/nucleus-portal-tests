@@ -178,8 +178,9 @@ const stagingConfig: TestConfig = {
         httpCredentials: {
             username: process.env.STAGING_USER,
             password: process.env.STAGING_PASS,
-        }
+        },
     }
+
 };
 
 

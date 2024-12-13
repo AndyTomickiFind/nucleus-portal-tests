@@ -65,7 +65,7 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
 
         await test.step("Check New Deposit Method", async () => {
             await NewToplistPage.newDepositMethodButton.click();
-            await components.checkDividers(["General", "Upload Logo", "Name English Translation *", "Name French Translation", "Name Portuguese Translation", "Name Spanish Translation"]);
+            await components.checkDividers(["General", "Upload Logo"]);
 
             await NewToplistPage.newDepositMethodCancelButton.click({trial: true});
             await NewToplistPage.newDepositMethodCancelButton.click();

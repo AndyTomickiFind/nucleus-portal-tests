@@ -35,7 +35,7 @@ export class components extends BasePage {
         this.rowsPerPageDropdown = page.locator("//p[.='Rows per page:']/..//*[@role='combobox']");
         this.nextPageButton = page.locator("//button[@aria-label='Go to next page']");
         this.previousPageButton = page.locator("//button[@aria-label='Go to previous page']");
-        this.displayedRowsLabel = page.locator("//p[@class='MuiTablePagination-displayedRows mui-1chpzqh']");
+        this.displayedRowsLabel = page.locator("//p[contains(@class, 'MuiTablePagination-displayedRows')]");
         this.newButton = page.locator("//button[@aria-label='New']");
         this.divider = page.getByRole('separator');
     }
