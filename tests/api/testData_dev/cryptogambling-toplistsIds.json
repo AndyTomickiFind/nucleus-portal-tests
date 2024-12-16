@@ -1,0 +1,84 @@
+{
+  "_id": "673c70a12c6d59f55778124f",
+  "name": "[QA] CryptoGambling Toplist",
+  "description": "Used by QA robots - Please do not modify",
+  "type": "casinos",
+  "subType": "default",
+  "appliesToProducts": [
+    "65f49a7d06037feabc191082"
+  ],
+  "overrides": [
+    {
+      "appliesToCountries": [
+        "FR"
+      ],
+      "results": [
+        "65f49a7e06037feabc191385",
+        "65f49a8006037feabc1a8723",
+        "65f49a7e06037feabc192565",
+        "65f49a8106037feabc1adc74",
+        "65f49a7f06037feabc1a20e2",
+        "65f49a8106037feabc1aefef",
+        "65f49a7e06037feabc1914ae",
+        "65f49a7e06037feabc1910ad",
+        "6745cc7a6abab55e5472ea48",
+        "65f49a7e06037feabc191085"
+      ],
+      "_id": "6756fba05e46917e95d6637d"
+    }
+  ],
+  "defaultResults": [
+    "675800b45e46917e95db9973",
+    "6745ef3852b22da56448372c",
+    "65f49a7f06037feabc19a277",
+    "65f49a7f06037feabc199ca5",
+    "65f49a8206037feabc1b4878",
+    "65f49a7f06037feabc199bfa",
+    "65f49a7e06037feabc19788b",
+    "65f49a7e06037feabc194ae5",
+    "65f49a7e06037feabc192a64",
+    "65f49a7e06037feabc195373"
+  ],
+  "placementsCount": 10,
+  "hasPublishedVersion": true,
+  "status": "published",
+  "createdAt": "2024-11-19T11:04:01.347Z",
+  "updatedAt": "2024-12-16T07:49:50.135Z",
+  "publishedVersion": {
+    "_id": "673c70a12c6d59f557781274",
+    "placementsCount": 10,
+    "defaultResults": [
+      "675800b45e46917e95db9973",
+      "6745ef3852b22da56448372c",
+      "65f49a7f06037feabc19a277",
+      "65f49a7f06037feabc199ca5",
+      "65f49a8206037feabc1b4878",
+      "65f49a7f06037feabc199bfa",
+      "65f49a7e06037feabc19788b",
+      "65f49a7e06037feabc194ae5",
+      "65f49a7e06037feabc192a64",
+      "65f49a7e06037feabc195373"
+    ],
+    "overrides": [
+      {
+        "appliesToCountries": [
+          "FR"
+        ],
+        "results": [
+          "65f49a7e06037feabc191385",
+          "65f49a8006037feabc1a8723",
+          "65f49a7e06037feabc192565",
+          "65f49a8106037feabc1adc74",
+          "65f49a7f06037feabc1a20e2",
+          "65f49a8106037feabc1aefef",
+          "65f49a7e06037feabc1914ae",
+          "65f49a7e06037feabc1910ad",
+          "6745cc7a6abab55e5472ea48",
+          "65f49a7e06037feabc191085"
+        ],
+        "_id": "6756fba05e46917e95d6637d"
+      }
+    ],
+    "publishedDate": "2024-12-10T14:45:34.882Z"
+  }
+}
