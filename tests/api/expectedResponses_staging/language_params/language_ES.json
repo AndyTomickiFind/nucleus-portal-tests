@@ -1,0 +1,5868 @@
+{
+  "sites": [
+    {
+      "id": "67597158cb78abdeed013753",
+      "name": "[QA] Nucleus Casino - Fully populated casino",
+      "description": "[staging.cryptogambling.ca] Entre em um mundo de emoção e possibilidades infinitas em nosso cassino online. Com uma ampla seleção de jogos emocionantes, incluindo caça-níqueis, jogos de mesa e opções de crupiê ao vivo, trazemos a experiência de jogo definitiva para você. Aproveite transações seguras e fáceis, bônus generosos e promoções criadas para maximizar sua diversão. Nossa plataforma está disponível 24 horas por dia, permitindo que você jogue quando e onde quiser. Junte-se a nós hoje e descubra a combinação perfeita de diversão, segurança e entretenimento.",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/images/logos/1733914956178_6759714ccb78abdeed013734.webp"
+      },
+      "landingPageUrl": "staging.cryptogambling.ca/dimension",
+      "finalRating": 5,
+      "welcomeOffer": "Trusted, Secure & Crypto Friendly",
+      "licenses": [
+        "United Kingdom",
+        "Schleswig-Holstein",
+        "Estonia",
+        "France",
+        "Poland",
+        "Spain"
+      ],
+      "yearFounded": 2024,
+      "TC": "https://nucleuscasino.online/termsandconditions",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Blackjack",
+        "Test Product"
+      ],
+      "numberCasinoGames": 665,
+      "languages": [
+        "Inglés",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Polaco"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Polaco"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf85",
+          "name": "Euro",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/eur.svg"
+          },
+          "iso": "EUR"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf99",
+          "name": "United States Dollar",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/usd.svg"
+          },
+          "iso": "USD"
+        },
+        {
+          "id": "66029fe855cb98d935e5d07f",
+          "name": "Polish złoty",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "PLN"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "675974aacb78abdeed02140e",
+          "name": "[QA] Coin with priority 66666666",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin66666666",
+          "priority": 66666666
+        },
+        {
+          "id": "6759746ecb78abdeed013917",
+          "name": "[QA] Coin with priority 100",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin100",
+          "priority": 100
+        },
+        {
+          "id": "6759748bcb78abdeed0213e6",
+          "name": "[QA] Coin with priority 99",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin99",
+          "priority": 99
+        },
+        {
+          "id": "6759748fcb78abdeed0213eb",
+          "name": "[QA] Coin with priority 98",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin98",
+          "priority": 98
+        },
+        {
+          "id": "67597493cb78abdeed0213f0",
+          "name": "[QA] Coin with priority 97",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin97",
+          "priority": 97
+        },
+        {
+          "id": "67597497cb78abdeed0213f5",
+          "name": "[QA] Coin with priority 96",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin96",
+          "priority": 96
+        },
+        {
+          "id": "6759749bcb78abdeed0213fa",
+          "name": "[QA] Coin with priority 95",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin95",
+          "priority": 95
+        },
+        {
+          "id": "6759749ecb78abdeed0213ff",
+          "name": "[QA] Coin with priority 94",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin94",
+          "priority": 94
+        },
+        {
+          "id": "67597863e094bdb6ab450872",
+          "name": "[QA] Coin with priority 55",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin55",
+          "priority": 55
+        },
+        {
+          "id": "675974a3cb78abdeed021404",
+          "name": "[QA] Coin with priority 50",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin50",
+          "priority": 50
+        },
+        {
+          "id": "675974a7cb78abdeed021409",
+          "name": "[QA] Coin with priority 20",
+          "image": {
+            "url": "nologo"
+          },
+          "iso": "QACoin20",
+          "priority": 20
+        },
+        {
+          "id": "66852255741301b5cf126659",
+          "name": "100xCoin",
+          "image": {
+            "url": "/wp-content/uploads/2023/07/100x.png"
+          },
+          "iso": "100X"
+        },
+        {
+          "id": "66852220741301b5cf125de3",
+          "name": "1inch",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/8104.png"
+          },
+          "iso": "1INCH"
+        },
+        {
+          "id": "66852233741301b5cf1260da",
+          "name": "Aergo",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/3637.png"
+          },
+          "iso": "AERGO"
+        },
+        {
+          "id": "66852242741301b5cf12636b",
+          "name": "AllianceBlock",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/6957.png"
+          },
+          "iso": "ALBT"
+        },
+        {
+          "id": "6685226a741301b5cf126998",
+          "name": "HBTC Captain Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/6965.png"
+          },
+          "iso": "HBC"
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/images/logos/1733914964453_67597154cb78abdeed013738.webp"
+      },
+      "homepageImageMobile": {
+        "url": "/images/logos/1733914966521_67597156cb78abdeed01373a.webp"
+      },
+      "position": 1,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5f0cb",
+          "name": "Angry Birds",
+          "logo": "/wp-content/uploads/2022/07/angry-birds.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f0f8",
+          "name": "Age of Empires IV",
+          "logo": "/wp-content/uploads/2022/03/age-of-empires-iv.svg"
+        }
+      ],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": "No promo"
+    },
+    {
+      "id": "66029fea55cb98d935e63238",
+      "name": "Betonline",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2021/06/Betonline-logo.png"
+      },
+      "landingPageUrl": "https://record.commissionkings.ag/_z_XHkpHrLjYTMKfio_tvj2Nd7ZgqdRLk/1/",
+      "finalRating": 4.64,
+      "welcomeOffer": "Up to 3000 USD Welcome Package",
+      "licenses": [
+        "Panama"
+      ],
+      "yearFounded": 2004,
+      "TC": "https://classic-help.betonline.ag/knowledge-base/terms-and-conditions/",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 500,
+      "languages": [
+        "Inglés"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Español"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf99",
+          "name": "United States Dollar",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/usd.svg"
+          },
+          "iso": "USD"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c6",
+          "name": "USD Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/usd-coin.svg"
+          },
+          "iso": "USDC",
+          "priority": 96
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e9ad",
+          "name": "Cardano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          "iso": "ADA",
+          "priority": 94
+        },
+        {
+          "id": "66029fe955cb98d935e5ea3e",
+          "name": "Solana",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/solana.svg"
+          },
+          "iso": "SOL",
+          "priority": 93
+        },
+        {
+          "id": "66029fe955cb98d935e5ea43",
+          "name": "Avalanche",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/avalanche-avax.svg"
+          },
+          "iso": "AVAX",
+          "priority": 91
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea4d",
+          "name": "Polygon",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polygon-matic.svg"
+          },
+          "iso": "MATIC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9d5",
+          "name": "SHIBA INU",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/shiba-inu.svg"
+          },
+          "iso": "SHIB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2f",
+          "name": "Stellar",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/stellar.svg"
+          },
+          "iso": "XLM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2021/06/betonline-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2021/06/betonline-review-m.png"
+      },
+      "position": 2,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee77",
+          "name": "Waterpolo",
+          "logo": "/wp-content/uploads/2021/06/waterpollo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec3",
+          "name": "Rainbow Six",
+          "logo": "/wp-content/uploads/2021/06/rainbow-six.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed0",
+          "name": "Carreras de Caballos",
+          "logo": "/wp-content/uploads/2021/06/horse-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed4",
+          "name": "Lacrosse",
+          "logo": "/wp-content/uploads/2021/06/lacrosse.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed8",
+          "name": "Esquí alpino",
+          "logo": "/wp-content/uploads/2021/06/alpine-skiing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eee8",
+          "name": "Surf",
+          "logo": "/wp-content/uploads/2021/06/surfing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefe",
+          "name": "Biatlón",
+          "logo": "/wp-content/uploads/2021/06/biathlon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef66",
+          "name": "Valorant",
+          "logo": "/wp-content/uploads/2021/06/valorant.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6b",
+          "name": "Carreras de motociclismo",
+          "logo": "/wp-content/uploads/2021/06/motorcycle-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa3",
+          "name": "Stock Car Racing",
+          "logo": "/wp-content/uploads/2021/06/stock-car-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa7",
+          "name": "FIFA",
+          "logo": "/wp-content/uploads/2021/06/fifa.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5effe",
+          "name": "NBA 2K",
+          "logo": "/wp-content/uploads/2021/08/nba-2k.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f016",
+          "name": "Age of Empires",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5f02a",
+          "name": "Wrestling",
+          "logo": "/wp-content/uploads/2021/06/wrestling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f02e",
+          "name": "Artes Marciales",
+          "logo": "/wp-content/uploads/2021/06/martial-arts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f032",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2021/11/lottery.svg"
+        }
+      ],
+      "endToEndCrypto": false,
+      "anonymousPlay": false,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee38",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2023/06/poker-icon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fea55cb98d935e62d5a",
+      "name": "Cloudbet",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2021/06/cloudbet-logo-1.png"
+      },
+      "landingPageUrl": "https://www.cloudbet.com/en/landing/cryptobetting/?af_token=bb8af9ed6a06f7285216258ebd165ae0",
+      "finalRating": 4.87,
+      "welcomeOffer": "Up to 50000 USD Welcome Package",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2013,
+      "TC": "https://www.cloudbet.com/en/help/terms",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 2000,
+      "languages": [
+        "Inglés",
+        "Alemán",
+        "Sueco",
+        "Japonés",
+        "Italiano",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Húngaro",
+        "Polaco",
+        "Ruso",
+        "Turco",
+        "Indonesio",
+        "Coreano",
+        "Tailandés",
+        "Neerlandés",
+        "Griego"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Alemán",
+        "Sueco",
+        "Japonés",
+        "Italiano",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Húngaro",
+        "Polaco",
+        "Ruso",
+        "Turco",
+        "Chino (Mandarín)",
+        "Indonesio",
+        "Tailandés",
+        "Neerlandés",
+        "Griego"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf99",
+          "name": "United States Dollar",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/usd.svg"
+          },
+          "iso": "USD"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf9e",
+          "name": "Japanese yen",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/jpy.svg"
+          },
+          "iso": "JPY"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c6",
+          "name": "USD Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/usd-coin.svg"
+          },
+          "iso": "USDC",
+          "priority": 96
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e9ad",
+          "name": "Cardano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          "iso": "ADA",
+          "priority": 94
+        },
+        {
+          "id": "66029fe955cb98d935e5ea3e",
+          "name": "Solana",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/solana.svg"
+          },
+          "iso": "SOL",
+          "priority": 93
+        },
+        {
+          "id": "66029fe955cb98d935e5ea43",
+          "name": "Avalanche",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/avalanche-avax.svg"
+          },
+          "iso": "AVAX",
+          "priority": 91
+        },
+        {
+          "id": "66029fe955cb98d935e5e9cb",
+          "name": "Polkadot",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polkadot-dot.svg"
+          },
+          "iso": "DOT",
+          "priority": 90
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5eaa7",
+          "name": "Algorand",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/algorand-algo.svg"
+          },
+          "iso": "ALGO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9b7",
+          "name": "Binance USD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-usd-busd.svg"
+          },
+          "iso": "BUSD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea34",
+          "name": "Chainlink",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/chainlink.svg"
+          },
+          "iso": "LINK",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea1b",
+          "name": "Dai",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/dai.svg"
+          },
+          "iso": "DAI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea16",
+          "name": "Dash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/dash.svg"
+          },
+          "iso": "DASH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2a",
+          "name": "EOS",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/eos.svg"
+          },
+          "iso": "EOS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea0c",
+          "name": "Ethereum Classic",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-classic-etc.svg"
+          },
+          "iso": "ETC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eab1",
+          "name": "Fantom",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/3513.png"
+          },
+          "iso": "FTM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eab6",
+          "name": "PAX Gold",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/4705.png"
+          },
+          "iso": "PAXG",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea4d",
+          "name": "Polygon",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polygon-matic.svg"
+          },
+          "iso": "MATIC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9d5",
+          "name": "SHIBA INU",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/shiba-inu.svg"
+          },
+          "iso": "SHIB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2f",
+          "name": "Stellar",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/stellar.svg"
+          },
+          "iso": "XLM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eabb",
+          "name": "stETH (Lido)",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/8085.png"
+          },
+          "iso": "STETH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaac",
+          "name": "Terra Classic USD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/terra-classic-usd.svg"
+          },
+          "iso": "USTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea98",
+          "name": "Uniswap",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/uniswap.svg"
+          },
+          "iso": "UNI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaa2",
+          "name": "USDP Stablecoin",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/usdp.png"
+          },
+          "iso": "USDP",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea11",
+          "name": "Zcash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/zcash.svg"
+          },
+          "iso": "ZEC",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2021/06/cloudbet-review-2.webp"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2021/06/cloudbet-review-1.webp"
+      },
+      "position": 3,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee77",
+          "name": "Waterpolo",
+          "logo": "/wp-content/uploads/2021/06/waterpollo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee88",
+          "name": "Fútbol Sala",
+          "logo": "/wp-content/uploads/2021/06/futsal.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee98",
+          "name": "MMA",
+          "logo": "/wp-content/uploads/2021/06/mma.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebb",
+          "name": "Motor",
+          "logo": "/wp-content/uploads/2021/06/motorsports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec3",
+          "name": "Rainbow Six",
+          "logo": "/wp-content/uploads/2021/06/rainbow-six.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eecc",
+          "name": "Baloncesto Playa",
+          "logo": "/wp-content/uploads/2021/06/beach-volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed0",
+          "name": "Carreras de Caballos",
+          "logo": "/wp-content/uploads/2021/06/horse-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef1",
+          "name": "Greyhound",
+          "logo": "/wp-content/uploads/2021/11/greyhound.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefa",
+          "name": "Badmintón",
+          "logo": "/wp-content/uploads/2021/06/badminton.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0f",
+          "name": "Hockey sobre hierba",
+          "logo": "/wp-content/uploads/2021/06/field-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef2f",
+          "name": "Ajedrez",
+          "logo": "/wp-content/uploads/2021/06/chess.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef4a",
+          "name": "Tenis Virtual",
+          "logo": "/wp-content/uploads/2022/02/virtual-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef4f",
+          "name": "Baloncesto Virtual",
+          "logo": "/wp-content/uploads/2022/03/virtual-basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef5c",
+          "name": "King of Glory",
+          "logo": "/wp-content/uploads/2021/06/king-of-glory.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef61",
+          "name": "Rocket League",
+          "logo": "/wp-content/uploads/2021/06/rocket-league.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef66",
+          "name": "Valorant",
+          "logo": "/wp-content/uploads/2021/06/valorant.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef7d",
+          "name": "Fútbol Virtual",
+          "logo": "/wp-content/uploads/2021/12/virtual-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef81",
+          "name": "Sumo",
+          "logo": "/wp-content/uploads/2022/09/sumo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef91",
+          "name": "Fútbol Playa",
+          "logo": "/wp-content/uploads/2021/06/beach-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa7",
+          "name": "FIFA",
+          "logo": "/wp-content/uploads/2021/06/fifa.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efac",
+          "name": "Bandy",
+          "logo": "/wp-content/uploads/2021/06/bandy.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb0",
+          "name": "Squash",
+          "logo": "/wp-content/uploads/2021/06/squash.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efef",
+          "name": "Wild Rift",
+          "logo": "/wp-content/uploads/2022/07/wild-rift.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5effe",
+          "name": "NBA 2K",
+          "logo": "/wp-content/uploads/2021/08/nba-2k.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f003",
+          "name": "Starcraft",
+          "logo": "/wp-content/uploads/2021/06/starcraft.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f008",
+          "name": "Kabaddi",
+          "logo": "/wp-content/uploads/2021/06/kabaddi.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f00c",
+          "name": "Heroes of the Storm",
+          "logo": "/wp-content/uploads/2021/09/heroes-of-the-storm.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f011",
+          "name": "World of Warcraft",
+          "logo": "/wp-content/uploads/2022/03/world-of-warcraft.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f016",
+          "name": "Age of Empires",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5f01b",
+          "name": "Brawl Stars",
+          "logo": "/wp-content/uploads/2023/01/brawl-stars.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f020",
+          "name": "Virtual Cricket",
+          "logo": "/wp-content/uploads/2023/02/virtual-cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f025",
+          "name": "Virtual Baseball",
+          "logo": "/wp-content/uploads/2023/02/virtual-baseball.svg"
+        }
+      ],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029feb55cb98d935e65b00",
+      "name": "ThunderPick",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2021/09/Thunderpick-logo.png"
+      },
+      "landingPageUrl": "https://go.thunder.partners/visit/?bta=35194&nci=5519&campaign=WELCOME",
+      "finalRating": 4.77,
+      "welcomeOffer": "Up to 600 EUR Welcome Package",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2017,
+      "TC": "https://thunderpick.com/en/content/legal",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 3500,
+      "languages": [
+        "Inglés",
+        "Alemán",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Ruso",
+        "Turco",
+        "Chino (Mandarín)"
+      ],
+      "supportLanguages": [
+        "Inglés"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf85",
+          "name": "Euro",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/eur.svg"
+          },
+          "iso": "EUR"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e9ad",
+          "name": "Cardano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          "iso": "ADA",
+          "priority": 94
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2021/08/thunderpick-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2021/09/thunderpick-review-m.png"
+      },
+      "position": 4,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee88",
+          "name": "Fútbol Sala",
+          "logo": "/wp-content/uploads/2021/06/futsal.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb1",
+          "name": "Overwatch",
+          "logo": "/wp-content/uploads/2021/06/overwatch.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec3",
+          "name": "Rainbow Six",
+          "logo": "/wp-content/uploads/2021/06/rainbow-six.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeec",
+          "name": "eSports",
+          "logo": "/wp-content/uploads/2021/08/esports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefa",
+          "name": "Badmintón",
+          "logo": "/wp-content/uploads/2021/06/badminton.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef5c",
+          "name": "King of Glory",
+          "logo": "/wp-content/uploads/2021/06/king-of-glory.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef61",
+          "name": "Rocket League",
+          "logo": "/wp-content/uploads/2021/06/rocket-league.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef66",
+          "name": "Valorant",
+          "logo": "/wp-content/uploads/2021/06/valorant.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef8c",
+          "name": "eFútbol",
+          "logo": "/wp-content/uploads/2021/06/esoccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef95",
+          "name": "eBaloncesto",
+          "logo": "/wp-content/uploads/2021/08/ebasketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa7",
+          "name": "FIFA",
+          "logo": "/wp-content/uploads/2021/06/fifa.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efac",
+          "name": "Bandy",
+          "logo": "/wp-content/uploads/2021/06/bandy.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb0",
+          "name": "Squash",
+          "logo": "/wp-content/uploads/2021/06/squash.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb4",
+          "name": "Arena of Valor",
+          "logo": "/wp-content/uploads/2022/03/arena-of-valor.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efc8",
+          "name": "Starcraft 2",
+          "logo": "/wp-content/uploads/2021/06/starcraft-2.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efef",
+          "name": "Wild Rift",
+          "logo": "/wp-content/uploads/2022/07/wild-rift.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eff9",
+          "name": "Mobile Legends",
+          "logo": "/wp-content/uploads/2022/07/mobile-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5effe",
+          "name": "NBA 2K",
+          "logo": "/wp-content/uploads/2021/08/nba-2k.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f00c",
+          "name": "Heroes of the Storm",
+          "logo": "/wp-content/uploads/2021/09/heroes-of-the-storm.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f016",
+          "name": "Age of Empires",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5f02e",
+          "name": "Artes Marciales",
+          "logo": "/wp-content/uploads/2021/06/martial-arts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f045",
+          "name": "Warcraft 3",
+          "logo": "/wp-content/uploads/2021/06/warcraft-4.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f0ea",
+          "name": "Curling",
+          "logo": "/wp-content/uploads/2021/06/curling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f0ee",
+          "name": "Hearthstone",
+          "logo": "/wp-content/uploads/2021/09/hearthstone.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f0f3",
+          "name": "Fortnite",
+          "logo": "/wp-content/uploads/2021/09/fortnite.svg"
+        }
+      ],
+      "endToEndCrypto": false,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029feb55cb98d935e68225",
+      "name": "BC.Game",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2021/11/BC-game-logo.png"
+      },
+      "landingPageUrl": "https://partnerbcgame.com/d9f308ed2",
+      "finalRating": 4.87,
+      "welcomeOffer": "Up to 20000 USD Welcome Package",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2017,
+      "TC": "https://bc.game/help/terms-service",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 7000,
+      "languages": [
+        "Inglés",
+        "Finés",
+        "Alemán",
+        "Japonés",
+        "Italiano",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Polaco",
+        "Ruso",
+        "Turco",
+        "Vietnamita",
+        "Indonesio",
+        "Coreano",
+        "Hindi",
+        "Árabe",
+        "Tailandés",
+        "Persa1",
+        "Ucraniano",
+        "Malayo",
+        "Filipino",
+        "Birmano",
+        "Tamil",
+        "Marathi"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Japonés",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Ruso",
+        "Turco",
+        "Vietnamita",
+        "Chino (Mandarín)",
+        "Indonesio",
+        "Coreano",
+        "Árabe",
+        "Filipino",
+        "Birmano"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf85",
+          "name": "Euro",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/eur.svg"
+          },
+          "iso": "EUR"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c6",
+          "name": "USD Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/usd-coin.svg"
+          },
+          "iso": "USDC",
+          "priority": 96
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e9ad",
+          "name": "Cardano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          "iso": "ADA",
+          "priority": 94
+        },
+        {
+          "id": "66029fe955cb98d935e5ea3e",
+          "name": "Solana",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/solana.svg"
+          },
+          "iso": "SOL",
+          "priority": 93
+        },
+        {
+          "id": "66029fe955cb98d935e5eae3",
+          "name": "Terra",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/terra-lunc.svg"
+          },
+          "iso": "LUNA",
+          "priority": 92
+        },
+        {
+          "id": "66029fe955cb98d935e5ea43",
+          "name": "Avalanche",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/avalanche-avax.svg"
+          },
+          "iso": "AVAX",
+          "priority": 91
+        },
+        {
+          "id": "66029fe955cb98d935e5e9cb",
+          "name": "Polkadot",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polkadot-dot.svg"
+          },
+          "iso": "DOT",
+          "priority": 90
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5eae8",
+          "name": "Aave",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/aave.svg"
+          },
+          "iso": "AAVE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaa7",
+          "name": "Algorand",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/algorand-algo.svg"
+          },
+          "iso": "ALGO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb83",
+          "name": "Amp",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/amp.svg"
+          },
+          "iso": "AMP",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb51",
+          "name": "Ampleforth",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ampleforth-ampl.svg"
+          },
+          "iso": "AMPL",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea8e",
+          "name": "APEcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/apecoin-ape.svg"
+          },
+          "iso": "APE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec2d",
+          "name": "ARbit",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/938.png"
+          },
+          "iso": "ARB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb88",
+          "name": "Axie Infinity",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/axie-infinity-axs.svg"
+          },
+          "iso": "AXS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eba6",
+          "name": "Banano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/banano-ban.svg"
+          },
+          "iso": "BAN",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9da",
+          "name": "Basic Attention Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/basic-attention-token-bat.svg"
+          },
+          "iso": "BAT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebb5",
+          "name": "BC Lottery",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/BC-Lottery-300x169.jpg"
+          },
+          "iso": "BCL",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb9c",
+          "name": "BigONE Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bigone-token-one.svg"
+          },
+          "iso": "ONE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9b7",
+          "name": "Binance USD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-usd-busd.svg"
+          },
+          "iso": "BUSD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec23",
+          "name": "Bitcoin Atom",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/2387.png"
+          },
+          "iso": "BCA",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec0a",
+          "name": "Bitcoin BEP2",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/4023.png"
+          },
+          "iso": "BTCB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb5b",
+          "name": "Bitcoin Diamond",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-diamond-bcd.svg"
+          },
+          "iso": "BCD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9f8",
+          "name": "Bitcoin Gold",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-gold-btg.svg"
+          },
+          "iso": "BTG",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eac0",
+          "name": "Bitcoin SV",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoinsv-bsv.svg"
+          },
+          "iso": "BSV",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec41",
+          "name": "BitDAO",
+          "image": {
+            "url": "/wp-content/uploads/2021/12/BIT.jpg"
+          },
+          "iso": "BIT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb42",
+          "name": "BitTorrent",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bittorrent-btt.svg"
+          },
+          "iso": "BTT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec28",
+          "name": "Blur",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/4530.png"
+          },
+          "iso": "BLUR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb29",
+          "name": "Celo",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/celo.svg"
+          },
+          "iso": "CELO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea34",
+          "name": "Chainlink",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/chainlink.svg"
+          },
+          "iso": "LINK",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebc4",
+          "name": "ConstitutionDAO",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/ConstitutionDAO.png"
+          },
+          "iso": "PEOPLE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea5c",
+          "name": "Cosmos",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cosmos-atom.svg"
+          },
+          "iso": "ATOM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea89",
+          "name": "Cronos",
+          "image": {
+            "url": "/wp-content/uploads/2022/09/cro.png"
+          },
+          "iso": "CRO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c1",
+          "name": "Crypto Snack",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/snack.png"
+          },
+          "iso": "SNACK",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb38",
+          "name": "Curve DAO Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/curve-dao-crv.svg"
+          },
+          "iso": "CRV",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea1b",
+          "name": "Dai",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/dai.svg"
+          },
+          "iso": "DAI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea16",
+          "name": "Dash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/dash.svg"
+          },
+          "iso": "DASH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb4c",
+          "name": "Decentraland",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/decentraland-mana.svg"
+          },
+          "iso": "MANA",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb15",
+          "name": "Decred",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/decred-dcr.svg"
+          },
+          "iso": "DCR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9e4",
+          "name": "DigiByte",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/digibyte-dgb.svg"
+          },
+          "iso": "DGB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb10",
+          "name": "Elrond",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/elrond-egld.svg"
+          },
+          "iso": "EGLD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb47",
+          "name": "Enjin Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/enjin-coin-enj.svg"
+          },
+          "iso": "ENJ",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2a",
+          "name": "EOS",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/eos.svg"
+          },
+          "iso": "EOS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea0c",
+          "name": "Ethereum Classic",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-classic-etc.svg"
+          },
+          "iso": "ETC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eab1",
+          "name": "Fantom",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/3513.png"
+          },
+          "iso": "FTM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebec",
+          "name": "Frapped USDT",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/fusdt.png"
+          },
+          "iso": "FUSDT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eba1",
+          "name": "Gala",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/gala.svg"
+          },
+          "iso": "GALA",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebbf",
+          "name": "GM Wagmi",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/GM-Wagmi.png"
+          },
+          "iso": "GM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec3c",
+          "name": "Gods Unchained",
+          "image": {
+            "url": "/wp-content/uploads/2021/12/GODS.png"
+          },
+          "iso": "GODS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec32",
+          "name": "Gstcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/5820.png"
+          },
+          "iso": "GST",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb1f",
+          "name": "Hedera Hashgraph",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/hedera-hashgraph-hbar.svg"
+          },
+          "iso": "HBAR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb7e",
+          "name": "HEX",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/hex.svg"
+          },
+          "iso": "HEX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb2e",
+          "name": "ICON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/icon-icx.svg"
+          },
+          "iso": "ICX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebd3",
+          "name": "Internet Computer",
+          "image": {
+            "url": "/wp-content/uploads/2022/06/internet-computer.svg"
+          },
+          "iso": "ICP",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb6a",
+          "name": "IoTeX",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/iotex.svg"
+          },
+          "iso": "IOTX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebce",
+          "name": "Janta Bazar Coin",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/JB.png"
+          },
+          "iso": "JB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebf6",
+          "name": "JOE",
+          "image": {
+            "url": "/wp-content/uploads/2023/04/joe.png"
+          },
+          "iso": "JOE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebdd",
+          "name": "JPEG'd",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/jpeg.png"
+          },
+          "iso": "JPEG",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb74",
+          "name": "JUST",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/just.svg"
+          },
+          "iso": "JST",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb0b",
+          "name": "Kusama",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/kusama.svg"
+          },
+          "iso": "KSM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebe2",
+          "name": "MAGIC",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/magic.png"
+          },
+          "iso": "MAGIC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea25",
+          "name": "Monero",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/monero.svg"
+          },
+          "iso": "XMR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb33",
+          "name": "Nano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/nano.svg"
+          },
+          "iso": "XNO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb24",
+          "name": "NEAR Protocol",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/near-protocol.svg"
+          },
+          "iso": "NEAR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb3d",
+          "name": "Nexo",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/nexo.svg"
+          },
+          "iso": "NEXO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec46",
+          "name": "NTF Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/12/download.png"
+          },
+          "iso": "NFT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb6f",
+          "name": "Oasis Network",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/oasis-network.svg"
+          },
+          "iso": "ROSE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebfb",
+          "name": "Optimism",
+          "image": {
+            "url": "/wp-content/uploads/2023/04/optimism.png"
+          },
+          "iso": "OP",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb60",
+          "name": "PancakeSwap",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/pancakeswap-cake.svg"
+          },
+          "iso": "CAKE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec1e",
+          "name": "Parachute",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/4051.png"
+          },
+          "iso": "PAR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec00",
+          "name": "Pepe",
+          "image": {
+            "url": "/wp-content/uploads/2023/05/pepe.png"
+          },
+          "iso": "PEPE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea4d",
+          "name": "Polygon",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polygon-matic.svg"
+          },
+          "iso": "MATIC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9e9",
+          "name": "Qtum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/qtum.svg"
+          },
+          "iso": "QTUM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb56",
+          "name": "Ravencoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ravencoin.svg"
+          },
+          "iso": "RVN",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebe7",
+          "name": "Samoyed",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/samo.png"
+          },
+          "iso": "SAMO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebb0",
+          "name": "Satoshi",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/Satoshi.png"
+          },
+          "iso": "SATS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9d5",
+          "name": "SHIBA INU",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/shiba-inu.svg"
+          },
+          "iso": "SHIB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb97",
+          "name": "STASIS EURO",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/stasis-euro-eurs.svg"
+          },
+          "iso": "EURS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2f",
+          "name": "Stellar",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/stellar.svg"
+          },
+          "iso": "XLM",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebd8",
+          "name": "STEPN",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/gmt.png"
+          },
+          "iso": "GMT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec14",
+          "name": "SUN",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/6990.png"
+          },
+          "iso": "SUN",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb01",
+          "name": "SushiSwap",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/sushiswap.svg"
+          },
+          "iso": "SUSHI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eafc",
+          "name": "Synthetix",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/synthetix.svg"
+          },
+          "iso": "SNX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec05",
+          "name": "Tamadoge",
+          "image": {
+            "url": "/wp-content/uploads/2023/05/tamadoge.png"
+          },
+          "iso": "TAMA",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebf1",
+          "name": "Terra Classic",
+          "image": {
+            "url": "/wp-content/uploads/2022/07/lunc.png"
+          },
+          "iso": "LUNC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaac",
+          "name": "Terra Classic USD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/terra-classic-usd.svg"
+          },
+          "iso": "USTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaf2",
+          "name": "Tezos",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tezos.svg"
+          },
+          "iso": "XTZ",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec37",
+          "name": "The Doge NFT",
+          "image": {
+            "url": "/wp-content/uploads/2021/12/DOG-300x169.jpg"
+          },
+          "iso": "DOG",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea93",
+          "name": "The Sandbox",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/the-sandbox.svg"
+          },
+          "iso": "SAND",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaed",
+          "name": "THETA",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/theta-network.svg"
+          },
+          "iso": "THETA",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec0f",
+          "name": "Theta Fuel",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/3822.png"
+          },
+          "iso": "TFUEL",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb65",
+          "name": "TomoChain",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tomochain-tomo.svg"
+          },
+          "iso": "TOMO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebba",
+          "name": "Toucan Protocol: Base Carbon Tonne",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/Base-Carbon-Tonne.png"
+          },
+          "iso": "BCT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9df",
+          "name": "TrueUSD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/trueusd.svg"
+          },
+          "iso": "TUSD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb8d",
+          "name": "Trust Wallet Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/trust-wallet-token.svg"
+          },
+          "iso": "TWT",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea98",
+          "name": "Uniswap",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/uniswap.svg"
+          },
+          "iso": "UNI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eaf7",
+          "name": "VeChain",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/vechain.svg"
+          },
+          "iso": "VET",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb92",
+          "name": "VeThor Token",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/vethor-token.svg"
+          },
+          "iso": "VTHO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eade",
+          "name": "Waves",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/waves.svg"
+          },
+          "iso": "WAVES",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb79",
+          "name": "WAX",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/wax.svg"
+          },
+          "iso": "WAXP",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea61",
+          "name": "Wrapped Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2022/06/wrapped-bitcoin.svg"
+          },
+          "iso": "WBTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ec19",
+          "name": "Wrapped BNB",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/7192.png"
+          },
+          "iso": "WBNB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebc9",
+          "name": "Wrapped CryptoKitties",
+          "image": {
+            "url": "/wp-content/uploads/2022/04/WCK.png"
+          },
+          "iso": "WCK",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb06",
+          "name": "yearn.finance",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/yearnfinance.svg"
+          },
+          "iso": "YFI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ebab",
+          "name": "Yield Guild Games",
+          "image": {
+            "url": "/wp-content/uploads/2021/12/yield-guild-games.svg"
+          },
+          "iso": "YGG",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5eb1a",
+          "name": "Zilliqa",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/zilliqa.svg"
+          },
+          "iso": "ZIL",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2021/11/bc-game-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2021/11/bc-game-review-m.png"
+      },
+      "position": 5,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6b",
+          "name": "Bolos",
+          "logo": "/wp-content/uploads/2021/09/bowls-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee77",
+          "name": "Waterpolo",
+          "logo": "/wp-content/uploads/2021/06/waterpollo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee88",
+          "name": "Fútbol Sala",
+          "logo": "/wp-content/uploads/2021/06/futsal.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee98",
+          "name": "MMA",
+          "logo": "/wp-content/uploads/2021/06/mma.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec3",
+          "name": "Rainbow Six",
+          "logo": "/wp-content/uploads/2021/06/rainbow-six.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec8",
+          "name": "Salto de esquí",
+          "logo": "/wp-content/uploads/2021/06/ski-jumping.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eecc",
+          "name": "Baloncesto Playa",
+          "logo": "/wp-content/uploads/2021/06/beach-volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed4",
+          "name": "Lacrosse",
+          "logo": "/wp-content/uploads/2021/06/lacrosse.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed8",
+          "name": "Esquí alpino",
+          "logo": "/wp-content/uploads/2021/06/alpine-skiing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eedb",
+          "name": "Hurling",
+          "logo": "/wp-content/uploads/2021/06/hurling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeec",
+          "name": "eSports",
+          "logo": "/wp-content/uploads/2021/08/esports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefa",
+          "name": "Badmintón",
+          "logo": "/wp-content/uploads/2021/06/badminton.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefe",
+          "name": "Biatlón",
+          "logo": "/wp-content/uploads/2021/06/biathlon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef02",
+          "name": "Campo a través",
+          "logo": "/wp-content/uploads/2021/06/cross-country.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0f",
+          "name": "Hockey sobre hierba",
+          "logo": "/wp-content/uploads/2021/06/field-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef13",
+          "name": "Fórmula 1",
+          "logo": "/wp-content/uploads/2021/06/formula-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef2f",
+          "name": "Ajedrez",
+          "logo": "/wp-content/uploads/2021/06/chess.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef37",
+          "name": "Especiales",
+          "logo": "/wp-content/uploads/2021/11/specials.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef5c",
+          "name": "King of Glory",
+          "logo": "/wp-content/uploads/2021/06/king-of-glory.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef61",
+          "name": "Rocket League",
+          "logo": "/wp-content/uploads/2021/06/rocket-league.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef66",
+          "name": "Valorant",
+          "logo": "/wp-content/uploads/2021/06/valorant.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6b",
+          "name": "Carreras de motociclismo",
+          "logo": "/wp-content/uploads/2021/06/motorcycle-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6f",
+          "name": "Speedway",
+          "logo": "/wp-content/uploads/2021/06/speedway.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef85",
+          "name": "Fútbol Gaélico",
+          "logo": "/wp-content/uploads/2021/06/gaelic-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef88",
+          "name": "Pesapallo",
+          "logo": "/wp-content/uploads/2021/06/pesapallo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef91",
+          "name": "Fútbol Playa",
+          "logo": "/wp-content/uploads/2021/06/beach-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef95",
+          "name": "eBaloncesto",
+          "logo": "/wp-content/uploads/2021/08/ebasketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef9f",
+          "name": "Indy Racing",
+          "logo": "/wp-content/uploads/2021/06/indy-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa3",
+          "name": "Stock Car Racing",
+          "logo": "/wp-content/uploads/2021/06/stock-car-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa7",
+          "name": "FIFA",
+          "logo": "/wp-content/uploads/2021/06/fifa.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efac",
+          "name": "Bandy",
+          "logo": "/wp-content/uploads/2021/06/bandy.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb0",
+          "name": "Squash",
+          "logo": "/wp-content/uploads/2021/06/squash.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb4",
+          "name": "Arena of Valor",
+          "logo": "/wp-content/uploads/2022/03/arena-of-valor.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efcd",
+          "name": "eLucha",
+          "logo": "/wp-content/uploads/2021/08/efighting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efd7",
+          "name": "Rally",
+          "logo": "/wp-content/uploads/2021/11/rally.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5effe",
+          "name": "NBA 2K",
+          "logo": "/wp-content/uploads/2021/08/nba-2k.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f003",
+          "name": "Starcraft",
+          "logo": "/wp-content/uploads/2021/06/starcraft.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f008",
+          "name": "Kabaddi",
+          "logo": "/wp-content/uploads/2021/06/kabaddi.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f040",
+          "name": "eTenis",
+          "logo": "/wp-content/uploads/2021/08/etennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f045",
+          "name": "Warcraft 3",
+          "logo": "/wp-content/uploads/2021/06/warcraft-4.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f04a",
+          "name": "Fórmula E",
+          "logo": "/wp-content/uploads/2021/06/formula-e.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f04e",
+          "name": "Atletismo",
+          "logo": "/wp-content/uploads/2021/06/athletics.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f087",
+          "name": "eCricket",
+          "logo": "/wp-content/uploads/2021/09/ecricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f09f",
+          "name": "eBéisbol",
+          "logo": "/wp-content/uploads/2021/09/ebaseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f0ea",
+          "name": "Curling",
+          "logo": "/wp-content/uploads/2021/06/curling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f1b9",
+          "name": "eShooter",
+          "logo": "/wp-content/uploads/2023/02/shooting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f1be",
+          "name": "Penalty Shootout",
+          "logo": "/wp-content/uploads/2021/12/penalty-shootout.svg"
+        }
+      ],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fec55cb98d935e6faf7",
+      "name": "BetPlay",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2022/03/BetPlay-logo.png"
+      },
+      "landingPageUrl": "https://betplay.io?ref=ece0b54229ff",
+      "finalRating": 3.95,
+      "welcomeOffer": "Up to 50000 MBC Welcome Package",
+      "licenses": [],
+      "yearFounded": 2020,
+      "TC": "https://betplay.io/en/info/terms",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 6000,
+      "languages": [
+        "Inglés",
+        "Francés"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Francés"
+      ],
+      "playWithFiat": [],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5ea3e",
+          "name": "Solana",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/solana.svg"
+          },
+          "iso": "SOL",
+          "priority": 93
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea25",
+          "name": "Monero",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/monero.svg"
+          },
+          "iso": "XMR",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2022/03/betplay-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2022/03/betplay-review-m.png"
+      },
+      "position": 6,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee38",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2023/06/poker-icon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fee55cb98d935e82cca",
+      "name": "Metaspins",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2022/09/metaspins-logo.png"
+      },
+      "landingPageUrl": "https://metamedialinks.com/ef888bc44",
+      "finalRating": 4.07,
+      "welcomeOffer": "100% up to 1BTC First Deposit Bonus",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2022,
+      "TC": "https://metaspins.com/info/terms-and-conditions",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 4000,
+      "languages": [
+        "Inglés",
+        "Noruego",
+        "Alemán",
+        "Francés"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Noruego",
+        "Alemán",
+        "Francés"
+      ],
+      "playWithFiat": [],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c6",
+          "name": "USD Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/usd-coin.svg"
+          },
+          "iso": "USDC",
+          "priority": 96
+        },
+        {
+          "id": "66029fe955cb98d935e5e9ad",
+          "name": "Cardano",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/cardano-ada.svg"
+          },
+          "iso": "ADA",
+          "priority": 94
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2022/09/metaspins-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2022/09/metaspins-review-m.png"
+      },
+      "position": 7,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fed55cb98d935e7766e",
+      "name": "LeoVegas",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2022/05/LeoVegas-logo.png"
+      },
+      "landingPageUrl": "https://www.leovegas.com/en-gb/livecasino",
+      "finalRating": 4.09,
+      "welcomeOffer": "Up to 100 GBP Welcome Package + 50 Free Spins",
+      "licenses": [
+        "Malta",
+        "United Kingdom",
+        "Sweden"
+      ],
+      "yearFounded": 2012,
+      "TC": "https://www.leovegas.com/en-gb/terms",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 1500,
+      "languages": [
+        "Inglés",
+        "Finés",
+        "Noruego",
+        "Alemán",
+        "Sueco",
+        "Danés",
+        "Japonés",
+        "Italiano",
+        "Español",
+        "Portugués"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Finés",
+        "Noruego",
+        "Alemán",
+        "Sueco",
+        "Danés",
+        "Japonés",
+        "Español",
+        "Portugués"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf85",
+          "name": "Euro",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/eur.svg"
+          },
+          "iso": "EUR"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf8a",
+          "name": "Canadian dollar",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "CAD"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf8f",
+          "name": "New Zealand dollar",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "NZD"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf94",
+          "name": "Norwegian krone",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "NOK"
+        },
+        {
+          "id": "66029fe855cb98d935e5cfa8",
+          "name": "Australian dollar",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "AUD"
+        },
+        {
+          "id": "66029fe855cb98d935e5cfad",
+          "name": "Czech koruna",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "CZK"
+        },
+        {
+          "id": "66029fe855cb98d935e5cfb2",
+          "name": "British pound",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/gbp.svg"
+          },
+          "iso": "GBP"
+        },
+        {
+          "id": "66029fe855cb98d935e5cfb7",
+          "name": "Swedish krona",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "SEK"
+        },
+        {
+          "id": "66029fe855cb98d935e5d084",
+          "name": "Danish krone",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "DKK"
+        },
+        {
+          "id": "66029fe855cb98d935e5d0b6",
+          "name": "Swiss franc",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "CHF"
+        }
+      ],
+      "depositMethodsCrypto": [],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2022/05/leovegas-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2022/05/leovegas-review-m.png"
+      },
+      "position": 8,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee88",
+          "name": "Fútbol Sala",
+          "logo": "/wp-content/uploads/2021/06/futsal.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee98",
+          "name": "MMA",
+          "logo": "/wp-content/uploads/2021/06/mma.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebb",
+          "name": "Motor",
+          "logo": "/wp-content/uploads/2021/06/motorsports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec3",
+          "name": "Rainbow Six",
+          "logo": "/wp-content/uploads/2021/06/rainbow-six.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed0",
+          "name": "Carreras de Caballos",
+          "logo": "/wp-content/uploads/2021/06/horse-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eedf",
+          "name": "Trotting",
+          "logo": "/wp-content/uploads/2021/06/trotting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eee3",
+          "name": "UFC",
+          "logo": "/wp-content/uploads/2021/06/ufc.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eee8",
+          "name": "Surf",
+          "logo": "/wp-content/uploads/2021/06/surfing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeec",
+          "name": "eSports",
+          "logo": "/wp-content/uploads/2021/08/esports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0f",
+          "name": "Hockey sobre hierba",
+          "logo": "/wp-content/uploads/2021/06/field-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef13",
+          "name": "Fórmula 1",
+          "logo": "/wp-content/uploads/2021/06/formula-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef2f",
+          "name": "Ajedrez",
+          "logo": "/wp-content/uploads/2021/06/chess.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef4a",
+          "name": "Tenis Virtual",
+          "logo": "/wp-content/uploads/2022/02/virtual-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef66",
+          "name": "Valorant",
+          "logo": "/wp-content/uploads/2021/06/valorant.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef75",
+          "name": "Virtual Greyhounds",
+          "logo": "/wp-content/uploads/2021/11/virtual-greyhounds.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef85",
+          "name": "Fútbol Gaélico",
+          "logo": "/wp-content/uploads/2021/06/gaelic-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef88",
+          "name": "Pesapallo",
+          "logo": "/wp-content/uploads/2021/06/pesapallo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efef",
+          "name": "Wild Rift",
+          "logo": "/wp-content/uploads/2022/07/wild-rift.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f02a",
+          "name": "Wrestling",
+          "logo": "/wp-content/uploads/2021/06/wrestling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f076",
+          "name": "Netball",
+          "logo": "/wp-content/uploads/2021/06/netball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f1dc",
+          "name": "Football Pro Virtual",
+          "logo": "/wp-content/uploads/2021/11/virtual-football-pro.svg"
+        }
+      ],
+      "endToEndCrypto": false,
+      "anonymousPlay": false,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fef55cb98d935e8409c",
+      "name": "Vave",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2023/03/vave-review.webp"
+      },
+      "landingPageUrl": "https://vave.com/",
+      "finalRating": 4.06,
+      "welcomeOffer": "Up to 1.5 BTC Welcome Package + 150 Free Spins",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2022,
+      "TC": "https://go.vavepartners.com/redirect.aspx?pid=14081&bid=1481&redirectURL=https://vave.com/information/terms-and-conditions",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 4000,
+      "languages": [
+        "Inglés",
+        "Finés",
+        "Alemán",
+        "Japonés",
+        "Italiano",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Polaco",
+        "Ruso",
+        "Turco",
+        "Vietnamita",
+        "Indonesio",
+        "Coreano",
+        "Hindi",
+        "Griego",
+        "Tagalo"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Alemán",
+        "Japonés",
+        "Español",
+        "Ruso"
+      ],
+      "playWithFiat": [],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5ea7f",
+          "name": "Changelly",
+          "image": {
+            "url": "/wp-content/uploads/2021/11/Changelly-300x188.png"
+          },
+          "iso": "Changelly",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2023/03/vave-review-1.webp"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2023/03/vave-review-2.webp"
+      },
+      "position": 9,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee77",
+          "name": "Waterpolo",
+          "logo": "/wp-content/uploads/2021/06/waterpollo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee98",
+          "name": "MMA",
+          "logo": "/wp-content/uploads/2021/06/mma.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed4",
+          "name": "Lacrosse",
+          "logo": "/wp-content/uploads/2021/06/lacrosse.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed8",
+          "name": "Esquí alpino",
+          "logo": "/wp-content/uploads/2021/06/alpine-skiing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eedb",
+          "name": "Hurling",
+          "logo": "/wp-content/uploads/2021/06/hurling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefe",
+          "name": "Biatlón",
+          "logo": "/wp-content/uploads/2021/06/biathlon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef02",
+          "name": "Campo a través",
+          "logo": "/wp-content/uploads/2021/06/cross-country.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0f",
+          "name": "Hockey sobre hierba",
+          "logo": "/wp-content/uploads/2021/06/field-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef13",
+          "name": "Fórmula 1",
+          "logo": "/wp-content/uploads/2021/06/formula-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef37",
+          "name": "Especiales",
+          "logo": "/wp-content/uploads/2021/11/specials.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6b",
+          "name": "Carreras de motociclismo",
+          "logo": "/wp-content/uploads/2021/06/motorcycle-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6f",
+          "name": "Speedway",
+          "logo": "/wp-content/uploads/2021/06/speedway.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef85",
+          "name": "Fútbol Gaélico",
+          "logo": "/wp-content/uploads/2021/06/gaelic-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef8c",
+          "name": "eFútbol",
+          "logo": "/wp-content/uploads/2021/06/esoccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef9f",
+          "name": "Indy Racing",
+          "logo": "/wp-content/uploads/2021/06/indy-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa3",
+          "name": "Stock Car Racing",
+          "logo": "/wp-content/uploads/2021/06/stock-car-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efac",
+          "name": "Bandy",
+          "logo": "/wp-content/uploads/2021/06/bandy.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f003",
+          "name": "Starcraft",
+          "logo": "/wp-content/uploads/2021/06/starcraft.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5f057",
+          "name": "Dota",
+          "logo": "/wp-content/uploads/2021/06/dota.svg"
+        }
+      ],
+      "endToEndCrypto": true,
+      "anonymousPlay": true,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": ""
+    },
+    {
+      "id": "66029fea55cb98d935e628c5",
+      "name": "Stake",
+      "description": "",
+      "featuredSnippet": "",
+      "logo": {
+        "url": "/wp-content/uploads/2021/06/stake-logo-1.png"
+      },
+      "landingPageUrl": "https://stake.com/?c=6e4d430b",
+      "finalRating": 4.97,
+      "welcomeOffer": "10% Cashback — Lifetime duration",
+      "licenses": [
+        "Curaçao"
+      ],
+      "yearFounded": 2017,
+      "TC": "https://stake.com/policies/terms",
+      "tableDesign": "",
+      "casinoProducts": [
+        "Slots",
+        "Video Poker",
+        "Crupier en vivo",
+        "Blackjack",
+        "Baccarat",
+        "Bingo",
+        "Keno",
+        "Ruleta",
+        "Lotería",
+        "Dados",
+        "Tarjetas rasca",
+        "Poker",
+        "Dice",
+        "Crash",
+        "Minas",
+        "Plinko",
+        "HiLo",
+        "Limbo",
+        "Financial",
+        "Jackpot",
+        "Test Product"
+      ],
+      "numberCasinoGames": 3000,
+      "languages": [
+        "Inglés",
+        "Finés",
+        "Alemán",
+        "Japonés",
+        "Español",
+        "Portugués",
+        "Francés",
+        "Polaco",
+        "Ruso",
+        "Turco",
+        "Vietnamita",
+        "Chino (Mandarín)",
+        "Indonesio",
+        "Coreano",
+        "Hindi",
+        "Árabe"
+      ],
+      "supportLanguages": [
+        "Inglés",
+        "Japonés",
+        "Portugués"
+      ],
+      "playWithFiat": [
+        {
+          "id": "66029fe855cb98d935e5cf85",
+          "name": "Euro",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/eur.svg"
+          },
+          "iso": "EUR"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf8a",
+          "name": "Canadian dollar",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "CAD"
+        },
+        {
+          "id": "66029fe855cb98d935e5cf9e",
+          "name": "Japanese yen",
+          "image": {
+            "url": "/wp-content/uploads/2020/07/jpy.svg"
+          },
+          "iso": "JPY"
+        },
+        {
+          "id": "66029fe855cb98d935e5cfbc",
+          "name": "Brazilian real",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "BRL"
+        },
+        {
+          "id": "66029fe855cb98d935e5d098",
+          "name": "Indian rupee",
+          "image": {
+            "url": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+          },
+          "iso": "INR"
+        }
+      ],
+      "depositMethodsCrypto": [
+        {
+          "id": "66029fe955cb98d935e5e980",
+          "name": "Bitcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-btc.svg"
+          },
+          "iso": "BTC",
+          "priority": 100
+        },
+        {
+          "id": "66029fe955cb98d935e5e985",
+          "name": "Ethereum",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/ethereum-eth.svg"
+          },
+          "iso": "ETH",
+          "priority": 99
+        },
+        {
+          "id": "66029fe955cb98d935e5e98a",
+          "name": "Tether",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tether.svg"
+          },
+          "iso": "USDT",
+          "priority": 98
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a3",
+          "name": "Binance Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-coin-bnb.svg"
+          },
+          "iso": "BNB",
+          "priority": 97
+        },
+        {
+          "id": "66029fe955cb98d935e5e9c6",
+          "name": "USD Coin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/usd-coin.svg"
+          },
+          "iso": "USDC",
+          "priority": 96
+        },
+        {
+          "id": "66029fe955cb98d935e5e9a8",
+          "name": "XRP",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/xrp.svg"
+          },
+          "iso": "XRP",
+          "priority": 95
+        },
+        {
+          "id": "66029fe955cb98d935e5e98f",
+          "name": "Dogecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/05/dogecoin-doge.svg"
+          },
+          "iso": "DOGE",
+          "priority": 89
+        },
+        {
+          "id": "66029fe955cb98d935e5ea8e",
+          "name": "APEcoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/apecoin-ape.svg"
+          },
+          "iso": "APE",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9b7",
+          "name": "Binance USD",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/binance-usd-busd.svg"
+          },
+          "iso": "BUSD",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e999",
+          "name": "Bitcoin Cash",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/bitcoin-cash-bch.svg"
+          },
+          "iso": "BCH",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea34",
+          "name": "Chainlink",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/chainlink.svg"
+          },
+          "iso": "LINK",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea89",
+          "name": "Cronos",
+          "image": {
+            "url": "/wp-content/uploads/2022/09/cro.png"
+          },
+          "iso": "CRO",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea1b",
+          "name": "Dai",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/dai.svg"
+          },
+          "iso": "DAI",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea2a",
+          "name": "EOS",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/eos.svg"
+          },
+          "iso": "EOS",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e994",
+          "name": "Litecoin",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/litecoin-ltc.svg"
+          },
+          "iso": "LTC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea4d",
+          "name": "Polygon",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/polygon-matic.svg"
+          },
+          "iso": "MATIC",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e9d5",
+          "name": "SHIBA INU",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/shiba-inu.svg"
+          },
+          "iso": "SHIB",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea93",
+          "name": "The Sandbox",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/the-sandbox.svg"
+          },
+          "iso": "SAND",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5e99e",
+          "name": "TRON",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/tron.svg"
+          },
+          "iso": "TRX",
+          "priority": 0
+        },
+        {
+          "id": "66029fe955cb98d935e5ea98",
+          "name": "Uniswap",
+          "image": {
+            "url": "/wp-content/uploads/2021/06/uniswap.svg"
+          },
+          "iso": "UNI",
+          "priority": 0
+        }
+      ],
+      "homepageImageDesktop": {
+        "url": "/wp-content/uploads/2021/06/stake-review.png"
+      },
+      "homepageImageMobile": {
+        "url": "/wp-content/uploads/2021/06/stake-review-m.png"
+      },
+      "position": 10,
+      "products": [
+        {
+          "id": "66029fe855cb98d935e5d44b",
+          "name": "Slots",
+          "logo": "/wp-content/uploads/2020/07/Slots-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d450",
+          "name": "Video Poker",
+          "logo": "/wp-content/uploads/2020/07/Video-Poker-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d455",
+          "name": "Crupier en vivo",
+          "logo": "/wp-content/uploads/2020/07/Live-Dealer.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45a",
+          "name": "Blackjack",
+          "logo": "/wp-content/uploads/2020/07/Blackjack.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d45f",
+          "name": "Baccarat",
+          "logo": "/wp-content/uploads/2020/07/Baccarat-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d464",
+          "name": "Bingo",
+          "logo": "/wp-content/uploads/2020/07/Bingo-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d469",
+          "name": "Keno",
+          "logo": "/wp-content/uploads/2020/07/Keno-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d46e",
+          "name": "Ruleta",
+          "logo": "/wp-content/uploads/2020/07/Roulette.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d473",
+          "name": "Lotería",
+          "logo": "/wp-content/uploads/2020/07/Lotteries.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d478",
+          "name": "Dados",
+          "logo": "/wp-content/uploads/2020/07/Craps-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d47d",
+          "name": "Tarjetas rasca",
+          "logo": "/wp-content/uploads/2020/07/Scratchcards-1.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d482",
+          "name": "Poker",
+          "logo": "/wp-content/uploads/2021/08/poker.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d487",
+          "name": "Dice",
+          "logo": "/wp-content/uploads/2021/11/dice.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d48c",
+          "name": "Crash",
+          "logo": "/wp-content/uploads/2022/05/crash.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d491",
+          "name": "Minas",
+          "logo": "/wp-content/uploads/2022/05/mines.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d496",
+          "name": "Plinko",
+          "logo": "/wp-content/uploads/2022/05/plinko.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d49b",
+          "name": "HiLo",
+          "logo": "/wp-content/uploads/2022/05/hi-lo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a0",
+          "name": "Limbo",
+          "logo": "/wp-content/uploads/2022/05/limbo.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4a5",
+          "name": "Financial",
+          "logo": "/wp-content/uploads/2022/05/financial.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4aa",
+          "name": "Jackpot",
+          "logo": "/wp-content/uploads/2022/05/jackpot.svg"
+        },
+        {
+          "id": "66029fe855cb98d935e5d4af",
+          "name": "Test Product",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        }
+      ],
+      "sports": [
+        {
+          "id": "66029fe955cb98d935e5ee67",
+          "name": "Dardos",
+          "logo": "/wp-content/uploads/2021/06/darts.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6b",
+          "name": "Bolos",
+          "logo": "/wp-content/uploads/2021/09/bowls-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee6f",
+          "name": "Fútbol de Reglas Australianas",
+          "logo": "/wp-content/uploads/2021/06/australian-rules-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee73",
+          "name": "Fútbol americano",
+          "logo": "/wp-content/uploads/2021/06/american-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee77",
+          "name": "Waterpolo",
+          "logo": "/wp-content/uploads/2021/06/waterpollo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7b",
+          "name": "Tenis de mesa",
+          "logo": "/wp-content/uploads/2021/06/table-tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee7f",
+          "name": "Snooker",
+          "logo": "/wp-content/uploads/2021/06/snooker.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee84",
+          "name": "Hockey sobre hielo",
+          "logo": "/wp-content/uploads/2021/06/ice-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee88",
+          "name": "Fútbol Sala",
+          "logo": "/wp-content/uploads/2021/06/futsal.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee8c",
+          "name": "Vóleibol",
+          "logo": "/wp-content/uploads/2021/05/volleyball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee90",
+          "name": "Crícket",
+          "logo": "/wp-content/uploads/2021/06/cricket.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee94",
+          "name": "Boxeo",
+          "logo": "/wp-content/uploads/2021/06/boxing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee98",
+          "name": "MMA",
+          "logo": "/wp-content/uploads/2021/06/mma.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee9d",
+          "name": "Fútbol",
+          "logo": "/wp-content/uploads/2021/05/football-soccer.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea1",
+          "name": "Béisbol",
+          "logo": "/wp-content/uploads/2021/05/baseball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea5",
+          "name": "Baloncesto",
+          "logo": "/wp-content/uploads/2021/05/basketball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eea9",
+          "name": "Rugby",
+          "logo": "/wp-content/uploads/2021/05/rugby.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eead",
+          "name": "Tenis",
+          "logo": "/wp-content/uploads/2021/05/tennis.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eeb6",
+          "name": "League of Legends",
+          "logo": "/wp-content/uploads/2021/06/league-of-legends.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebb",
+          "name": "Motor",
+          "logo": "/wp-content/uploads/2021/06/motorsports.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eebf",
+          "name": "Política y entretenimiento",
+          "logo": "/wp-content/uploads/2021/06/politics-entertainment.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eec8",
+          "name": "Salto de esquí",
+          "logo": "/wp-content/uploads/2021/06/ski-jumping.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed4",
+          "name": "Lacrosse",
+          "logo": "/wp-content/uploads/2021/06/lacrosse.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eed8",
+          "name": "Esquí alpino",
+          "logo": "/wp-content/uploads/2021/06/alpine-skiing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eedb",
+          "name": "Hurling",
+          "logo": "/wp-content/uploads/2021/06/hurling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eef5",
+          "name": "CSGO",
+          "logo": "/wp-content/uploads/2021/06/csgo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefa",
+          "name": "Badmintón",
+          "logo": "/wp-content/uploads/2021/06/badminton.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5eefe",
+          "name": "Biatlón",
+          "logo": "/wp-content/uploads/2021/06/biathlon.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef02",
+          "name": "Campo a través",
+          "logo": "/wp-content/uploads/2021/06/cross-country.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef06",
+          "name": "Ciclismo",
+          "logo": "/wp-content/uploads/2021/06/cycling.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0a",
+          "name": "Dota 2",
+          "logo": "/wp-content/uploads/2021/06/dota-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef0f",
+          "name": "Hockey sobre hierba",
+          "logo": "/wp-content/uploads/2021/06/field-hockey.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef13",
+          "name": "Fórmula 1",
+          "logo": "/wp-content/uploads/2021/06/formula-1.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef17",
+          "name": "Golf",
+          "logo": "/wp-content/uploads/2021/06/golf.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef1b",
+          "name": "Balonmano",
+          "logo": "/wp-content/uploads/2021/06/handball.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef20",
+          "name": "Call of Duty",
+          "logo": "/wp-content/uploads/2021/06/Call-of-Duty.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef61",
+          "name": "Rocket League",
+          "logo": "/wp-content/uploads/2021/06/rocket-league.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef6b",
+          "name": "Carreras de motociclismo",
+          "logo": "/wp-content/uploads/2021/06/motorcycle-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef85",
+          "name": "Fútbol Gaélico",
+          "logo": "/wp-content/uploads/2021/06/gaelic-football.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef88",
+          "name": "Pesapallo",
+          "logo": "/wp-content/uploads/2021/06/pesapallo.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ef9f",
+          "name": "Indy Racing",
+          "logo": "/wp-content/uploads/2021/06/indy-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa3",
+          "name": "Stock Car Racing",
+          "logo": "/wp-content/uploads/2021/06/stock-car-racing.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efa7",
+          "name": "FIFA",
+          "logo": "/wp-content/uploads/2021/06/fifa.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efac",
+          "name": "Bandy",
+          "logo": "/wp-content/uploads/2021/06/bandy.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb0",
+          "name": "Squash",
+          "logo": "/wp-content/uploads/2021/06/squash.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb4",
+          "name": "Arena of Valor",
+          "logo": "/wp-content/uploads/2022/03/arena-of-valor.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5efb9",
+          "name": "Ligas Electrónicas",
+          "logo": "/wp-content/uploads/2021/06/electronic-leagues.svg"
+        }
+      ],
+      "endToEndCrypto": true,
+      "anonymousPlay": false,
+      "productCategories": [
+        {
+          "id": "66029fe955cb98d935e5ee36",
+          "name": "Sports Betting",
+          "logo": "/wp-content/uploads/2021/06/sportsbetting.svg"
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3a",
+          "name": "Gambling",
+          "logo": "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+        },
+        {
+          "id": "66029fe955cb98d935e5ee3c",
+          "name": "Casino Games",
+          "logo": "/wp-content/uploads/2021/06/Casino-Icon.svg"
+        }
+      ],
+      "promoCode": "10LIFETIME"
+    }
+  ]
+}
