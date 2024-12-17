@@ -3,13 +3,15 @@ import {expect} from "@playwright/test";
 import config from "../../../playwright.config";
 
 
-
-
-
 test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
-    test.beforeEach(async ({ToplistsUI}) => {
-        await ToplistsUI.page.goto(`https://${process.env.STATIC_PAGE_USER}:${process.env.STATIC_PAGE_PASSWORD}@${process.env.TEST_ENV}.ccn.com/crypto-gambling/`);  //temporary
+    test.beforeEach(async ({ToplistsUI}, testInfo) => {
+        const landingPage = `https://${process.env.DEV_STATIC_PAGE_USER}:${process.env.DEV_STATIC_PAGE_PASSWORD}@${process.env.TEST_ENV}.ccn.com/crypto-gambling/`;
+        testInfo.annotations.push({
+            type: "info",
+            description: landingPage,
+        });
+        await ToplistsUI.page.goto(landingPage);  //temporary
     });
 
     test('Check Toplist for visibility of elements', async ({ToplistsUI, request}) => {

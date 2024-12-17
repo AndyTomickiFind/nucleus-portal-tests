@@ -3,7 +3,7 @@ import {logResponse} from '../../src/logger';
 import config from "../../playwright.config";
 import fs from "fs";
 
-test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, {
+test(`[${config.name.toUpperCase()}] Test response language according to param EN FR ES PT`, {
     annotation: {
         type: 'issue',
         description: 'https://findco.atlassian.net/browse/DEV-5372',
