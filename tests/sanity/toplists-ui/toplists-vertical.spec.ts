@@ -6,7 +6,7 @@ import config from "../../../playwright.config";
 test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({ToplistsUI}, testInfo) => {
-        const landingPage = `https://${process.env.DEV_STATIC_PAGE_USER}:${process.env.DEV_STATIC_PAGE_PASSWORD}@${process.env.TEST_ENV}.ccn.com/crypto-gambling/`;
+        const landingPage = `https://${config.staticPage.username}:${config.staticPage.password}@${process.env.TEST_ENV}.ccn.com/crypto-gambling/`;
         testInfo.annotations.push({
             type: "info",
             description: landingPage,

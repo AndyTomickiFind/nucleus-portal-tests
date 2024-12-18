@@ -10,6 +10,7 @@ const environment = process.env.TEST_ENV || 'dev';
 interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
     toplistServiceV1Uri?: string;
+    staticPage?: { username?: string; password?: string };
 }
 
 
@@ -136,6 +137,10 @@ const prodConfig: TestConfig = {
     baseUrl: 'portal.nucleusmvp.com',
     toplistServiceV1Uri: '',
     name: `prod`,
+    staticPage: {
+        username: process.env.DEV_STATIC_PAGE_USER,
+        password: process.env.DEV_STATIC_PAGE_PASSWORD,
+    },
     expect: {
         timeout: 6000
     },
@@ -152,6 +157,10 @@ const prodConfig: TestConfig = {
 const devConfig: TestConfig = {
     baseUrl: 'portal.dev.nucleusmvp.com',
     toplistServiceV1Uri: 'dev.nucleusmvp.com',
+    staticPage: {
+        username: process.env.DEV_STATIC_PAGE_USER,
+        password: process.env.DEV_STATIC_PAGE_PASSWORD,
+    },
     name: `dev`,
     expect: {
         timeout: 6000
@@ -169,6 +178,10 @@ const devConfig: TestConfig = {
 const stagingConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
     toplistServiceV1Uri: 'staging.nucleusmvp.com',
+    staticPage: {
+        username: process.env.STAGING_STATIC_PAGE_USER,
+        password: process.env.STAGING_STATIC_PAGE_PASSWORD,
+    },
     name: `staging`,
     expect: {
         timeout: 6000
