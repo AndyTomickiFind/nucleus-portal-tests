@@ -89,7 +89,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-            dependencies: ['setup'],
+            dependencies: ['setup'], //comment out if the auth is already stored
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',
@@ -142,7 +142,7 @@ const prodConfig: TestConfig = {
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
     },
     expect: {
-        timeout: 6000
+        timeout: 4000
     },
     use: {
         ...defaultConfig.use,
@@ -163,7 +163,7 @@ const devConfig: TestConfig = {
     },
     name: `dev`,
     expect: {
-        timeout: 6000
+        timeout: 4000
     },
     use: {
         ...defaultConfig.use,
@@ -184,7 +184,7 @@ const stagingConfig: TestConfig = {
     },
     name: `staging`,
     expect: {
-        timeout: 6000
+        timeout: 4000
     },
     use: {
         ...defaultConfig.use,

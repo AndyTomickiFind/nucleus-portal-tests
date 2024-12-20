@@ -13,7 +13,7 @@ test.describe(`SEARCH field functionality - ${config.name} `, {tag: [`@${config.
         await HomePage.page.goto(`https://${config.baseUrl}/partners/casinos`);
 
         const searchField: Locator = HomePage.page.getByTestId('casino-name-filter-field');
-        const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`);
+        const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
 
         const characters = "<>/[|\\{}()[]^$+*?.]/gabcABC.,';`-=~#@'!£%&¬";
 
