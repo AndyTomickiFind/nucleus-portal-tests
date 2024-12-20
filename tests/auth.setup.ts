@@ -11,7 +11,7 @@ setup('authenticate', async ({page}) => {
     });
 
     await page.goto(`https://${config.baseUrl}/login`);
-    await page.getByRole('button', {name: 'google logo Sign in with'}).click(); //login with Google button
+    await page.locator('//button').click(); //login with Google button
     await page.fill('input[type="email"]', config.use.httpCredentials.username);
     await page.click('#identifierNext');
 

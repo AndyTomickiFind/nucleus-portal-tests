@@ -6,6 +6,7 @@ export class ToplistsUI extends BasePage {
 
     readonly toplistContainer: Locator;
     readonly toplistItem: Locator;
+    readonly doNotConsentButton: Locator;
 
 
 
@@ -14,7 +15,8 @@ export class ToplistsUI extends BasePage {
         this.testInfo = testInfo;
 
         this.toplistContainer = page.locator(`.toplist-table-container`);
-        this.toplistItem = this.toplistContainer.locator('.toplist-table-item');
+        this.toplistItem = this.toplistContainer.locator(`.toplist-table-item`);
+        this.doNotConsentButton = page.locator(`//button[@class="fc-button fc-cta-do-not-consent fc-secondary-button"]`);
     }
 
     async nthToplistItem(nth: number): Promise<Locator> {
@@ -24,11 +26,9 @@ export class ToplistsUI extends BasePage {
     async compareExpectedToActualElements(topListsResultsJson) {
         //const desiredField = topListsResultsJson.sites[0].name;
 
-
-
         await expect(this.toplistContainer).toBeVisible();
 
-        const numberOfItems = topListsResultsJson.length;
+        const numberOfItems: number = topListsResultsJson.length;
 
         await expect(this.toplistItem, `There must be ${numberOfItems} items in the toplist`).toHaveCount(numberOfItems);
 

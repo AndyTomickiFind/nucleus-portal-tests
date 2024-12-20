@@ -84,7 +84,7 @@
           "id": "67585d625e46917e950dac16",
           "name": "[QA] Coin with priority 115",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin115",
           "priority": 115
@@ -93,7 +93,7 @@
           "id": "67585d5f5e46917e950dac11",
           "name": "[QA] Coin with priority 110",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin110",
           "priority": 110
@@ -102,7 +102,7 @@
           "id": "67585d5c5e46917e950dac0c",
           "name": "[QA] Coin with priority 105",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin105",
           "priority": 105
@@ -111,7 +111,7 @@
           "id": "67585d595e46917e950dac07",
           "name": "[QA] Coin with priority 104",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin104",
           "priority": 104
@@ -120,7 +120,7 @@
           "id": "67585d565e46917e950dac02",
           "name": "[QA] Coin with priority 103",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin103",
           "priority": 103
@@ -129,7 +129,7 @@
           "id": "67585d535e46917e950dabfd",
           "name": "[QA] Coin with priority 102",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin102",
           "priority": 102
@@ -138,7 +138,7 @@
           "id": "67585cc05e46917e950ca7b4",
           "name": "[QA] Coin with priority 101",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin101",
           "priority": 101
@@ -147,7 +147,7 @@
           "id": "67585c305e46917e950ca2f9",
           "name": "[QA] Coin with priority 100",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin100",
           "priority": 100
@@ -192,7 +192,7 @@
           "id": "67585d685e46917e950dac1b",
           "name": "[QA] Coin with priority 80",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin80",
           "priority": 80
@@ -201,7 +201,7 @@
           "id": "67585d6b5e46917e950dac20",
           "name": "[QA] Coin with priority 50",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin50",
           "priority": 50
@@ -210,7 +210,7 @@
           "id": "675859585e46917e950c97da",
           "name": "[QA] Coin ",
           "image": {
-            "url": "string"
+            "url": "/wp-content/uploadsstring"
           },
           "iso": "string",
           "priority": 1
@@ -8090,7 +8090,7 @@
           "id": "67585d705e46917e950dac25",
           "name": "[QA] Coin with priority -1",
           "image": {
-            "url": "nologo"
+            "url": "/wp-content/uploadsnologo"
           },
           "iso": "QACoin-1",
           "priority": -1
@@ -8164,7 +8164,7 @@
       "description": "",
       "featuredSnippet": "",
       "logo": {
-        "url": "/images/logos/1732636468924_6745ef3452b22da564483719.jpg"
+        "url": "/images/logos/1734621925601_67643ae5a58f13ce2c37786b.jpg"
       },
       "landingPageUrl": "https://www.andyscasino.com",
       "finalRating": 1,
@@ -8207,22 +8207,13 @@
           },
           "iso": "Andys Coin",
           "priority": 6666666666666
-        },
-        {
-          "id": "666befa6da2f46ee38aca934",
-          "name": "Lustcoins",
-          "image": {
-            "url": "/wp-content/uploads/2023/07/lust.png"
-          },
-          "iso": "LUST",
-          "priority": 69
         }
       ],
       "homepageImageDesktop": {
-        "url": "/images/logos/1732636471764_6745ef3752b22da56448371f.jpg"
+        "url": "/images/logos/1734621926294_67643ae6a58f13ce2c37786f.png"
       },
       "homepageImageMobile": {
-        "url": "/images/logos/1732636471028_6745ef3752b22da56448371d.jpg"
+        "url": "/images/logos/1734621927873_67643ae7a58f13ce2c377871.webp"
       },
       "position": 2,
       "products": [

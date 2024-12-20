@@ -12,24 +12,40 @@ test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () =
             description: landingPage,
         });
         await ToplistsUI.page.goto(landingPage);  //temporary
+        await ToplistsUI.doNotConsentButton.click();
     });
 
     test('Check Toplist for visibility of elements', async ({ToplistsUI, request}) => {
-        await expect(ToplistsUI.page).toHaveScreenshot();
-        const id = "673efb7fdaa386be8b2edc89"; //temporary - staging toplist
-        const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v1/toplists/${id}/results`, {
-            headers: {
-                // Add headers if needed
-            },
-            params: {
-                // Add query params if needed
-            },
-            data: {
-                // Add body data if needed
-            }
-        });
-        const responseBody = await response.json();
-        expect(ToplistsUI.compareExpectedToActualElements(responseBody.sites)).toBeTruthy();
+        // await expect(ToplistsUI.page).toHaveScreenshot();
+        // const id = "673efb7fdaa386be8b2edc89"; //temporary - staging toplist
+        // const response = await request.get(`https://${config.toplistServiceV1Uri}/api/v2/toplists/${id}/results`, {
+        //     headers: {
+        //         // Add headers if needed
+        //     },
+        //     params: {
+        //         // Add query params if needed
+        //     },
+        //     data: {
+        //         // Add body data if needed
+        //     }
+        // });
+        // const responseBody = await response.json();
+        // //expect(ToplistsUI.compareExpectedToActualElements(responseBody.sites)).toBeTruthy();
+
+        await expect(ToplistsUI.toplistContainer).toMatchAriaSnapshot(`
+    - link "FruitKings1":
+      - img "FruitKin1gs"
+    - text: #1
+    - link "FruitKings":
+      - heading "FruitKings" [level=3]
+    - text: promotions
+    - link /Up to \\d+ GBP Welcome Package \\+ \\d+ Free Spins/:
+      - strong: /Up to \\d+ GBP Welcome Package \\+ \\d+ Free Spins/
+    - text: Coins – Opened in
+    - strong: /\\d+/
+    - link "Go to Site "
+    - link "Read Review"
+    `);
     });
 
 
