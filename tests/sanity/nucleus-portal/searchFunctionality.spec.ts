@@ -4,7 +4,12 @@ import config from "../../../playwright.config";
 
 
 test.describe(`SEARCH field functionality - ${config.name} `, {tag: [`@${config.name}`]}, () => {
-    test('SEARCH for `invalid` characters', async ({HomePage}) => {
+    test('SEARCH for `invalid` characters',  {
+        annotation: {
+            type: 'issue',
+            description: 'https://findco.atlassian.net/browse/DEV-5448',
+        }
+    },async ({HomePage}) => {
         await HomePage.page.goto(`https://${config.baseUrl}/partners/casinos`);
 
         const searchField: Locator = HomePage.page.getByTestId('casino-name-filter-field');
