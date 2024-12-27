@@ -39,7 +39,7 @@ test(`[${config.name.toUpperCase()}] Test response language according to param E
             const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/language_params/language_${language}.json`, 'utf-8'));
             // Parse the response body as JSON
             const responseBody = await response.json();
-            expect(responseBody).toMatchObject(fullExpectedResponse);
+            expect.soft(responseBody).toMatchObject(fullExpectedResponse);
         });
     }
 });

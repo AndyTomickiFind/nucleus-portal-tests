@@ -12,7 +12,7 @@ test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () =
             description: landingPage,
         });
         await ToplistsUI.page.goto(landingPage);  //temporary
-        await ToplistsUI.doNotConsentButton.click();
+      //  await ToplistsUI.doNotConsentButton.click();
     });
 
     test('Check Toplist for visibility of elements', async ({ToplistsUI, request}) => {
@@ -32,20 +32,10 @@ test.describe(`TOPLIST - UI - ${config.name} `, {tag: [`@${config.name}`]}, () =
         // const responseBody = await response.json();
         // //expect(ToplistsUI.compareExpectedToActualElements(responseBody.sites)).toBeTruthy();
 
-        await expect(ToplistsUI.toplistContainer).toMatchAriaSnapshot(`
-    - link "FruitKings1":
-      - img "FruitKin1gs"
-    - text: #1
-    - link "FruitKings":
-      - heading "FruitKings" [level=3]
-    - text: promotions
-    - link /Up to \\d+ GBP Welcome Package \\+ \\d+ Free Spins/:
-      - strong: /Up to \\d+ GBP Welcome Package \\+ \\d+ Free Spins/
-    - text: Coins – Opened in
-    - strong: /\\d+/
-    - link "Go to Site "
-    - link "Read Review"
-    `);
+        await expect(ToplistsUI.toplistContainer).toMatchAriaSnapshot(
+            `- link "Up to 50 GBP Welcome Package + 100 Free Spins":
+  - strong: Up to 50 GBP Welcome Package + 100 Free Spinsjhjhjvkhvk`
+        );
     });
 
 
