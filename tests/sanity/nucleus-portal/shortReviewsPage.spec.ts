@@ -57,7 +57,7 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
             await expect(components.dataGridCell("partnerName", 1)).toContainText("Dreamz");
             await expect(components.dataGridCell("status", 1)).toContainText("Created");
             await expect(components.dataGridCell("assignedTo", 1)).toHaveText("");
-            await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2024,");
+            await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2025,");
             await expect(components.dataGridCell("actions", 1)).toHaveText("Approve");
         })
     });
