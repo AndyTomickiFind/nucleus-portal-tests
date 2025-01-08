@@ -12,40 +12,63 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         await CasinosPage.page.waitForLoadState();
     });
 
-    test('check the title and url', async ({CasinosPage}) => {
+    test('Check the title and url', async ({CasinosPage}) => {
         await CasinosPage.page.waitForURL('**/partners/casinos');
         expect(await CasinosPage.page.title()).toBe('Nucleus Portal');
         expect(CasinosPage.page.url()).toBe(`https://${config.baseUrl}/partners/casinos`);
     });
 
-    test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
+    test('Verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
         await menuComponent.checkMenuItems();
         await menuComponent.checkDataPointItems();
     });
 
 
 
-    test('check the data grid', async ({components}) => {
+    test('Check the data grid', async ({components}) => {
         await test.step("Data grid table to be visible", async () => {
             await expect(components.dataGrid).toBeVisible();
         })
     });
 
-    test('edit and save Casino', async ({components, CasinosPage}) => {
+    test('Update and save Casino', async ({components, CasinosPage}) => {
         await test.step("search for the Casino", async () => {
-            await CasinosPage.casinoNameFilterField.fill("[QA] Casino used by ROBOTS - do not edit");
-            await CasinosPage.casinoNameFilterField.press(`Enter`);
+            const casinoName = "Casino used by ROBOTS - do not edit";
+            await CasinosPage.filterByCasinoName(casinoName);
+            await expect(components.dataGridCell("name", 1)).toContainText(casinoName);
+            await expect(components.dataGridCell("createdAt", 1)).toBeVisible();
+            await expect(components.dataGridCell("updatedAt", 1)).toBeVisible();
+        });
 
-            await expect(components.dataGridCell("name", 1)).toContainText("QA Toplist");
-            await expect(components.dataGridCell("domains", 1)).toContainText("ccn.com");
-            await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
-            await expect(components.dataGridCell("subType", 1)).toContainText("Default");
-            await expect(components.dataGridCell("status", 1)).toContainText("Published");
-            await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2024,");
-        })
+        await test.step("Open the Casino", async () => {
+            await components.dblClickDataGridRow(1);
+            await CasinosPage.page.waitForLoadState();
+            await expect(CasinosPage.topHeader).toContainText("Update Casino");
+        });
+
+        await test.step("Check all of accordion dropdowns", async () => {
+            // Define the list of dropdown headers to click
+            const dropdowns = ['details-header', 'logo-header', 'settings-header', 'homepage-header', 'reviewBy-header', 'teaser-header', 'prosCons', 'legal-header', 'extras'];
+
+            // Iterate through the dropdowns and click on each
+            for (const dropdown of dropdowns) {
+                await test.step(`Clicking on "${dropdown}"`, async () => {
+                    await components.openDropdown(dropdown);
+                    await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+                });
+            }
+        });
+
+        await test.step("Check the Tabs", async () => {
+            const tabs = ['General Information', 'Datapoints', 'Affiliate Links', 'Bonuses'];
+            for (const tab of tabs) {
+                const tabLocator = CasinosPage.getTabLocator(tab);
+                await tabLocator.click();
+            }
+        });
     });
 
-    test('pagination and Data Grid items', async ({components}) => {
+    test('Pagination and Data Grid items', async ({components}) => {
 
         await test.step("Select 25 items per page", async () => {
             await components.checkRowsInDataGrid(25, ["name", "createdAt", "updatedAt"]);

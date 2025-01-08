@@ -4,18 +4,22 @@ import {BrowserContext, Locator, Page, TestInfo} from "@playwright/test";
 export class CasinosPage extends BasePage {
 
     readonly testInfo: TestInfo;
+    readonly topHeader: Locator;
     readonly casinoNameFilterField: Locator;
     readonly sortButton: Locator;
     readonly newCasinoButton: Locator;
+
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
         this.testInfo = testInfo;
 
         // Mapping locators in the constructor
-        this.casinoNameFilterField = page.getByTestId(`casino-name-filter-field`);
+        this.topHeader = page.locator('//h5');
+        this.casinoNameFilterField = page.locator(`//input[@id='casino-name-filter-field']`);
         this.sortButton = page.locator("button[aria-label='Sort']");
         this.newCasinoButton = page.locator("button[data-testid='add-casino-button']");
+
     }
 
     /**
@@ -27,4 +31,8 @@ export class CasinosPage extends BasePage {
         await this.casinoNameFilterField.press('Enter');
     }
 
+    getTabLocator(tabName: string): Locator {
+        const tabTestId = `casino-${tabName.toLowerCase().replace(/\s+/g, '-')}-tab`;
+        return this.page.locator(`button[data-testid='${tabTestId}']`);
+    }
 }

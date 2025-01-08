@@ -19,6 +19,7 @@ export class components extends BasePage {
     readonly displayedRowsLabel: Locator;
     readonly newButton: Locator;
     readonly divider: Locator;
+    readonly dropdownHeader: (headerName: string) => Locator;
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -38,6 +39,8 @@ export class components extends BasePage {
         this.displayedRowsLabel = page.locator("//p[contains(@class, 'MuiTablePagination-displayedRows')]");
         this.newButton = page.locator("//button[@aria-label='New']");
         this.divider = page.getByRole('separator');
+        this.dropdownHeader = (headerName: string) =>
+            page.locator(`div[data-testid='${headerName}']`);
     }
 
     dataGridCell(column: string, rowNumber: number): Locator {
@@ -93,6 +96,10 @@ export class components extends BasePage {
         for (const label of labels) {
             await expect(elementLocator, `Element should contain text:"${label}"`).toContainText(label);
         }
+    }
+
+    async openDropdown(headerName: string) {
+        await this.dropdownHeader(headerName).click();
     }
 }
 
