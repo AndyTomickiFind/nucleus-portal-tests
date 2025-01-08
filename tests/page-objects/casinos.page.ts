@@ -9,6 +9,7 @@ export class CasinosPage extends BasePage {
     readonly sortButton: Locator;
     readonly newCasinoButton: Locator;
     readonly domainButton: (label: string) => Locator;
+    readonly noBonusToggle: Locator;
 
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
@@ -22,6 +23,7 @@ export class CasinosPage extends BasePage {
         this.newCasinoButton = page.locator("button[data-testid='add-casino-button']");
         this.domainButton = (label: string) =>
             page.locator(`//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')and .='${label}']`);
+        this.noBonusToggle = page.locator('//input[@id="casino-domain-has-bonuses-toggle"]');
 
     }
 

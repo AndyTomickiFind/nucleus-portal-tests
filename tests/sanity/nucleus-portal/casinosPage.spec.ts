@@ -24,12 +24,12 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-
     test('Check the data grid', async ({components}) => {
         await test.step("Data grid table to be visible", async () => {
             await expect(components.dataGrid).toBeVisible();
         })
     });
+
 
     test('Update and save Casino', async ({components, CasinosPage}) => {
         await test.step("search for the Casino", async () => {
@@ -68,10 +68,15 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         });
 
         await test.step("Check No Bonus toggle button", async () => {
-            CasinosPage.getTabLocator('Bonuses').click();
-            CasinosPage.domainButton('salon.com').click();
+            await CasinosPage.getTabLocator('Bonuses').click();
+            await CasinosPage.domainButton('salon.com').click();
+            await CasinosPage.noBonusToggle.click();
+            await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for salon.com.");
+            await CasinosPage.noBonusToggle.click();
+            await components.checkAlertBanner("Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed.");
         });
     });
+
 
     test('Pagination and Data Grid items', async ({components}) => {
 
