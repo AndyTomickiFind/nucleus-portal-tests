@@ -31,22 +31,22 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-    test('Update and save Random Casinos and a Specific Casino', async ({components, CasinosPage, menuComponent }) => {
+    test('Update and save Random Casinos and a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
 
         // Randomly select 5 casinos, excluding the specific one
         const randomCasinos: string[] = [
             "Casino used by ROBOTS - do not edit",
-            ...Array.from({ length: 5 }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26)))
+            ...Array.from({length: 5}, () => String.fromCharCode(65 + Math.floor(Math.random() * 26)))
         ];
 
-         for (const casino of randomCasinos) {
+        for (const casinoName of randomCasinos) {
 
-            await test.step(`Testing Casino "${casino}"`, async () => {
+            await test.step(`Testing Casino that starts with "${casinoName}"`, async () => {
                 // Search for the casino
                 await test.step("Search for the Casino", async () => {
                     await menuComponent.menubarItem_Partners.click();
                     await menuComponent.subPartnersMenuItem_Casinos.click();
-                    await CasinosPage.filterByCasinoName(casino);
+                    await CasinosPage.filterByCasinoName(casinoName);
                     await expect(components.dataGridCell("name", 1)).toBeVisible();
                     await expect(components.dataGridCell("createdAt", 1)).toBeVisible();
                     await expect(components.dataGridCell("updatedAt", 1)).toBeVisible();
@@ -92,9 +92,11 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 // Check the "No Bonus" toggle button
                 await test.step("Check No Bonus toggle button", async () => {
                     await CasinosPage.getTabLocator('Bonuses').click();
-                    await CasinosPage.domainButton('salon.com').click(); // Example: replace with dynamic domain logic if needed
-                    await CasinosPage.noBonusToggle.click();
-                    await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for salon.com.");
+                    await CasinosPage.firstDomainButton.click(); //first domain that can be found
+                    if (await CasinosPage.noBonusToggle.isChecked()) {
+                        await CasinosPage.noBonusToggle.click();
+                    }
+                    await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for");
                     await CasinosPage.noBonusToggle.click();
                     await components.checkAlertBanner(
                         "Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed."

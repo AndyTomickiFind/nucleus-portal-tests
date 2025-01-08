@@ -8,6 +8,7 @@ export class CasinosPage extends BasePage {
     readonly casinoNameFilterField: Locator;
     readonly sortButton: Locator;
     readonly newCasinoButton: Locator;
+    readonly firstDomainButton: Locator;
     readonly domainButton: (label: string) => Locator;
     readonly noBonusToggle: Locator;
 
@@ -21,6 +22,7 @@ export class CasinosPage extends BasePage {
         this.casinoNameFilterField = page.locator(`//input[@id='casino-name-filter-field']`);
         this.sortButton = page.locator("button[aria-label='Sort']");
         this.newCasinoButton = page.locator("button[data-testid='add-casino-button']");
+        this.firstDomainButton = page.locator("//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')]").first();
         this.domainButton = (label: string) =>
             page.locator(`//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')and .='${label}']`);
         this.noBonusToggle = page.locator('//input[@id="casino-domain-has-bonuses-toggle"]');
