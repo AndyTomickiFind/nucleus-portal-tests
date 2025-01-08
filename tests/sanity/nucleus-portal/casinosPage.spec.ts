@@ -66,6 +66,11 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 await tabLocator.click();
             }
         });
+
+        await test.step("Check No Bonus toggle button", async () => {
+            CasinosPage.getTabLocator('Bonuses').click();
+            CasinosPage.domainButton('salon.com').click();
+        });
     });
 
     test('Pagination and Data Grid items', async ({components}) => {
