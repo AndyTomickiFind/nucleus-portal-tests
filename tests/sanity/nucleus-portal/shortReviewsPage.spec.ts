@@ -15,8 +15,8 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
     });
 
     test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
-        await menuComponent.checkMenuItems()
-        // await menuComponent.checkDataPointItems() //doesnt exist in staging
+        await menuComponent.checkMenuItems();
+        await menuComponent.checkDataPointItems();
     });
 
     test('check the alert banner', async ({components}) => {

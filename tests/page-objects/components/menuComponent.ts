@@ -61,8 +61,8 @@ export class MenuComponent extends BasePage {
         await verifyAndClickMenuItem(this.menubarItem_Home, "Home");
         await verifyAndClickMenuItem(this.menubarItem_Toplists, "Toplists");
         await verifyAndClickMenuItem(this.menubarItem_ShortReviews, "Short Reviews");
-      //  await verifyAndClickMenuItem(this.menubarItem_Partners, "Partners");  //doesn't exist in staging
-      //  await verifyAndClickMenuItem(this.menubarItem_Database, "Database");
+        await verifyAndClickMenuItem(this.menubarItem_Partners, "Partners");
+        await verifyAndClickMenuItem(this.menubarItem_Database, "Database");
 
 
         // SubMenu TOPLISTS
@@ -74,50 +74,48 @@ export class MenuComponent extends BasePage {
         await this.menubarItem_ShortReviews.hover();
         await verifyAndClickMenuItem(this.subShortReviewsMenuItem_Search, "Search");
 
-        // DOESN'T EXIST IN STAGING
-        // // SubMenu PARTNERS
-        // await this.menubarItem_Partners.hover();
-        // await verifyAndClickMenuItem(this.subPartnersMenuItem_Casinos, "Casinos");
-        //
-        // // SubMenu DATABASE
-        // await this.menubarItem_Database.hover();
-        // await verifyAndClickMenuItem(this.subDatabaseMenuItem_Datapoints, "Datapoints");
+        // SubMenu PARTNERS
+        await this.menubarItem_Partners.hover();
+        await verifyAndClickMenuItem(this.subPartnersMenuItem_Casinos, "Casinos");
+
+        // SubMenu DATABASE
+        await this.menubarItem_Database.hover();
+        await verifyAndClickMenuItem(this.subDatabaseMenuItem_Datapoints, "Datapoints");
     }
 
-    // DOESN'T EXIST IN STAGING
-    // async checkDataPointItems() {
-    //     const dataPointItems: string[] = [
-    //         "Coins",
-    //         "Community Socials",
-    //         "Contact Methods",
-    //         "Crypto Pairs",
-    //         "Currencies",
-    //         "Deposit Methods",
-    //         "Educational Resources",
-    //         "Insurance Providers",
-    //         "Languages",
-    //         "Licenses",
-    //         "Order Types",
-    //         "Payment Types",
-    //         "Positions",
-    //         "Product Categories",
-    //         "Products",
-    //         "Registration Steps",
-    //         "Security Methods",
-    //         "Slot Providers",
-    //         "Sport Types",
-    //         "Sports",
-    //         "Support Issues",
-    //         "Withdrawal Methods"
-    //     ];
-    //
-    //
-    //     await this.menubarItem_Database.click();
-    //     await this.subDatabaseMenuItem_Datapoints.click();
-    //
-    //     for (const dataPointItem of dataPointItems) {
-    //         const menuItemLocator: Locator = this.page.getByRole('menuitem', {name: `${dataPointItem}`});
-    //         await verifyAndClickMenuItem(menuItemLocator, dataPointItem)
-    //     }
-    //}
+    async checkDataPointItems() {
+        const dataPointItems: string[] = [
+            "Coins",
+            "Community Socials",
+            "Contact Methods",
+            "Crypto Pairs",
+            "Currencies",
+            "Deposit Methods",
+            "Educational Resources",
+            "Insurance Providers",
+            "Languages",
+            "Licenses",
+            "Order Types",
+            "Payment Types",
+            "Positions",
+            "Product Categories",
+            "Products",
+            "Registration Steps",
+            "Security Methods",
+            "Slot Providers",
+            "Sport Types",
+            "Sports",
+            "Support Issues",
+            "Withdrawal Methods"
+        ];
+
+
+        await this.menubarItem_Database.click();
+        await this.subDatabaseMenuItem_Datapoints.click();
+
+        for (const dataPointItem of dataPointItems) {
+            const menuItemLocator: Locator = this.page.getByRole('menuitem', {name: `${dataPointItem}`});
+            await verifyAndClickMenuItem(menuItemLocator, dataPointItem)
+        }
+    }
 }

@@ -14,8 +14,8 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
     });
 
     test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
-        await menuComponent.checkMenuItems()
-        // await menuComponent.checkDataPointItems()
+        await menuComponent.checkMenuItems();
+        await menuComponent.checkDataPointItems();
     });
 
     test('check all elements', async ({NewToplistPage, components}) => {
