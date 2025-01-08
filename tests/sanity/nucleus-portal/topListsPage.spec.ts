@@ -134,15 +134,15 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
         await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
         await test.step("Select 25 items per page", async () => {
-            await components.checkRowsInDataGrid(25);
+            await components.checkRowsInDataGrid(25, ["name", "domains", "type", "subType", "status", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
         });
         await test.step("Select 15 items per page", async () => {
-            await components.checkRowsInDataGrid(15);
+            await components.checkRowsInDataGrid(15, ["name", "domains", "type", "subType", "status", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–15 of ");
         });
         await test.step("Select 10 items per page", async () => {
-            await components.checkRowsInDataGrid(10);
+            await components.checkRowsInDataGrid(10, ["name", "domains", "type", "subType", "status", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
         await test.step("Check Next Page and Previous Page buttons", async () => {

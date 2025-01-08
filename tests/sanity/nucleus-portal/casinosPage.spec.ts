@@ -2,6 +2,7 @@ import {test} from "../../fixtures/fixtures";
 import {expect} from "@playwright/test";
 import config from "../../../playwright.config";
 
+
 test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({CasinosPage, menuComponent}) => {
@@ -26,15 +27,15 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
     test('check the data grid', async ({components}) => {
         await test.step("Data grid table to be visible", async () => {
-            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
             await expect(components.dataGrid).toBeVisible();
         })
     });
 
-    test('check the search by Country', async ({components}) => {
-        await test.step("`QA Toplist` must be visible when selecting `Cyprus` on ccn.com", async () => {
-            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
-            await components.clickItemFromCombobox(components.countriesCombobox, "Cyprus");
+    test('edit and save Casino', async ({components, CasinosPage}) => {
+        await test.step("search for the Casino", async () => {
+            await CasinosPage.casinoNameFilterField.fill("[QA] Casino used by ROBOTS - do not edit");
+            await CasinosPage.casinoNameFilterField.press(`Enter`);
+
             await expect(components.dataGridCell("name", 1)).toContainText("QA Toplist");
             await expect(components.dataGridCell("domains", 1)).toContainText("ccn.com");
             await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
@@ -45,20 +46,17 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
     test('pagination and Data Grid items', async ({components}) => {
-        test.skip(process.env.TEST_ENV === 'staging', 'Not enough Toplists in staging env to test pagination');
 
-        await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
-        await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
         await test.step("Select 25 items per page", async () => {
-            await components.checkRowsInDataGrid(25);
+            await components.checkRowsInDataGrid(25, ["name", "createdAt", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
         });
         await test.step("Select 15 items per page", async () => {
-            await components.checkRowsInDataGrid(15);
+            await components.checkRowsInDataGrid(15, ["name", "createdAt", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–15 of ");
         });
         await test.step("Select 10 items per page", async () => {
-            await components.checkRowsInDataGrid(10);
+            await components.checkRowsInDataGrid(10, ["name", "createdAt", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
         await test.step("Check Next Page and Previous Page buttons", async () => {
@@ -71,12 +69,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             await components.previousPageButton.click();
             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
-    });
-
-    //COPY TOPLIST - TO DO
-
-    test('new Toplist', async ({components}) => {
-        await components.newButton.click();
     });
 
 });

@@ -70,16 +70,13 @@ export class components extends BasePage {
         await itemLocator.click();
     }
 
-    async checkRowsInDataGrid(rowsCount: number) {
+    async checkRowsInDataGrid(rowsCount: number, dataGridCells: string[]) {
         await this.clickItemFromCombobox(this.rowsPerPageDropdown, rowsCount.toString());
 
         for (let row = 1; row <= rowsCount; row++) {
-            await this.dataGridCell("name", row).click({trial: true});
-            await this.dataGridCell("domains", row).click({trial: true});
-            await this.dataGridCell("type", row).click({trial: true});
-            await this.dataGridCell("subType", row).click({trial: true});
-            await this.dataGridCell("status", row).click({trial: true});
-            await this.dataGridCell("updatedAt", row).click({trial: true});
+            for (const cell of dataGridCells) {
+                await this.dataGridCell(cell, row).click({trial: true});
+            }
         }
     }
 
