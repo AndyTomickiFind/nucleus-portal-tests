@@ -31,50 +31,77 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-    test('Update and save Casino', async ({components, CasinosPage}) => {
-        await test.step("search for the Casino", async () => {
-            const casinoName = "Casino used by ROBOTS - do not edit";
-            await CasinosPage.filterByCasinoName(casinoName);
-            await expect(components.dataGridCell("name", 1)).toContainText(casinoName);
-            await expect(components.dataGridCell("createdAt", 1)).toBeVisible();
-            await expect(components.dataGridCell("updatedAt", 1)).toBeVisible();
-        });
+    test('Update and save Random Casinos and a Specific Casino', async ({components, CasinosPage, menuComponent }) => {
 
-        await test.step("Open the Casino", async () => {
-            await components.dblClickDataGridRow(1);
-            await CasinosPage.page.waitForLoadState();
-            await expect(CasinosPage.topHeader).toContainText("Update Casino");
-        });
+        // Randomly select 5 casinos, excluding the specific one
+        const randomCasinos: string[] = [
+            "Casino used by ROBOTS - do not edit",
+            ...Array.from({ length: 5 }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26)))
+        ];
 
-        await test.step("Check all of accordion dropdowns", async () => {
-            // Define the list of dropdown headers to click
-            const dropdowns = ['details-header', 'logo-header', 'settings-header', 'homepage-header', 'reviewBy-header', 'teaser-header', 'prosCons', 'legal-header', 'extras'];
+         for (const casino of randomCasinos) {
 
-            // Iterate through the dropdowns and click on each
-            for (const dropdown of dropdowns) {
-                await test.step(`Clicking on "${dropdown}"`, async () => {
-                    await components.openDropdown(dropdown);
-                    await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+            await test.step(`Testing Casino "${casino}"`, async () => {
+                // Search for the casino
+                await test.step("Search for the Casino", async () => {
+                    await menuComponent.menubarItem_Partners.click();
+                    await menuComponent.subPartnersMenuItem_Casinos.click();
+                    await CasinosPage.filterByCasinoName(casino);
+                    await expect(components.dataGridCell("name", 1)).toBeVisible();
+                    await expect(components.dataGridCell("createdAt", 1)).toBeVisible();
+                    await expect(components.dataGridCell("updatedAt", 1)).toBeVisible();
                 });
-            }
-        });
 
-        await test.step("Check the Tabs", async () => {
-            const tabs = ['General Information', 'Datapoints', 'Affiliate Links', 'Bonuses'];
-            for (const tab of tabs) {
-                const tabLocator = CasinosPage.getTabLocator(tab);
-                await tabLocator.click();
-            }
-        });
+                // Open the casino details page
+                await test.step("Open the Casino", async () => {
+                    await components.dblClickDataGridRow(1);
+                    await CasinosPage.page.waitForLoadState();
+                    await expect(CasinosPage.topHeader).toContainText("Update Casino");
+                });
 
-        await test.step("Check No Bonus toggle button", async () => {
-            await CasinosPage.getTabLocator('Bonuses').click();
-            await CasinosPage.domainButton('salon.com').click();
-            await CasinosPage.noBonusToggle.click();
-            await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for salon.com.");
-            await CasinosPage.noBonusToggle.click();
-            await components.checkAlertBanner("Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed.");
-        });
+                // Check all accordion dropdowns
+                await test.step("Check all accordion dropdowns", async () => {
+                    const dropdowns = [
+                        'details-header',
+                        'logo-header',
+                        'settings-header',
+                        'homepage-header',
+                        'reviewBy-header',
+                        'teaser-header',
+                        'prosCons',
+                        'legal-header',
+                        'extras',
+                    ];
+                    for (const dropdown of dropdowns) {
+                        await test.step(`Clicking on "${dropdown}"`, async () => {
+                            await components.openDropdown(dropdown);
+                            await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+                        });
+                    }
+                });
+
+                // Check the tabs
+                await test.step("Check the Tabs", async () => {
+                    const tabs = ['General Information', 'Datapoints', 'Affiliate Links', 'Bonuses'];
+                    for (const tab of tabs) {
+                        const tabLocator = CasinosPage.getTabLocator(tab);
+                        await tabLocator.click();
+                    }
+                });
+
+                // Check the "No Bonus" toggle button
+                await test.step("Check No Bonus toggle button", async () => {
+                    await CasinosPage.getTabLocator('Bonuses').click();
+                    await CasinosPage.domainButton('salon.com').click(); // Example: replace with dynamic domain logic if needed
+                    await CasinosPage.noBonusToggle.click();
+                    await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for salon.com.");
+                    await CasinosPage.noBonusToggle.click();
+                    await components.checkAlertBanner(
+                        "Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed."
+                    );
+                });
+            }); // End of casino test
+        } // End of loop through casinos
     });
 
 

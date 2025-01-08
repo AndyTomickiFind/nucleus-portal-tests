@@ -10,6 +10,7 @@ const environment = process.env.TEST_ENV || 'dev';
 interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
     toplistServiceV1Uri?: string;
+    nucleusPortalServiceUri?: string;
     staticPage?: { username?: string; password?: string };
 }
 
@@ -89,7 +90,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-            dependencies: ['setup'], //comment out if the auth is already stored
+          //  dependencies: ['setup'], //comment out if the auth is already stored
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',
@@ -157,6 +158,7 @@ const prodConfig: TestConfig = {
 const devConfig: TestConfig = {
     baseUrl: 'portal.dev.nucleusmvp.com',
     toplistServiceV1Uri: 'dev.nucleusmvp.com',
+    nucleusPortalServiceUri: 'portal-be.dev.nucleusmvp.com',
     staticPage: {
         username: process.env.DEV_STATIC_PAGE_USER,
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
@@ -178,6 +180,7 @@ const devConfig: TestConfig = {
 const stagingConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
     toplistServiceV1Uri: 'staging.nucleusmvp.com',
+    nucleusPortalServiceUri: 'portal-be.staging.nucleusmvp.com',
     staticPage: {
         username: process.env.STAGING_STATIC_PAGE_USER,
         password: process.env.STAGING_STATIC_PAGE_PASSWORD,
