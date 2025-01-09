@@ -31,13 +31,34 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-    test('Update and save Random Casinos and a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
+    test('Update and save Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
+        async function getCasinos(): Promise<string[]> {
+            const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
+                params: {size: 10000},
+                headers: {
+                    "Authorization": `${config.nucleusPortalToken}`,
+                    "Content-Type": "application/json"
+                }
+            });
+            const data = await response.json();
+            return data.items.map((item) => item.name);
+        }
 
-        // Randomly select 5 casinos, excluding the specific one
-        const randomCasinos: string[] = [
-            "Casino used by ROBOTS - do not edit",
-            ...Array.from({length: 5}, () => String.fromCharCode(65 + Math.floor(Math.random() * 26)))
-        ];
+        // Randomly select 5 casinos
+        const randomCasinos: string[] = await (async () => {
+            const allCasinos = await getCasinos(); // Retrieve the list of casinos
+            const selectedCasinos = new Set<string>();
+
+            while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
+                // Randomly select a casino and add it to the set to avoid duplicates
+                const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
+                if (!selectedCasinos.has(randomCasino)) {
+                    selectedCasinos.add(randomCasino);
+                }
+            }
+
+            return Array.from(selectedCasinos);
+        })();
 
         for (const casinoName of randomCasinos) {
 

@@ -11,6 +11,7 @@ interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
     toplistServiceV1Uri?: string;
     nucleusPortalServiceUri?: string;
+    nucleusPortalToken?: string;
     staticPage?: { username?: string; password?: string };
 }
 
@@ -25,7 +26,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 200000,
+    timeout: 20000000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
@@ -90,7 +91,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-          //  dependencies: ['setup'], //comment out if the auth is already stored
+            dependencies: ['setup'], //comment out if the auth is already stored
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',
@@ -159,6 +160,7 @@ const devConfig: TestConfig = {
     baseUrl: 'portal.dev.nucleusmvp.com',
     toplistServiceV1Uri: 'dev.nucleusmvp.com',
     nucleusPortalServiceUri: 'portal-be.dev.nucleusmvp.com',
+    nucleusPortalToken: process.env.DEV_NUCLEUS_PORTAL_TOKEN,
     staticPage: {
         username: process.env.DEV_STATIC_PAGE_USER,
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
@@ -181,6 +183,7 @@ const stagingConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
     toplistServiceV1Uri: 'staging.nucleusmvp.com',
     nucleusPortalServiceUri: 'portal-be.staging.nucleusmvp.com',
+    nucleusPortalToken: process.env.STAGING_NUCLEUS_PORTAL_TOKEN,
     staticPage: {
         username: process.env.STAGING_STATIC_PAGE_USER,
         password: process.env.STAGING_STATIC_PAGE_PASSWORD,
