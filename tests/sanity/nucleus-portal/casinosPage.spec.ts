@@ -234,7 +234,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     await CasinosPage.saveButton.click();
                 });
 
-                await test.step("Check Validation Messages", async () => {
+                await test.step("Check validation messages", async () => {
                     // Required fields
                     const requiredFields: string[] = ["products", "coins", "currencies", "security-methods", "languages", "support-languages", "slot-providers", "deposit-methods", "withdrawal-methods", "licenses-owned"];
                     for (const field of requiredFields) {
