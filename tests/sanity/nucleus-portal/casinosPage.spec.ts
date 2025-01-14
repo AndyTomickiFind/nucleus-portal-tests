@@ -158,14 +158,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-    // test(`[${config.name.toUpperCase()}] Cryptogambling - GET /api/v2/toplists/{id}/results`,{
-    //     annotation: {
-    //         type: 'issue',
-    //         description: 'https://findco.atlassian.net/browse/DEV-5314',
-    //     },
-    // }, async ({request}, testInfo) => {
-
-
     test('Update/edit a Specific Casino', {
             annotation: {
                 type: 'issue',
@@ -197,7 +189,11 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 await test.step("Edit DATAPOINTS", async () => {
                     await CasinosPage.getTabLocator("DATAPOINTS").click();
-                    await CasinosPage.casinoDatapointsClearField("sports");
+
+                    const fieldsToClear = ["Products *", "Product Categories *", "Coins *", "Currencies *", "Security Methods *", "Languages *", "Support Languages *", "Slot Providers *", "Sports *", "Deposit Methods *", "Withdrawal Methods *", "Licenses Owned *"];
+                    for (const field of fieldsToClear) {
+                        await CasinosPage.casinoDatapointsClearField(field);
+                    }
                 });
 
 
@@ -206,7 +202,14 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 });
 
                 await test.step("Check Validation Messages", async () => {
-                    await expect(CasinosPage.casinoDatapointsValidationLabel("sports")).not.toBeVisible();
+                    // Required fields
+                    const requiredFields: string[] = ["products", "coins", "currencies", "security-methods", "languages", "support-languages", "slot-providers", "deposit-methods", "withdrawal-methods", "licenses-owned"];
+                    for (const field of requiredFields) {
+                        await expect(CasinosPage.casinoDatapointsValidationLabel(field),`${field} field is required`).toBeVisible();
+                    }
+
+                    //Not required fields
+                    await expect(CasinosPage.casinoDatapointsValidationLabel("sports"), "Sports field is not required (DEV-5499)").not.toBeVisible();
                 });
 
 

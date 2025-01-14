@@ -1,5 +1,6 @@
 import {BasePage} from "./base.page";
 import {BrowserContext, Locator, Page, TestInfo} from "@playwright/test";
+import {test} from "../fixtures/fixtures";
 
 export class CasinosPage extends BasePage {
 
@@ -14,7 +15,7 @@ export class CasinosPage extends BasePage {
     readonly noBonusToggle: Locator;
     readonly casinoNameField: Locator;
     readonly clearFieldButton: (name: string) => Locator;
-    readonly casinoDatapointsDropdownField: (name: string) => Locator;
+    readonly casinoDatapointsDropdownField: (label: string) => Locator;
     readonly casinoDatapointsValidationLabel: (name: string) => Locator;
 
 
@@ -33,10 +34,10 @@ export class CasinosPage extends BasePage {
             page.locator(`//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')and .='${label}']`);
         this.noBonusToggle = page.locator('//input[@id="casino-domain-has-bonuses-toggle"]');
         this.casinoNameField = page.locator('//input[@id="casino-general-info-form-field-name"]');
-        this.clearFieldButton = (name: string) =>
-            this.casinoDatapointsDropdownField(name).locator(" //*[@data-testid='CloseIcon']");
-        this.casinoDatapointsDropdownField = (name: string) =>
-            page.locator(`//div[@data-testid='casino-datapoints-form-${name}-autocomplete-field']`);
+        this.clearFieldButton = (label: string) =>
+            this.casinoDatapointsDropdownField(label).locator(" //*[@data-testid='CloseIcon']");
+        this.casinoDatapointsDropdownField = (label: string) =>
+            page.locator(`//label[.='${label}']/..`);
         this.casinoDatapointsValidationLabel = (name: string) =>
             page.locator(`//p[@id='casino-datapoints-form-${name}-autocomplete-field-helper-text']`);
 
@@ -58,7 +59,10 @@ export class CasinosPage extends BasePage {
     }
 
     async casinoDatapointsClearField(fieldName: string) {
-        await this.casinoDatapointsDropdownField(fieldName).click();
-        await this.clearFieldButton(fieldName).click();
+        await test.step("Removing all items in: "+fieldName, async () => {
+            await this.casinoDatapointsDropdownField(fieldName).click();
+            await this.clearFieldButton(fieldName).click();
+            await this.page.keyboard.press('Escape');
+        });
     }
 }
