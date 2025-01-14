@@ -7,10 +7,15 @@ export class CasinosPage extends BasePage {
     readonly topHeader: Locator;
     readonly casinoNameFilterField: Locator;
     readonly sortButton: Locator;
+    readonly saveButton: Locator;
     readonly newCasinoButton: Locator;
     readonly firstDomainButton: Locator;
     readonly domainButton: (label: string) => Locator;
     readonly noBonusToggle: Locator;
+    readonly casinoNameField: Locator;
+    readonly clearFieldButton: (name: string) => Locator;
+    readonly casinoDatapointsDropdownField: (name: string) => Locator;
+    readonly casinoDatapointsValidationLabel: (name: string) => Locator;
 
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
@@ -21,11 +26,20 @@ export class CasinosPage extends BasePage {
         this.topHeader = page.locator('//h5');
         this.casinoNameFilterField = page.locator(`//input[@id='casino-name-filter-field']`);
         this.sortButton = page.locator("button[aria-label='Sort']");
+        this.saveButton = page.getByTestId(`casino-submit-button`);
         this.newCasinoButton = page.locator("button[data-testid='add-casino-button']");
         this.firstDomainButton = page.locator("//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')]").first();
         this.domainButton = (label: string) =>
             page.locator(`//div[contains(@data-testid, 'casino-bonuses-form-domain-chip-')and .='${label}']`);
         this.noBonusToggle = page.locator('//input[@id="casino-domain-has-bonuses-toggle"]');
+        this.casinoNameField = page.locator('//input[@id="casino-general-info-form-field-name"]');
+        this.clearFieldButton = (name: string) =>
+            this.casinoDatapointsDropdownField(name).locator(" //*[@data-testid='CloseIcon']");
+        this.casinoDatapointsDropdownField = (name: string) =>
+            page.locator(`//div[@data-testid='casino-datapoints-form-${name}-autocomplete-field']`);
+        this.casinoDatapointsValidationLabel = (name: string) =>
+            page.locator(`//p[@id='casino-datapoints-form-${name}-autocomplete-field-helper-text']`);
+
 
     }
 
@@ -41,5 +55,10 @@ export class CasinosPage extends BasePage {
     getTabLocator(tabName: string): Locator {
         const tabTestId = `casino-${tabName.toLowerCase().replace(/\s+/g, '-')}-tab`;
         return this.page.locator(`button[data-testid='${tabTestId}']`);
+    }
+
+    async casinoDatapointsClearField(fieldName: string) {
+        await this.casinoDatapointsDropdownField(fieldName).click();
+        await this.clearFieldButton(fieldName).click();
     }
 }

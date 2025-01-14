@@ -12,11 +12,13 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         await CasinosPage.page.waitForLoadState();
     });
 
+
     test('Check the title and url', async ({CasinosPage}) => {
         await CasinosPage.page.waitForURL('**/partners/casinos');
         expect(await CasinosPage.page.title()).toBe('Nucleus Portal');
         expect(CasinosPage.page.url()).toBe(`https://${config.baseUrl}/partners/casinos`);
     });
+
 
     test('Verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
         await menuComponent.checkMenuItems();
@@ -154,4 +156,93 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         });
     });
 
+
+    test('Update/edit a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
+
+        const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
+        await test.step(`Updating Casino "${casinoName}"`, async () => {
+            // Search for the casino
+            await test.step("Search for the Casino", async () => {
+                await menuComponent.menubarItem_Partners.click();
+                await menuComponent.subPartnersMenuItem_Casinos.click();
+                await CasinosPage.filterByCasinoName(casinoName);
+            });
+
+            // Open the casino details page
+            await test.step("Open the Casino", async () => {
+                await components.dblClickDataGridRow(1);
+                await CasinosPage.page.waitForLoadState();
+                await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+            });
+
+
+            await test.step("Edit General Information", async () => {
+                const date: Date = new Date();
+                await CasinosPage.casinoNameField.fill(casinoName+" - "+date.toISOString());
+
+            });
+
+
+            await test.step("Edit DATAPOINTS", async () => {
+                await CasinosPage.getTabLocator("DATAPOINTS").click();
+                await CasinosPage.casinoDatapointsClearField("sports");
+            });
+
+
+            await test.step("Save Casino", async () => {
+                await CasinosPage.saveButton.click();
+            });
+
+            await test.step("Check Validation Messages", async () => {
+                expect.soft(CasinosPage.casinoDatapointsValidationLabel("sports")).not.toBeVisible();
+            });
+
+
+
+
+            // // Check all accordion dropdowns
+            // await test.step("Check all accordion dropdowns", async () => {
+            //     const dropdowns = [
+            //         'details-header',
+            //         'logo-header',
+            //         'settings-header',
+            //         'homepage-header',
+            //         'reviewBy-header',
+            //         'teaser-header',
+            //         'prosCons',
+            //         'legal-header',
+            //         'extras',
+            //     ];
+            //     for (const dropdown of dropdowns) {
+            //         await test.step(`Clicking on "${dropdown}"`, async () => {
+            //             await components.openDropdown(dropdown);
+            //             await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+            //         });
+            //     }
+            // });
+
+            // Check the tabs
+            // await test.step("Check the Tabs", async () => {
+            //     const tabs = ['General Information', 'Datapoints', 'Affiliate Links', 'Bonuses'];
+            //     for (const tab of tabs) {
+            //         const tabLocator = CasinosPage.getTabLocator(tab);
+            //         await tabLocator.click();
+            //     }
+            // });
+
+            // Check the "No Bonus" toggle button
+            // await test.step("Check No Bonus toggle button", async () => {
+            //     await CasinosPage.getTabLocator('Bonuses').click();
+            //     await CasinosPage.firstDomainButton.click(); //first domain that can be found
+            //     if (await CasinosPage.noBonusToggle.isChecked()) {
+            //         await CasinosPage.noBonusToggle.click();
+            //     }
+            //     await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for");
+            //     await CasinosPage.noBonusToggle.click();
+            //     await components.checkAlertBanner(
+            //         "Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed."
+            //     );
+            // });
+        });
+    });
 });
