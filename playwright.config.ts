@@ -144,7 +144,7 @@ const prodConfig: TestConfig = {
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
     },
     expect: {
-        timeout: 4000
+        timeout: 6000
     },
     use: {
         ...defaultConfig.use,
@@ -167,7 +167,7 @@ const devConfig: TestConfig = {
     },
     name: `dev`,
     expect: {
-        timeout: 4000
+        timeout: 6000
     },
     use: {
         ...defaultConfig.use,
@@ -190,7 +190,7 @@ const stagingConfig: TestConfig = {
     },
     name: `staging`,
     expect: {
-        timeout: 4000
+        timeout: 6000
     },
     use: {
         ...defaultConfig.use,

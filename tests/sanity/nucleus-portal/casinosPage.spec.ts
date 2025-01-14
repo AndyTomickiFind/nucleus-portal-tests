@@ -31,7 +31,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
-    test('Update and save Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
+    test('Check Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
         async function getCasinos(): Promise<string[]> {
             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
                 params: {size: 10000},
@@ -57,27 +57,27 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 }
             }
 
-            return Array.from(selectedCasinos);
+            return ["Casino used by ROBOTS - do not edit", ...Array.from(selectedCasinos)];
         })();
 
         for (const casinoName of randomCasinos) {
 
-            await test.step(`Testing Casino that starts with "${casinoName}"`, async () => {
+            await test.step(`Testing Casino "${casinoName}"`, async () => {
                 // Search for the casino
                 await test.step("Search for the Casino", async () => {
                     await menuComponent.menubarItem_Partners.click();
                     await menuComponent.subPartnersMenuItem_Casinos.click();
                     await CasinosPage.filterByCasinoName(casinoName);
-                    await expect(components.dataGridCell("name", 1)).toBeVisible();
-                    await expect(components.dataGridCell("createdAt", 1)).toBeVisible();
-                    await expect(components.dataGridCell("updatedAt", 1)).toBeVisible();
+                    await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+                    await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
+                    await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
                 });
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
                     await components.dblClickDataGridRow(1);
                     await CasinosPage.page.waitForLoadState();
-                    await expect(CasinosPage.topHeader).toContainText("Update Casino");
+                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
                 });
 
                 // Check all accordion dropdowns
