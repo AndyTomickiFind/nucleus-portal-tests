@@ -1,6 +1,7 @@
 import {test} from "../../fixtures/fixtures";
 import {expect} from "@playwright/test";
 import config from "../../../playwright.config";
+import {timeDifference} from "../../common/helpers";
 
 
 test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
@@ -171,7 +172,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 description: 'https://findco.atlassian.net/browse/DEV-5499',
             },
         },
-        async ({request, components, CasinosPage, menuComponent}) => {
+        async ({components, CasinosPage, menuComponent}) => {
             const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
             await test.step(`Updating Casino "${casinoName}"`, async () => {
                 // Search for the casino
@@ -188,11 +189,9 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
                 });
 
-
+                const date: Date = new Date();
                 await test.step("Edit General Information", async () => {
-                    const date: Date = new Date();
                     await CasinosPage.casinoNameField.fill(casinoName + " - " + date.toISOString());
-
                 });
 
 
@@ -207,8 +206,18 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 });
 
                 await test.step("Check Validation Messages", async () => {
-                    expect.soft(CasinosPage.casinoDatapointsValidationLabel("sports")).not.toBeVisible();
+                    await expect(CasinosPage.casinoDatapointsValidationLabel("sports")).not.toBeVisible();
                 });
+
+
+                await test.step("Check if the Casino is saved and updated", async () => {
+                    await expect(components.dataGridCell("name", 1)).toContainText(casinoName + " - " + date.toISOString());
+                    const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
+                    const timedate = new Date();
+                    const expectedUpdateTime = timedate.toLocaleString();
+                    expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 10 seconds`).toBeLessThan(10_000);
+                });
+
 
 
                 // // Check all accordion dropdowns
