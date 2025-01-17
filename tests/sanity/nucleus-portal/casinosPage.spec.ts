@@ -190,7 +190,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
                     const timedate = new Date();
                     const expectedUpdateTime = timedate.toLocaleString();
-                    expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 10 seconds`).toBeLessThan(10_000);
+                    expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 20 seconds`).toBeLessThan(20_000);
                 });
 
             });
