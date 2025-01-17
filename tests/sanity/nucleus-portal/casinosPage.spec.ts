@@ -44,6 +44,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 }
             });
             const data = await response.json();
+            //console.log(data)
             return data.items.map((item) => item.name);
         }
 
@@ -223,7 +224,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 await test.step("Edit DATAPOINTS", async () => {
                     await CasinosPage.getTabLocator("DATAPOINTS").click();
 
-                    const fieldsToClear = ["Products *", "Product Categories *", "Coins *", "Currencies *", "Security Methods *", "Languages *", "Support Languages *", "Slot Providers *", "Sports *", "Deposit Methods *", "Withdrawal Methods *", "Licenses Owned *"];
+                    const fieldsToClear = ["Products *", "Product Categories *", "Coins *", "Currencies *", "Security Methods *", "Languages *", "Support Languages *", "Slot Providers *", "Sports", "Deposit Methods *", "Withdrawal Methods *", "Licenses Owned *"];
                     for (const field of fieldsToClear) {
                         await CasinosPage.casinoDatapointsClearField(field);
                     }
