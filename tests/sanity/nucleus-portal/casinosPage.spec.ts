@@ -36,6 +36,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
     test('Check Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
         async function getCasinos(): Promise<string[]> {
+
             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
                 params: {size: 10000},
                 headers: {
@@ -43,9 +44,13 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     "Content-Type": "application/json"
                 }
             });
+
+            expect.soft([401, 403], "User is not authorized to access this resource").not.toContain(response.status());
+            expect(response.status(), "There is an issue receiving the response from:"+response.url()).toBe(200);
+
             const data = await response.json();
-            //console.log(data)
             return data.items.map((item) => item.name);
+
         }
 
         // Randomly select 5 casinos
@@ -160,41 +165,45 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
 
     test('Update/edit a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
-            const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
-            await test.step(`Updating Casino "${casinoName}"`, async () => {
-                // Search for the casino
-                await test.step("Search for the Casino", async () => {
-                    await menuComponent.menubarItem_Partners.click();
-                    await menuComponent.subPartnersMenuItem_Casinos.click();
-                    await CasinosPage.filterByCasinoName(casinoName);
-                });
-
-                // Open the casino details page
-                await test.step("Open the Casino", async () => {
-                    await components.dblClickDataGridRow(1);
-                    await CasinosPage.page.waitForLoadState();
-                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
-                });
-
-                const date: Date = new Date();
-                await test.step("Edit General Information", async () => {
-                    await CasinosPage.casinoNameField.fill(casinoName + " - " + date.toISOString());
-                });
-
-                await test.step("Save Casino", async () => {
-                    await CasinosPage.saveButton.click();
-                });
-
-                await test.step("Check if the Casino is saved and updated", async () => {
-                    await expect(components.dataGridCell("name", 1)).toContainText(casinoName + " - " + date.toISOString());
-                    const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
-                    const timedate = new Date();
-                    const expectedUpdateTime = timedate.toLocaleString();
-                    expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 20 seconds`).toBeLessThan(20_000);
-                });
-
+        const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
+        await test.step(`Updating Casino "${casinoName}"`, async () => {
+            // Search for the casino
+            await test.step("Search for the Casino", async () => {
+                await menuComponent.menubarItem_Partners.click();
+                await menuComponent.subPartnersMenuItem_Casinos.click();
+                await CasinosPage.filterByCasinoName(casinoName);
             });
+
+            // Open the casino details page
+            await test.step("Open the Casino", async () => {
+                await components.dblClickDataGridRow(1);
+                await CasinosPage.page.waitForLoadState();
+                await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+            });
+
+            const date: Date = new Date();
+            await test.step("Edit General Information", async () => {
+                await CasinosPage.casinoNameField.fill(casinoName + " - " + date.toISOString());
+            });
+
+            await test.step("Save Casino", async () => {
+                await CasinosPage.saveButton.click();
+            });
+
+            await test.step("Check if the Casino is saved and updated", async () => {
+                await CasinosPage.page.waitForTimeout(2000);
+                await menuComponent.menubarItem_Partners.click();
+                await menuComponent.subPartnersMenuItem_Casinos.click();
+                await CasinosPage.filterByCasinoName(casinoName);
+                await expect(components.dataGridCell("name", 1)).toContainText(casinoName + " - " + date.toISOString());
+                const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
+                const timedate = new Date();
+                const expectedUpdateTime = timedate.toLocaleString();
+                expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 30 seconds`).toBeLessThan(30_000);
+            });
+
         });
+    });
 
 
     test('Check Validation Messages', {
@@ -239,7 +248,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     // Required fields
                     const requiredFields: string[] = ["products", "coins", "currencies", "security-methods", "languages", "support-languages", "slot-providers", "deposit-methods", "withdrawal-methods", "licenses-owned"];
                     for (const field of requiredFields) {
-                        await expect(CasinosPage.casinoDatapointsValidationLabel(field),`${field} field is required`).toBeVisible();
+                        await expect(CasinosPage.casinoDatapointsValidationLabel(field), `${field} field is required`).toBeVisible();
                     }
 
                     //Not required fields

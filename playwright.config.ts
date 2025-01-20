@@ -91,7 +91,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-          //  dependencies: ['setup'], //comment out if the auth is already stored
+            dependencies: ['setup'], //comment out if the auth is already stored
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',

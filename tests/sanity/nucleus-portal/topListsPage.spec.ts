@@ -124,7 +124,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
             await expect(components.dataGridCell("subType", 1)).toContainText("Default");
             await expect(components.dataGridCell("status", 1)).toContainText("Published");
-            await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2024,");
+            await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2025,");
         })
     });
 
