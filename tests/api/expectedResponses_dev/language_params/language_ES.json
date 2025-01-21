@@ -1,4 +1,5 @@
 {
+  "toplistLatestVersionId": "678a103f3e94008ec8318b76",
   "sites": [
     {
       "id": "675800b45e46917e95db9973",
@@ -6,7 +7,7 @@
       "description": "[dev.cryptogambling.ca] Adéntrate en un mundo de emoción y posibilidades infinitas en nuestro casino en línea. Con una amplia selección de juegos emocionantes, como tragamonedas, juegos de mesa y opciones con crupier en vivo, te ofrecemos la experiencia de juego definitiva al alcance de tu mano. Disfruta de transacciones seguras y fluidas, generosos bonos y promociones diseñadas para maximizar tu diversión. Nuestra plataforma está disponible las 24 horas, para que puedas jugar cuando y donde quieras. Únete hoy y descubre la combinación perfecta de diversión, seguridad y entretenimiento.",
       "featuredSnippet": "",
       "logo": {
-        "url": "/images/logos/1737018361233_6788cbf977ca4cc2338bf7ea.webp"
+        "url": "/images/logos/1737375522720_678e3f22719f207ac16efa78.webp"
       },
       "landingPageUrl": "https://dev.cryptogambling.ca/dimension",
       "finalRating": 5,
@@ -8097,10 +8098,10 @@
         }
       ],
       "homepageImageDesktop": {
-        "url": "/images/logos/1737018361927_6788cbf977ca4cc2338bf7ee.webp"
+        "url": "/images/logos/1737375523316_678e3f23719f207ac16efa7a.webp"
       },
       "homepageImageMobile": {
-        "url": "/images/logos/1737018362456_6788cbfa77ca4cc2338bf7f0.webp"
+        "url": "/images/logos/1737375524003_678e3f24719f207ac16efa7c.webp"
       },
       "position": 1,
       "products": [

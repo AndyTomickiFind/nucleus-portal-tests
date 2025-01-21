@@ -1,4 +1,5 @@
 {
+  "toplistLatestVersionId": "678a103f3e94008ec8318b76",
   "sites": [
     {
       "id": "675800b45e46917e95db9973",
@@ -6,7 +7,7 @@
       "description": "[dev.cryptogambling.ca] Step into a world of excitement and endless possibilities at our online casino. With a wide selection of thrilling games, including slots, table games, and live dealer options, we bring the ultimate gaming experience right to your fingertips. Enjoy secure and seamless transactions, generous bonuses, and promotions designed to maximize your enjoyment. Our platform is accessible 24/7, ensuring you can play whenever and wherever you like. Join us today and discover the perfect blend of fun, security, and entertainment.",
       "featuredSnippet": "",
       "logo": {
-        "url": "/images/logos/1737018361233_6788cbf977ca4cc2338bf7ea.webp"
+        "url": "/images/logos/1737375522720_678e3f22719f207ac16efa78.webp"
       },
       "landingPageUrl": "https://dev.cryptogambling.ca/dimension",
       "finalRating": 5,
@@ -8097,10 +8098,10 @@
         }
       ],
       "homepageImageDesktop": {
-        "url": "/images/logos/1737018361927_6788cbf977ca4cc2338bf7ee.webp"
+        "url": "/images/logos/1737375523316_678e3f23719f207ac16efa7a.webp"
       },
       "homepageImageMobile": {
-        "url": "/images/logos/1737018362456_6788cbfa77ca4cc2338bf7f0.webp"
+        "url": "/images/logos/1737375524003_678e3f24719f207ac16efa7c.webp"
       },
       "position": 1,
       "products": [

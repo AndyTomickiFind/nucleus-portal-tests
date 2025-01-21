@@ -86,6 +86,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 await test.step("Open the Casino", async () => {
                     await components.dblClickDataGridRow(1);
                     await CasinosPage.page.waitForLoadState();
+                    await CasinosPage.page.waitForTimeout(1500);
                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
                 });
 
@@ -177,7 +178,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             // Open the casino details page
             await test.step("Open the Casino", async () => {
                 await components.dblClickDataGridRow(1);
-                await CasinosPage.page.waitForLoadState();
+                await CasinosPage.page.waitForTimeout(2000);
                 await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
             });
 
