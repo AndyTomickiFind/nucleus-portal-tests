@@ -84,10 +84,28 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
-                    await components.dblClickDataGridRow(1);
-                    await CasinosPage.page.waitForLoadState();
-                    await CasinosPage.page.waitForTimeout(1500);
-                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                    for (let attempt = 0; attempt < 3; attempt++) {
+                        try {
+                            // Attempt the steps
+                            await components.dblClickDataGridRow(1);
+                            await CasinosPage.page.waitForLoadState('domcontentloaded');
+                            await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+
+                            // Exit the loop if successful
+                            break;
+                        } catch (error) {
+                            // Log an error or wait before retrying
+                            console.warn(`Attempt ${attempt + 1} failed. Retrying...`);
+
+                            // If this was the last attempt, rethrow the error
+                            if (attempt === 2) {
+                                throw error;
+                            }
+
+                            // Optionally, add a delay before retrying
+                            await new Promise(resolve => setTimeout(resolve, 1000)); // 1-second delay
+                        }
+                    }
                 });
 
                 // Check all accordion dropdowns
@@ -165,6 +183,8 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     });
 
 
+
+
     test('Update/edit a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
         const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
         await test.step(`Updating Casino "${casinoName}"`, async () => {
@@ -178,7 +198,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             // Open the casino details page
             await test.step("Open the Casino", async () => {
                 await components.dblClickDataGridRow(1);
-                await CasinosPage.page.waitForTimeout(2000);
                 await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
             });
 
