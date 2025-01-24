@@ -68,7 +68,6 @@ export class NewToplistPage extends BasePage {
         return this.page.getByTestId(`toplist-${listType}-result-${itemNumber}-autocomplete`);
     }
 
-
     async checkNewToplistHeader(bannerText: string) {
         await expect(this.newToplistHeader).toContainText(bannerText);
     }
