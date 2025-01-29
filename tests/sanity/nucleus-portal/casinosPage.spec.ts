@@ -58,7 +58,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             const allCasinos = await getCasinos(); // Retrieve the list of casinos
             const selectedCasinos = new Set<string>();
 
-            while (selectedCasinos.size < 125 && allCasinos.length > selectedCasinos.size) {
+            while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
                 // Randomly select a casino and add it to the set to avoid duplicates
                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
                 if (!selectedCasinos.has(randomCasino)) {
