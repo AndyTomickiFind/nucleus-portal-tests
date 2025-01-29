@@ -73,7 +73,7 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Screenshot on failure. */
         screenshot: 'only-on-failure',
         /* Headless mode. */
-        headless: false,
+        headless: true,
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */
