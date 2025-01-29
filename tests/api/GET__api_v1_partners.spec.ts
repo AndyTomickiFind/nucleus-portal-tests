@@ -18,7 +18,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/partners`, async ({request}, te
 
     await logResponse(response, testInfo);
 
-    expect(response.status()).toBe(200); // Customize based on the expected status code
+    expect(response.status()).toBe(200);
     const responseBody = await response.json();
     const idPattern = /^[0-9a-fA-F]{24}$/;
     //const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/partners.json`, 'utf-8'));

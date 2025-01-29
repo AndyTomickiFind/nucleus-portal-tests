@@ -1,10 +1,9 @@
 import {APIResponse, TestInfo} from "@playwright/test";
 
-export async function logResponse(response: APIResponse, context: TestInfo): Promise<void> {
+export async function logResponse(response: APIResponse, context: TestInfo, method?: string): Promise<void> {
     const responseBody = await response.body();
-    await context.attach(`Response Body of ${response.url()}`, {
+    await context.attach(`Response Body of ${method} ${response.url()}`, {
         contentType: 'application/json',
         body: responseBody.toString()
     });
-   // console.log(responseBody.toString())
 }

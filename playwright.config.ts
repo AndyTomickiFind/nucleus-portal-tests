@@ -116,8 +116,12 @@ const defaultConfig: PlaywrightTestConfig = {
             },
         },
         {
-            name: 'api',
+            name: 'api-toplist-service',
             testMatch: 'api/*.spec.ts',
+        },
+        {
+            name: 'api-nucleus-portal',
+            testMatch: 'api/nucleusPortalAPI/*.spec.ts',
         },
     ],
 
