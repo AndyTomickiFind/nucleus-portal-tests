@@ -74,8 +74,8 @@ export class NewToplistPage extends BasePage {
 
     async checkToplistsResults(listType: string, itemsCount: number) {
         for (let i = 1; i < itemsCount; i++) {
-            // await this.toplistResultsItem(listType, i).scrollIntoViewIfNeeded();
-            await this.page.mouse.wheel(0, 10);
+            //await this.toplistResultsItem(listType, i).scrollIntoViewIfNeeded();
+            await this.page.mouse.wheel(0, 100);
             await this.toplistResultsItem(listType, i).click({trial: true})
         }
     }
