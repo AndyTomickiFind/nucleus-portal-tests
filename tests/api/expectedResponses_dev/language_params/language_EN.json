@@ -209,11 +209,11 @@
         },
         {
           "id": "675859585e46917e950c97da",
-          "name": "[QA] Coin ",
+          "name": "[QA] Coin 1",
           "image": {
             "url": "/wp-content/uploadsstring"
           },
-          "iso": "string",
+          "iso": "QA1",
           "priority": 1
         },
         {
@@ -8201,13 +8201,22 @@
       ],
       "depositMethodsCrypto": [
         {
-          "id": "6745f09352b22da564483832",
-          "name": "Best coin ever",
+          "id": "675859585e46917e950c97da",
+          "name": "[QA] Coin 1",
           "image": {
-            "url": "/images/logos/1732636817457_6745f09152b22da564483830.jpg"
+            "url": "/wp-content/uploadsstring"
           },
-          "iso": "Andys Coin",
-          "priority": 6666666666666
+          "iso": "QA1",
+          "priority": 1
+        },
+        {
+          "id": "675859de5e46917e950c9d86",
+          "name": "[QA] Coin 2",
+          "image": {
+            "url": "/wp-content/uploadsstring"
+          },
+          "iso": "QA2",
+          "priority": 1
         }
       ],
       "homepageImageDesktop": {
@@ -8231,9 +8240,8 @@
       ],
       "sports": [
         {
-          "id": "6750748ef58cbf28baaae516",
-          "name": "1",
-          "logo": "/images/logos/1733325965999_6750748df58cbf28baaae514.webp"
+          "id": "67597554018a12a2b506c7a6",
+          "name": "[QA] Sport 1"
         }
       ],
       "endToEndCrypto": false,
