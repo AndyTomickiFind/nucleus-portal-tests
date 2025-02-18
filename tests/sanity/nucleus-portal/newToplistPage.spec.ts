@@ -63,13 +63,15 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await NewToplistPage.provablyFairCheckbox.click();
         });
 
-        await test.step("Check New Deposit Method", async () => {
-            await NewToplistPage.newDepositMethodButton.click();
-            await components.checkDividers(["General", "Upload Logo"]);
 
-            await NewToplistPage.newDepositMethodCancelButton.click({trial: true});
-            await NewToplistPage.newDepositMethodCancelButton.click();
-        });
+        // Button doesn't exist anymore
+        // await test.step("Check New Deposit Method", async () => {
+        //     await NewToplistPage.newDepositMethodButton.click();
+        //     await components.checkDividers(["General", "Upload Logo"]);
+        //
+        //     await NewToplistPage.newDepositMethodCancelButton.click({trial: true});
+        //     await NewToplistPage.newDepositMethodCancelButton.click();
+        // });
 
         await test.step("Check Override modal", async () => {
             await NewToplistPage.addOverrideButton.click();

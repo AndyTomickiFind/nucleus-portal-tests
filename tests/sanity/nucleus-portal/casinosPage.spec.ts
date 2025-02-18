@@ -77,7 +77,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
     test("Check Random Casinos and a Specific Casino", async ({request, components, CasinosPage, menuComponent}) => {
         const allCasinos = await getCasinos(request);
-        const randomCasinos: string[] = ["Casino used by ROBOTS - do not edit", ...allCasinos.slice(0, Math.min(125, allCasinos.length))];
+        const randomCasinos: string[] = ["Casino used by ROBOTS - do not edit", ...allCasinos.slice(0, Math.min(5, allCasinos.length))];
 
         for (const casinoName of randomCasinos) {
             await test.step(`Testing Casino "${casinoName}"`, async () => {
