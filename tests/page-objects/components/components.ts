@@ -49,6 +49,7 @@ export class components extends BasePage {
 
     async dblClickDataGridRow(rowNumber: number): Promise<void> {
         const dataGridRow = this.page.locator(`//div[@data-rowindex="${rowNumber - 1}"]`);
+        await expect(this.dataGrid.locator(dataGridRow)).toBeVisible();
         await this.dataGrid.locator(dataGridRow).dblclick();
     }
 
