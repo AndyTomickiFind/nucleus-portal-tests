@@ -9,7 +9,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
         // Step 1: Create a New Exchange
         await test.step('Step 1: Create a New Exchange', async () => {
-            exchangeName = `[QA] Exchange Created by ${crypto.randomUUID()}`;
+            exchangeName = `[QA] Exchange created by robots ${crypto.randomUUID()}`;
             const createPayload = {
                 "domains": ["67879a5370cf0018856ef888"],
                 "contentLanguagesCodes": ["en"],
@@ -157,7 +157,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
             console.log(`Verified Updated Exchange via GET: ${exchangeId}`);
         });
 
-        // Step 5: Delete the Exchange
+        //Step 5: Delete the Exchange
         await test.step('Step 5: Delete the Exchange', async () => {
             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
                 headers: {

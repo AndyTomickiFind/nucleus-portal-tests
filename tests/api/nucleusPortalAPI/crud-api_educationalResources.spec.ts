@@ -8,7 +8,7 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
     let updatedEducationalResourceName: string;
 
     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
-        // Step 1: Create a New Educational Resource
+        //  Step 1: Create a New Educational Resource
         await test.step('Step 1: Create a New Educational Resource', async () => {
             educationalResourceName = `[QA] Educational Resource created by robots ${crypto.randomUUID()}`;
             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources`, {
@@ -37,8 +37,25 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
             console.log(`Created Educational Resource ID: ${educationalResourceId}`);
         });
 
-        // Step 2: Verify the Created Educational Resource with GET
-        await test.step('Step 2: Verify the Created Educational Resource with GET', async () => {
+        // **NEW: Step 2 - Verify the created resource appears in the list of all resources**
+        await test.step('Step 2: Verify the Educational Resource is in the list of all resources', async () => {
+            const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources`, {
+                headers: {
+                    "Authorization": `${config.nucleusPortalToken}`
+                }
+            });
+
+            await logResponse(getAllResponse, testInfo, "GET");
+            const getAllStatusCode = getAllResponse.status();
+            expect(getAllStatusCode).toBe(200);
+
+            const allResources = await getAllResponse.json();
+            const found = allResources.some((resource) => resource._id === educationalResourceId);
+            expect(found, "New Educational Resource is in the list of all resources: ${educationalResourceId}").toBe(true);
+        });
+
+        // Step 3: Verify the Created Educational Resource with GET
+        await test.step('Step 3: Verify the Created Educational Resource with GET', async () => {
             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources/${educationalResourceId}`, {
                 headers: {
                     "Authorization": `${config.nucleusPortalToken}`
@@ -55,8 +72,8 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
             console.log(`Verified Educational Resource via GET: ${educationalResourceId}`);
         });
 
-        // Step 3: Update the Educational Resource using PATCH
-        await test.step('Step 3: Update the Educational Resource using PATCH', async () => {
+        // Step 4: Update the Educational Resource using PATCH
+        await test.step('Step 4: Update the Educational Resource using PATCH', async () => {
             updatedEducationalResourceName = `${educationalResourceName} - Updated`;
 
             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources/${educationalResourceId}`, {
@@ -81,8 +98,8 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
             console.log(`Updated Educational Resource Name via PATCH: ${updatedEducationalResourceName}`);
         });
 
-        // Step 4: Verify the Updated Educational Resource with GET
-        await test.step('Step 4: Verify the Updated Educational Resource with GET', async () => {
+        // Step 5: Verify the Updated Educational Resource with GET
+        await test.step('Step 5: Verify the Updated Educational Resource with GET', async () => {
             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources/${educationalResourceId}`, {
                 headers: {
                     "Authorization": `${config.nucleusPortalToken}`
@@ -99,8 +116,8 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
             console.log(`Verified Updated Educational Resource via GET: ${educationalResourceId}`);
         });
 
-        // Step 5: Delete the Educational Resource
-        await test.step('Step 5: Delete the Educational Resource', async () => {
+        // Step 6: Delete the Educational Resource
+        await test.step('Step 6: Delete the Educational Resource', async () => {
             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources/${educationalResourceId}`, {
                 headers: {
                     "Authorization": `${config.nucleusPortalToken}`
@@ -114,8 +131,8 @@ test.describe(`CRUD e2e API educationalResources - ${config.name}`, { tag: [`@${
             console.log(`Educational Resource with ID ${educationalResourceId} has been deleted successfully.`);
         });
 
-        // Step 6: Verify the Deletion with GET
-        await test.step('Step 6: Verify the Deletion with GET', async () => {
+        // Step 7: Verify the Deletion with GET
+        await test.step('Step 7: Verify the Deletion with GET', async () => {
             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/educational-resources/${educationalResourceId}`, {
                 headers: {
                     "Authorization": `${config.nucleusPortalToken}`

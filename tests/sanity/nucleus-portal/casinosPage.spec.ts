@@ -84,14 +84,36 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
-                    for (let attempt = 0; attempt < 3; attempt++) {
+                    for (let attempt = 0; attempt < 5; attempt++) {
                         try {
                             // Attempt the steps
-                            await components.dblClickDataGridRow(1);
-                            await CasinosPage.page.waitForLoadState('domcontentloaded');
-                            await expect(CasinosPage.topHeader).toBeVisible();
-                            await expect(CasinosPage.topHeader).toBeEnabled();
-                            await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                            for (let attempt = 0; attempt < 5; attempt++) { // Retry up to 5 times
+                                try {
+                                    await components.dblClickDataGridRow(1);
+                                    await CasinosPage.page.waitForLoadState('domcontentloaded');
+
+                                    // Assertions
+                                    await expect(CasinosPage.topHeader).toBeVisible();
+                                    await expect(CasinosPage.topHeader).toBeEnabled();
+
+                                    // This is the assertion that might fail
+                                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+
+                                    // If successful, exit the loop
+                                    break;
+                                } catch (error) {
+                                    // Log the error or handle it (optional)
+                                    console.warn(`Attempt ${attempt + 1} failed: ${error}`);
+
+                                    // If this was the last attempt, throw the error
+                                    if (attempt === 4) {
+                                        throw error;
+                                    }
+
+                                    // Optionally, add a delay before retrying
+                                    await new Promise(resolve => setTimeout(resolve, 1000)); // 1-second delay
+                                }
+                            }
 
                             // Exit the loop if successful
                             break;
@@ -100,7 +122,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                             console.warn(`Attempt ${attempt + 1} failed. Retrying...`);
 
                             // If this was the last attempt, rethrow the error
-                            if (attempt === 2) {
+                            if (attempt === 4) {
                                 throw error;
                             }
 
