@@ -25,6 +25,10 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
         {
             path: '/database/datapoints/sports',
             searchFieldSelector: 'sport-name-filter-field'
+        },
+        {
+            path: '/toplists',
+            searchFieldSelector: 'toplist-name-filter-field'
         }
     ];
 

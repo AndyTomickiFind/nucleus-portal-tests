@@ -26,7 +26,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 20000000,
+    timeout: 2000000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
@@ -91,7 +91,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-            dependencies: ['setup'], //comment out if the auth is already stored
+         //   dependencies: ['setup'], //comment out if the auth is already stored
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop Chrome'], channel: 'chromium',

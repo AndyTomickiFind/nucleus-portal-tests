@@ -23,7 +23,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
     });
 
     test('check the alert banner', async ({components}) => {
-        await components.checkAlertBanner("Please select a filter to view the Toplists");
+        await components.checkAlertBanner("Please use the name search or select a filter to view the Toplists");
     });
 
     test('check comboBoxes', async ({components}) => {
