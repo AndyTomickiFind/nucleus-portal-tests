@@ -19,6 +19,7 @@ export class NewToplistPage extends BasePage {
     readonly anonymousPlayCheckbox: Locator;
     readonly provablyFairCheckbox: Locator;
     readonly softwareProvidersCombobox: Locator;
+    readonly currenciesCombobox: Locator;
     readonly depositMethodsCombobox: Locator;
     readonly sportsCombobox: Locator;
     readonly newDepositMethodButton: Locator;
@@ -49,6 +50,7 @@ export class NewToplistPage extends BasePage {
         this.anonymousPlayCheckbox = page.getByTestId("toplist-form-filters-casinos-anonymous-play-checkbox");
         this.provablyFairCheckbox = page.getByTestId("toplist-form-filters-casinos-provably-fair-checkbox");
         this.softwareProvidersCombobox = page.getByTestId("toplist-form-filters-casinos-slot-providers-autocomplete");
+        this.currenciesCombobox = page.getByTestId("toplist-form-filters-casinos-currencies-autocomplete");
         this.depositMethodsCombobox = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete");
         this.sportsCombobox = page.getByTestId("toplist-form-filters-casinos-sports-autocomplete");
         this.newDepositMethodButton = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete-new-button");
@@ -74,7 +76,7 @@ export class NewToplistPage extends BasePage {
 
     async checkToplistsResults(listType: string, itemsCount: number) {
         for (let i = 1; i < itemsCount; i++) {
-            //await this.toplistResultsItem(listType, i).scrollIntoViewIfNeeded();
+           // await this.toplistResultsItem(listType, i).scrollIntoViewIfNeeded();
             await this.page.mouse.wheel(0, 100);
             await this.toplistResultsItem(listType, i).click({trial: true})
         }

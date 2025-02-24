@@ -47,7 +47,7 @@ test.describe(`CRUD e2e API currencies - ${config.name}`, { tag: [`@${config.nam
 
         // Step 2: Verify the created currency appears in the list of all currencies
         await test.step('Step 2: Verify the Currency is in the list of all currencies', async () => {
-            const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/currencies?page=0&size=100&sortField=createdAt&sortOrder=desc&shortName=${shortName}`, {
+            const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/currencies?page=0&size=100&sortField=createdAt&sortOrder=desc&name=${currencyName}`, {
                 headers: {
                     Authorization: `${config.nucleusPortalToken}`,
                 },
@@ -57,10 +57,9 @@ test.describe(`CRUD e2e API currencies - ${config.name}`, { tag: [`@${config.nam
             const getAllStatusCode = getAllResponse.status();
             expect(getAllStatusCode).toBe(200);
 
-            const allCurrencies = await getAllResponse.json();
+            const responseBody = await getAllResponse.json();
 
-            const found = allCurrencies.some((currency) => currency._id === currencyId);
-            expect(found, `New Currency is in the list of all currencies: ${currencyId}`).toBe(true);
+            expect(responseBody.items[0]._id, `New Currency must be in the list of all currencies: ${currencyId}`).toBe(currencyId);
         });
 
         // Step 3: Verify the Created Currency with GET
