@@ -28,7 +28,7 @@
         "Slots",
         "Blackjack",
         "Test Casino Product",
-        "Andys Product"
+        "[QA] Search me 1"
       ],
       "numberCasinoGames": 665,
       "languages": [
@@ -8122,7 +8122,7 @@
         },
         {
           "id": "67472e6115b3c618daee31bf",
-          "name": "Andys Product",
+          "name": "[QA] Search me 1",
           "logo": "/images/logos/1732718177291_67472e6115b3c618daee31bd.jpg"
         }
       ],
@@ -8178,7 +8178,7 @@
       "tableDesign": "",
       "casinoProducts": [
         "Jogos de Dealer ao vivo",
-        "Andys Product"
+        "[QA] Search me 1"
       ],
       "numberCasinoGames": 1,
       "languages": [
@@ -8234,14 +8234,14 @@
         },
         {
           "id": "67472e6115b3c618daee31bf",
-          "name": "Andys Product",
+          "name": "[QA] Search me 1",
           "logo": "/images/logos/1732718177291_67472e6115b3c618daee31bd.jpg"
         }
       ],
       "sports": [
         {
           "id": "67597554018a12a2b506c7a6",
-          "name": "[QA] Sport 1"
+          "name": "[QA] Search me 1 [QA] Sport 1"
         }
       ],
       "endToEndCrypto": false,
