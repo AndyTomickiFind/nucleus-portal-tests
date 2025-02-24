@@ -32,10 +32,14 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
         }
     ];
 
-    const invalidCharacters = "<>/[|\\{}()[]^$+*?.]/gabcABC.,';`-=~#@'!£%&¬";
+    const invalidCharacters = "<>/[|\\{}()[]^$+*?.]/gabcABC.,';`-=~#@'!£%&¬";  //These are valid but used to throw an error
+    const searchKeywords = [
+        "[QA] Search me 1",
+        "[QA] Search me 2"
+    ];
 
     for (const { path, searchFieldSelector } of testLandingPages) {
-        test(`SEARCH for 'invalid' characters on ${path}`, {
+        test(`SEARCH for invalid characters and specified keywords on ${path}`, {
             annotation: {
                 type: 'issue',
                 description: 'https://findco.atlassian.net/browse/DEV-5448',
@@ -50,16 +54,13 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
             const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector);
             const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
 
-            // Array to store failed characters
+            // **PART 1: Test invalid characters**
             const failedCharacters: string[] = [];
-
-            // Step 2: Test invalid characters in the search field
             for (const character of invalidCharacters) {
                 await test.step(`Checking character "${character}"`, async () => {
                     await searchField.click();
                     await searchField.pressSequentially(character, { delay: 800 });
-                    const alertVisible = await alertBanner.count() > 0;
-                    if (alertVisible) {
+                    if (await alertBanner.count() > 0) {
                         failedCharacters.push(character);
                     }
                     await expect.soft(alertBanner, "Detecting alert banner").not.toBeVisible();
@@ -67,7 +68,7 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
                 });
             }
 
-            // Step 3: Report failed characters
+            // Report failed characters
             await test.step("Report failed characters", async () => {
                 await test.info().attach("Failed Characters", {
                     body: JSON.stringify({
@@ -77,6 +78,44 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
                     contentType: "application/json"
                 });
             });
+
+
         });
+
+
     }
+
+    test.describe(`SEARCH functionality for specified keywords - ${config.name} `, {tag: [`@${config.name}`]}, () => {
+        for (const {path, searchFieldSelector} of testLandingPages) {
+            test(`SEARCH for specified keywords on ${path}`, {
+                annotation: {
+                    type: 'issue',
+                    description: 'https://findco.atlassian.net/browse/DEV-5448',
+                }
+            }, async ({HomePage, components}) => {
+                // Step 1: Navigate to the landing page
+                await test.step(`Navigate to ${path}`, async () => {
+                    await HomePage.page.goto(`https://${config.baseUrl}${path}`);
+                });
+
+                // Define the search field
+                const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector).locator(`//input`);
+                for (const keyword of searchKeywords) {
+                    await test.step(`Searching for keyword "${keyword}"`, async () => {
+                        await searchField.click();
+                        await searchField.pressSequentially(keyword, {delay: 100});
+
+                        // Simulate the search action (e.g., pressing Enter, if required)
+                        await HomePage.page.keyboard.press('Enter');
+
+                        // Assert that the grid contains the corresponding keyword
+                        await expect(components.dataGridCell("name", 1), `Checking grid contains keyword ${keyword}`).toContainText(keyword);
+
+                        // Reset the search field before the next iteration
+                        await searchField.clear();
+                    });
+                }
+            });
+        }
+    });
 });

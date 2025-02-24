@@ -66,7 +66,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 }
             }
 
-            return [...Array.from(selectedCasinos), "Casino used by ROBOTS - do not edit"];
+            return [...Array.from(selectedCasinos), "[QA] Casino used by ROBOTS - do not edit"];
         })();
 
         for (const casinoName of randomCasinos) {
@@ -210,7 +210,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
 
     test('Update/edit a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
-        const casinoName = `[QA] Casino used by ROBOTS - do not edit`;
+        const casinoName = `[QA] 2 Casino used by ROBOTS - do not edit`;
         await test.step(`Updating Casino "${casinoName}"`, async () => {
             // Search for the casino
             await test.step("Search for the Casino", async () => {
