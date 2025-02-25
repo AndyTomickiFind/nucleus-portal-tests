@@ -168,7 +168,7 @@ const devConfig: TestConfig = {
     nucleusPortalServiceUri: 'portal-be.dev.nucleusmvp.com',
     nucleusPortalToken: process.env.DEV_NUCLEUS_PORTAL_TOKEN,
     defaultDomainId: process.env.DEV_DEFAULT_DOMAIN_ID,
-    defaultPaymentTypeId: process.env.STAGING_DEFAULT_PAYMENT_TYPE,
+    defaultPaymentTypeId: process.env.DEV_DEFAULT_PAYMENT_TYPE,
     staticPage: {
         username: process.env.DEV_STATIC_PAGE_USER,
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
