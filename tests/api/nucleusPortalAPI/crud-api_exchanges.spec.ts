@@ -11,7 +11,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
         await test.step('Step 1: Create a New Exchange', async () => {
             exchangeName = `[QA] Exchange created by robots ${crypto.randomUUID()}`;
             const createPayload = {
-                "domains": ["${config.defaultDomainId}"],
+                "domains": [`${config.defaultDomainId}`],
                 "contentLanguagesCodes": ["en"],
                 "name": exchangeName,
                 "landingPageUrl": "https://landing-page",
@@ -72,7 +72,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
                 "affiliateLinks": [
                     {
                         "affiliateLinkUrl": "https://aff-link-per-dimension",
-                        "dimensions": [{ "type": "domains", "ids": ["${config.defaultDomainId}"] }]
+                        "dimensions": [{ "type": "domains", "ids": [`${config.defaultDomainId}`] }]
                     }
                 ]
             };
@@ -117,7 +117,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
         await test.step('Step 3: Update the Exchange using PATCH', async () => {
             const updatedExchangeName = `${exchangeName} - Updated`;
             const patchPayload = {
-                "domains": ["${config.defaultDomainId}"], // Retain the same domains
+                "domains": [`${config.defaultDomainId}`], // Retain the same domains
                 "contentLanguagesCodes": ["en"], // Retain the same language codes
                 "name": updatedExchangeName, // Update the name
                 "finalRating": 4 // Update the rating

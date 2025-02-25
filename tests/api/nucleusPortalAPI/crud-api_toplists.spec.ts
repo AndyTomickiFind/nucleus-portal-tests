@@ -23,7 +23,7 @@ test.describe(`CRUD e2e API toplists - ${config.name}`, { tag: [`@${config.name}
                     "type": "casinos",
                     "subType": "default",
                     "appliesToProducts": [
-                        "${config.defaultDomainId}"
+                        `${config.defaultDomainId}`
                     ],
                     "placementsCount": 2,
                     "defaultResults": [

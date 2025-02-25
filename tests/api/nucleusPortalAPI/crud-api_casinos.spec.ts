@@ -36,7 +36,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "shortDescription": [],
                 "description": [
                     {
-                        "domainId": "${config.defaultDomainId}",
+                        "domainId": `${config.defaultDomainId}`,
                         "content": [{ "language": "en", "text": "English Description" }]
                     }
                 ],
@@ -73,13 +73,13 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "topGames": [],
                 "landingPageUrl": [
                     {
-                        "domainId": "${config.defaultDomainId}",
+                        "domainId": `${config.defaultDomainId}`,
                         "url": "https://landing-page-QAGeneralTestDomain"
                     }
                 ],
                 "casinoBonuses": [
                     {
-                        "domainId": "${config.defaultDomainId}",
+                        "domainId": `${config.defaultDomainId}`,
                         "hasNoBonus": true,
                         "bonusContent": [],
                         "bonuses": { "offers": [], "packages": [] }
@@ -99,7 +99,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "licencesOwned": ["65f49a7c06037feabc18f2b5"],
                 "affiliateUrl": [
                     {
-                        "domainId": "${config.defaultDomainId}",
+                        "domainId": `${config.defaultDomainId}`,
                         "url": "https://general-affil-link-QAGeneralTestDomain"
                     }
                 ],
@@ -146,7 +146,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
         await test.step('Step 3: Update the Casino using PATCH', async () => {
             const updatedCasinoName = `${casinoName} - Updated`;
             const patchPayload = {
-                "domains": ["${config.defaultDomainId}"], // Retain the same domains from creation
+                "domains": [`${config.defaultDomainId}`], // Retain the same domains from creation
                 "contentLanguagesCodes": ["en"], // Include this to avoid validation errors
                 "name": updatedCasinoName, // Update the name
                 "rating": 5 // Update the rating
@@ -186,7 +186,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
             console.log(`Verified Updated Casino via GET: ${casinoId}`);
         });
 
-        // Step 5: Delete the Casino
+        //Step 5: Delete the Casino
         await test.step('Step 5: Delete the Casino', async () => {
             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
                 headers: {
