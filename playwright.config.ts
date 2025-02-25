@@ -13,6 +13,7 @@ interface TestConfig extends PlaywrightTestConfig {
     nucleusPortalServiceUri?: string;
     nucleusPortalToken?: string;
     defaultDomainId?: string;
+    defaultPaymentTypeId?: string;
     staticPage?: { username?: string; password?: string };
 }
 
@@ -167,6 +168,7 @@ const devConfig: TestConfig = {
     nucleusPortalServiceUri: 'portal-be.dev.nucleusmvp.com',
     nucleusPortalToken: process.env.DEV_NUCLEUS_PORTAL_TOKEN,
     defaultDomainId: process.env.DEV_DEFAULT_DOMAIN_ID,
+    defaultPaymentTypeId: process.env.STAGING_DEFAULT_PAYMENT_TYPE,
     staticPage: {
         username: process.env.DEV_STATIC_PAGE_USER,
         password: process.env.DEV_STATIC_PAGE_PASSWORD,
@@ -191,6 +193,7 @@ const stagingConfig: TestConfig = {
     nucleusPortalServiceUri: 'portal-be.staging.nucleusmvp.com',
     nucleusPortalToken: process.env.STAGING_NUCLEUS_PORTAL_TOKEN,
     defaultDomainId: process.env.STAGING_DEFAULT_DOMAIN_ID,
+    defaultPaymentTypeId: process.env.STAGING_DEFAULT_PAYMENT_TYPE,
     staticPage: {
         username: process.env.STAGING_STATIC_PAGE_USER,
         password: process.env.STAGING_STATIC_PAGE_PASSWORD,

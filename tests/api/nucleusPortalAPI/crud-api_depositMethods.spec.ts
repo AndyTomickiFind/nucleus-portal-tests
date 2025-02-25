@@ -26,7 +26,7 @@ test.describe(`CRUD e2e API deposit methods - ${config.name}`, { tag: [`@${confi
                             text: depositMethodName,
                         },
                     ],
-                    type: `65f49a7b06037feabc18e1cd`,
+                    type: `${config.defaultPaymentTypeId}`,
                     logo: logo,
                 },
             });
@@ -39,14 +39,14 @@ test.describe(`CRUD e2e API deposit methods - ${config.name}`, { tag: [`@${confi
             depositMethodId = responseBody._id;
             expect(depositMethodId).toBeTruthy();
             expect.soft(responseBody.name[0].text).toBe(depositMethodName);
-            expect.soft(responseBody.type).toBe("65f49a7b06037feabc18e1cd");
+            expect.soft(responseBody.type).toBe(`${config.defaultPaymentTypeId}`);
             expect.soft(responseBody.logo).toBe(logo);
             console.log(`Created Deposit Method ID: ${depositMethodId}`);
         });
 
         // Step 2: Verify the created deposit method appears in the list of all deposit methods
         await test.step('Step 2: Verify the Deposit Method is in the list of all deposit methods', async () => {
-            const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods?page=0&size=100&sortField=createdAt&sortOrder=desc`, {
+            const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods?name=${depositMethodName}`, {
                 headers: {
                     Authorization: `${config.nucleusPortalToken}`,
                 },
@@ -57,10 +57,9 @@ test.describe(`CRUD e2e API deposit methods - ${config.name}`, { tag: [`@${confi
             expect(getAllStatusCode).toBe(200);
 
             const allDepositMethodsResponse = await getAllResponse.json();
-            const allDepositMethods = allDepositMethodsResponse.items;
 
-            const found = allDepositMethods.some((method) => method._id === depositMethodId);
-            expect(found, `New Deposit Method is in the list of all deposit methods: ${depositMethodId}`).toBe(true);
+
+            expect.soft(allDepositMethodsResponse.items[0]).toHaveProperty('_id', depositMethodId);
         });
 
         // Step 3: Verify the Created Deposit Method with GET
@@ -79,7 +78,7 @@ test.describe(`CRUD e2e API deposit methods - ${config.name}`, { tag: [`@${confi
             expect.soft(getCreatedBody).toHaveProperty('_id', depositMethodId);
             expect.soft(getCreatedBody.name[0]).toHaveProperty('text', depositMethodName);
             expect.soft(getCreatedBody.name[0]).toHaveProperty('language', 'en');
-            expect.soft(getCreatedBody).toHaveProperty('type', "65f49a7b06037feabc18e1cd");
+            expect.soft(getCreatedBody).toHaveProperty('type', `${config.defaultPaymentTypeId}`);
             expect.soft(getCreatedBody).toHaveProperty('logo', logo);
             console.log(`Verified Deposit Method via GET: ${depositMethodId}`);
         });
