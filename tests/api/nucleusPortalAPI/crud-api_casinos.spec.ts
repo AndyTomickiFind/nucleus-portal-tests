@@ -11,7 +11,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
         await test.step('Step 1: Create a New Casino', async () => {
             casinoName = `[QA] Casino Created by ${crypto.randomUUID()}`;
             const createPayload = {
-                "domains": ["67879a5370cf0018856ef888"],
+                "domains": [`${config.defaultDomainId}`],
                 "contentLanguagesCodes": ["en"],
                 "name": casinoName,
                 "logo": "/images/logos/1739964616595_67b5c0c84cb9582fe03c13e6.webp",
@@ -36,7 +36,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "shortDescription": [],
                 "description": [
                     {
-                        "domainId": "67879a5370cf0018856ef888",
+                        "domainId": "${config.defaultDomainId}",
                         "content": [{ "language": "en", "text": "English Description" }]
                     }
                 ],
@@ -73,13 +73,13 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "topGames": [],
                 "landingPageUrl": [
                     {
-                        "domainId": "67879a5370cf0018856ef888",
+                        "domainId": "${config.defaultDomainId}",
                         "url": "https://landing-page-QAGeneralTestDomain"
                     }
                 ],
                 "casinoBonuses": [
                     {
-                        "domainId": "67879a5370cf0018856ef888",
+                        "domainId": "${config.defaultDomainId}",
                         "hasNoBonus": true,
                         "bonusContent": [],
                         "bonuses": { "offers": [], "packages": [] }
@@ -99,7 +99,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "licencesOwned": ["65f49a7c06037feabc18f2b5"],
                 "affiliateUrl": [
                     {
-                        "domainId": "67879a5370cf0018856ef888",
+                        "domainId": "${config.defaultDomainId}",
                         "url": "https://general-affil-link-QAGeneralTestDomain"
                     }
                 ],
@@ -146,7 +146,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
         await test.step('Step 3: Update the Casino using PATCH', async () => {
             const updatedCasinoName = `${casinoName} - Updated`;
             const patchPayload = {
-                "domains": ["67879a5370cf0018856ef888"], // Retain the same domains from creation
+                "domains": ["${config.defaultDomainId}"], // Retain the same domains from creation
                 "contentLanguagesCodes": ["en"], // Include this to avoid validation errors
                 "name": updatedCasinoName, // Update the name
                 "rating": 5 // Update the rating
