@@ -81,13 +81,13 @@ export class components extends BasePage {
     }
 
 
-    async clickItemFromCombobox(comboboxLocator: Locator, item: string, exact?:boolean): Promise<void> {
+    async clickItemFromCombobox(comboboxLocator: Locator, item: string, exact: boolean = true
+    ): Promise<void> {
         await comboboxLocator.click();
         await comboboxLocator.locator("input").fill(item);
         await this.page.waitForLoadState();
         const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: exact})
         await itemLocator.click();
-      //  await this.page.keyboard.press('Escape');
     }
 
     async selectFromDropdown(comboboxLocator: Locator, item: string): Promise<void> {
