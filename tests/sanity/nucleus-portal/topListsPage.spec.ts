@@ -159,8 +159,30 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
 
     //COPY TOPLIST - TO DO
 
-    test('new Toplist', async ({components}) => {
-        await components.newButton.click();
+    test('save Filters in the Toplist', async ({components, ToplistsPage, NewToplistPage}) => {
+
+        await ToplistsPage.searchField.fill("[QA] Filter check Toplist");
+        await components.dataGridCell("name", 1).dblclick();
+        await NewToplistPage.advancedFiltersAccordion.click();
+
+        await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 1")).toBeVisible();
+        await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 2")).toBeVisible();
+        await expect(NewToplistPage.licensesCombobox.getByRole("button").getByText("[QA] License 1")).toBeVisible();
+        await expect(NewToplistPage.depositMethodsCombobox.getByRole("button").getByText("[QA] Deposit Method 1")).toBeVisible();
+        await expect(NewToplistPage.casinoProductsCombobox.getByRole("button").getByText("[QA] Casino Product 1")).toBeVisible();
+        await expect(NewToplistPage.currenciesCombobox.getByRole("button").getByText("[QA] Currency 1")).toBeVisible();
+        await expect(NewToplistPage.sportsCombobox.getByRole("button").getByText("[QA] Sport 1")).toBeVisible();
+
+        await components.clearCombobox(NewToplistPage.coinsCombobox);
+        // await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 1");
+        // await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 2");
+        await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, "[QA] License 1");
+        await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, "[QA] Deposit Method 1");
+        await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, "[QA] Casino Product 1");
+        await components.clickItemFromCombobox(NewToplistPage.currenciesCombobox, "[QA] Currency 1");
+        await components.clickItemFromCombobox(NewToplistPage.sportsCombobox, "[QA] Sport 1");
+
+
     });
 
 });

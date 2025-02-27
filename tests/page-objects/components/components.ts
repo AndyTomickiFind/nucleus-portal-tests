@@ -70,14 +70,32 @@ export class components extends BasePage {
         await this.page.keyboard.press('Escape');
     }
 
+
+    async clearCombobox(comboboxLocator: Locator): Promise<void> {
+        await comboboxLocator.click();
+        await comboboxLocator.getByTestId("CloseIcon").click();
+        await this.page.keyboard.press('Escape');
+
+    }
+
+
     async clickItemFromCombobox(comboboxLocator: Locator, item: string): Promise<void> {
+        await comboboxLocator.click();
+        await comboboxLocator.locator("input").fill(item);
+        await this.page.waitForLoadState();
+        const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
+        await itemLocator.click();
+      //  await this.page.keyboard.press('Escape');
+    }
+
+    async selectFromDropdown(comboboxLocator: Locator, item: string): Promise<void> {
         await comboboxLocator.click();
         const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
         await itemLocator.click();
     }
 
     async checkRowsInDataGrid(rowsCount: number, dataGridCells: string[]) {
-        await this.clickItemFromCombobox(this.rowsPerPageDropdown, rowsCount.toString());
+        await this.selectFromDropdown(this.rowsPerPageDropdown, rowsCount.toString());
 
         for (let row = 1; row <= rowsCount; row++) {
             for (const cell of dataGridCells) {
