@@ -73,17 +73,19 @@ export class components extends BasePage {
 
     async clearCombobox(comboboxLocator: Locator): Promise<void> {
         await comboboxLocator.click();
-        await comboboxLocator.getByTestId("CloseIcon").click();
+        const closeIcon = comboboxLocator.getByTestId("CloseIcon");
+        if (await closeIcon.isVisible()) {
+            await closeIcon.click();
+        }
         await this.page.keyboard.press('Escape');
-
     }
 
 
-    async clickItemFromCombobox(comboboxLocator: Locator, item: string): Promise<void> {
+    async clickItemFromCombobox(comboboxLocator: Locator, item: string, exact?:boolean): Promise<void> {
         await comboboxLocator.click();
         await comboboxLocator.locator("input").fill(item);
         await this.page.waitForLoadState();
-        const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: true})
+        const itemLocator: Locator = this.page.getByRole('option', {name: item, exact: exact})
         await itemLocator.click();
       //  await this.page.keyboard.press('Escape');
     }

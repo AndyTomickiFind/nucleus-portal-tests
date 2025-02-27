@@ -165,6 +165,41 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         await components.dataGridCell("name", 1).dblclick();
         await NewToplistPage.advancedFiltersAccordion.click();
 
+        await components.clearCombobox(NewToplistPage.coinsCombobox);
+        await components.clearCombobox(NewToplistPage.licensesCombobox);
+        await components.clearCombobox(NewToplistPage.depositMethodsCombobox);
+        await components.clearCombobox(NewToplistPage.casinoProductsCombobox);
+        await components.clearCombobox(NewToplistPage.currenciesCombobox);
+        await components.clearCombobox(NewToplistPage.sportsCombobox);
+
+        await NewToplistPage.createButton.click();
+        await ToplistsPage.page.waitForTimeout(1000);
+
+        await components.dataGridCell("name", 1).dblclick();
+        await NewToplistPage.advancedFiltersAccordion.click();
+
+        await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 1")).not.toBeVisible();
+        await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 2")).not.toBeVisible();
+        await expect(NewToplistPage.licensesCombobox.getByRole("button").getByText("[QA] License 1")).not.toBeVisible();
+        await expect(NewToplistPage.depositMethodsCombobox.getByRole("button").getByText("[QA] Deposit Method 1")).not.toBeVisible();
+        await expect(NewToplistPage.casinoProductsCombobox.getByRole("button").getByText("[QA] Casino Product 1")).not.toBeVisible();
+        await expect(NewToplistPage.currenciesCombobox.getByRole("button").getByText("[QA] Currency 1")).not.toBeVisible();
+        await expect(NewToplistPage.sportsCombobox.getByRole("button").getByText("[QA] Sport 1")).not.toBeVisible();
+
+        await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 1", false);
+        await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 2", false);
+        await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, "[QA] License 1");
+        await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, "[QA] Deposit Method 1");
+        await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, "[QA] Casino Product 1");
+        await components.clickItemFromCombobox(NewToplistPage.currenciesCombobox, "[QA] Currency 1");
+        await components.clickItemFromCombobox(NewToplistPage.sportsCombobox, "[QA] Sport 1");
+
+        await NewToplistPage.createButton.click();
+        await ToplistsPage.page.waitForTimeout(1000);
+
+        await components.dataGridCell("name", 1).dblclick();
+        await NewToplistPage.advancedFiltersAccordion.click();
+
         await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 1")).toBeVisible();
         await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 2")).toBeVisible();
         await expect(NewToplistPage.licensesCombobox.getByRole("button").getByText("[QA] License 1")).toBeVisible();
@@ -172,17 +207,6 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         await expect(NewToplistPage.casinoProductsCombobox.getByRole("button").getByText("[QA] Casino Product 1")).toBeVisible();
         await expect(NewToplistPage.currenciesCombobox.getByRole("button").getByText("[QA] Currency 1")).toBeVisible();
         await expect(NewToplistPage.sportsCombobox.getByRole("button").getByText("[QA] Sport 1")).toBeVisible();
-
-        await components.clearCombobox(NewToplistPage.coinsCombobox);
-        // await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 1");
-        // await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 2");
-        await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, "[QA] License 1");
-        await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, "[QA] Deposit Method 1");
-        await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, "[QA] Casino Product 1");
-        await components.clickItemFromCombobox(NewToplistPage.currenciesCombobox, "[QA] Currency 1");
-        await components.clickItemFromCombobox(NewToplistPage.sportsCombobox, "[QA] Sport 1");
-
-
     });
 
 });
