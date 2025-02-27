@@ -19,7 +19,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
 
     test('verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
         await menuComponent.checkMenuItems();
-        // await menuComponent.checkDataPointItems();
+        await menuComponent.checkDataPointItems();
     });
 
     test('check the alert banner', async ({components}) => {
@@ -30,6 +30,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         await test.step("Product combobox", async () => {
             const productComboboxItems: string[] = [
                 "Select an option",
+                "[QA] GeneralTestDomain"
             ]
             await components.checkCombobox(components.productCombobox, productComboboxItems);
         });
@@ -108,16 +109,10 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         });
     });
 
-    test('check the data grid', async ({components}) => {
-        await test.step("Data grid table to be visible", async () => {
-            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
-            await expect(components.dataGrid).toBeVisible();
-        })
-    });
-
     test('check the search by Country', async ({components}) => {
         await test.step("`QA Toplist` must be visible when selecting `Cyprus` on ccn.com", async () => {
             await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
+            await expect(components.dataGrid).toBeVisible();
             await components.clickItemFromCombobox(components.countriesCombobox, "Cyprus");
             await expect(components.dataGridCell("name", 1)).toContainText("QA Toplist");
             await expect(components.dataGridCell("domains", 1)).toContainText("ccn.com");

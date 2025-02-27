@@ -46,7 +46,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             });
 
             expect.soft([401, 403], "User is not authorized to access this resource").not.toContain(response.status());
-            expect(response.status(), "There is an issue receiving the response from:"+response.url()).toBe(200);
+            expect(response.status(), "There is an issue receiving the response from:" + response.url()).toBe(200);
 
             const data = await response.json();
             return data.items.map((item) => item.name);
@@ -84,52 +84,18 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
-                    for (let attempt = 0; attempt < 5; attempt++) {
-                        try {
-                            // Attempt the steps
-                            for (let attempt = 0; attempt < 5; attempt++) { // Retry up to 5 times
-                                try {
-                                    await components.dblClickDataGridRow(1);
-                                    await CasinosPage.page.waitForLoadState('domcontentloaded');
 
-                                    // Assertions
-                                    await expect(CasinosPage.topHeader).toBeVisible();
-                                    await expect(CasinosPage.topHeader).toBeEnabled();
+                    await components.dblClickDataGridRow(1);
+                    await CasinosPage.page.waitForLoadState('domcontentloaded');
 
-                                    // This is the assertion that might fail
-                                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                    // Assertions
+                    await expect(CasinosPage.topHeader).toBeVisible();
+                    await expect(CasinosPage.topHeader).toBeEnabled();
 
-                                    // If successful, exit the loop
-                                    break;
-                                } catch (error) {
-                                    // Log the error or handle it (optional)
-                                    console.warn(`Attempt ${attempt + 1} failed: ${error}`);
+                    // This is the assertion that might fail
+                    await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
 
-                                    // If this was the last attempt, throw the error
-                                    if (attempt === 4) {
-                                        throw error;
-                                    }
 
-                                    // Optionally, add a delay before retrying
-                                    await new Promise(resolve => setTimeout(resolve, 1000)); // 1-second delay
-                                }
-                            }
-
-                            // Exit the loop if successful
-                            break;
-                        } catch (error) {
-                            // Log an error or wait before retrying
-                            console.warn(`Attempt ${attempt + 1} failed. Retrying...`);
-
-                            // If this was the last attempt, rethrow the error
-                            if (attempt === 4) {
-                                throw error;
-                            }
-
-                            // Optionally, add a delay before retrying
-                            await new Promise(resolve => setTimeout(resolve, 1000)); // 1-second delay
-                        }
-                    }
                 });
 
                 // Check all accordion dropdowns
@@ -205,8 +171,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
     });
-
-
 
 
     test('Update/edit a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
