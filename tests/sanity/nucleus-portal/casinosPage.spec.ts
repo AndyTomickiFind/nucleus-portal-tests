@@ -141,8 +141,8 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                         "Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed."
                     );
                 });
-            }); // End of casino test
-        } // End of loop through casinos
+            });
+        }
     });
 
 

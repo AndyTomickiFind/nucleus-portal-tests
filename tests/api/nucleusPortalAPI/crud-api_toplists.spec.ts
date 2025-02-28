@@ -22,6 +22,7 @@ test.describe(`CRUD e2e API toplists - ${config.name}`, { tag: [`@${config.name}
                     "description": toplistDescription,
                     "type": "casinos",
                     "subType": "default",
+                    "excludedFrom": [],
                     "appliesToProducts": [
                         `${config.defaultDomainId}`
                     ],
