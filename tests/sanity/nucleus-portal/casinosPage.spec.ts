@@ -84,18 +84,16 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
+                    await CasinosPage.page.waitForTimeout(2000);
 
                     await components.dblClickDataGridRow(1);
                     await CasinosPage.page.waitForLoadState('domcontentloaded');
 
-                    // Assertions
                     await expect(CasinosPage.topHeader).toBeVisible();
                     await expect(CasinosPage.topHeader).toBeEnabled();
 
                     // This is the assertion that might fail
                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
-
-
                 });
 
                 // Check all accordion dropdowns
@@ -207,7 +205,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 const actualUpdateTime = await components.dataGridCell("updatedAt", 1).innerText();
                 const timedate = new Date();
                 const expectedUpdateTime = timedate.toLocaleString();
-                expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 30 seconds`).toBeLessThan(30_000);
+                expect(timeDifference(expectedUpdateTime, actualUpdateTime), `Actual [${actualUpdateTime}] and expected [${expectedUpdateTime}] update time should not differ by more than 30 seconds`).toBeLessThan(30000);
             });
 
         });
@@ -232,6 +230,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
+                    await CasinosPage.page.waitForTimeout(1200);
                     await components.dblClickDataGridRow(1);
                     await CasinosPage.page.waitForLoadState();
                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");

@@ -13,8 +13,8 @@ test.describe(`CRUD e2e API currencies - ${config.name}`, { tag: [`@${config.nam
         // Step 1: Create a New Currency
         await test.step('Step 1: Create a New Currency', async () => {
             currencyName = `[QA] RoboCurrency - ${crypto.randomUUID()}`;
-            shortName = `[QA]CURR-${Math.floor(Math.random() * 1000)}`;
-            logo = `logo_${Math.floor(Math.random() * 1000)}`; // Example logo placeholder
+            shortName = `[QA]CURR-${Math.floor(Math.random() * 10000)}`;
+            logo = `logo_${Math.floor(Math.random() * 10000)}`; // Example logo placeholder
 
             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/currencies`, {
                 headers: {

@@ -157,6 +157,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
     test('save Filters in the Toplist', async ({components, ToplistsPage, NewToplistPage}) => {
 
         await test.step("Open a toplist", async () => {
+            await ToplistsPage.page.waitForTimeout(1000);
             await ToplistsPage.searchField.fill("[QA] Filter check Toplist");
             await components.dataGridCell("name", 1).dblclick();
             await NewToplistPage.advancedFiltersAccordion.click();

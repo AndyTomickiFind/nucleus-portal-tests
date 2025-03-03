@@ -70,6 +70,7 @@ test.describe(`CRUD e2e API toplists - ${config.name}`, { tag: [`@${config.name}
 
             const getCreatedBody = await getCreatedResponse.json();
             expect.soft(getCreatedBody).toHaveProperty('_id', toplistId);
+            expect.soft(getCreatedBody).toHaveProperty('excludedFrom');
             expect.soft(getCreatedBody.name).toBe(toplistName);
             expect.soft(getCreatedBody.description).toBe(toplistDescription);
             console.log(`Verified Toplist via GET: ${toplistId}`);

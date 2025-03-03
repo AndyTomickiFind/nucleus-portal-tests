@@ -14,7 +14,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/toplists`, async ({request}, te
             }
         });
 
-        await logResponse(response, testInfo);
+        await logResponse(response, testInfo, "GET");
 
         expect(response.status()).toBe(200);
         //const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/toplists.json`, 'utf-8'))
@@ -51,8 +51,10 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/toplists`, async ({request}, te
                 expect(toplist).toHaveProperty('updatedAt');
                 expect(toplist).toHaveProperty('hasPublishedVersion');
                 expect(toplist).toHaveProperty('publishedVersion');
+                expect(toplist.publishedVersion).toHaveProperty('overrides');
                 expect(toplist).toHaveProperty('status');
                 expect(toplist).toHaveProperty('subType');
+                
 
                 // Check the format of specific fields
                 expect(toplist._id).toMatch(idPattern);

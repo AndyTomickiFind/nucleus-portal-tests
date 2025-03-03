@@ -45,21 +45,18 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
                 description: 'https://findco.atlassian.net/browse/DEV-5448',
             }
         }, async ({ HomePage }) => {
-            // Step 1: Navigate to the landing page
             await test.step(`Navigate to ${path}`, async () => {
                 await HomePage.page.goto(`https://${config.baseUrl}${path}`);
             });
 
-            // Define the search field and alert banner
             const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector);
             const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
 
-            // **PART 1: Test invalid characters**
             const failedCharacters: string[] = [];
             for (const character of invalidCharacters) {
                 await test.step(`Checking character "${character}"`, async () => {
                     await searchField.click();
-                    await searchField.pressSequentially(character, { delay: 800 });
+                    await searchField.pressSequentially(character, { delay: 400 });
                     if (await alertBanner.count() > 0) {
                         failedCharacters.push(character);
                     }

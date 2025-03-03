@@ -28,7 +28,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 2000000,
+    timeout: 90_000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
