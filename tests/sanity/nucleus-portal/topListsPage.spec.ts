@@ -97,7 +97,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await components.checkCombobox(components.verticalCombobox, verticalComboboxItems);
         });
 
-        await test.step("subVertical combobox", async () => {
+        await test.step("SubVertical combobox", async () => {
             const subVerticalComboboxItems: string[] = [
                 "Select an option",
                 "Default",
@@ -108,7 +108,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await components.checkCombobox(components.subVerticalCombobox, subVerticalComboboxItems);
         });
 
-        await test.step("subVertical combobox", async () => {
+        await test.step("Toplist Automation combobox", async () => {
             const toplistAutomationComboboxItems: string[] = [
                 "Select an option",
                 "Included",
@@ -138,15 +138,15 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
         await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
         await test.step("Select 25 items per page", async () => {
-            await components.checkRowsInDataGrid(25, ["name", "domains", "type", "subType", "status", "updatedAt"]);
+            await components.checkRowsInDataGrid(25, ["name", "domains", "type", "subType", "status", "automation", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
         });
         await test.step("Select 15 items per page", async () => {
-            await components.checkRowsInDataGrid(15, ["name", "domains", "type", "subType", "status", "updatedAt"]);
+            await components.checkRowsInDataGrid(15, ["name", "domains", "type", "subType", "status", "automation", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–15 of ");
         });
         await test.step("Select 10 items per page", async () => {
-            await components.checkRowsInDataGrid(10, ["name", "domains", "type", "subType", "status", "updatedAt"]);
+            await components.checkRowsInDataGrid(10, ["name", "domains", "type", "subType", "status", "automation", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
         });
         await test.step("Check Next Page and Previous Page buttons", async () => {
