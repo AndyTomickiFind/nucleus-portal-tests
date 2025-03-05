@@ -107,6 +107,15 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             ]
             await components.checkCombobox(components.subVerticalCombobox, subVerticalComboboxItems);
         });
+
+        await test.step("subVertical combobox", async () => {
+            const toplistAutomationComboboxItems: string[] = [
+                "Select an option",
+                "Included",
+                "Excluded"
+            ]
+            await components.checkCombobox(components.toplistAutomationCombobox, toplistAutomationComboboxItems);
+        });
     });
 
     test('check the search by Country', async ({components}) => {

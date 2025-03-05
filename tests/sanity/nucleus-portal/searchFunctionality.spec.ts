@@ -87,10 +87,9 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
             test(`SEARCH for specified keywords on ${path}`, {
                 annotation: {
                     type: 'issue',
-                    description: 'https://findco.atlassian.net/browse/DEV-5448',
+                    description: 'https://findco.atlassian.net/browse/DEV-5626',
                 }
             }, async ({HomePage, components}) => {
-                // Step 1: Navigate to the landing page
                 await test.step(`Navigate to ${path}`, async () => {
                     await HomePage.page.goto(`https://${config.baseUrl}${path}`);
                 });
@@ -101,14 +100,8 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
                     await test.step(`Searching for keyword "${keyword}"`, async () => {
                         await searchField.click();
                         await searchField.pressSequentially(keyword, {delay: 100});
-
-                        // Simulate the search action (e.g., pressing Enter, if required)
                         await HomePage.page.keyboard.press('Enter');
-
-                        // Assert that the grid contains the corresponding keyword
                         await expect(components.dataGridCell("name", 1), `Checking grid contains keyword ${keyword}`).toContainText(keyword);
-
-                        // Reset the search field before the next iteration
                         await searchField.clear();
                     });
                 }

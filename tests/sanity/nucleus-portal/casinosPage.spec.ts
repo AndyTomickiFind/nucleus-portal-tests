@@ -70,7 +70,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         })();
 
         for (const casinoName of randomCasinos) {
-
             await test.step(`Testing Casino "${casinoName}"`, async () => {
                 // Search for the casino
                 await test.step("Search for the Casino", async () => {

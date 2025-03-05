@@ -11,6 +11,7 @@ export class components extends BasePage {
     readonly countriesCombobox: Locator;
     readonly verticalCombobox: Locator;
     readonly subVerticalCombobox: Locator;
+    readonly toplistAutomationCombobox: Locator;
     readonly dataGrid: Locator;
     readonly dataGridRow: Locator;
     readonly rowsPerPageDropdown: Locator;
@@ -31,6 +32,7 @@ export class components extends BasePage {
         this.countriesCombobox = page.getByTestId('country-code-select');
         this.verticalCombobox = page.getByTestId('type-select');
         this.subVerticalCombobox = page.getByTestId('sub-type-select');
+        this.toplistAutomationCombobox = page.getByTestId('toplist-automation-select');
         this.dataGrid = page.locator('//div[contains(@class, "MuiDataGrid-root")]');
         this.dataGridRow = page.getByRole("row");
         this.rowsPerPageDropdown = page.locator("//p[.='Rows per page:']/..//*[@role='combobox']");
