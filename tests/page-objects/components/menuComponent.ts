@@ -21,6 +21,7 @@ export class MenuComponent extends BasePage {
     readonly subToplistsMenuItem_New: Locator;
     readonly subShortReviewsMenuItem_Search: Locator;
     readonly subPartnersMenuItem_Casinos: Locator;
+    readonly subPartnersMenuItem_Exchanges: Locator;
     readonly subDatabaseMenuItem_Datapoints: Locator;
     readonly menubarItem_User: Locator;
     readonly subUserMenuItem_LogOut: Locator;
@@ -46,6 +47,7 @@ export class MenuComponent extends BasePage {
         this.subToplistsMenuItem_New = page.locator("//a[contains(@role, 'menuitem') and text() = 'New']");
         this.subShortReviewsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
         this.subPartnersMenuItem_Casinos = page.locator("//a[contains(@role, 'menuitem') and text() = 'Casinos']");
+        this.subPartnersMenuItem_Exchanges = page.locator("//a[contains(@role, 'menuitem') and text() = 'Exchanges']");
         this.subDatabaseMenuItem_Datapoints = page.getByText('Datapoints');
         this.subUserMenuItem_LogOut = page.getByRole('menuitem', { name: 'Log out' });
     }
