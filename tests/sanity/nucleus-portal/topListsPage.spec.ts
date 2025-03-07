@@ -120,9 +120,9 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
 
     test('check the search by Country', async ({components}) => {
         await test.step("`QA Toplist` must be visible when selecting `Cyprus` on ccn.com", async () => {
-            await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
+            await components.clickItemFromCombobox(components.productCombobox, ["ccn.com"]);
             await expect(components.dataGrid).toBeVisible();
-            await components.clickItemFromCombobox(components.countriesCombobox, "Cyprus");
+            await components.clickItemFromCombobox(components.countriesCombobox, ["Cyprus"]);
             await expect(components.dataGridCell("name", 1)).toContainText("QA Toplist");
             await expect(components.dataGridCell("domains", 1)).toContainText("ccn.com");
             await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
@@ -135,8 +135,8 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
     test('pagination and Data Grid items', async ({components}) => {
         //  test.skip(process.env.TEST_ENV === 'staging', 'Not enough Toplists in staging env to test pagination');
 
-        await components.clickItemFromCombobox(components.productCombobox, "ccn.com");
-        await components.clickItemFromCombobox(components.countriesCombobox, "Select an option");
+        await components.clickItemFromCombobox(components.productCombobox, ["ccn.com"]);
+        await components.clickItemFromCombobox(components.countriesCombobox, ["Select an option"]);
         await test.step("Select 25 items per page", async () => {
             await components.checkRowsInDataGrid(25, ["name", "domains", "type", "subType", "status", "automation", "updatedAt"]);
             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
@@ -198,13 +198,13 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await expect(NewToplistPage.sportsCombobox.getByRole("button").getByText("[QA] Sport 1")).not.toBeVisible();
         });
         await test.step("Populate all of the filters and save", async () => {
-            await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 1", false);
-            await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, "[QA] Coin 2", false);
-            await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, "[QA] License 1");
-            await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, "[QA] Deposit Method 1");
-            await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, "[QA] Casino Product 1");
-            await components.clickItemFromCombobox(NewToplistPage.currenciesCombobox, "[QA] Currency 1");
-            await components.clickItemFromCombobox(NewToplistPage.sportsCombobox, "[QA] Sport 1");
+            await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, ["[QA] Coin 1", "[QA] Coin 2"], false);
+            //await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, , false);
+            await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, ["[QA] License 1"]);
+            await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, ["[QA] Deposit Method 1"]);
+            await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, ["[QA] Casino Product 1"]);
+            await components.clickItemFromCombobox(NewToplistPage.currenciesCombobox, ["[QA] Currency 1"]);
+            await components.clickItemFromCombobox(NewToplistPage.sportsCombobox, ["[QA] Sport 1"]);
             await NewToplistPage.createButton.click();
             await ToplistsPage.page.waitForTimeout(1000);
         });

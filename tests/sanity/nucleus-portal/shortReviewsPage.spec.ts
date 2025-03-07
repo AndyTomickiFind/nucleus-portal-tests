@@ -51,7 +51,7 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
     });
 
     test('check the Multi Grid', async ({components, ShortReviewsPage}) => {
-        await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
+        await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, ["QA Toplist"]);
         await test.step("Check each of the fields in a row", async () => {
             await expect(components.dataGridCell("toplistName", 1)).toContainText("QA Toplist");
             await expect(components.dataGridCell("partnerName", 1)).toContainText("Dreamz");
@@ -74,7 +74,7 @@ test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}
         },
     }, async ({components, ShortReviewsPage}) => {
 
-        await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, "QA Toplist");
+        await components.clickItemFromCombobox(ShortReviewsPage.toplistCombobox, ["QA Toplist"]);
         //await components.dblClickDataGridRow(1);
         await ShortReviewsPage.page.locator(`//div[@data-rowindex]/div[.='Dreamz']`).dblclick();  // Edit row containing "Dreamz"
         await test.step("Check elements", async () => {

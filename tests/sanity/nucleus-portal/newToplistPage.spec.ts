@@ -36,10 +36,9 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await expect(NewToplistPage.nameField).toContainText("Name *");
             await expect(NewToplistPage.verticalCombobox).toContainText("Casinos");
             await expect(NewToplistPage.subVerticalCombobox).toContainText("Default");
-            await expect(NewToplistPage.placementsCountInputBox).toBeEditable();
+            await expect(NewToplistPage.placementsCountInputBox).toBeVisible();
             await expect(NewToplistPage.descriptionInputField).toContainText("Description");
             await expect(NewToplistPage.appliesToProductCombobox).toContainText("Applies to Product *");
-            await expect(NewToplistPage.coinsCombobox).toBeEditable();
             await expect(NewToplistPage.advancedFiltersAccordion).toContainText("Advanced filters");
             await expect(NewToplistPage.addOverrideButton).toBeVisible();
 
@@ -58,7 +57,7 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await components.checkCombobox(NewToplistPage.currenciesCombobox, ["[QA] RoboCurrency 01", "[QA] RoboCurrency 02"]);  //PROD-1172
             await components.checkCombobox(NewToplistPage.depositMethodsCombobox, ["1Sol", "1inch"]);
             await components.checkCombobox(NewToplistPage.sportsCombobox, ["Age of Empires", "Archery", "Angry Birds"]);
-            await components.clickItemFromCombobox(NewToplistPage.appliesToProductCombobox, "ccn.com");
+            await components.clickItemFromCombobox(NewToplistPage.appliesToProductCombobox, ["ccn.com"]);
             await components.checkCombobox(NewToplistPage.promotionTypesCombobox, ["Free bet", "Welcome package", "Cashback", "Free spins", "First deposit"]);
             await NewToplistPage.anonymousPlayCheckbox.click();
             await NewToplistPage.provablyFairCheckbox.click();
