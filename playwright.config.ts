@@ -6,6 +6,8 @@ dotenv.config();
 
 // Get the environment type from the command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
+const browser = 'msedge'; //firefox, chromium
+
 
 interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
@@ -28,7 +30,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 90_000,
+    timeout: 990_000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
@@ -75,7 +77,7 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Screenshot on failure. */
         screenshot: 'only-on-failure',
         /* Headless mode. */
-        headless: false,
+        headless: true,
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */
@@ -88,7 +90,14 @@ const defaultConfig: PlaywrightTestConfig = {
         // Setup project
         {
             name: 'setup',
-            testMatch: /.*\.setup\.ts/
+            testMatch: /.*\.setup\.ts/,
+            use: {
+                ...devices['Desktop ' + browser], channel: browser,
+                viewport: {
+                    width: 1600,
+                    height: 800
+                },
+            },
         },
 
         {
@@ -96,7 +105,7 @@ const defaultConfig: PlaywrightTestConfig = {
             dependencies: ['setup'], //comment out if the auth is already stored - - - - - - - - - - - - - - - - - - +++
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
-                ...devices['Desktop Chrome'], channel: 'chromium',
+                ...devices['Desktop ' + browser], channel: browser,
                 storageState: 'playwright/.auth/user.json',
                 viewport: {
                     width: 1600,
@@ -106,10 +115,10 @@ const defaultConfig: PlaywrightTestConfig = {
         },
         {
             name: 'toplists-ui-sanity',
-            //dependencies: ['setup'],
+            dependencies: ['setup'],
             testMatch: 'sanity/toplists-ui/*.spec.ts',
             use: {
-                ...devices['Desktop Chrome'], channel: 'chromium',
+                ...devices['Desktop ' + browser], channel: browser,
                 storageState: 'playwright/.auth/user.json',
                 viewport: {
                     width: 1600,
