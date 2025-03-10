@@ -19,7 +19,6 @@ interface TestConfig extends PlaywrightTestConfig {
     staticPage?: { username?: string; password?: string };
 }
 
-
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
