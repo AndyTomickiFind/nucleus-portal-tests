@@ -182,8 +182,6 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
         await ExchangesPage.page.waitForLoadState();
         await expect.soft(ExchangesPage.topHeader).toContainText("Update Exchange");
 
-
-
         await ExchangesPage.getTabLocator("DATAPOINTS").click();
 
         const fieldsToClear = ["Products", "Coins", "Crypto Pairs", "Currencies", "Site Languages", "Support Languages", "Contact Methods", "Deposit Methods", "Deposit Currencies", "Withdrawal Methods", "Licenses", "Support Issues", "Security Methods", "Community Socials", "Order Types", "Educational Resources", "Registration Steps"];
