@@ -55,7 +55,9 @@ export class ExchangesPage extends BasePage {
     async exchangeDatapointsClearField(fieldName: string) {
         await test.step("Removing all items in: " + fieldName, async () => {
             await this.exchangeDatapointsDropdownField(fieldName).click();
-            await this.clearFieldButton(fieldName).click();
+            if (await this.exchangeDatapointsDropdownField(fieldName).getByTestId("CancelIcon").count() > 0) {
+                await this.clearFieldButton(fieldName).click();
+            }
             await this.page.keyboard.press("Escape");
         });
     }

@@ -15,7 +15,7 @@ test(`[${config.name.toUpperCase()}] GET /v1/health`, async ({request}, testInfo
         }
     });
 
-    await logResponse(response, testInfo);
+    await logResponse(response, testInfo, "GET");
 
     expect(response.status()).toBe(200);
     const responseBody = await response.json();

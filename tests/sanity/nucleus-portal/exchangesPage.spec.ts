@@ -29,7 +29,12 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
         });
     });
 
-    test('Check Random Exchanges and a Specific Exchange', async ({request, components, ExchangesPage, menuComponent}) => {
+    test('Check Random Exchanges and a Specific Exchange', async ({
+                                                                      request,
+                                                                      components,
+                                                                      ExchangesPage,
+                                                                      menuComponent
+                                                                  }) => {
         async function getExchanges(): Promise<string[]> {
             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges`, {
                 params: {size: 10000},
@@ -164,7 +169,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
     test('Check Validation Messages', {
         annotation: {
             type: 'issue',
-            description: 'https://findco.atlassian.net/browse/DEV-5499',
+            description: 'https://findco.atlassian.net/browse/DEV-5499, https://findco.atlassian.net/browse/DEV-5800',
         },
     }, async ({components, ExchangesPage, menuComponent}) => {
         const exchangeName = `[QA] Exchange used by ROBOTS - do not edit`;
@@ -177,20 +182,21 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
         await ExchangesPage.page.waitForLoadState();
         await expect.soft(ExchangesPage.topHeader).toContainText("Update Exchange");
 
+
+
         await ExchangesPage.getTabLocator("DATAPOINTS").click();
 
-        const fieldsToClear = ["Products *", "Coins *", "Crypto Pairs *", "Currencies *", "Site Languages *", "Support Languages *", "Contact Methods *", "Deposit Methods *", "Deposit Currencies *", "Withdrawal Methods *", "Licenses *", "Support Issues *", "Security Methods *", "Community Socials *", "Order Types *", "Educational Resources *", "Registration Steps *"];
+        const fieldsToClear = ["Products", "Coins", "Crypto Pairs", "Currencies", "Site Languages", "Support Languages", "Contact Methods", "Deposit Methods", "Deposit Currencies", "Withdrawal Methods", "Licenses", "Support Issues", "Security Methods", "Community Socials", "Order Types", "Educational Resources", "Registration Steps"];
         for (const field of fieldsToClear) {
             await ExchangesPage.exchangeDatapointsClearField(field);
         }
 
         await ExchangesPage.saveButton.click();
 
-        const requiredFields: string[] = ["products", "coins", "crypto-pairs", "currencies", "site-languages", "support-languages", "contact-methods", "deposit-methods", "deposit-currencies", "withdrawal-methods", "licenses", "support-issues", "security-methods", "community-socials", "order-types", "educational-resources", "registration-steps"];
-        for (const field of requiredFields) {
-            await expect(ExchangesPage.exchangeDatapointsValidationLabel(field), `${field} field is required`).toBeVisible();
+        const optionalFields: string[] = ["products", "coins", "crypto-pairs", "currencies", "site-languages", "support-languages", "contact-methods", "deposit-methods", "deposit-currencies", "withdrawal-methods", "licenses", "support-issues", "security-methods", "community-socials", "order-types", "educational-resources", "registration-steps"];
+        for (const field of optionalFields) {
+            const isVisible = await ExchangesPage.exchangeDatapointsValidationLabel(field).isVisible();
+            expect.soft(isVisible, `${field} field validation should only appear if necessary`).toBe(false);
         }
-
-        await expect(ExchangesPage.exchangeDatapointsValidationLabel("sports"), "Sports field is not required (DEV-5499)").not.toBeVisible();
     });
 });

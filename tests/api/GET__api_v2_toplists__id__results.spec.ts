@@ -38,7 +38,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, async (
         }
     });
 
-    await logResponse(response, testInfo);
+    await logResponse(response, testInfo, "GET");
 
 
     expect(response.status()).toBe(200);
@@ -149,7 +149,7 @@ test(`[${config.name.toUpperCase()}] Cryptogambling - GET /api/v2/toplists/{id}/
         }
     });
 
-    await logResponse(response, testInfo);
+    await logResponse(response, testInfo, "GET");
 
     expect(response.status()).toBe(200);
 

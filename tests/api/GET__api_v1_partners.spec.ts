@@ -16,7 +16,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/partners`, async ({request}, te
         }
     })]);
 
-    await logResponse(response, testInfo);
+    await logResponse(response, testInfo, "GET");
 
     expect(response.status()).toBe(200);
     const responseBody = await response.json();

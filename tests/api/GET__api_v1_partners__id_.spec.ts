@@ -18,7 +18,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/partners/{id}`, async ({ reques
         }
     });
 
-    await logResponse(response, testInfo);
+    await logResponse(response, testInfo, "GET");
 
     expect(response.status()).toBe(200);
     //const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/partnersDetails.json`, 'utf-8'))
