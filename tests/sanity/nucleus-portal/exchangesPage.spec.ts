@@ -53,17 +53,15 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
 
         // Randomly select 5 exchanges
         const randomExchanges: string[] = await (async () => {
-            const allExchanges = await getExchanges(); // Retrieve the list of exchanges
+            const allExchanges = (await getExchanges()).filter(exchange => !exchange.toLowerCase().includes("do not edit")); // Exclude exchanges with "do not edit" in the name
             const selectedExchanges = new Set<string>();
-
             while (selectedExchanges.size < 5 && allExchanges.length > selectedExchanges.size) {
                 const randomExchange = allExchanges[Math.floor(Math.random() * allExchanges.length)];
                 if (!selectedExchanges.has(randomExchange)) {
                     selectedExchanges.add(randomExchange);
                 }
             }
-
-            return [...Array.from(selectedExchanges), "[QA] Exchange used by ROBOTS - do not edit"];
+            return [...Array.from(selectedExchanges)];
         })();
 
         for (const exchangeName of randomExchanges) {

@@ -7,6 +7,7 @@ dotenv.config();
 // Get the environment type from the command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
+const headless = true;
 
 
 interface TestConfig extends PlaywrightTestConfig {
@@ -76,7 +77,7 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Screenshot on failure. */
         screenshot: 'only-on-failure',
         /* Headless mode. */
-        headless: true,
+        headless: headless,
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */

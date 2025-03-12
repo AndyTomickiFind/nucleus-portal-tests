@@ -55,9 +55,8 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
         // Randomly select 5 casinos
         const randomCasinos: string[] = await (async () => {
-            const allCasinos = await getCasinos(); // Retrieve the list of casinos
+            const allCasinos = (await getCasinos()).filter(casino => !casino.toLowerCase().includes("do not edit")); // Exclude casinos with "do not edit" in the name
             const selectedCasinos = new Set<string>();
-
             while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
                 // Randomly select a casino and add it to the set to avoid duplicates
                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
@@ -65,8 +64,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     selectedCasinos.add(randomCasino);
                 }
             }
-
-            return [...Array.from(selectedCasinos), "[QA] Casino used by ROBOTS - do not edit"];
+            return [...Array.from(selectedCasinos)];
         })();
 
         for (const casinoName of randomCasinos) {
