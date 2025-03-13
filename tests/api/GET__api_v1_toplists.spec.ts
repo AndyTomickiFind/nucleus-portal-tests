@@ -17,9 +17,8 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/toplists`, async ({request}, te
         await logResponse(response, testInfo, "GET");
 
         expect(response.status()).toBe(200);
-        //const fullExpectedResponse = JSON.parse(fs.readFileSync(`tests/api/expectedResponses_${process.env.TEST_ENV}/toplists.json`, 'utf-8'))
         const responseBody = await response.json();
-        //expect(responseBody).toMatchObject(fullExpectedResponse);
+
         // Check if the response is an array
         expect(Array.isArray(responseBody)).toBeTruthy();
 
@@ -54,7 +53,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v1/toplists`, async ({request}, te
                 expect(toplist.publishedVersion).toHaveProperty('overrides');
                 expect(toplist).toHaveProperty('status');
                 expect(toplist).toHaveProperty('subType');
-                
+
 
                 // Check the format of specific fields
                 expect(toplist._id).toMatch(idPattern);

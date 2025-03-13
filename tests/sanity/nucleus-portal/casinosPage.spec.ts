@@ -181,7 +181,15 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             // Open the casino details page
             await test.step("Open the Casino", async () => {
                 await components.dblClickDataGridRow(1);
-                await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                for (let attempt = 0; attempt < 3; attempt++) {
+                    try {
+                        await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                        break; // Exit the loop if assertion passes
+                    } catch (error) {
+                        if (attempt === 2) throw error; // Rethrow the error after 3 failed attempts
+                        await CasinosPage.page.waitForTimeout(1000); // Wait for 1 second before retrying
+                    }
+                }
             });
 
             const date: Date = new Date();
