@@ -31,6 +31,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "termsAndConditions": "https://terms-and-conditions",
                 "minimumDeposit": "",
                 "allowedCountries": [],
+                "excludedCountries":["AF","RU","US"],
                 "reviewBy": { "shortBio": [], "position": [] },
                 "wageringRequirements": [],
                 "shortDescription": [],

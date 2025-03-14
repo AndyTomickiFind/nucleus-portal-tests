@@ -26,6 +26,7 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
                 "headquarter": "660bd00b53314b10fc9c0052",
                 "supportEmails": [],
                 "allowedCountries": [],
+                "excludedCountries":["AF","RU","US"],
                 "availabilityHours": 24,
                 "availabilityDays": 7,
                 "interfaceCleanlinessScore": 2,
