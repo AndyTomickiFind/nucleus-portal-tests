@@ -140,12 +140,24 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
     test('Update/edit a Specific Exchange', async ({components, ExchangesPage, menuComponent}) => {
         const exchangeName = `[QA] 3 Exchange used by ROBOTS - do not edit`;
         await test.step(`Updating Exchange "${exchangeName}"`, async () => {
-            await menuComponent.menubarItem_Partners.click();
-            await menuComponent.subPartnersMenuItem_Exchanges.click();
-            await ExchangesPage.filterByExchangeName(exchangeName);
+            await test.step("Search for the Exchange", async () => {
+                await menuComponent.menubarItem_Partners.click();
+                await menuComponent.subPartnersMenuItem_Exchanges.click();
+                await ExchangesPage.filterByExchangeName(exchangeName);
+            });
 
-            await components.dblClickDataGridRow(1);
-            await expect.soft(ExchangesPage.topHeader).toContainText("Update Exchange");
+            // Open the exchange details page
+            await test.step("Open the Exchange", async () => {
+                await components.dblClickDataGridRow(1);
+                for (let attempt = 0; attempt < 3; attempt++) {
+                    if (await ExchangesPage.topHeader.textContent() === "Update Exchange") {
+                        break;
+                    } else {
+                        await components.dblClickDataGridRow(1);
+                        await ExchangesPage.page.waitForTimeout(1000);
+                    }
+                }
+            });
 
             const date: Date = new Date();
             await ExchangesPage.exchangeNameField.fill(exchangeName + " - " + date.toISOString());

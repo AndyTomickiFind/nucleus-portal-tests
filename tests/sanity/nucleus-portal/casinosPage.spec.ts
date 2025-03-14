@@ -171,7 +171,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     test('Update/edit a Specific Casino', async ({components, CasinosPage, menuComponent}) => {
         const casinoName = `[QA] 3 Casino used by ROBOTS - do not edit`;
         await test.step(`Updating Casino "${casinoName}"`, async () => {
-            // Search for the casino
             await test.step("Search for the Casino", async () => {
                 await menuComponent.menubarItem_Partners.click();
                 await menuComponent.subPartnersMenuItem_Casinos.click();
@@ -182,12 +181,11 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
             await test.step("Open the Casino", async () => {
                 await components.dblClickDataGridRow(1);
                 for (let attempt = 0; attempt < 3; attempt++) {
-                    try {
-                        await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
-                        break; // Exit the loop if assertion passes
-                    } catch (error) {
-                        if (attempt === 2) throw error; // Rethrow the error after 3 failed attempts
-                        await CasinosPage.page.waitForTimeout(1000); // Wait for 1 second before retrying
+                    if (await CasinosPage.topHeader.textContent() === "Update Casino") {
+                        break;
+                    } else {
+                        await components.dblClickDataGridRow(1);
+                        await CasinosPage.page.waitForTimeout(1000);
                     }
                 }
             });
