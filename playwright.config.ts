@@ -7,7 +7,8 @@ dotenv.config();
 // Get the environment type from the command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
-const headless = true;
+const headless = false;
+const runAuth = true;
 
 
 interface TestConfig extends PlaywrightTestConfig {
@@ -30,7 +31,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 990_000,
+    timeout: 1_990_000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
@@ -102,7 +103,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-            dependencies: ['setup'], //comment out if the auth is already stored - - - - - - - - - - - - - - - - - - +++
+            dependencies: runAuth ? ['setup'] : [],
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop ' + browser], channel: browser,

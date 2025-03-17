@@ -75,14 +75,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
                 });
 
-                await test.step("Open the Exchange", async () => {
-                    await ExchangesPage.page.waitForTimeout(2000);
-                    await components.dblClickDataGridRow(1);
-                    await ExchangesPage.page.waitForLoadState('domcontentloaded');
-                    await expect(ExchangesPage.topHeader).toBeVisible();
-                    await expect(ExchangesPage.topHeader).toBeEnabled();
-                    await expect.soft(ExchangesPage.topHeader).toContainText("Update Exchange");
-                });
+                await ExchangesPage.openExchange(exchangeName);
 
                 await test.step("Check all accordion dropdowns", async () => {
                     const dropdowns = [
@@ -140,24 +133,10 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
     test('Update/edit a Specific Exchange', async ({components, ExchangesPage, menuComponent}) => {
         const exchangeName = `[QA] 3 Exchange used by ROBOTS - do not edit`;
         await test.step(`Updating Exchange "${exchangeName}"`, async () => {
-            await test.step("Search for the Exchange", async () => {
-                await menuComponent.menubarItem_Partners.click();
-                await menuComponent.subPartnersMenuItem_Exchanges.click();
-                await ExchangesPage.filterByExchangeName(exchangeName);
-            });
 
-            // Open the exchange details page
-            await test.step("Open the Exchange", async () => {
-                await components.dblClickDataGridRow(1);
-                for (let attempt = 0; attempt < 3; attempt++) {
-                    if (await ExchangesPage.topHeader.textContent() === "Update Exchange") {
-                        break;
-                    } else {
-                        await components.dblClickDataGridRow(1);
-                        await ExchangesPage.page.waitForTimeout(1000);
-                    }
-                }
-            });
+            await menuComponent.menubarItem_Partners.click();
+            await menuComponent.subPartnersMenuItem_Exchanges.click();
+            await ExchangesPage.openExchange(exchangeName);
 
             const date: Date = new Date();
             await ExchangesPage.exchangeNameField.fill(exchangeName + " - " + date.toISOString());
@@ -181,16 +160,11 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
             type: 'issue',
             description: 'https://findco.atlassian.net/browse/DEV-5499, https://findco.atlassian.net/browse/DEV-5800',
         },
-    }, async ({components, ExchangesPage, menuComponent}) => {
+    }, async ({ExchangesPage, menuComponent}) => {
         const exchangeName = `[QA] Exchange used by ROBOTS - do not edit`;
         await menuComponent.menubarItem_Partners.click();
         await menuComponent.subPartnersMenuItem_Exchanges.click();
-        await ExchangesPage.filterByExchangeName(exchangeName);
-
-        await ExchangesPage.page.waitForTimeout(1200);
-        await components.dblClickDataGridRow(1);
-        await ExchangesPage.page.waitForLoadState();
-        await expect.soft(ExchangesPage.topHeader).toContainText("Update Exchange");
+        await ExchangesPage.openExchange(exchangeName);
 
         await ExchangesPage.getTabLocator("DATAPOINTS").click();
 
@@ -207,4 +181,35 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
             expect.soft(isVisible, `${field} field validation should only appear if necessary`).toBe(false);
         }
     });
+
+
+    test('Exchange Allowed/Excluded Countries', {
+        annotation: {
+            type: 'issue',
+            description: 'https://findco.atlassian.net/browse/DEV-5850, https://findco.atlassian.net/browse/DEV-5849',
+        },
+    }, async ({ExchangesPage, menuComponent}) => {
+
+        const exchangeName = `[QA] 4 Exchange used by ROBOTS - do not edit`;
+        await test.step(`Updating Exchange "${exchangeName}"`, async () => {
+            await menuComponent.menubarItem_Partners.click();
+            await menuComponent.subPartnersMenuItem_Exchanges.click();
+            await ExchangesPage.openExchange(exchangeName);
+
+            await test.step("Check Allowed/Excluded Countries fields", async () => {
+
+            });
+
+
+            await ExchangesPage.saveButton.click();
+
+            await ExchangesPage.page.waitForTimeout(2000);
+            await menuComponent.menubarItem_Partners.click();
+            await menuComponent.subPartnersMenuItem_Exchanges.click();
+            await ExchangesPage.filterByExchangeName(exchangeName);
+
+
+        });
+    });
+
 });

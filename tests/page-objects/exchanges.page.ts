@@ -1,6 +1,6 @@
-import { BasePage } from "./base.page";
-import { BrowserContext, Locator, Page, TestInfo } from "@playwright/test";
-import { test } from "../fixtures/fixtures";
+import {BasePage} from "./base.page";
+import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
+import {test} from "../fixtures/fixtures";
 
 export class ExchangesPage extends BasePage {
     readonly testInfo: TestInfo;
@@ -15,6 +15,7 @@ export class ExchangesPage extends BasePage {
     readonly clearFieldButton: (name: string) => Locator;
     readonly exchangeDatapointsDropdownField: (label: string) => Locator;
     readonly exchangeDatapointsValidationLabel: (name: string) => Locator;
+    readonly dataGridRow: (rowIndex: number) => Locator;
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -36,6 +37,18 @@ export class ExchangesPage extends BasePage {
             page.locator(`//label[.='${label}']/..`);
         this.exchangeDatapointsValidationLabel = (name: string) =>
             page.locator(`//p[@id='exchange-datapoints-form-${name}-autocomplete-field-helper-text']`);
+        this.dataGridRow = (rowIndex: number) =>
+            page.locator(`//div[@data-rowindex="${rowIndex}"]`);
+    }
+
+    /**
+     * Double-click a data grid row
+     * @param rowIndex - Index of the row to double-click (1-based index)
+     */
+    async dblClickDataGridRow(rowIndex: number) {
+        const row = this.dataGridRow(rowIndex);
+        await this.page.waitForTimeout(100);
+        await row.dblclick();
     }
 
     /**
@@ -61,4 +74,27 @@ export class ExchangesPage extends BasePage {
             await this.page.keyboard.press("Escape");
         });
     }
+
+    async openExchange(exchangeName: string) {
+        await test.step("Search for the Exchange " + exchangeName, async () => {
+            await this.filterByExchangeName(exchangeName);
+        });
+
+        // Open the exchange details page
+        await test.step("Open the Exchange", async () => {
+            for (let attempt = 0; attempt < 3; attempt++) {
+                if (await this.topHeader.textContent() === "Update Exchange") {
+                    break;
+                } else {
+                    await this.dblClickDataGridRow(0);
+                    await this.page.waitForTimeout(1000);
+                }
+            }
+        });
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.topHeader).toBeVisible();
+        await expect(this.topHeader).toBeEnabled();
+        await expect.soft(this.topHeader).toContainText("Update Exchange");
+    }
+
 }
