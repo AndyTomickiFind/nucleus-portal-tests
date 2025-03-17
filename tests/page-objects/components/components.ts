@@ -21,6 +21,8 @@ export class components extends BasePage {
     readonly newButton: Locator;
     readonly divider: Locator;
     readonly dropdownHeader: (headerName: string) => Locator;
+    readonly chipButton: (label: string) => Locator;
+    readonly chipButtonCloseX: (label: string) => Locator;
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -41,8 +43,10 @@ export class components extends BasePage {
         this.displayedRowsLabel = page.locator("//p[contains(@class, 'MuiTablePagination-displayedRows')]");
         this.newButton = page.locator("//button[@aria-label='New']");
         this.divider = page.getByRole('separator');
-        this.dropdownHeader = (headerName: string) =>
-            page.locator(`div[data-testid='${headerName}']`);
+        this.dropdownHeader = (headerName: string) => page.locator(`div[data-testid='${headerName}']`);
+        this.chipButton = (label: string) => page.getByRole("button").locator(`//*[.='${label}']/..`);
+        this.chipButtonCloseX = (label: string) =>
+            this.chipButton(label).locator("//*[@data-testid='CancelIcon']");
     }
 
     dataGridCell(column: string, rowNumber: number): Locator {

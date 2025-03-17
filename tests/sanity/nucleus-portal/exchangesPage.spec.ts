@@ -188,7 +188,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
             type: 'issue',
             description: 'https://findco.atlassian.net/browse/DEV-5850, https://findco.atlassian.net/browse/DEV-5849',
         },
-    }, async ({ExchangesPage, menuComponent}) => {
+    }, async ({components, ExchangesPage, menuComponent}) => {
 
         const exchangeName = `[QA] 4 Exchange used by ROBOTS - do not edit`;
         await test.step(`Updating Exchange "${exchangeName}"`, async () => {
@@ -197,18 +197,27 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
             await ExchangesPage.openExchange(exchangeName);
 
             await test.step("Check Allowed/Excluded Countries fields", async () => {
+                await components.openDropdown("details-header");
+                await ExchangesPage.page.waitForTimeout(300);
+                await expect(ExchangesPage.allowedCountriesField).toBeVisible();
+                await expect(ExchangesPage.excludedCountriesField).toBeVisible();
 
+                await expect(ExchangesPage.allowedCountriesField).toContainText("AO - Angola");
+                await expect(ExchangesPage.excludedCountriesField).not.toContainText("AO - Angola");
+                await components.chipButtonCloseX("AO - Angola").click();
+                await expect(ExchangesPage.excludedCountriesField).toContainText("AO - Angola");
+                await expect(ExchangesPage.allowedCountriesField).not.toContainText("AO - Angola");
+                await components.chipButtonCloseX("AO - Angola").click();
+
+                await expect(ExchangesPage.allowedCountriesField).toContainText("AR - Argentina");
+                await expect(ExchangesPage.excludedCountriesField).not.toContainText("AR - Argentina");
+                await components.chipButtonCloseX("AR - Argentina").click();
+                await expect(ExchangesPage.excludedCountriesField).toContainText("AR - Argentina");
+                await expect(ExchangesPage.allowedCountriesField).not.toContainText("AR - Argentina");
+                await components.chipButtonCloseX("AR - Argentina").click();
             });
 
-
             await ExchangesPage.saveButton.click();
-
-            await ExchangesPage.page.waitForTimeout(2000);
-            await menuComponent.menubarItem_Partners.click();
-            await menuComponent.subPartnersMenuItem_Exchanges.click();
-            await ExchangesPage.filterByExchangeName(exchangeName);
-
-
         });
     });
 

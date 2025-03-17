@@ -16,6 +16,10 @@ export class ExchangesPage extends BasePage {
     readonly exchangeDatapointsDropdownField: (label: string) => Locator;
     readonly exchangeDatapointsValidationLabel: (name: string) => Locator;
     readonly dataGridRow: (rowIndex: number) => Locator;
+    readonly allowedCountriesField : Locator;
+    readonly excludedCountriesField : Locator;
+
+
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
         super(page, context);
@@ -39,6 +43,9 @@ export class ExchangesPage extends BasePage {
             page.locator(`//p[@id='exchange-datapoints-form-${name}-autocomplete-field-helper-text']`);
         this.dataGridRow = (rowIndex: number) =>
             page.locator(`//div[@data-rowindex="${rowIndex}"]`);
+
+        this.allowedCountriesField = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-field`);
+        this.excludedCountriesField = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-field`);
     }
 
     /**
@@ -87,7 +94,7 @@ export class ExchangesPage extends BasePage {
                     break;
                 } else {
                     await this.dblClickDataGridRow(0);
-                    await this.page.waitForTimeout(1000);
+                    await this.page.waitForTimeout(300);
                 }
             }
         });
