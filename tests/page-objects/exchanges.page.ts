@@ -18,6 +18,8 @@ export class ExchangesPage extends BasePage {
     readonly dataGridRow: (rowIndex: number) => Locator;
     readonly allowedCountriesField : Locator;
     readonly excludedCountriesField : Locator;
+    readonly allowedCountriesSelecAllButton : Locator;
+    readonly excludedCountriesSelecAllButton : Locator;
 
 
 
@@ -46,6 +48,9 @@ export class ExchangesPage extends BasePage {
 
         this.allowedCountriesField = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-field`);
         this.excludedCountriesField = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-field`);
+        this.allowedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-select-all-button`);
+        this.excludedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-select-all-button`);
+
     }
 
     /**
