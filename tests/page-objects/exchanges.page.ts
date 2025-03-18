@@ -59,7 +59,7 @@ export class ExchangesPage extends BasePage {
      */
     async dblClickDataGridRow(rowIndex: number) {
         const row = this.dataGridRow(rowIndex);
-        await this.page.waitForTimeout(100);
+        await this.page.waitForTimeout(300);
         await row.dblclick();
     }
 
@@ -69,6 +69,8 @@ export class ExchangesPage extends BasePage {
      */
     async filterByExchangeName(exchangeName: string) {
         await this.exchangeNameFilterField.fill(exchangeName);
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.page.waitForTimeout(300);
         await this.exchangeNameFilterField.press("Enter");
     }
 
@@ -94,12 +96,13 @@ export class ExchangesPage extends BasePage {
 
         // Open the exchange details page
         await test.step("Open the Exchange", async () => {
+            await this.page.waitForLoadState('domcontentloaded');
             for (let attempt = 0; attempt < 3; attempt++) {
                 if (await this.topHeader.textContent() === "Update Exchange") {
                     break;
                 } else {
                     await this.dblClickDataGridRow(0);
-                    await this.page.waitForTimeout(300);
+                    await this.page.waitForTimeout(350);
                 }
             }
         });

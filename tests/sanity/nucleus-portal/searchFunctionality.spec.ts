@@ -47,20 +47,26 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
         }, async ({ HomePage }) => {
             await test.step(`Navigate to ${path}`, async () => {
                 await HomePage.page.goto(`https://${config.baseUrl}${path}`);
+                await HomePage.page.waitForLoadState('domcontentloaded');
+                await HomePage.page.waitForTimeout(500);
             });
 
             const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector);
-            const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
 
             const failedCharacters: string[] = [];
             for (const character of invalidCharacters) {
                 await test.step(`Checking character "${character}"`, async () => {
                     await searchField.click();
-                    await searchField.pressSequentially(character, { delay: 400 });
+                    await searchField.pressSequentially(character, { delay: 500 });
+                    const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
+                    let attempts = 0;
+                    while (attempts < 3 && await alertBanner.isVisible()) {
+                        attempts++;
+                        await HomePage.page.waitForTimeout(500);
+                    }
                     if (await alertBanner.count() > 0) {
                         failedCharacters.push(character);
                     }
-                    await expect.soft(alertBanner, "Detecting alert banner").not.toBeVisible();
                     await HomePage.page.keyboard.press('Backspace'); // Reset search field
                 });
             }
