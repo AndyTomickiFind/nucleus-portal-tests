@@ -198,15 +198,15 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
 
             await test.step("Check Allowed/Excluded Countries fields", async () => {
                 await components.openDropdown("details-header");
-                await ExchangesPage.page.waitForTimeout(300);
+                await ExchangesPage.page.waitForTimeout(100);
                 await expect(ExchangesPage.allowedCountriesField).toBeVisible();
                 await expect(ExchangesPage.excludedCountriesField).toBeVisible();
                 await expect(ExchangesPage.allowedCountriesSelecAllButton).toBeVisible();
                 await expect(ExchangesPage.excludedCountriesSelecAllButton).toBeVisible();
 
-
                 await ExchangesPage.allowedCountriesSelecAllButton.click();
-                // Test dynamic removal and checking of countries
+                await ExchangesPage.page.waitForTimeout(120);
+
                 const testCountries = ["AO - Angola", "AR - Argentina", "PL - Poland", "CA - Canada", "TV - Tuvalu", "HT - Haiti", "EC - Ecuador"];
                 for (const country of testCountries) {
                     await components.chipButtonCloseX(country).click(); // Remove country from allowed
