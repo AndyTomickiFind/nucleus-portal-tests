@@ -91,9 +91,9 @@ export class components extends BasePage {
         this.newButton = page.locator("//button[@aria-label='New']");
         this.divider = page.getByRole('separator');
         this.dropdownHeader = (headerName: string) => page.locator(`div[data-testid='${headerName}']`);
-        this.chipButton = (label: string) => page.getByRole("button").locator(`//*[.='${label}']/..`);
+        this.chipButton = (label: string) => page.getByRole("button").locator(`//*[contains(text(),'${label}')]`);
         this.chipButtonCloseX = (label: string) =>
-            this.chipButton(label).locator("//*[@data-testid='CancelIcon']");
+            this.page.locator(`//*[contains(text(),'${label}')]/..//*[@data-testid='CancelIcon']`);
     }
 
     dataGridCell(column: string, rowNumber: number): Locator {

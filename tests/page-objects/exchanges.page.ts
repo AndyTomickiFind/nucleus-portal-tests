@@ -59,7 +59,6 @@ export class ExchangesPage extends BasePage {
      */
     async dblClickDataGridRow(rowIndex: number) {
         const row = this.dataGridRow(rowIndex);
-        await this.page.waitForTimeout(250);
         await row.dblclick();
     }
 
