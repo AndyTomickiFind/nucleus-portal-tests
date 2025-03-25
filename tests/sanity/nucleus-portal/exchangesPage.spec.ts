@@ -205,15 +205,18 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
                 await expect(ExchangesPage.excludedCountriesSelecAllButton).toBeVisible();
 
                 await ExchangesPage.allowedCountriesSelecAllButton.click();
-                await ExchangesPage.page.waitForTimeout(120);
+                await ExchangesPage.page.waitForTimeout(220);
+                await ExchangesPage.allowedCountriesSelecAllButton.click();
 
                 const testCountries = ["AO - Angola", "AR - Argentina", "PL - Poland", "CA - Canada", "TV - Tuvalu", "HT - Haiti", "EC - Ecuador"];
                 for (const country of testCountries) {
                     await components.chipButtonCloseX(country).click(); // Remove country from allowed
+                    await ExchangesPage.page.waitForTimeout(80);
                     await expect(ExchangesPage.allowedCountriesField).not.toContainText(country);
                     await expect(ExchangesPage.excludedCountriesField).toContainText(country); // Verify it's added to excluded
 
                     await components.chipButtonCloseX(country).click(); // Remove from excluded
+                    await ExchangesPage.page.waitForTimeout(80);
                     await expect(ExchangesPage.excludedCountriesField).not.toContainText(country);
                     await expect(ExchangesPage.allowedCountriesField).toContainText(country); // Verify it's added back to allowed
                 }
