@@ -158,7 +158,9 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
     test('Check Validation Messages', {
         annotation: {
             type: 'issue',
-            description: 'https://findco.atlassian.net/browse/DEV-5499, https://findco.atlassian.net/browse/DEV-5800',
+            description:
+                'https://findco.atlassian.net/browse/DEV-5499, ' + // [nucleus-portal] Make sports not required
+                'https://findco.atlassian.net/browse/DEV-5800',    // [nucleus-portal-fe] Reduce exchanges validations
         },
     }, async ({ExchangesPage, menuComponent}) => {
         const exchangeName = `[QA] Exchange used by ROBOTS - do not edit`;

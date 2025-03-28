@@ -1,0 +1,24 @@
+{
+  "autoUpdateToplists": [
+    {
+      "domainId": "67879a5370cf0018856ef888",
+      "type": "casinos",
+      "subType": "default",
+      "results": [
+        {
+          "partnerId": "675800b45e46917e95db9973",
+          "position": 1
+        },
+        {
+          "partnerId": "6740ba051eabad4f6f451602",
+          "position": 5
+        },
+        {
+          "partnerId": "6745ef3852b22da56448372c",
+          "position": 7
+        }
+      ],
+      "overrides": []
+    }
+  ]
+}

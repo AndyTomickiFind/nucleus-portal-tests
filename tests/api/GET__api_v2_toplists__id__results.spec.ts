@@ -111,7 +111,7 @@ test(`[${config.name.toUpperCase()}] GET /api/v2/toplists/{id}/results`, async (
 test(`[${config.name.toUpperCase()}] Cryptogambling - GET /api/v2/toplists/{id}/results`,{
     annotation: {
         type: 'issue',
-        description: 'https://findco.atlassian.net/browse/DEV-5314',
+        description: 'https://findco.atlassian.net/browse/DEV-5314',  //[nucleus-toplist-service] Cryptogambling toplist v2 results changes
     },
 }, async ({request}, testInfo) => {
 

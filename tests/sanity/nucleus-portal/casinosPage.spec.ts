@@ -218,7 +218,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
     test('Check Validation Messages', {
             annotation: {
                 type: 'issue',
-                description: 'https://findco.atlassian.net/browse/DEV-5499',
+                description: 'https://findco.atlassian.net/browse/DEV-5499',  //[nucleus-portal] Make sports not required
             },
         },
         async ({components, CasinosPage, menuComponent}) => {

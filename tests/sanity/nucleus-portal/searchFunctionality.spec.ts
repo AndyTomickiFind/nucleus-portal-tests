@@ -42,7 +42,7 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
         test(`SEARCH for invalid characters and specified keywords on ${path}`, {
             annotation: {
                 type: 'issue',
-                description: 'https://findco.atlassian.net/browse/DEV-5448',
+                description: 'https://findco.atlassian.net/browse/DEV-5448', //"Invalid regular expression" internal server error while searching in the portal
             }
         }, async ({ HomePage }) => {
             await test.step(`Navigate to ${path}`, async () => {

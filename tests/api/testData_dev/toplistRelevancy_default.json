@@ -1,0 +1,36 @@
+{
+  "name": "[QA] Toplist Relevancy Test",
+  "description": "Auto Updater Test - Do not modify",
+  "type": "casinos",
+  "subType": "default",
+  "excludedFrom": [],
+  "appliesToProducts": [
+    "67879a5370cf0018856ef888"
+  ],
+  "placementsCount": 10,
+  "defaultResults": [
+    "67e3af40b5ff3179abe4a4db",
+    "67e3af41b5ff3179abe4a4e8",
+    "67e3af41b5ff3179abe4a4f5",
+    "67e3af41b5ff3179abe4a502",
+    "67e3af41b5ff3179abe4a50f",
+    "67e3af41b5ff3179abe4a51c",
+    "67e3af41b5ff3179abe4a529",
+    "67e3af41b5ff3179abe4a536",
+    "67e3af42b5ff3179abe4a543",
+    "67e3af42b5ff3179abe4a550"
+  ],
+  "overrides": [],
+  "filters": {
+    "_id": "67c015ca36fcef3efd3a7d01",
+    "coins": [],
+    "products": [],
+    "licenses": [],
+    "currencies": [],
+    "depositMethods": [],
+    "sports": [],
+    "promotionTypes": [],
+    "anonymousPlay": false,
+    "provablyFair": false
+  }
+}

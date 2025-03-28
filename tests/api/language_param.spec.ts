@@ -6,7 +6,7 @@ import fs from "fs";
 test(`[${config.name.toUpperCase()}] Test response language according to param EN FR ES PT`, {
     annotation: {
         type: 'issue',
-        description: 'https://findco.atlassian.net/browse/DEV-5372',
+        description: 'https://findco.atlassian.net/browse/DEV-5372',  //[nucleus-toplist-service] Return toplist results in the requested language
     },
 }, async ({request}, testInfo) => {
 
