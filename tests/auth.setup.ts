@@ -20,12 +20,16 @@ setup('authenticate', async ({page}) => {
     await passwordInput.fill(config.use.httpCredentials.password);
     await page.click('#passwordNext');
     await page.waitForLoadState();
-    await page.locator("//span[.='Try another way']").click();
-    await page.locator("//div[.='Get a verification code from the Google Authenticator app']").first().click();
-    const otp = await getOTP();
-    await page.getByLabel("Enter code").fill(otp);
-    await page.getByLabel("Enter code").press("Enter");
-
+    await page.addLocatorHandler(
+        page.locator("//span[.='Try another way']"),
+        async () => {
+            await page.locator("//span[.='Try another way']").click();
+            await page.locator("//div[.='Get a verification code from the Google Authenticator app']").first().click();
+            const otp = await getOTP();
+            await page.getByLabel("Enter code").fill(otp);
+            await page.getByLabel("Enter code").press("Enter");
+        }
+    );
     await page.waitForLoadState();
     await page.waitForSelector('//*[.="Hello Nucleus"]');
     await page.context().storageState({path: authFile});

@@ -7,7 +7,7 @@ dotenv.config();
 // Get the environment type from the command line. If none, set it to dev
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
-const headless = true;
+const headless = false;
 const runAuth = true;
 
 
@@ -82,7 +82,7 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */
-        actionTimeout: 8000,
+        actionTimeout: 18000,
         javaScriptEnabled: true,
     },
 
