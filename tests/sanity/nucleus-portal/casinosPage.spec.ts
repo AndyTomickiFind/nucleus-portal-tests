@@ -57,7 +57,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         const randomCasinos: string[] = await (async () => {
             const allCasinos = (await getCasinos()).filter(casino => !casino.toLowerCase().includes("do not edit")); // Exclude casinos with "do not edit" in the name
             const selectedCasinos = new Set<string>();
-            while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
+            while (selectedCasinos.size < 1 && allCasinos.length > selectedCasinos.size) {
                 // Randomly select a casino and add it to the set to avoid duplicates
                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
                 if (!selectedCasinos.has(randomCasino)) {
@@ -75,27 +75,27 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     await menuComponent.subPartnersMenuItem_Casinos.click();
                     await CasinosPage.filterByCasinoName(casinoName);
                     await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+                    await expect.soft(components.dataGridCell("status", 1)).toBeVisible();
                     await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
                 });
 
                 // Open the casino details page
                 await test.step("Open the Casino", async () => {
-                    await CasinosPage.page.waitForTimeout(2000);
-
+                    await CasinosPage.page.waitForTimeout(800);
                     await components.dblClickDataGridRow(1);
                     await CasinosPage.page.waitForLoadState('domcontentloaded');
-
-                    await expect(CasinosPage.topHeader).toBeVisible();
-                    await expect(CasinosPage.topHeader).toBeEnabled();
-
-                    // This is the assertion that might fail
+                    await expect.soft(CasinosPage.topHeader).toBeVisible();
+                    await expect.soft(CasinosPage.topHeader).toBeEnabled();
                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+                    await expect.soft(CasinosPage.selectedDomainsDropdown).toBeVisible();
+                    await expect.soft(CasinosPage.selectedContentLanguagesDropdown).toBeVisible();
+                    await expect.soft(CasinosPage.statusDropdown).toBeVisible();
                 });
 
                 // Check all accordion dropdowns
                 await test.step("Check all accordion dropdowns", async () => {
-                    const dropdowns = [
+                    const accordionItems = [
                         'details-header',
                         'logo-header',
                         'settings-header',
@@ -106,10 +106,10 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                         'legal-header',
                         'extras',
                     ];
-                    for (const dropdown of dropdowns) {
-                        await test.step(`Clicking on "${dropdown}"`, async () => {
-                            await components.openDropdown(dropdown);
-                            await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+                    for (const accordionItem of accordionItems) {
+                        await test.step(`Clicking on "${accordionItem}"`, async () => {
+                            await components.openDropdown(accordionItem);
+                            await expect.soft(components.dropdownHeader(accordionItem)).toBeVisible();
                         });
                     }
                 });

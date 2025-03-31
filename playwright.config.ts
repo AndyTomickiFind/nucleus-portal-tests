@@ -8,7 +8,7 @@ dotenv.config();
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
 const headless = false;
-const runAuth = true;
+const runAuth = false;
 
 
 interface TestConfig extends PlaywrightTestConfig {
@@ -31,7 +31,7 @@ const defaultConfig: PlaywrightTestConfig = {
     testMatch: '**/*.spec.ts',
 
     /* Timeout for each test in milliseconds. */
-    timeout: 1_990_000,
+    timeout: 180_000,
 
     /* Ignore snapshots on CI to avoid bloating the build artifacts. */
     ignoreSnapshots: !process.env.CI,
@@ -82,7 +82,7 @@ const defaultConfig: PlaywrightTestConfig = {
         /* Video recording mode. */
         video: process.env.CI ? 'retain-on-failure' : 'on',
         /* Timeout for Playwright actions such as click, fill, etc. */
-        actionTimeout: 18000,
+        actionTimeout: 8000,
         javaScriptEnabled: true,
     },
 

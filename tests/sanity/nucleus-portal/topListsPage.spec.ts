@@ -81,6 +81,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await expect(components.dataGridCell("type", 1)).toContainText("Casinos");
             await expect(components.dataGridCell("subType", 1)).toContainText("Default");
             await expect(components.dataGridCell("status", 1)).toContainText("Published");
+            await expect(components.dataGridCell("automation", 1)).toContainText("Included");
             await expect(components.dataGridCell("updatedAt", 1)).toContainText("/2025,");
         })
     });
@@ -152,7 +153,6 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
         });
         await test.step("Populate all of the filters and save", async () => {
             await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, ["[QA] Coin 1", "[QA] Coin 2"], false);
-            //await components.clickItemFromCombobox(NewToplistPage.coinsCombobox, , false);
             await components.clickItemFromCombobox(NewToplistPage.licensesCombobox, ["[QA] License 1"]);
             await components.clickItemFromCombobox(NewToplistPage.depositMethodsCombobox, ["[QA] Deposit Method 1"]);
             await components.clickItemFromCombobox(NewToplistPage.casinoProductsCombobox, ["[QA] Casino Product 1"]);
@@ -162,7 +162,7 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
             await ToplistsPage.page.waitForTimeout(1000);
         });
 
-        await test.step("Check the saved filters", async () => {
+        await test.step("Check saved filters", async () => {
             await components.dataGridCell("name", 1).dblclick();
             await NewToplistPage.advancedFiltersAccordion.click();
             await expect(NewToplistPage.coinsCombobox.getByRole("button").getByText("[QA] Coin 1")).toBeVisible();

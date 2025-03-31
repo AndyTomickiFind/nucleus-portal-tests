@@ -17,6 +17,9 @@ export class CasinosPage extends BasePage {
     readonly clearFieldButton: (name: string) => Locator;
     readonly casinoDatapointsDropdownField: (label: string) => Locator;
     readonly casinoDatapointsValidationLabel: (name: string) => Locator;
+    readonly selectedContentLanguagesDropdown: Locator;
+    readonly selectedDomainsDropdown: Locator;
+    readonly statusDropdown: Locator;
 
 
     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
@@ -40,6 +43,9 @@ export class CasinosPage extends BasePage {
             page.locator(`//label[.='${label}']/..`);
         this.casinoDatapointsValidationLabel = (name: string) =>
             page.locator(`//p[@id='casino-datapoints-form-${name}-autocomplete-field-helper-text']`);
+        this.selectedContentLanguagesDropdown = page.getByTestId(`casino-content-languages-codes-autocomplete`);
+        this.selectedDomainsDropdown = page.getByTestId(`casino-domains-autocomplete-field`);
+        this.statusDropdown = page.getByTestId(`casino-status-select`);
 
 
     }
@@ -59,7 +65,7 @@ export class CasinosPage extends BasePage {
     }
 
     async casinoDatapointsClearField(fieldName: string) {
-        await test.step("Removing all items in: "+fieldName, async () => {
+        await test.step("Removing all items in: " + fieldName, async () => {
             await this.casinoDatapointsDropdownField(fieldName).click();
             await this.clearFieldButton(fieldName).click();
             await this.page.keyboard.press('Escape');
