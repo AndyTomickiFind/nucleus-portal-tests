@@ -57,7 +57,7 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
         const randomCasinos: string[] = await (async () => {
             const allCasinos = (await getCasinos()).filter(casino => !casino.toLowerCase().includes("do not edit")); // Exclude casinos with "do not edit" in the name
             const selectedCasinos = new Set<string>();
-            while (selectedCasinos.size < 1 && allCasinos.length > selectedCasinos.size) {
+            while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
                 // Randomly select a casino and add it to the set to avoid duplicates
                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
                 if (!selectedCasinos.has(randomCasino)) {

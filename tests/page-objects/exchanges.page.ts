@@ -20,6 +20,9 @@ export class ExchangesPage extends BasePage {
     readonly excludedCountriesField : Locator;
     readonly allowedCountriesSelecAllButton : Locator;
     readonly excludedCountriesSelecAllButton : Locator;
+    readonly selectedContentLanguagesDropdown: Locator;
+    readonly selectedDomainsDropdown: Locator;
+    readonly statusDropdown: Locator;
 
 
 
@@ -50,6 +53,9 @@ export class ExchangesPage extends BasePage {
         this.excludedCountriesField = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-field`);
         this.allowedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-select-all-button`);
         this.excludedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-select-all-button`);
+        this.selectedContentLanguagesDropdown = page.getByTestId(`exchange-content-languages-codes-autocomplete`);
+        this.selectedDomainsDropdown = page.getByTestId(`exchange-domains-autocomplete-field`);
+        this.statusDropdown = page.getByTestId(`exchange-status-select`);
 
     }
 

@@ -29,12 +29,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
         });
     });
 
-    test('Check Random Exchanges and a Specific Exchange', async ({
-                                                                      request,
-                                                                      components,
-                                                                      ExchangesPage,
-                                                                      menuComponent
-                                                                  }) => {
+    test('Check Random Exchanges and a Specific Exchange', async ({request, components,ExchangesPage,menuComponent}) => {
         async function getExchanges(): Promise<string[]> {
             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges`, {
                 params: {size: 10000},
@@ -44,8 +39,8 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
                 }
             });
 
-            expect.soft([401, 403], "User is not authorized to access this resource").not.toContain(response.status());
-            expect(response.status(), "There is an issue receiving the response from:" + response.url()).toBe(200);
+            expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
+            expect(response.status(), "Response status is expected to be 200" + response.url()).toBe(200);
 
             const data = await response.json();
             return data.items.map((item) => item.name);
@@ -71,11 +66,19 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
                     await menuComponent.subPartnersMenuItem_Exchanges.click();
                     await ExchangesPage.filterByExchangeName(exchangeName);
                     await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+                    await expect.soft(components.dataGridCell("status", 1)).toBeVisible();
                     await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
                 });
 
                 await ExchangesPage.openExchange(exchangeName);
+
+                await test.step("Check header dropdowns", async () => {
+                        await expect.soft(ExchangesPage.selectedDomainsDropdown).toBeVisible();
+                        await expect.soft(ExchangesPage.selectedContentLanguagesDropdown).toBeVisible();
+                        await expect.soft(ExchangesPage.statusDropdown).toBeVisible();
+                    }
+                );
 
                 await test.step("Check all accordion dropdowns", async () => {
                     const dropdowns = [
