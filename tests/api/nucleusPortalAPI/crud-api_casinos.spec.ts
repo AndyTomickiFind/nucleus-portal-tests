@@ -97,6 +97,7 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "withdrawalMethods": ["666bf14eda2f46ee38ad0727"],
                 "slotProviders": ["65f49a7c06037feabc18fe7a"],
                 "sports": [],
+                "status": "published",
                 "licencesOwned": ["65f49a7c06037feabc18f2b5"],
                 "affiliateUrl": [
                     {
@@ -150,7 +151,8 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                 "domains": [`${config.defaultDomainId}`], // Retain the same domains from creation
                 "contentLanguagesCodes": ["en"], // Include this to avoid validation errors
                 "name": updatedCasinoName, // Update the name
-                "rating": 5 // Update the rating
+                "rating": 5, // Update the rating
+                "status": "published"
             };
 
             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {

@@ -75,7 +75,8 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
                         "affiliateLinkUrl": "https://aff-link-per-dimension",
                         "dimensions": [{ "type": "domains", "ids": [`${config.defaultDomainId}`] }]
                     }
-                ]
+                ],
+                "status": "published"
             };
 
             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges`, {
@@ -121,7 +122,8 @@ test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name
                 "domains": [`${config.defaultDomainId}`], // Retain the same domains
                 "contentLanguagesCodes": ["en"], // Retain the same language codes
                 "name": updatedExchangeName, // Update the name
-                "finalRating": 4 // Update the rating
+                "finalRating": 4, // Update the rating
+                "status": "published"
             };
 
             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
