@@ -45,8 +45,8 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                 }
             });
 
-            expect.soft([401, 403], "User is not authorized to access this resource").not.toContain(response.status());
-            expect(response.status(), "There is an issue receiving the response from:" + response.url()).toBe(200);
+            expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
+            expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
 
             const data = await response.json();
             return data.items.map((item) => item.name);

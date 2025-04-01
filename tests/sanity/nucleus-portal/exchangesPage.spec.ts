@@ -40,7 +40,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
             });
 
             expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
-            expect(response.status(), "Response status is expected to be 200" + response.url()).toBe(200);
+            expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
 
             const data = await response.json();
             return data.items.map((item) => item.name);
