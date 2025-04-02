@@ -18,8 +18,10 @@ setup('authenticate', async ({page}) => {
 
     const passwordInput = page.locator('input[type="password"]').first();
 
-    await page.waitForTimeout(1500);
-    await passwordInput.pressSequentially(config.use.httpCredentials.password, {delay: 100});
+    await page.waitForTimeout(1000);
+    //await passwordInput.pressSequentially(config.use.httpCredentials.password, {delay: 200});
+    await passwordInput.fill(config.use.httpCredentials.password);
+    await page.waitForTimeout(500);
     await page.click('#passwordNext');
     await page.waitForLoadState();
     await page.addLocatorHandler(
