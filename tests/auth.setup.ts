@@ -18,6 +18,7 @@ setup('authenticate', async ({page}) => {
 
     const passwordInput = page.locator('input[type="password"]').first();
 
+    await page.waitForTimeout(1500);
     await passwordInput.pressSequentially(config.use.httpCredentials.password, {delay: 100});
     await page.click('#passwordNext');
     await page.waitForLoadState();
