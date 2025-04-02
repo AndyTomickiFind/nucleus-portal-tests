@@ -1,9 +1,18 @@
 name: Playwright Tests
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment (dev or staging)'
+        required: true
+        default: 'dev'
+        type: string
 jobs:
   test:
     timeout-minutes: 15
+    strategy:
+      matrix:
+        runner: [ 1, 2, 3, 4, 5 ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,12 +24,12 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Create .env file
-        run: echo "${{secrets.DOT_ENV}}" > .env
+        run: echo "${{ secrets[`DOT_ENV_${{ github.event.inputs.environment | toUpperCase() }}`] }}" > .env
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report
+          name: playwright-report-${{matrix.runner}}
           path: playwright-report/
           retention-days: 30
