@@ -3,6 +3,7 @@ import * as path from "node:path";
 import config from "../playwright.config";
 import {getOTP} from "./totpGenerator";
 
+
 const authFile = path.join(__dirname, '../playwright/.auth/user.json');
 
 setup('authenticate', async ({page}) => {
@@ -17,7 +18,7 @@ setup('authenticate', async ({page}) => {
 
     const passwordInput = page.locator('input[type="password"]').first();
 
-    await passwordInput.fill(config.use.httpCredentials.password);
+    await passwordInput.pressSequentially(config.use.httpCredentials.password, {delay: 100});
     await page.click('#passwordNext');
     await page.waitForLoadState();
     await page.addLocatorHandler(
