@@ -47,10 +47,10 @@ const defaultConfig: PlaywrightTestConfig = {
     forbidOnly: !!process.env.CI,
 
     /* Retry configuration. See https://playwright.dev/docs/test-configuration#retry-failed-tests. */
-    retries: process.env.CI ? 1 : 0,
+    retries: process.env.CI ? 2 : 0,
 
     /* Opt out of parallel tests on CI. */
-    workers: process.env.CI ? 1 : undefined,
+    workers: process.env.CI ? 6 : undefined,
 
 
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
