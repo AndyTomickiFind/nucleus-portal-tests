@@ -1,15 +1,29 @@
-import { expect, test } from '@playwright/test';
-import { logResponse } from '../../../src/logger';
+import {expect, test} from '@playwright/test';
+import {logResponse} from '../../../src/logger';
 import config from "../../../playwright.config";
 
-test.describe(`CRUD e2e API toplists - ${config.name}`, { tag: [`@${config.name}`] }, () => {
-    let toplistId: string;
+test.describe(`CRUD e2e API toplists - ${config.name}`, {tag: [`@${config.name}`]}, () => {
+    let toplistId, casino1, casino2: string;
     let toplistName: string;
     let toplistDescription: string;
 
-    test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+    test(`CRUD operations executed sequentially`, async ({request}, testInfo) => {
+
         // Step 1: Create a New Toplist
         await test.step('Step 1: Create a New Toplist', async () => {
+            switch (process.env.TEST_ENV.toLowerCase()) {
+                case "dev": {
+                    casino1 = "67e3af40b5ff3179abe4a4db";
+                    casino2 = "67e3af41b5ff3179abe4a4e8";
+                    break
+                }
+                case "staging": {
+                    casino1 = "67e3af946eb14bd77a43e1c2";
+                    casino2 = "67e3af946eb14bd77a43e1cf";
+                    break
+                }
+            }
+
             toplistName = `[QA] Sample Toplist Created by ${crypto.randomUUID()}`;
             toplistDescription = `Sample description ${crypto.randomUUID()}`;
             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v2/toplists`, {
@@ -28,8 +42,8 @@ test.describe(`CRUD e2e API toplists - ${config.name}`, { tag: [`@${config.name}
                     ],
                     "placementsCount": 2,
                     "defaultResults": [
-                        "6740ba051eabad4f6f451602",
-                        "6788d5820b1e03559ebd1ab1"
+                        `${casino1}`,
+                        `${casino2}`
                     ],
                     "overrides": [],
                     "filters": {

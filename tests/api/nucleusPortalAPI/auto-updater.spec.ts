@@ -13,7 +13,7 @@ test(`[${config.name.toUpperCase()}] Toplist auto updater - Toplist relevancy`, 
     await test.step(`Set the toplist with default values`, async () => {
         const testData = JSON.parse(fs.readFileSync(`tests/api/testData_${process.env.TEST_ENV}/toplistRelevancy_default.json`, 'utf-8'));
         let toplistId;
-        switch (process.env.TEST_ENV) {
+        switch (process.env.TEST_ENV.toLowerCase()) {
             case "dev": {toplistId = "67c015ca36fcef3efd3a7d00";break}
             case "staging": {toplistId = "67e3c25b6eb14bd77a86cbde";break}
         }

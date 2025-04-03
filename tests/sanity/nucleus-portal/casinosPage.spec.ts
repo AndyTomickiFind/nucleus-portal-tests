@@ -36,7 +36,6 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
 
     test('Check Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
         async function getCasinos(): Promise<string[]> {
-
             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
                 params: {size: 10000},
                 headers: {
@@ -44,13 +43,10 @@ test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.na
                     "Content-Type": "application/json"
                 }
             });
-
             expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
             expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
-
             const data = await response.json();
             return data.items.map((item) => item.name);
-
         }
 
         // Randomly select 5 casinos
