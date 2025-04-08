@@ -61,7 +61,7 @@ const defaultConfig: PlaywrightTestConfig = {
                 outputFile: `./playwright-report/results.json`
             }],
             ['html', {outputFolder: `playwright-report`, open: 'never'}],
-            ['blob', {outputFile: `report.zip`}],
+          //  ['blob', {outputFile: `report.zip`}],
             ['github'],
             ['allure-playwright']
         ] :
