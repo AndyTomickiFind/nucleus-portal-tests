@@ -1,6 +1,0 @@
-Created Currency ID: 67f7c169c844c94caff6e19c
-Verified Currency via GET: 67f7c169c844c94caff6e19c
-Updated Currency Name via PATCH: [QA] RoboCurrency - 3fb6666d-626a-4e90-936d-41a940298114 - Updated
-Verified Updated Currency via GET: 67f7c169c844c94caff6e19c
-Currency with ID 67f7c169c844c94caff6e19c has been deleted successfully.
-Verified Currency Deletion (404): 67f7c169c844c94caff6e19c

@@ -1,0 +1,148 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: SEARCH field functionality - staging  >> SEARCH functionality for specified keywords - staging  >> SEARCH for specified keywords on /database/datapoints/products
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/searchFunctionality.spec.ts:93:17
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for getByTestId('product-name-filter-field').locator('//input')
+
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/searchFunctionality.spec.ts:107:43
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/searchFunctionality.spec.ts:106:32
+```
+
+# Page snapshot
+
+```yaml
+- button "Sign in with Google":
+  - img
+  - paragraph: Sign in with Google
+- alert
+```
+
+# Test source
+
+```ts
+   7 |     // Define landing pages and their corresponding search field locators
+   8 |     const testLandingPages = [
+   9 |         {
+   10 |             path: '/partners/casinos',
+   11 |             searchFieldSelector: 'casino-name-filter-field'
+   12 |         },
+   13 |         {
+   14 |             path: '/partners/exchanges',
+   15 |             searchFieldSelector: 'exchange-name-filter-field'
+   16 |         },
+   17 |         {
+   18 |             path: '/database/datapoints/coins',
+   19 |             searchFieldSelector: 'coin-name-filter-field'
+   20 |         },
+   21 |         {
+   22 |             path: '/database/datapoints/products',
+   23 |             searchFieldSelector: 'product-name-filter-field'
+   24 |         },
+   25 |         {
+   26 |             path: '/database/datapoints/sports',
+   27 |             searchFieldSelector: 'sport-name-filter-field'
+   28 |         },
+   29 |         {
+   30 |             path: '/toplists',
+   31 |             searchFieldSelector: 'toplist-name-filter-field'
+   32 |         }
+   33 |     ];
+   34 |
+   35 |     const invalidCharacters = "<>/[|\\{}()[]^$+*?.]/gabcABC.,';`-=~#@'!£%&¬";  //These are valid but used to throw an error
+   36 |     const searchKeywords = [
+   37 |         "[QA] Search me 1",
+   38 |         "[QA] Search me 2"
+   39 |     ];
+   40 |
+   41 |     for (const { path, searchFieldSelector } of testLandingPages) {
+   42 |         test(`SEARCH for invalid characters and specified keywords on ${path}`, {
+   43 |             annotation: {
+   44 |                 type: 'issue',
+   45 |                 description: 'https://findco.atlassian.net/browse/DEV-5448', //"Invalid regular expression" internal server error while searching in the portal
+   46 |             }
+   47 |         }, async ({ HomePage }) => {
+   48 |             await test.step(`Navigate to ${path}`, async () => {
+   49 |                 await HomePage.page.goto(`https://${config.baseUrl}${path}`);
+   50 |                 await HomePage.page.waitForLoadState('domcontentloaded');
+   51 |                 await HomePage.page.waitForTimeout(500);
+   52 |             });
+   53 |
+   54 |             const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector);
+   55 |
+   56 |             const failedCharacters: string[] = [];
+   57 |             for (const character of invalidCharacters) {
+   58 |                 await test.step(`Checking character "${character}"`, async () => {
+   59 |                     await searchField.click();
+   60 |                     await searchField.pressSequentially(character, { delay: 500 });
+   61 |                     const alertBanner: Locator = HomePage.page.locator(`//div[contains(@class, "MuiAlert")]`).first();
+   62 |                     let attempts = 0;
+   63 |                     while (attempts < 3 && await alertBanner.isVisible()) {
+   64 |                         attempts++;
+   65 |                         await HomePage.page.waitForTimeout(500);
+   66 |                     }
+   67 |                     if (await alertBanner.count() > 0) {
+   68 |                         failedCharacters.push(character);
+   69 |                     }
+   70 |                     await HomePage.page.keyboard.press('Backspace'); // Reset search field
+   71 |                 });
+   72 |             }
+   73 |
+   74 |             // Report failed characters
+   75 |             await test.step("Report failed characters", async () => {
+   76 |                 await test.info().attach("Failed Characters", {
+   77 |                     body: JSON.stringify({
+   78 |                         landingPage: path,
+   79 |                         failedCharacters: failedCharacters.length ? failedCharacters : "None"
+   80 |                     }, null, 2),
+   81 |                     contentType: "application/json"
+   82 |                 });
+   83 |             });
+   84 |
+   85 |
+   86 |         });
+   87 |
+   88 |
+   89 |     }
+   90 |
+   91 |     test.describe(`SEARCH functionality for specified keywords - ${config.name} `, {tag: [`@${config.name}`]}, () => {
+   92 |         for (const {path, searchFieldSelector} of testLandingPages) {
+   93 |             test(`SEARCH for specified keywords on ${path}`, {
+   94 |                 annotation: {
+   95 |                     type: 'issue',
+   96 |                     description: 'https://findco.atlassian.net/browse/DEV-5626',
+   97 |                 }
+   98 |             }, async ({HomePage, components}) => {
+   99 |                 await test.step(`Navigate to ${path}`, async () => {
+  100 |                     await HomePage.page.goto(`https://${config.baseUrl}${path}`);
+  101 |                 });
+  102 |
+  103 |                 // Define the search field
+  104 |                 const searchField: Locator = HomePage.page.getByTestId(searchFieldSelector).locator(`//input`);
+  105 |                 for (const keyword of searchKeywords) {
+  106 |                     await test.step(`Searching for keyword "${keyword}"`, async () => {
+> 107 |                         await searchField.click();
+      |                                           ^ TimeoutError: locator.click: Timeout 8000ms exceeded.
+  108 |                         await searchField.pressSequentially(keyword, {delay: 100});
+  109 |                         await HomePage.page.keyboard.press('Enter');
+  110 |                         await expect(components.dataGridCell("name", 1), `Checking grid contains keyword ${keyword}`).toContainText(keyword);
+  111 |                         await searchField.clear();
+  112 |                     });
+  113 |                 }
+  114 |             });
+  115 |         }
+  116 |     });
+  117 | });
+  118 |
+```

@@ -1,0 +1,159 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: NEW TOPLIST subpage - staging  >> verify that the expected menu items are displayed and clickable
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/newToplistPage.spec.ts:16:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'User profile picture QA' })
+
+    at MenuComponent.checkMenuItems (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/page-objects/components/menuComponent.ts:57:37)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/newToplistPage.spec.ts:17:29
+```
+
+# Page snapshot
+
+```yaml
+- button "Sign in with Google":
+  - img
+  - paragraph: Sign in with Google
+- alert
+```
+
+# Test source
+
+```ts
+   1 | import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
+   2 | import {BasePage} from "../base.page";
+   3 |
+   4 |
+   5 | async function verifyAndClickMenuItem(menuItem: Locator, expectedText: string): Promise<void> {
+   6 |     await expect(menuItem, `Menu item should contain text:"${expectedText}"`).toContainText(expectedText);
+   7 |     await menuItem.click({trial: true});
+   8 | }
+   9 |
+   10 | export class MenuComponent extends BasePage {
+   11 |     readonly page: Page;
+   12 |     readonly context: BrowserContext;
+   13 |     readonly testInfo: TestInfo;
+   14 |     readonly menubar: Locator;
+   15 |     readonly menubarItem_Home: Locator;
+   16 |     readonly menubarItem_Toplists: Locator;
+   17 |     readonly menubarItem_ShortReviews: Locator;
+   18 |     readonly menubarItem_Partners: Locator;
+   19 |     readonly menubarItem_Database: Locator;
+   20 |     readonly subToplistsMenuItem_Search: Locator;
+   21 |     readonly subToplistsMenuItem_New: Locator;
+   22 |     readonly subShortReviewsMenuItem_Search: Locator;
+   23 |     readonly subPartnersMenuItem_Casinos: Locator;
+   24 |     readonly subPartnersMenuItem_Exchanges: Locator;
+   25 |     readonly subDatabaseMenuItem_Datapoints: Locator;
+   26 |     readonly menubarItem_User: Locator;
+   27 |     readonly subUserMenuItem_LogOut: Locator;
+   28 |
+   29 |
+   30 |     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
+   31 |         super(page, context);
+   32 |         this.page = page;
+   33 |         this.context = context;
+   34 |         this.testInfo = testInfo;
+   35 |         this.menubar = page.locator("//div[@class='MuiBox-root mui-0']");
+   36 |
+   37 |         //MainMenu
+   38 |         this.menubarItem_Home = page.locator("//a[.='Home']");
+   39 |         this.menubarItem_Toplists = page.locator("//a[.='Toplists']");
+   40 |         this.menubarItem_ShortReviews = page.locator("//a[.='Short Reviews']");
+   41 |         this.menubarItem_Partners = page.locator("//button[.='Partners']");
+   42 |         this.menubarItem_Database = page.locator("//button[.='Database']");
+   43 |         this.menubarItem_User = page.getByRole('button', { name: `User profile picture ${process.env.GOOGLE_UI_USERNAME}` })
+   44 |
+   45 |         //SubMenus
+   46 |         this.subToplistsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
+   47 |         this.subToplistsMenuItem_New = page.locator("//a[contains(@role, 'menuitem') and text() = 'New']");
+   48 |         this.subShortReviewsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
+   49 |         this.subPartnersMenuItem_Casinos = page.locator("//a[contains(@role, 'menuitem') and text() = 'Casinos']");
+   50 |         this.subPartnersMenuItem_Exchanges = page.locator("//a[contains(@role, 'menuitem') and text() = 'Exchanges']");
+   51 |         this.subDatabaseMenuItem_Datapoints = page.getByText('Datapoints');
+   52 |         this.subUserMenuItem_LogOut = page.getByRole('menuitem', { name: 'Log out' });
+   53 |     }
+   54 |
+   55 |     async checkMenuItems() {
+   56 |         // SubMenu USER
+>  57 |         await this.menubarItem_User.click();
+      |                                     ^ TimeoutError: locator.click: Timeout 8000ms exceeded.
+   58 |         await verifyAndClickMenuItem(this.subUserMenuItem_LogOut, "Log out");
+   59 |         await this.page.keyboard.press('Escape');
+   60 |
+   61 |         // MainMenu
+   62 |         await verifyAndClickMenuItem(this.menubarItem_User, process.env.GOOGLE_UI_USERNAME);
+   63 |         await verifyAndClickMenuItem(this.menubarItem_Home, "Home");
+   64 |         await verifyAndClickMenuItem(this.menubarItem_Toplists, "Toplists");
+   65 |         await verifyAndClickMenuItem(this.menubarItem_ShortReviews, "Short Reviews");
+   66 |         await verifyAndClickMenuItem(this.menubarItem_Partners, "Partners");
+   67 |         await verifyAndClickMenuItem(this.menubarItem_Database, "Database");
+   68 |
+   69 |
+   70 |         // SubMenu TOPLISTS
+   71 |         await this.menubarItem_Toplists.hover();
+   72 |         await verifyAndClickMenuItem(this.subToplistsMenuItem_Search, "Search");
+   73 |         await verifyAndClickMenuItem(this.subToplistsMenuItem_New, "New");
+   74 |
+   75 |         // SubMenu SHORT REVIEWS
+   76 |         await this.menubarItem_ShortReviews.hover();
+   77 |         await verifyAndClickMenuItem(this.subShortReviewsMenuItem_Search, "Search");
+   78 |
+   79 |         // SubMenu PARTNERS
+   80 |         await this.menubarItem_Partners.hover();
+   81 |         await verifyAndClickMenuItem(this.subPartnersMenuItem_Casinos, "Casinos");
+   82 |
+   83 |         // SubMenu DATABASE
+   84 |         await this.menubarItem_Database.hover();
+   85 |         await verifyAndClickMenuItem(this.subDatabaseMenuItem_Datapoints, "Datapoints");
+   86 |     }
+   87 |
+   88 |     async checkDataPointItems() {
+   89 |         const dataPointItems: string[] = [
+   90 |             "Coins",
+   91 |             "Community Socials",
+   92 |             "Contact Methods",
+   93 |             "Crypto Pairs",
+   94 |             "Currencies",
+   95 |             "Deposit Methods",
+   96 |             "Educational Resources",
+   97 |             "Insurance Providers",
+   98 |             "Languages",
+   99 |             "Licenses",
+  100 |             "Order Types",
+  101 |             "Payment Types",
+  102 |             "Positions",
+  103 |             "Product Categories",
+  104 |             "Products",
+  105 |             "Registration Steps",
+  106 |             "Security Methods",
+  107 |             "Slot Providers",
+  108 |             "Sport Types",
+  109 |             "Sports",
+  110 |             "Support Issues",
+  111 |             "Withdrawal Methods"
+  112 |         ];
+  113 |
+  114 |
+  115 |         await this.menubarItem_Database.click();
+  116 |         await this.subDatabaseMenuItem_Datapoints.click();
+  117 |
+  118 |         for (const dataPointItem of dataPointItems) {
+  119 |             const menuItemLocator: Locator = this.page.getByRole('menuitem', {name: `${dataPointItem}`});
+  120 |             await verifyAndClickMenuItem(menuItemLocator, dataPointItem)
+  121 |         }
+  122 |     }
+  123 | }
+```

@@ -1,0 +1,146 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PARTNERS/CASINOS subpage - staging  >> Check Validation Messages
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:214:9
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator('//button[.=\'Partners\']')
+
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:11:50
+```
+
+# Page snapshot
+
+```yaml
+- button "Sign in with Google":
+  - img
+  - paragraph: Sign in with Google
+- alert
+```
+
+# Test source
+
+```ts
+   1 | import {test} from "../../fixtures/fixtures";
+   2 | import {expect} from "@playwright/test";
+   3 | import config from "../../../playwright.config";
+   4 | import {timeDifference} from "../../common/helpers";
+   5 |
+   6 |
+   7 | test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
+   8 |
+   9 |     test.beforeEach(async ({CasinosPage, menuComponent}) => {
+   10 |         await CasinosPage.page.goto(`https://${config.baseUrl}`);
+>  11 |         await menuComponent.menubarItem_Partners.click();
+      |                                                  ^ TimeoutError: locator.click: Timeout 8000ms exceeded.
+   12 |         await menuComponent.subPartnersMenuItem_Casinos.click();
+   13 |         await CasinosPage.page.waitForLoadState();
+   14 |     });
+   15 |
+   16 |
+   17 |     test('Check the title and url', async ({CasinosPage}) => {
+   18 |         await CasinosPage.page.waitForURL('**/partners/casinos');
+   19 |         expect(await CasinosPage.page.title()).toBe('Nucleus Portal');
+   20 |         expect(CasinosPage.page.url()).toBe(`https://${config.baseUrl}/partners/casinos`);
+   21 |     });
+   22 |
+   23 |
+   24 |     test('Verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
+   25 |         await menuComponent.checkMenuItems();
+   26 |         await menuComponent.checkDataPointItems();
+   27 |     });
+   28 |
+   29 |
+   30 |     test('Check the data grid', async ({components}) => {
+   31 |         await test.step("Data grid table to be visible", async () => {
+   32 |             await expect(components.dataGrid).toBeVisible();
+   33 |         })
+   34 |     });
+   35 |
+   36 |
+   37 |     test('Check Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
+   38 |         async function getCasinos(): Promise<string[]> {
+   39 |             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
+   40 |                 params: {size: 10000},
+   41 |                 headers: {
+   42 |                     "Authorization": `${config.nucleusPortalToken}`,
+   43 |                     "Content-Type": "application/json"
+   44 |                 }
+   45 |             });
+   46 |             expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
+   47 |             expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
+   48 |             const data = await response.json();
+   49 |             return data.items.map((item) => item.name);
+   50 |         }
+   51 |
+   52 |         // Randomly select 5 casinos
+   53 |         const randomCasinos: string[] = await (async () => {
+   54 |             const allCasinos = (await getCasinos()).filter(casino => !casino.toLowerCase().includes("do not edit")); // Exclude casinos with "do not edit" in the name
+   55 |             const selectedCasinos = new Set<string>();
+   56 |             while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
+   57 |                 // Randomly select a casino and add it to the set to avoid duplicates
+   58 |                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
+   59 |                 if (!selectedCasinos.has(randomCasino)) {
+   60 |                     selectedCasinos.add(randomCasino);
+   61 |                 }
+   62 |             }
+   63 |             return [...Array.from(selectedCasinos)];
+   64 |         })();
+   65 |
+   66 |         for (const casinoName of randomCasinos) {
+   67 |             await test.step(`Testing Casino "${casinoName}"`, async () => {
+   68 |                 // Search for the casino
+   69 |                 await test.step("Search for the Casino", async () => {
+   70 |                     await menuComponent.menubarItem_Partners.click();
+   71 |                     await menuComponent.subPartnersMenuItem_Casinos.click();
+   72 |                     await CasinosPage.filterByCasinoName(casinoName);
+   73 |                     await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+   74 |                     await expect.soft(components.dataGridCell("status", 1)).toBeVisible();
+   75 |                     await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
+   76 |                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
+   77 |                 });
+   78 |
+   79 |                 // Open the casino details page
+   80 |                 await test.step("Open the Casino", async () => {
+   81 |                     await CasinosPage.page.waitForTimeout(800);
+   82 |                     await components.dblClickDataGridRow(1);
+   83 |                     await CasinosPage.page.waitForLoadState('domcontentloaded');
+   84 |                     await expect.soft(CasinosPage.topHeader).toBeVisible();
+   85 |                     await expect.soft(CasinosPage.topHeader).toBeEnabled();
+   86 |                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+   87 |                     await expect.soft(CasinosPage.selectedDomainsDropdown).toBeVisible();
+   88 |                     await expect.soft(CasinosPage.selectedContentLanguagesDropdown).toBeVisible();
+   89 |                     await expect.soft(CasinosPage.statusDropdown).toBeVisible();
+   90 |                 });
+   91 |
+   92 |                 // Check all accordion dropdowns
+   93 |                 await test.step("Check all accordion dropdowns", async () => {
+   94 |                     const accordionItems = [
+   95 |                         'details-header',
+   96 |                         'logo-header',
+   97 |                         'settings-header',
+   98 |                         'homepage-header',
+   99 |                         'reviewBy-header',
+  100 |                         'teaser-header',
+  101 |                         'prosCons',
+  102 |                         'legal-header',
+  103 |                         'extras',
+  104 |                     ];
+  105 |                     for (const accordionItem of accordionItems) {
+  106 |                         await test.step(`Clicking on "${accordionItem}"`, async () => {
+  107 |                             await components.openDropdown(accordionItem);
+  108 |                             await expect.soft(components.dropdownHeader(accordionItem)).toBeVisible();
+  109 |                         });
+  110 |                     }
+  111 |                 });
+```

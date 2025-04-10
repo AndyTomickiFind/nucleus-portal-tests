@@ -1,0 +1,128 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: NEW TOPLIST subpage - staging  >> check all elements
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/newToplistPage.spec.ts:21:9
+
+# Error details
+
+```
+Error: Timed out 6000ms waiting for expect(locator).toContainText(expected)
+
+Locator: locator('//h5')
+Expected string: "New Toplist"
+Received: <element(s) not found>
+Call log:
+  - expect.toContainText with timeout 6000ms
+  - waiting for locator('//h5')
+    - waiting for navigation to finish...
+
+    at NewToplistPage.checkNewToplistHeader (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/page-objects/newToplist.page.ts:74:45)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/newToplistPage.spec.ts:23:30
+```
+
+# Page snapshot
+
+```yaml
+- button "Sign in with Google":
+  - img
+  - paragraph: Sign in with Google
+- alert
+```
+
+# Test source
+
+```ts
+   1 | import {BasePage} from "./base.page";
+   2 | import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
+   3 |
+   4 |
+   5 | export class NewToplistPage extends BasePage {
+   6 |
+   7 |     readonly testInfo: TestInfo;
+   8 |     readonly newToplistHeader: Locator;
+   9 |     readonly nameField: Locator;
+  10 |     readonly verticalCombobox: Locator;
+  11 |     readonly subVerticalCombobox: Locator;
+  12 |     readonly placementsCountInputBox: Locator;
+  13 |     readonly descriptionInputField: Locator;
+  14 |     readonly appliesToProductCombobox: Locator;
+  15 |     readonly coinsCombobox: Locator;
+  16 |     readonly advancedFiltersAccordion: Locator;
+  17 |     readonly casinoProductsCombobox: Locator;
+  18 |     readonly licensesCombobox: Locator;
+  19 |     readonly anonymousPlayCheckbox: Locator;
+  20 |     readonly provablyFairCheckbox: Locator;
+  21 |     readonly softwareProvidersCombobox: Locator;
+  22 |     readonly currenciesCombobox: Locator;
+  23 |     readonly depositMethodsCombobox: Locator;
+  24 |     readonly sportsCombobox: Locator;
+  25 |     readonly newDepositMethodButton: Locator;
+  26 |     readonly newDepositMethodCancelButton: Locator;
+  27 |     readonly newDepositMethodCreateButton: Locator;
+  28 |     readonly promotionTypesCombobox: Locator;
+  29 |     readonly addOverrideButton: Locator;
+  30 |     readonly cancelButton: Locator;
+  31 |     readonly createButton: Locator;
+  32 |     readonly appliesToCountriesCombobox: Locator;
+  33 |     readonly saveOverrideListButton: Locator;
+  34 |     readonly cancelOverrideListButton: Locator;
+  35 |
+  36 |     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
+  37 |         super(page, context);
+  38 |         this.testInfo = testInfo;
+  39 |         this.newToplistHeader = page.locator('//h5');
+  40 |         this.nameField = page.getByTestId("toplist-name-field");
+  41 |         this.verticalCombobox = page.getByTestId("toplist-type-select");
+  42 |         this.subVerticalCombobox = page.getByTestId("toplist-sub-type-select");
+  43 |         this.placementsCountInputBox = page.getByTestId("toplist-placements-count-field");
+  44 |         this.descriptionInputField = page.getByTestId("toplist-description-field");
+  45 |         this.appliesToProductCombobox = page.getByTestId("toplist-products-autocomplete-field");
+  46 |         this.coinsCombobox = page.getByTestId("toplist-form-filters-casinos-coins-autocomplete-field");
+  47 |         this.advancedFiltersAccordion = page.getByTestId("toplist-form-advanced-filters-accordion");
+  48 |         this.casinoProductsCombobox = page.getByTestId("toplist-form-filters-casinos-products-autocomplete");
+  49 |         this.licensesCombobox = page.getByTestId("toplist-form-filters-casinos-licenses-autocomplete");
+  50 |         this.anonymousPlayCheckbox = page.getByTestId("toplist-form-filters-casinos-anonymous-play-checkbox");
+  51 |         this.provablyFairCheckbox = page.getByTestId("toplist-form-filters-casinos-provably-fair-checkbox");
+  52 |         this.softwareProvidersCombobox = page.getByTestId("toplist-form-filters-casinos-slot-providers-autocomplete");
+  53 |         this.currenciesCombobox = page.getByTestId("toplist-form-filters-casinos-currencies-autocomplete");
+  54 |         this.depositMethodsCombobox = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete");
+  55 |         this.sportsCombobox = page.getByTestId("toplist-form-filters-casinos-sports-autocomplete");
+  56 |         this.newDepositMethodButton = page.getByTestId("toplist-form-filters-casinos-deposit-methods-autocomplete-new-button");
+  57 |         this.newDepositMethodCancelButton = page.getByTestId("deposit-method-cancel-button");
+  58 |         this.newDepositMethodCreateButton = page.getByTestId("deposit-method-submit-button");
+  59 |         this.promotionTypesCombobox = page.getByTestId("toplist-form-filters-casinos-promotion-types-autocomplete");
+  60 |         this.addOverrideButton = page.getByTestId("add-override-button");
+  61 |         this.cancelButton = page.getByTestId("toplist-cancel-button");
+  62 |         this.createButton = page.getByTestId("toplist-submit-button");
+  63 |         this.appliesToCountriesCombobox = page.getByTestId("toplist-override-countries-autocomplete");
+  64 |         this.saveOverrideListButton = page.getByTestId("toplist-override-submit-button");
+  65 |         this.cancelOverrideListButton = page.getByTestId("toplist-override-cancel-button");
+  66 |
+  67 |     }
+  68 |
+  69 |     toplistResultsItem(listType: string, itemNumber: number): Locator {
+  70 |         return this.page.getByTestId(`toplist-${listType}-result-${itemNumber}-autocomplete`);
+  71 |     }
+  72 |
+  73 |     async checkNewToplistHeader(bannerText: string) {
+> 74 |         await expect(this.newToplistHeader).toContainText(bannerText);
+     |                                             ^ Error: Timed out 6000ms waiting for expect(locator).toContainText(expected)
+  75 |     }
+  76 |
+  77 |     async checkToplistsResults(listType: string, itemsCount: number) {
+  78 |         for (let i = 1; i < itemsCount; i++) {
+  79 |            // await this.toplistResultsItem(listType, i).scrollIntoViewIfNeeded();
+  80 |             await this.page.mouse.wheel(0, 100);
+  81 |             await this.toplistResultsItem(listType, i).click({trial: true})
+  82 |         }
+  83 |     }
+  84 |
+  85 | }
+  86 |
+```
