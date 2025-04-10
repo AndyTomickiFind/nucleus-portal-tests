@@ -1,0 +1,6 @@
+Created Exchange ID: 67f7bcfac844c94cafa5fe77
+Verified Exchange via GET: 67f7bcfac844c94cafa5fe77
+Updated Exchange: Name - [QA] Exchange created by robots 4bd4237a-bc83-43df-b002-4a30143fded5 - Updated
+Verified Updated Exchange via GET: 67f7bcfac844c94cafa5fe77
+Exchange with ID 67f7bcfac844c94cafa5fe77 has been deleted successfully.
+Verified Exchange Deletion (404): 67f7bcfac844c94cafa5fe77

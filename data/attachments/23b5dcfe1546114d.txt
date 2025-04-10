@@ -1,6 +1,0 @@
-Created Crypto Pair ID: 67f7b6f6c844c94caf7b3091
-Verified Crypto Pair via GET: 67f7b6f6c844c94caf7b3091
-Updated Crypto Pair Name via PATCH: [QA] Crypto Pair created by robots dfacc2d2-fb52-405f-830f-e19063a4f8be - Updated
-Verified Updated Crypto Pair via GET: 67f7b6f6c844c94caf7b3091
-Crypto Pair with ID 67f7b6f6c844c94caf7b3091 has been deleted successfully.
-Verified Crypto Pair Deletion (404): 67f7b6f6c844c94caf7b3091

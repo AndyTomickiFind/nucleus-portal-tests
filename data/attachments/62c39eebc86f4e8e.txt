@@ -1,6 +1,0 @@
-Created Position ID: 67f7b6f8c844c94caf7b319e
-Verified Position via GET: 67f7b6f8c844c94caf7b319e
-Updated Position Name via PATCH: [QA] RoboPosition - 3c67fa7c-45c7-45cf-898a-ce3c8e05468d - Updated
-Verified Updated Position via GET: 67f7b6f8c844c94caf7b319e
-Position with ID 67f7b6f8c844c94caf7b319e has been deleted successfully.
-Verified Position Deletion (404): 67f7b6f8c844c94caf7b319e

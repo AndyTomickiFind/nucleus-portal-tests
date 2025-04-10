@@ -1,6 +1,0 @@
-Created Payment Type ID: 67f7b6f3c844c94caf7b2faf
-Verified Payment Type via GET: 67f7b6f3c844c94caf7b2faf
-Updated Payment Type Name via PATCH: [QA] RoboPaymentType - fe467fdf-f686-47d0-bbe5-048bc5ef6335 - Updated
-Verified Updated Payment Type via GET: 67f7b6f3c844c94caf7b2faf
-Payment Type with ID 67f7b6f3c844c94caf7b2faf has been deleted successfully.
-Verified Payment Type Deletion (404): 67f7b6f3c844c94caf7b2faf

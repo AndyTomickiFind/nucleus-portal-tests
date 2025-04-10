@@ -1,6 +1,0 @@
-Created Coin ID: 67f7b6f4c844c94caf7b2fed
-Verified Coin via GET: 67f7b6f4c844c94caf7b2fed
-Updated Coin Name via PATCH: [QA] RoboCoin - feed0711-1ed3-4c2b-906b-d39c38776a07 - Updated
-Verified Updated Coin via GET: 67f7b6f4c844c94caf7b2fed
-Coin with ID 67f7b6f4c844c94caf7b2fed has been deleted successfully.
-Verified Coin Deletion (404): 67f7b6f4c844c94caf7b2fed

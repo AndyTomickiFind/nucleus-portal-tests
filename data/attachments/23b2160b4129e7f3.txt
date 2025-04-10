@@ -1,0 +1,6 @@
+Created Toplist ID: 67f7bcfbc844c94cafa5ff09
+Verified Toplist via GET: 67f7bcfbc844c94cafa5ff09
+Updated Toplist: Name - [QA] Sample Toplist Created by 1d7d11ac-9d92-4f5c-bcb7-a3fda291a53d - Updated | Description - Sample description 44102048-7053-4f9a-be86-c8c5a5b05e3d - Updated
+Verified Updated Toplist via GET: 67f7bcfbc844c94cafa5ff09
+Toplist with ID 67f7bcfbc844c94cafa5ff09 has been deleted successfully.
+Verified Toplist Deletion (404): 67f7bcfbc844c94cafa5ff09

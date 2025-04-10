@@ -1,6 +1,0 @@
-Created Contact Method ID: 67f7b6f5c844c94caf7b3060
-Verified Contact Method via GET: 67f7b6f5c844c94caf7b3060
-Updated Contact Method Name via PATCH: [QA] Contact Method created by robots 35546b97-b08e-4d7c-a543-672e068eb455 - Updated
-Verified Updated Contact Method via GET: 67f7b6f5c844c94caf7b3060
-Contact Method with ID 67f7b6f5c844c94caf7b3060 has been deleted successfully.
-Verified Contact Method Deletion (404): 67f7b6f5c844c94caf7b3060
