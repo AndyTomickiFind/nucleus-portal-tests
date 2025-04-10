@@ -28,6 +28,7 @@ jobs:
       - name: Run Playwright tests
         run: TEST_ENV=${{github.event.inputs.environment}} npx playwright test --workers=6
       - name: Generate Allure Report
+        if: always()
         run:  npx allure generate allure-results --clean -o allure-report
 #      - uses: actions/upload-artifact@v4
 #        if: always()
@@ -35,6 +36,8 @@ jobs:
 #          name: playwright-report
 #          path: playwright-report/
 #          retention-days: 30
+      - name: Debug Allure Report Directory
+        run: ls -la allure-report
       - name: Deploy Allure Report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
