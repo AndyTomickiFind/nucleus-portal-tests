@@ -1,6 +1,0 @@
-Created Deposit Method ID: 67f7bcf9c844c94cafa5fe02
-Verified Deposit Method via GET: 67f7bcf9c844c94cafa5fe02
-Updated Deposit Method Name via PATCH: [QA] RoboDeposit - 11a104eb-7c36-4ba0-97ad-a45d00889837 - Updated
-Verified Updated Deposit Method via GET: 67f7bcf9c844c94cafa5fe02
-Deposit Method with ID 67f7bcf9c844c94cafa5fe02 has been deleted successfully.
-Verified Deposit Method Deletion (404): 67f7bcf9c844c94cafa5fe02

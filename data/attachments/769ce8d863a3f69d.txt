@@ -1,0 +1,6 @@
+Created Insurance Provider ID: 67f7bf3cc844c94cafd0de91
+Verified Insurance Provider via GET: 67f7bf3cc844c94cafd0de91
+Updated Insurance Provider Name via PATCH: [QA] Insurance Provider created by robots ccd80bbb-dbad-4d59-a23c-57fbf8d6d827 - Updated
+Verified Updated Insurance Provider via GET: 67f7bf3cc844c94cafd0de91
+Insurance Provider with ID 67f7bf3cc844c94cafd0de91 has been deleted successfully.
+Verified Insurance Provider Deletion (404): 67f7bf3cc844c94cafd0de91

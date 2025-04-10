@@ -1,0 +1,6 @@
+Created Educational Resource ID: 67f7bf3ac844c94cafd0dd80
+Verified Educational Resource via GET: 67f7bf3ac844c94cafd0dd80
+Updated Educational Resource Name via PATCH: [QA] Educational Resource created by robots fb1b7111-4a7f-4ea6-b08f-1d3dd933b853 - Updated
+Verified Updated Educational Resource via GET: 67f7bf3ac844c94cafd0dd80
+Educational Resource with ID 67f7bf3ac844c94cafd0dd80 has been deleted successfully.
+Verified Educational Resource Deletion (404): 67f7bf3ac844c94cafd0dd80
