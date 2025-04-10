@@ -1,7 +1,0 @@
-{
-  "message": [
-    "language must be one of the following values: en, es, fr, pt"
-  ],
-  "error": "Bad Request",
-  "statusCode": 400
-}
