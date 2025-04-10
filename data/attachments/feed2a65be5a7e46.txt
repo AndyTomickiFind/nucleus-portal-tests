@@ -1,0 +1,158 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API insuranceProviders - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_insuranceProviders.spec.ts:10:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_insuranceProviders.spec.ts:31:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_insuranceProviders.spec.ts:12:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from "../../../playwright.config";
+   4 |
+   5 | test.describe(`CRUD e2e API insuranceProviders - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let insuranceProviderId: string;
+   7 |     let insuranceProviderName: string;
+   8 |     let updatedInsuranceProviderName: string;
+   9 |
+   10 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   11 |         // Step 1: Create a New Insurance Provider
+   12 |         await test.step('Step 1: Create a New Insurance Provider', async () => {
+   13 |             insuranceProviderName = `[QA] Insurance Provider created by robots ${crypto.randomUUID()}`;
+   14 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers`, {
+   15 |                 headers: {
+   16 |                     "Authorization": `${config.nucleusPortalToken}`,
+   17 |                     "Content-Type": "application/json"
+   18 |                 },
+   19 |                 data: {
+   20 |                     "name": [
+   21 |                         {
+   22 |                             "language": "en",
+   23 |                             "text": `${insuranceProviderName}`
+   24 |                         }
+   25 |                     ]
+   26 |                 }
+   27 |             });
+   28 |
+   29 |             await logResponse(createResponse, testInfo, "POST");
+   30 |             const createStatusCode = createResponse.status();
+>  31 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   32 |
+   33 |             const responseBody = await createResponse.json();
+   34 |             insuranceProviderId = responseBody._id;
+   35 |             expect(insuranceProviderId).toBeTruthy();
+   36 |             expect.soft(responseBody.name[0].text).toBe(insuranceProviderName);
+   37 |             console.log(`Created Insurance Provider ID: ${insuranceProviderId}`);
+   38 |         });
+   39 |
+   40 |         // Step 2: Verify the Created Insurance Provider with GET
+   41 |         await test.step('Step 2: Verify the Created Insurance Provider with GET', async () => {
+   42 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers/${insuranceProviderId}`, {
+   43 |                 headers: {
+   44 |                     "Authorization": `${config.nucleusPortalToken}`
+   45 |                 }
+   46 |             });
+   47 |
+   48 |             await logResponse(getCreatedResponse, testInfo, "GET");
+   49 |             const getCreatedStatusCode = getCreatedResponse.status();
+   50 |             expect(getCreatedStatusCode).toBe(200);
+   51 |
+   52 |             const getCreatedBody = await getCreatedResponse.json();
+   53 |             expect.soft(getCreatedBody).toHaveProperty('_id', insuranceProviderId);
+   54 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('text', insuranceProviderName);
+   55 |             console.log(`Verified Insurance Provider via GET: ${insuranceProviderId}`);
+   56 |         });
+   57 |
+   58 |         // Step 3: Update the Insurance Provider using PATCH
+   59 |         await test.step('Step 3: Update the Insurance Provider using PATCH', async () => {
+   60 |             updatedInsuranceProviderName = `${insuranceProviderName} - Updated`;
+   61 |
+   62 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers/${insuranceProviderId}`, {
+   63 |                 headers: {
+   64 |                     "Authorization": `${config.nucleusPortalToken}`,
+   65 |                     "Content-Type": "application/json"
+   66 |                 },
+   67 |                 data: {
+   68 |                     "name": [
+   69 |                         {
+   70 |                             "language": "en",
+   71 |                             "text": `${updatedInsuranceProviderName}`
+   72 |                         }
+   73 |                     ]
+   74 |                 }
+   75 |             });
+   76 |
+   77 |             await logResponse(patchResponse, testInfo, "PATCH");
+   78 |             const patchStatusCode = patchResponse.status();
+   79 |             expect(patchStatusCode).toBe(204);
+   80 |
+   81 |             console.log(`Updated Insurance Provider Name via PATCH: ${updatedInsuranceProviderName}`);
+   82 |         });
+   83 |
+   84 |         // Step 4: Verify the Updated Insurance Provider with GET
+   85 |         await test.step('Step 4: Verify the Updated Insurance Provider with GET', async () => {
+   86 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers/${insuranceProviderId}`, {
+   87 |                 headers: {
+   88 |                     "Authorization": `${config.nucleusPortalToken}`
+   89 |                 }
+   90 |             });
+   91 |
+   92 |             await logResponse(getUpdatedResponse, testInfo, "GET");
+   93 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+   94 |             expect(getUpdatedStatusCode).toBe(200);
+   95 |
+   96 |             const getUpdatedBody = await getUpdatedResponse.json();
+   97 |             expect(getUpdatedBody).toHaveProperty('_id', insuranceProviderId);
+   98 |             expect(getUpdatedBody.name[0]).toHaveProperty('text', updatedInsuranceProviderName);
+   99 |             console.log(`Verified Updated Insurance Provider via GET: ${insuranceProviderId}`);
+  100 |         });
+  101 |
+  102 |         // Step 5: Delete the Insurance Provider
+  103 |         await test.step('Step 5: Delete the Insurance Provider', async () => {
+  104 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers/${insuranceProviderId}`, {
+  105 |                 headers: {
+  106 |                     "Authorization": `${config.nucleusPortalToken}`
+  107 |                 }
+  108 |             });
+  109 |
+  110 |             await logResponse(deleteResponse, testInfo, "DELETE");
+  111 |             const deleteStatusCode = deleteResponse.status();
+  112 |             expect(deleteStatusCode).toBe(204);
+  113 |
+  114 |             console.log(`Insurance Provider with ID ${insuranceProviderId} has been deleted successfully.`);
+  115 |         });
+  116 |
+  117 |         // Step 6: Verify the Deletion with GET
+  118 |         await test.step('Step 6: Verify the Deletion with GET', async () => {
+  119 |             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/insurance-providers/${insuranceProviderId}`, {
+  120 |                 headers: {
+  121 |                     "Authorization": `${config.nucleusPortalToken}`
+  122 |                 }
+  123 |             });
+  124 |
+  125 |             await logResponse(getAfterDeleteResponse, testInfo, "GET");
+  126 |             const getAfterDeleteStatusCode = getAfterDeleteResponse.status();
+  127 |             expect(getAfterDeleteStatusCode).toBe(404); // Not Found
+  128 |
+  129 |             console.log(`Verified Insurance Provider Deletion (404): ${insuranceProviderId}`);
+  130 |         });
+  131 |     });
+```

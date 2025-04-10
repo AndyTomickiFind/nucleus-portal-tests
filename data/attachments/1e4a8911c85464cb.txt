@@ -1,0 +1,192 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API toplists - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_toplists.spec.ts:10:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_toplists.spec.ts:65:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_toplists.spec.ts:13:9
+```
+
+# Test source
+
+```ts
+   1 | import {expect, test} from '@playwright/test';
+   2 | import {logResponse} from '../../../src/logger';
+   3 | import config from "../../../playwright.config";
+   4 |
+   5 | test.describe(`CRUD e2e API toplists - ${config.name}`, {tag: [`@${config.name}`]}, () => {
+   6 |     let toplistId, casino1, casino2: string;
+   7 |     let toplistName: string;
+   8 |     let toplistDescription: string;
+   9 |
+   10 |     test(`CRUD operations executed sequentially`, async ({request}, testInfo) => {
+   11 |
+   12 |         // Step 1: Create a New Toplist
+   13 |         await test.step('Step 1: Create a New Toplist', async () => {
+   14 |             switch (process.env.TEST_ENV.toLowerCase()) {
+   15 |                 case "dev": {
+   16 |                     casino1 = "67e3af40b5ff3179abe4a4db";
+   17 |                     casino2 = "67e3af41b5ff3179abe4a4e8";
+   18 |                     break
+   19 |                 }
+   20 |                 case "staging": {
+   21 |                     casino1 = "67e3af946eb14bd77a43e1c2";
+   22 |                     casino2 = "67e3af946eb14bd77a43e1cf";
+   23 |                     break
+   24 |                 }
+   25 |             }
+   26 |
+   27 |             toplistName = `[QA] Sample Toplist Created by ${crypto.randomUUID()}`;
+   28 |             toplistDescription = `Sample description ${crypto.randomUUID()}`;
+   29 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v2/toplists`, {
+   30 |                 headers: {
+   31 |                     "Authorization": `${config.nucleusPortalToken}`,
+   32 |                     "Content-Type": "application/json"
+   33 |                 },
+   34 |                 data: {
+   35 |                     "name": toplistName,
+   36 |                     "description": toplistDescription,
+   37 |                     "type": "casinos",
+   38 |                     "subType": "default",
+   39 |                     "excludedFrom": [],
+   40 |                     "appliesToProducts": [
+   41 |                         `${config.defaultDomainId}`
+   42 |                     ],
+   43 |                     "placementsCount": 2,
+   44 |                     "defaultResults": [
+   45 |                         `${casino1}`,
+   46 |                         `${casino2}`
+   47 |                     ],
+   48 |                     "overrides": [],
+   49 |                     "filters": {
+   50 |                         "coins": [],
+   51 |                         "products": [],
+   52 |                         "licenses": [],
+   53 |                         "currencies": [],
+   54 |                         "depositMethods": [],
+   55 |                         "sports": [],
+   56 |                         "promotionTypes": [],
+   57 |                         "anonymousPlay": false,
+   58 |                         "provablyFair": false
+   59 |                     }
+   60 |                 }
+   61 |             });
+   62 |
+   63 |             await logResponse(createResponse, testInfo, "POST");
+   64 |             const createStatusCode = createResponse.status();
+>  65 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   66 |
+   67 |             const responseBody = await createResponse.json();
+   68 |             toplistId = responseBody._id;
+   69 |             expect(toplistId).toBeTruthy();
+   70 |             console.log(`Created Toplist ID: ${toplistId}`);
+   71 |         });
+   72 |
+   73 |         // Step 2: Verify the Created Toplist with GET
+   74 |         await test.step('Step 2: Verify the Created Toplist with GET', async () => {
+   75 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/toplists/${toplistId}`, {
+   76 |                 headers: {
+   77 |                     "Authorization": `${config.nucleusPortalToken}`
+   78 |                 }
+   79 |             });
+   80 |
+   81 |             await logResponse(getCreatedResponse, testInfo, "GET");
+   82 |             const getCreatedStatusCode = getCreatedResponse.status();
+   83 |             expect(getCreatedStatusCode).toBe(200);
+   84 |
+   85 |             const getCreatedBody = await getCreatedResponse.json();
+   86 |             expect.soft(getCreatedBody).toHaveProperty('_id', toplistId);
+   87 |             expect.soft(getCreatedBody).toHaveProperty('excludedFrom');
+   88 |             expect.soft(getCreatedBody.name).toBe(toplistName);
+   89 |             expect.soft(getCreatedBody.description).toBe(toplistDescription);
+   90 |             console.log(`Verified Toplist via GET: ${toplistId}`);
+   91 |         });
+   92 |
+   93 |         // Step 3: Update the Toplist using PATCH
+   94 |         await test.step('Step 3: Update the Toplist using PATCH', async () => {
+   95 |             const updatedToplistName = `${toplistName} - Updated`;
+   96 |             const updatedDescription = `${toplistDescription} - Updated`;
+   97 |
+   98 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v2/toplists/${toplistId}`, {
+   99 |                 headers: {
+  100 |                     "Authorization": `${config.nucleusPortalToken}`,
+  101 |                     "Content-Type": "application/json"
+  102 |                 },
+  103 |                 data: {
+  104 |                     "name": updatedToplistName,
+  105 |                     "description": updatedDescription
+  106 |                 }
+  107 |             });
+  108 |
+  109 |             await logResponse(patchResponse, testInfo, "PATCH");
+  110 |             const patchStatusCode = patchResponse.status();
+  111 |             expect(patchStatusCode).toBe(204);
+  112 |
+  113 |             // Update local variables for validation later
+  114 |             toplistName = updatedToplistName;
+  115 |             toplistDescription = updatedDescription;
+  116 |             console.log(`Updated Toplist: Name - ${toplistName} | Description - ${toplistDescription}`);
+  117 |         });
+  118 |
+  119 |         // Step 4: Verify the Updated Toplist with GET
+  120 |         await test.step('Step 4: Verify the Updated Toplist with GET', async () => {
+  121 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/toplists/${toplistId}`, {
+  122 |                 headers: {
+  123 |                     "Authorization": `${config.nucleusPortalToken}`
+  124 |                 }
+  125 |             });
+  126 |
+  127 |             await logResponse(getUpdatedResponse, testInfo, "GET");
+  128 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  129 |             expect(getUpdatedStatusCode).toBe(200);
+  130 |
+  131 |             const getUpdatedBody = await getUpdatedResponse.json();
+  132 |             expect(getUpdatedBody).toHaveProperty('_id', toplistId);
+  133 |             expect(getUpdatedBody.name).toBe(toplistName);
+  134 |             expect(getUpdatedBody.description).toBe(toplistDescription);
+  135 |             console.log(`Verified Updated Toplist via GET: ${toplistId}`);
+  136 |         });
+  137 |
+  138 |         // Step 5: Delete the Toplist
+  139 |         await test.step('Step 5: Delete the Toplist', async () => {
+  140 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/toplists/${toplistId}`, {
+  141 |                 headers: {
+  142 |                     "Authorization": `${config.nucleusPortalToken}`
+  143 |                 }
+  144 |             });
+  145 |
+  146 |             await logResponse(deleteResponse, testInfo, "DELETE");
+  147 |             const deleteStatusCode = deleteResponse.status();
+  148 |             expect(deleteStatusCode).toBe(204);
+  149 |
+  150 |             console.log(`Toplist with ID ${toplistId} has been deleted successfully.`);
+  151 |         });
+  152 |
+  153 |         // Step 6: Verify the Deletion with GET
+  154 |         await test.step('Step 6: Verify the Deletion with GET', async () => {
+  155 |             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v2/toplists/${toplistId}`, {
+  156 |                 headers: {
+  157 |                     "Authorization": `${config.nucleusPortalToken}`
+  158 |                 }
+  159 |             });
+  160 |
+  161 |             await logResponse(getAfterDeleteResponse, testInfo, "GET");
+  162 |             const getAfterDeleteStatusCode = getAfterDeleteResponse.status();
+  163 |             expect(getAfterDeleteStatusCode).toBe(404); // Not Found
+  164 |
+  165 |             console.log(`Verified Toplist Deletion (404): ${toplistId}`);
+```

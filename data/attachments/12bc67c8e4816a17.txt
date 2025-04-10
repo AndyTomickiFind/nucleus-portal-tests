@@ -1,0 +1,163 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API deposit methods - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_depositMethods.spec.ts:11:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_depositMethods.spec.ts:36:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_depositMethods.spec.ts:13:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from '../../../playwright.config';
+   4 |
+   5 | test.describe(`CRUD e2e API deposit methods - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let depositMethodId: string;
+   7 |     let depositMethodName: string;
+   8 |     let updatedDepositMethodName: string;
+   9 |     let logo: string;
+   10 |
+   11 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   12 |         // Step 1: Create a New Deposit Method
+   13 |         await test.step('Step 1: Create a New Deposit Method', async () => {
+   14 |             depositMethodName = `[QA] RoboDeposit - ${crypto.randomUUID()}`;
+   15 |             logo = `logo_${Math.floor(Math.random() * 1000)}`; // Example logo placeholder
+   16 |
+   17 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods`, {
+   18 |                 headers: {
+   19 |                     Authorization: `${config.nucleusPortalToken}`,
+   20 |                     'Content-Type': 'application/json',
+   21 |                 },
+   22 |                 data: {
+   23 |                     name: [
+   24 |                         {
+   25 |                             language: 'en',
+   26 |                             text: depositMethodName,
+   27 |                         },
+   28 |                     ],
+   29 |                     type: `${config.defaultPaymentTypeId}`,
+   30 |                     logo: logo,
+   31 |                 },
+   32 |             });
+   33 |
+   34 |             await logResponse(createResponse, testInfo, 'POST');
+   35 |             const createStatusCode = createResponse.status();
+>  36 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   37 |
+   38 |             const responseBody = await createResponse.json();
+   39 |             depositMethodId = responseBody._id;
+   40 |             expect(depositMethodId).toBeTruthy();
+   41 |             expect.soft(responseBody.name[0].text).toBe(depositMethodName);
+   42 |             expect.soft(responseBody.type).toBe(`${config.defaultPaymentTypeId}`);
+   43 |             expect.soft(responseBody.logo).toBe(logo);
+   44 |             console.log(`Created Deposit Method ID: ${depositMethodId}`);
+   45 |         });
+   46 |
+   47 |         // Step 2: Verify the created deposit method appears in the list of all deposit methods
+   48 |         await test.step('Step 2: Verify the Deposit Method is in the list of all deposit methods', async () => {
+   49 |             const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods?name=${depositMethodName}`, {
+   50 |                 headers: {
+   51 |                     Authorization: `${config.nucleusPortalToken}`,
+   52 |                 },
+   53 |             });
+   54 |
+   55 |             await logResponse(getAllResponse, testInfo, 'GET');
+   56 |             const getAllStatusCode = getAllResponse.status();
+   57 |             expect(getAllStatusCode).toBe(200);
+   58 |
+   59 |             const allDepositMethodsResponse = await getAllResponse.json();
+   60 |
+   61 |
+   62 |             expect.soft(allDepositMethodsResponse.items[0]).toHaveProperty('_id', depositMethodId);
+   63 |         });
+   64 |
+   65 |         // Step 3: Verify the Created Deposit Method with GET
+   66 |         await test.step('Step 3: Verify the Created Deposit Method with GET', async () => {
+   67 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods/${depositMethodId}`, {
+   68 |                 headers: {
+   69 |                     Authorization: `${config.nucleusPortalToken}`,
+   70 |                 },
+   71 |             });
+   72 |
+   73 |             await logResponse(getCreatedResponse, testInfo, 'GET');
+   74 |             const getCreatedStatusCode = getCreatedResponse.status();
+   75 |             expect(getCreatedStatusCode).toBe(200);
+   76 |
+   77 |             const getCreatedBody = await getCreatedResponse.json();
+   78 |             expect.soft(getCreatedBody).toHaveProperty('_id', depositMethodId);
+   79 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('text', depositMethodName);
+   80 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('language', 'en');
+   81 |             expect.soft(getCreatedBody).toHaveProperty('type', `${config.defaultPaymentTypeId}`);
+   82 |             expect.soft(getCreatedBody).toHaveProperty('logo', logo);
+   83 |             console.log(`Verified Deposit Method via GET: ${depositMethodId}`);
+   84 |         });
+   85 |
+   86 |         // Step 4: Update the Deposit Method using PATCH
+   87 |         await test.step('Step 4: Update the Deposit Method using PATCH', async () => {
+   88 |             updatedDepositMethodName = `${depositMethodName} - Updated`;
+   89 |
+   90 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods/${depositMethodId}`, {
+   91 |                 headers: {
+   92 |                     Authorization: `${config.nucleusPortalToken}`,
+   93 |                     'Content-Type': 'application/json',
+   94 |                 },
+   95 |                 data: {
+   96 |                     name: [
+   97 |                         {
+   98 |                             language: 'en',
+   99 |                             text: updatedDepositMethodName,
+  100 |                         },
+  101 |                     ],
+  102 |                     type: `65f49a7b06037feabc18e1cd`,
+  103 |                     logo: `${logo}_updated`,
+  104 |                 },
+  105 |             });
+  106 |
+  107 |             await logResponse(patchResponse, testInfo, 'PATCH');
+  108 |             const patchStatusCode = patchResponse.status();
+  109 |             expect(patchStatusCode).toBe(204);
+  110 |
+  111 |             console.log(`Updated Deposit Method Name via PATCH: ${updatedDepositMethodName}`);
+  112 |         });
+  113 |
+  114 |         // Step 5: Verify the Updated Deposit Method with GET
+  115 |         await test.step('Step 5: Verify the Updated Deposit Method with GET', async () => {
+  116 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods/${depositMethodId}`, {
+  117 |                 headers: {
+  118 |                     Authorization: `${config.nucleusPortalToken}`,
+  119 |                 },
+  120 |             });
+  121 |
+  122 |             await logResponse(getUpdatedResponse, testInfo, 'GET');
+  123 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  124 |             expect(getUpdatedStatusCode).toBe(200);
+  125 |
+  126 |             const getUpdatedBody = await getUpdatedResponse.json();
+  127 |             expect(getUpdatedBody).toHaveProperty('_id', depositMethodId);
+  128 |             expect(getUpdatedBody.name[0]).toHaveProperty('text', updatedDepositMethodName);
+  129 |             expect(getUpdatedBody).toHaveProperty('type', `65f49a7b06037feabc18e1cd`);
+  130 |             expect(getUpdatedBody).toHaveProperty('logo', `${logo}_updated`);
+  131 |             console.log(`Verified Updated Deposit Method via GET: ${depositMethodId}`);
+  132 |         });
+  133 |
+  134 |         // Step 6: Delete the Deposit Method
+  135 |         await test.step('Step 6: Delete the Deposit Method', async () => {
+  136 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/deposit-methods/${depositMethodId}`, {
+```

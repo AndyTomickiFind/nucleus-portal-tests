@@ -1,0 +1,228 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API casinos - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_casinos.spec.ts:9:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_casinos.spec.ts:121:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_casinos.spec.ts:11:9
+```
+
+# Test source
+
+```ts
+   21 |                 "numberOfGames": 2,
+   22 |                 "freeSpins": null,
+   23 |                 "promoCode": "",
+   24 |                 "homepageUrl": "https://home-page",
+   25 |                 "sweepstakeCasino": false,
+   26 |                 "anonymousPlay": false,
+   27 |                 "endToEndCrypto": false,
+   28 |                 "provablyFair": false,
+   29 |                 "operatedBy": [],
+   30 |                 "registrationToDepositProcess": [],
+   31 |                 "termsAndConditions": "https://terms-and-conditions",
+   32 |                 "minimumDeposit": "",
+   33 |                 "allowedCountries": [],
+   34 |                 "excludedCountries":["AF","RU","US"],
+   35 |                 "reviewBy": { "shortBio": [], "position": [] },
+   36 |                 "wageringRequirements": [],
+   37 |                 "shortDescription": [],
+   38 |                 "description": [
+   39 |                     {
+   40 |                         "domainId": `${config.defaultDomainId}`,
+   41 |                         "content": [{ "language": "en", "text": "English Description" }]
+   42 |                     }
+   43 |                 ],
+   44 |                 "teaser": { "gambling": [], "casino": [], "sports": [] },
+   45 |                 "prosCons": { "red": [], "green": [] },
+   46 |                 "homepageImageDesktop": {
+   47 |                     "title": [{ "language": "en", "text": "EN" }],
+   48 |                     "description": [],
+   49 |                     "caption": [],
+   50 |                     "linkUrl": "",
+   51 |                     "alt": "",
+   52 |                     "imageType": "image/jpeg",
+   53 |                     "subtype": "jpeg",
+   54 |                     "filesize": 102689,
+   55 |                     "filename": "Grand-Hyatt-Athens_cocktail-party_Acropolis_DSC07202.jpg",
+   56 |                     "name": "Grand-Hyatt-Athens_cocktail-party_Acropolis_DSC07202",
+   57 |                     "mimeType": "image/jpeg",
+   58 |                     "urlImage": "/images/logos/1739964617432_67b5c0c94cb9582fe03c13e8.jpg"
+   59 |                 },
+   60 |                 "homepageImageMobile": {
+   61 |                     "title": [{ "language": "en", "text": "EN" }],
+   62 |                     "description": [],
+   63 |                     "caption": [],
+   64 |                     "linkUrl": "",
+   65 |                     "alt": "",
+   66 |                     "imageType": "image/jpeg",
+   67 |                     "subtype": "jpeg",
+   68 |                     "filesize": 463105,
+   69 |                     "filename": "carnavalriodesfilecampea-25.jpg",
+   70 |                     "name": "carnavalriodesfilecampea-25",
+   71 |                     "mimeType": "image/jpeg",
+   72 |                     "urlImage": "/images/logos/1739964617730_67b5c0c94cb9582fe03c13ea.jpg"
+   73 |                 },
+   74 |                 "topGames": [],
+   75 |                 "landingPageUrl": [
+   76 |                     {
+   77 |                         "domainId": `${config.defaultDomainId}`,
+   78 |                         "url": "https://landing-page-QAGeneralTestDomain"
+   79 |                     }
+   80 |                 ],
+   81 |                 "casinoBonuses": [
+   82 |                     {
+   83 |                         "domainId": `${config.defaultDomainId}`,
+   84 |                         "hasNoBonus": true,
+   85 |                         "bonusContent": [],
+   86 |                         "bonuses": { "offers": [], "packages": [] }
+   87 |                     }
+   88 |                 ],
+   89 |                 "products": ["67472e6115b3c618daee31bf"],
+   90 |                 "productCategories": ["65f49a7d06037feabc190bc1"],
+   91 |                 "coins": ["675859585e46917e950c97da", "675859de5e46917e950c9d86"],
+   92 |                 "currencies": [],
+   93 |                 "securityMethods": ["666bf1adda2f46ee38ad1806"],
+   94 |                 "languages": ["65f49a7c06037feabc18f0f7"],
+   95 |                 "supportLanguages": ["65f49a7c06037feabc18f0f7"],
+   96 |                 "depositMethods": ["666bf0c5da2f46ee38acdbc1"],
+   97 |                 "withdrawalMethods": ["666bf14eda2f46ee38ad0727"],
+   98 |                 "slotProviders": ["65f49a7c06037feabc18fe7a"],
+   99 |                 "sports": [],
+  100 |                 "status": "published",
+  101 |                 "licencesOwned": ["65f49a7c06037feabc18f2b5"],
+  102 |                 "affiliateUrl": [
+  103 |                     {
+  104 |                         "domainId": `${config.defaultDomainId}`,
+  105 |                         "url": "https://general-affil-link-QAGeneralTestDomain"
+  106 |                     }
+  107 |                 ],
+  108 |                 "affiliateLinks": []
+  109 |             };
+  110 |
+  111 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
+  112 |                 headers: {
+  113 |                     "Authorization": `${config.nucleusPortalToken}`,
+  114 |                     "Content-Type": "application/json"
+  115 |                 },
+  116 |                 data: createPayload
+  117 |             });
+  118 |
+  119 |             await logResponse(createResponse, testInfo, "POST");
+  120 |             const createStatusCode = createResponse.status();
+> 121 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+  122 |
+  123 |             const responseBody = await createResponse.json();
+  124 |             casinoId = responseBody._id;
+  125 |             expect(casinoId).toBeTruthy();
+  126 |             console.log(`Created Casino ID: ${casinoId}`);
+  127 |         });
+  128 |
+  129 |         // Step 2: Verify the Created Casino with GET
+  130 |         await test.step('Step 2: Verify the Created Casino with GET', async () => {
+  131 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
+  132 |                 headers: {
+  133 |                     "Authorization": `${config.nucleusPortalToken}`
+  134 |                 }
+  135 |             });
+  136 |
+  137 |             await logResponse(getCreatedResponse, testInfo, "GET");
+  138 |             const getCreatedStatusCode = getCreatedResponse.status();
+  139 |             expect(getCreatedStatusCode).toBe(200);
+  140 |
+  141 |             const getCreatedBody = await getCreatedResponse.json();
+  142 |             expect(getCreatedBody).toHaveProperty('_id', casinoId);
+  143 |             expect(getCreatedBody.name).toBe(casinoName);
+  144 |             console.log(`Verified Casino via GET: ${casinoId}`);
+  145 |         });
+  146 |
+  147 |         // Step 3: Update the Casino using PATCH
+  148 |         await test.step('Step 3: Update the Casino using PATCH', async () => {
+  149 |             const updatedCasinoName = `${casinoName} - Updated`;
+  150 |             const patchPayload = {
+  151 |                 "domains": [`${config.defaultDomainId}`], // Retain the same domains from creation
+  152 |                 "contentLanguagesCodes": ["en"], // Include this to avoid validation errors
+  153 |                 "name": updatedCasinoName, // Update the name
+  154 |                 "rating": 5, // Update the rating
+  155 |                 "status": "published"
+  156 |             };
+  157 |
+  158 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
+  159 |                 headers: {
+  160 |                     "Authorization": `${config.nucleusPortalToken}`,
+  161 |                     "Content-Type": "application/json"
+  162 |                 },
+  163 |                 data: patchPayload
+  164 |             });
+  165 |
+  166 |             await logResponse(patchResponse, testInfo, "PATCH");
+  167 |             const patchStatusCode = patchResponse.status();
+  168 |             expect(patchStatusCode).toBe(204);
+  169 |
+  170 |             casinoName = updatedCasinoName;
+  171 |             console.log(`Updated Casino: Name - ${casinoName}`);
+  172 |         });
+  173 |
+  174 |         // Step 4: Verify the Updated Casino with GET
+  175 |         await test.step('Step 4: Verify the Updated Casino with GET', async () => {
+  176 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
+  177 |                 headers: {
+  178 |                     "Authorization": `${config.nucleusPortalToken}`
+  179 |                 }
+  180 |             });
+  181 |
+  182 |             await logResponse(getUpdatedResponse, testInfo, "GET");
+  183 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  184 |             expect(getUpdatedStatusCode).toBe(200);
+  185 |
+  186 |             const getUpdatedBody = await getUpdatedResponse.json();
+  187 |             expect(getUpdatedBody).toHaveProperty('_id', casinoId);
+  188 |             expect(getUpdatedBody.name).toBe(casinoName);
+  189 |             console.log(`Verified Updated Casino via GET: ${casinoId}`);
+  190 |         });
+  191 |
+  192 |         //Step 5: Delete the Casino
+  193 |         await test.step('Step 5: Delete the Casino', async () => {
+  194 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
+  195 |                 headers: {
+  196 |                     "Authorization": `${config.nucleusPortalToken}`
+  197 |                 }
+  198 |             });
+  199 |
+  200 |             await logResponse(deleteResponse, testInfo, "DELETE");
+  201 |             const deleteStatusCode = deleteResponse.status();
+  202 |             expect(deleteStatusCode).toBe(204);
+  203 |
+  204 |             console.log(`Casino with ID ${casinoId} has been deleted successfully.`);
+  205 |         });
+  206 |
+  207 |         // Step 6: Verify the Deletion with GET
+  208 |         await test.step('Step 6: Verify the Deletion with GET', async () => {
+  209 |             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos/${casinoId}`, {
+  210 |                 headers: {
+  211 |                     "Authorization": `${config.nucleusPortalToken}`
+  212 |                 }
+  213 |             });
+  214 |
+  215 |             await logResponse(getAfterDeleteResponse, testInfo, "GET");
+  216 |             const getAfterDeleteStatusCode = getAfterDeleteResponse.status();
+  217 |             expect(getAfterDeleteStatusCode).toBe(404);
+  218 |
+  219 |             console.log(`Verified Casino Deletion (404): ${casinoId}`);
+  220 |         });
+  221 |     });
+```

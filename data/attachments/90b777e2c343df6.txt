@@ -1,0 +1,273 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PARTNERS/CASINOS subpage - dev  >> Check Random Casinos and a Specific Casino
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:37:9
+
+# Error details
+
+```
+Error: User is authorized to access this resource
+
+expect(received).not.toContain(expected) // indexOf
+
+Expected value: not 401
+Received array:     [401, 403]
+    at getCasinos (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:46:87)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:54:33
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/casinosPage.spec.ts:53:41
+```
+
+# Page snapshot
+
+```yaml
+- alert
+- link "Home":
+  - button "Home"
+- link "Toplists":
+  - button "Toplists"
+- link "Short Reviews":
+  - button "Short Reviews"
+- button "Partners"
+- button "Database"
+- button "Admin"
+- button "User profile picture QA":
+  - img "User profile picture"
+  - paragraph: QA
+- heading "Casinos" [level=5]
+- text: Name
+- textbox "Name"
+- grid:
+  - row "Name Status Created at Updated at Sort":
+    - columnheader "Name"
+    - columnheader "Status"
+    - columnheader "Created at"
+    - columnheader "Updated at Sort":
+      - text: Updated at
+      - button "Sort"
+  - rowgroup:
+    - row "[QA] 3 Casino used by ROBOTS - do not edit - 2025-04-10T11:51:53.793Z Published 2/19/2025, 12:14:33 PM 4/10/2025, 11:51:54 AM":
+      - gridcell "[QA] 3 Casino used by ROBOTS - do not edit - 2025-04-10T11:51:53.793Z"
+      - gridcell "Published"
+      - gridcell "2/19/2025, 12:14:33 PM"
+      - gridcell "4/10/2025, 11:51:54 AM"
+    - row "Dunder Casino (2) Published 8/23/2024, 1:23:19 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Dunder Casino (2)"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:19 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Dunder Casino Published 8/23/2024, 1:23:19 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Dunder Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:19 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Videoslots Casino Published 8/23/2024, 1:23:21 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Videoslots Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:21 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "PlayFrank Casino Published 8/23/2024, 1:23:22 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "PlayFrank Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:22 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Redbet edited 2 Published 8/23/2024, 1:23:26 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Redbet edited 2"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:26 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Barbados Casino 2 Published 8/23/2024, 1:23:27 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Barbados Casino 2"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:27 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "AHTI Games Casino Published 8/23/2024, 1:23:34 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "AHTI Games Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:34 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "QueenVegas Casino Published 8/23/2024, 1:23:36 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "QueenVegas Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:36 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Lucky Vegas Casino Published 8/23/2024, 1:23:42 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Lucky Vegas Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:42 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Playzee Casino Published 8/23/2024, 1:23:46 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Playzee Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:46 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+    - row "Jackie Jackpot Casino Published 8/23/2024, 1:23:51 PM 4/9/2025, 10:00:41 PM":
+      - gridcell "Jackie Jackpot Casino"
+      - gridcell "Published"
+      - gridcell "8/23/2024, 1:23:51 PM"
+      - gridcell "4/9/2025, 10:00:41 PM"
+- paragraph: "Rows per page:"
+- 'combobox "Rows per page: 15"': "15"
+- paragraph: 1–15 of 445
+- button "Go to previous page" [disabled]
+- button "Go to next page"
+- link "New":
+  - button "New"
+```
+
+# Test source
+
+```ts
+   1 | import {test} from "../../fixtures/fixtures";
+   2 | import {expect} from "@playwright/test";
+   3 | import config from "../../../playwright.config";
+   4 | import {timeDifference} from "../../common/helpers";
+   5 |
+   6 |
+   7 | test.describe(`PARTNERS/CASINOS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
+   8 |
+   9 |     test.beforeEach(async ({CasinosPage, menuComponent}) => {
+   10 |         await CasinosPage.page.goto(`https://${config.baseUrl}`);
+   11 |         await menuComponent.menubarItem_Partners.click();
+   12 |         await menuComponent.subPartnersMenuItem_Casinos.click();
+   13 |         await CasinosPage.page.waitForLoadState();
+   14 |     });
+   15 |
+   16 |
+   17 |     test('Check the title and url', async ({CasinosPage}) => {
+   18 |         await CasinosPage.page.waitForURL('**/partners/casinos');
+   19 |         expect(await CasinosPage.page.title()).toBe('Nucleus Portal');
+   20 |         expect(CasinosPage.page.url()).toBe(`https://${config.baseUrl}/partners/casinos`);
+   21 |     });
+   22 |
+   23 |
+   24 |     test('Verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
+   25 |         await menuComponent.checkMenuItems();
+   26 |         await menuComponent.checkDataPointItems();
+   27 |     });
+   28 |
+   29 |
+   30 |     test('Check the data grid', async ({components}) => {
+   31 |         await test.step("Data grid table to be visible", async () => {
+   32 |             await expect(components.dataGrid).toBeVisible();
+   33 |         })
+   34 |     });
+   35 |
+   36 |
+   37 |     test('Check Random Casinos and a Specific Casino', async ({request, components, CasinosPage, menuComponent}) => {
+   38 |         async function getCasinos(): Promise<string[]> {
+   39 |             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {
+   40 |                 params: {size: 10000},
+   41 |                 headers: {
+   42 |                     "Authorization": `${config.nucleusPortalToken}`,
+   43 |                     "Content-Type": "application/json"
+   44 |                 }
+   45 |             });
+>  46 |             expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
+      |                                                                                       ^ Error: User is authorized to access this resource
+   47 |             expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
+   48 |             const data = await response.json();
+   49 |             return data.items.map((item) => item.name);
+   50 |         }
+   51 |
+   52 |         // Randomly select 5 casinos
+   53 |         const randomCasinos: string[] = await (async () => {
+   54 |             const allCasinos = (await getCasinos()).filter(casino => !casino.toLowerCase().includes("do not edit")); // Exclude casinos with "do not edit" in the name
+   55 |             const selectedCasinos = new Set<string>();
+   56 |             while (selectedCasinos.size < 5 && allCasinos.length > selectedCasinos.size) {
+   57 |                 // Randomly select a casino and add it to the set to avoid duplicates
+   58 |                 const randomCasino = allCasinos[Math.floor(Math.random() * allCasinos.length)];
+   59 |                 if (!selectedCasinos.has(randomCasino)) {
+   60 |                     selectedCasinos.add(randomCasino);
+   61 |                 }
+   62 |             }
+   63 |             return [...Array.from(selectedCasinos)];
+   64 |         })();
+   65 |
+   66 |         for (const casinoName of randomCasinos) {
+   67 |             await test.step(`Testing Casino "${casinoName}"`, async () => {
+   68 |                 // Search for the casino
+   69 |                 await test.step("Search for the Casino", async () => {
+   70 |                     await menuComponent.menubarItem_Partners.click();
+   71 |                     await menuComponent.subPartnersMenuItem_Casinos.click();
+   72 |                     await CasinosPage.filterByCasinoName(casinoName);
+   73 |                     await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+   74 |                     await expect.soft(components.dataGridCell("status", 1)).toBeVisible();
+   75 |                     await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
+   76 |                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
+   77 |                 });
+   78 |
+   79 |                 // Open the casino details page
+   80 |                 await test.step("Open the Casino", async () => {
+   81 |                     await CasinosPage.page.waitForTimeout(800);
+   82 |                     await components.dblClickDataGridRow(1);
+   83 |                     await CasinosPage.page.waitForLoadState('domcontentloaded');
+   84 |                     await expect.soft(CasinosPage.topHeader).toBeVisible();
+   85 |                     await expect.soft(CasinosPage.topHeader).toBeEnabled();
+   86 |                     await expect.soft(CasinosPage.topHeader).toContainText("Update Casino");
+   87 |                     await expect.soft(CasinosPage.selectedDomainsDropdown).toBeVisible();
+   88 |                     await expect.soft(CasinosPage.selectedContentLanguagesDropdown).toBeVisible();
+   89 |                     await expect.soft(CasinosPage.statusDropdown).toBeVisible();
+   90 |                 });
+   91 |
+   92 |                 // Check all accordion dropdowns
+   93 |                 await test.step("Check all accordion dropdowns", async () => {
+   94 |                     const accordionItems = [
+   95 |                         'details-header',
+   96 |                         'logo-header',
+   97 |                         'settings-header',
+   98 |                         'homepage-header',
+   99 |                         'reviewBy-header',
+  100 |                         'teaser-header',
+  101 |                         'prosCons',
+  102 |                         'legal-header',
+  103 |                         'extras',
+  104 |                     ];
+  105 |                     for (const accordionItem of accordionItems) {
+  106 |                         await test.step(`Clicking on "${accordionItem}"`, async () => {
+  107 |                             await components.openDropdown(accordionItem);
+  108 |                             await expect.soft(components.dropdownHeader(accordionItem)).toBeVisible();
+  109 |                         });
+  110 |                     }
+  111 |                 });
+  112 |
+  113 |                 // Check the tabs
+  114 |                 await test.step("Check the Tabs", async () => {
+  115 |                     const tabs = ['General Information', 'Datapoints', 'Affiliate Links', 'Bonuses'];
+  116 |                     for (const tab of tabs) {
+  117 |                         const tabLocator = CasinosPage.getTabLocator(tab);
+  118 |                         await tabLocator.click();
+  119 |                     }
+  120 |                 });
+  121 |
+  122 |                 // Check the "No Bonus" toggle button
+  123 |                 await test.step("Check No Bonus toggle button", async () => {
+  124 |                     await CasinosPage.getTabLocator('Bonuses').click();
+  125 |                     await CasinosPage.firstDomainButton.click(); //first domain that can be found
+  126 |                     if (await CasinosPage.noBonusToggle.isChecked()) {
+  127 |                         await CasinosPage.noBonusToggle.click();
+  128 |                     }
+  129 |                     await components.checkAlertBanner("Welcome offer value will be returned in the toplist results for");
+  130 |                     await CasinosPage.noBonusToggle.click();
+  131 |                     await components.checkAlertBanner(
+  132 |                         "Please note that you cannot edit offers or packages if the domain has no bonus. If you save this form, any existing offers and packages for this domain will be removed."
+  133 |                     );
+  134 |                 });
+  135 |             });
+  136 |         }
+  137 |     });
+  138 |
+  139 |
+  140 |     test('Pagination and Data Grid items', async ({components}) => {
+  141 |
+  142 |         await test.step("Select 25 items per page", async () => {
+  143 |             await components.checkRowsInDataGrid(25, ["name", "createdAt", "updatedAt"]);
+  144 |             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
+  145 |         });
+  146 |         await test.step("Select 15 items per page", async () => {
+```

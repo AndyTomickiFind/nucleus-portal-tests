@@ -1,0 +1,150 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API cryptoPair - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_cryptoPairs.spec.ts:10:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_cryptoPairs.spec.ts:26:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_cryptoPairs.spec.ts:12:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from "../../../playwright.config";
+   4 |
+   5 | test.describe(`CRUD e2e API cryptoPair - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let cryptoPairId: string;
+   7 |     let cryptoPairsName: string;
+   8 |     let updatedCryptoPairsName: string;
+   9 |
+   10 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   11 |         // Step 1: Create a New CryptoPair
+   12 |         await test.step('Step 1: Create a New CryptoPair', async () => {
+   13 |             cryptoPairsName = `[QA] Crypto Pair created by robots ${crypto.randomUUID()}`;
+   14 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs`, {
+   15 |                 headers: {
+   16 |                     "Authorization": `${config.nucleusPortalToken}`,
+   17 |                     "Content-Type": "application/json"
+   18 |                 },
+   19 |                 data: {
+   20 |                     "name": `${cryptoPairsName}`
+   21 |                 }
+   22 |             });
+   23 |
+   24 |             await logResponse(createResponse, testInfo, "POST");
+   25 |             const createStatusCode = createResponse.status();
+>  26 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   27 |
+   28 |             const responseBody = await createResponse.json();
+   29 |             cryptoPairId = responseBody._id;
+   30 |             expect(cryptoPairId).toBeTruthy();
+   31 |             expect(responseBody.name).toBe(cryptoPairsName);
+   32 |             console.log(`Created Crypto Pair ID: ${cryptoPairId}`);
+   33 |         });
+   34 |
+   35 |         // Step 2: Verify the Created CryptoPair with GET
+   36 |         await test.step('Step 2: Verify the Created CryptoPair with GET', async () => {
+   37 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs/${cryptoPairId}`, {
+   38 |                 headers: {
+   39 |                     "Authorization": `${config.nucleusPortalToken}`
+   40 |                 }
+   41 |             });
+   42 |
+   43 |             await logResponse(getCreatedResponse, testInfo, "GET");
+   44 |             const getCreatedStatusCode = getCreatedResponse.status();
+   45 |             expect(getCreatedStatusCode).toBe(200);
+   46 |
+   47 |             const getCreatedBody = await getCreatedResponse.json();
+   48 |             expect(getCreatedBody).toHaveProperty('_id', cryptoPairId);
+   49 |             expect(getCreatedBody).toHaveProperty('name', cryptoPairsName);
+   50 |             console.log(`Verified Crypto Pair via GET: ${cryptoPairId}`);
+   51 |         });
+   52 |
+   53 |         // Step 3: Update the CryptoPair using PATCH
+   54 |         await test.step('Step 3: Update the CryptoPair using PATCH', async () => {
+   55 |             updatedCryptoPairsName = `${cryptoPairsName} - Updated`;
+   56 |
+   57 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs/${cryptoPairId}`, {
+   58 |                 headers: {
+   59 |                     "Authorization": `${config.nucleusPortalToken}`,
+   60 |                     "Content-Type": "application/json"
+   61 |                 },
+   62 |                 data: {
+   63 |                     "name": `${updatedCryptoPairsName}`
+   64 |                 }
+   65 |             });
+   66 |
+   67 |             await logResponse(patchResponse, testInfo, "PATCH");
+   68 |             const patchStatusCode = patchResponse.status();
+   69 |             expect(patchStatusCode).toBe(204);
+   70 |
+   71 |             console.log(`Updated Crypto Pair Name via PATCH: ${updatedCryptoPairsName}`);
+   72 |         });
+   73 |
+   74 |         // Step 4: Verify the Updated CryptoPair with GET
+   75 |         await test.step('Step 4: Verify the Updated CryptoPair with GET', async () => {
+   76 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs/${cryptoPairId}`, {
+   77 |                 headers: {
+   78 |                     "Authorization": `${config.nucleusPortalToken}`
+   79 |                 }
+   80 |             });
+   81 |
+   82 |             await logResponse(getUpdatedResponse, testInfo, "GET");
+   83 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+   84 |             expect(getUpdatedStatusCode).toBe(200);
+   85 |
+   86 |             const getUpdatedBody = await getUpdatedResponse.json();
+   87 |             expect(getUpdatedBody).toHaveProperty('_id', cryptoPairId);
+   88 |             expect(getUpdatedBody).toHaveProperty('name', updatedCryptoPairsName);
+   89 |             console.log(`Verified Updated Crypto Pair via GET: ${cryptoPairId}`);
+   90 |         });
+   91 |
+   92 |         // Step 5: Delete the CryptoPair
+   93 |         await test.step('Step 5: Delete the CryptoPair', async () => {
+   94 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs/${cryptoPairId}`, {
+   95 |                 headers: {
+   96 |                     "Authorization": `${config.nucleusPortalToken}`
+   97 |                 }
+   98 |             });
+   99 |
+  100 |             await logResponse(deleteResponse, testInfo, "DELETE");
+  101 |             const deleteStatusCode = deleteResponse.status();
+  102 |             expect(deleteStatusCode).toBe(204);
+  103 |
+  104 |             console.log(`Crypto Pair with ID ${cryptoPairId} has been deleted successfully.`);
+  105 |         });
+  106 |
+  107 |         // Step 6: Verify the Deletion with GET
+  108 |         await test.step('Step 6: Verify the Deletion with GET', async () => {
+  109 |             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/crypto-pairs/${cryptoPairId}`, {
+  110 |                 headers: {
+  111 |                     "Authorization": `${config.nucleusPortalToken}`
+  112 |                 }
+  113 |             });
+  114 |
+  115 |             await logResponse(getAfterDeleteResponse, testInfo, "GET");
+  116 |             const getAfterDeleteStatusCode = getAfterDeleteResponse.status();
+  117 |             expect(getAfterDeleteStatusCode).toBe(404); // Not Found
+  118 |
+  119 |             console.log(`Verified Crypto Pair Deletion (404): ${cryptoPairId}`);
+  120 |         });
+  121 |     });
+  122 | });
+  123 |
+```

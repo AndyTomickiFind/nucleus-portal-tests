@@ -1,0 +1,219 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API exchanges - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_exchanges.spec.ts:9:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_exchanges.spec.ts:92:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_exchanges.spec.ts:11:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from "../../../playwright.config";
+   4 |
+   5 | test.describe(`CRUD e2e API exchanges - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let exchangeId: string;
+   7 |     let exchangeName: string;
+   8 |
+   9 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   10 |         // Step 1: Create a New Exchange
+   11 |         await test.step('Step 1: Create a New Exchange', async () => {
+   12 |             exchangeName = `[QA] Exchange created by robots ${crypto.randomUUID()}`;
+   13 |             const createPayload = {
+   14 |                 "domains": [`${config.defaultDomainId}`],
+   15 |                 "contentLanguagesCodes": ["en"],
+   16 |                 "name": exchangeName,
+   17 |                 "landingPageUrl": "https://landing-page",
+   18 |                 "homepageUrl": "https://home-page",
+   19 |                 "logo": { "url": "/images/logos/1739968292252_67b5cf244cb9582fe0463409.webp" },
+   20 |                 "homepageImageMobile": { "url": "/images/logos/1739968294177_67b5cf264cb9582fe046340d.webp" },
+   21 |                 "homepageImageDesktop": { "url": "/images/logos/1739968293897_67b5cf254cb9582fe046340b.jpg" },
+   22 |                 "otherExchangeFeatures": "no",
+   23 |                 "phoneNumber": "",
+   24 |                 "owner": "QA",
+   25 |                 "termsAndConditions": "https://hot-terms-and-conditioners",
+   26 |                 "headquarter": "660bd00b53314b10fc9c0052",
+   27 |                 "supportEmails": [],
+   28 |                 "allowedCountries": [],
+   29 |                 "excludedCountries":["AF","RU","US"],
+   30 |                 "availabilityHours": 24,
+   31 |                 "availabilityDays": 7,
+   32 |                 "interfaceCleanlinessScore": 2,
+   33 |                 "mobileExperienceScore": 4,
+   34 |                 "minimumDeposit": 42,
+   35 |                 "designScore": 3,
+   36 |                 "finalRating": 5,
+   37 |                 "supportAccessibilityScore": 2,
+   38 |                 "interfaceFluidityScore": 1,
+   39 |                 "supportEfficiencyScore": 3,
+   40 |                 "yearFounded": 2025,
+   41 |                 "mobileApp": false,
+   42 |                 "liveChatSupport": false,
+   43 |                 "liveChatAvailability": false,
+   44 |                 "kycAml": [{ "language": "en", "text": "EN" }],
+   45 |                 "featuredSnippet": [],
+   46 |                 "promotion": [{ "language": "en", "text": "EN" }],
+   47 |                 "fees": [
+   48 |                     {
+   49 |                         "productPaymentMethod": [{ "language": "en", "text": "EN" }],
+   50 |                         "typeOfFee": [{ "language": "en", "text": "EN" }]
+   51 |                     }
+   52 |                 ],
+   53 |                 "reviewedBy": { "shortBio": [], "name": "" },
+   54 |                 "insurance": { "condition": [], "eventsCovered": [] },
+   55 |                 "prosCons": { "pros": [], "cons": [] },
+   56 |                 "products": ["666bef37da2f46ee38ac95d5"],
+   57 |                 "coins": ["675859de5e46917e950c9d86", "675859585e46917e950c97da"],
+   58 |                 "cryptoPairs": ["6799ff5a8fcd78476375a3fb"],
+   59 |                 "currencies": [],
+   60 |                 "siteLanguages": ["65f49a7c06037feabc18f0f7"],
+   61 |                 "supportLanguages": ["65f49a7c06037feabc18f0f7"],
+   62 |                 "contactMethods": ["675970e227b4c437fa48f43f"],
+   63 |                 "depositMethods": ["666bf079da2f46ee38acce3b"],
+   64 |                 "depositCurrencies": ["65f49a7c06037feabc18ee9e"],
+   65 |                 "withdrawalMethods": ["666bf14eda2f46ee38ad0727"],
+   66 |                 "licenses": ["65f49a7c06037feabc18f2eb"],
+   67 |                 "supportIssues": ["666bf1adda2f46ee38ad17f3"],
+   68 |                 "securityMethods": ["673c9a477e8b87fc195817ca"],
+   69 |                 "communitySocials": ["679a249c8fcd784763a0469f"],
+   70 |                 "orderTypesAvailable": ["679a2a588fcd784763a150d3"],
+   71 |                 "educationalResources": ["679a2efd8fcd784763a253a7"],
+   72 |                 "registrationSteps": ["666bf1adda2f46ee38ad18b9"],
+   73 |                 "affiliateLinks": [
+   74 |                     {
+   75 |                         "affiliateLinkUrl": "https://aff-link-per-dimension",
+   76 |                         "dimensions": [{ "type": "domains", "ids": [`${config.defaultDomainId}`] }]
+   77 |                     }
+   78 |                 ],
+   79 |                 "status": "published"
+   80 |             };
+   81 |
+   82 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges`, {
+   83 |                 headers: {
+   84 |                     "Authorization": `${config.nucleusPortalToken}`,
+   85 |                     "Content-Type": "application/json"
+   86 |                 },
+   87 |                 data: createPayload
+   88 |             });
+   89 |
+   90 |             await logResponse(createResponse, testInfo, "POST");
+   91 |             const createStatusCode = createResponse.status();
+>  92 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   93 |
+   94 |             const responseBody = await createResponse.json();
+   95 |             exchangeId = responseBody._id;
+   96 |             expect(exchangeId).toBeTruthy();
+   97 |             console.log(`Created Exchange ID: ${exchangeId}`);
+   98 |         });
+   99 |
+  100 |         // Step 2: Verify the Created Exchange with GET
+  101 |         await test.step('Step 2: Verify the Created Exchange with GET', async () => {
+  102 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
+  103 |                 headers: {
+  104 |                     "Authorization": `${config.nucleusPortalToken}`
+  105 |                 }
+  106 |             });
+  107 |
+  108 |             await logResponse(getCreatedResponse, testInfo, "GET");
+  109 |             const getCreatedStatusCode = getCreatedResponse.status();
+  110 |             expect(getCreatedStatusCode).toBe(200);
+  111 |
+  112 |             const getCreatedBody = await getCreatedResponse.json();
+  113 |             expect(getCreatedBody).toHaveProperty('_id', exchangeId);
+  114 |             expect(getCreatedBody.name).toBe(exchangeName);
+  115 |             console.log(`Verified Exchange via GET: ${exchangeId}`);
+  116 |         });
+  117 |
+  118 |         // Step 3: Update the Exchange using PATCH
+  119 |         await test.step('Step 3: Update the Exchange using PATCH', async () => {
+  120 |             const updatedExchangeName = `${exchangeName} - Updated`;
+  121 |             const patchPayload = {
+  122 |                 "domains": [`${config.defaultDomainId}`], // Retain the same domains
+  123 |                 "contentLanguagesCodes": ["en"], // Retain the same language codes
+  124 |                 "name": updatedExchangeName, // Update the name
+  125 |                 "finalRating": 4, // Update the rating
+  126 |                 "status": "published"
+  127 |             };
+  128 |
+  129 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
+  130 |                 headers: {
+  131 |                     "Authorization": `${config.nucleusPortalToken}`,
+  132 |                     "Content-Type": "application/json"
+  133 |                 },
+  134 |                 data: patchPayload
+  135 |             });
+  136 |
+  137 |             await logResponse(patchResponse, testInfo, "PATCH");
+  138 |             const patchStatusCode = patchResponse.status();
+  139 |             expect(patchStatusCode).toBe(204);
+  140 |
+  141 |             exchangeName = updatedExchangeName;
+  142 |             console.log(`Updated Exchange: Name - ${exchangeName}`);
+  143 |         });
+  144 |
+  145 |         // Step 4: Verify the Updated Exchange with GET
+  146 |         await test.step('Step 4: Verify the Updated Exchange with GET', async () => {
+  147 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
+  148 |                 headers: {
+  149 |                     "Authorization": `${config.nucleusPortalToken}`
+  150 |                 }
+  151 |             });
+  152 |
+  153 |             await logResponse(getUpdatedResponse, testInfo, "GET");
+  154 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  155 |             expect(getUpdatedStatusCode).toBe(200);
+  156 |
+  157 |             const getUpdatedBody = await getUpdatedResponse.json();
+  158 |             expect(getUpdatedBody).toHaveProperty('_id', exchangeId);
+  159 |             expect(getUpdatedBody.name).toBe(exchangeName);
+  160 |             console.log(`Verified Updated Exchange via GET: ${exchangeId}`);
+  161 |         });
+  162 |
+  163 |         //Step 5: Delete the Exchange
+  164 |         await test.step('Step 5: Delete the Exchange', async () => {
+  165 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
+  166 |                 headers: {
+  167 |                     "Authorization": `${config.nucleusPortalToken}`
+  168 |                 }
+  169 |             });
+  170 |
+  171 |             await logResponse(deleteResponse, testInfo, "DELETE");
+  172 |             const deleteStatusCode = deleteResponse.status();
+  173 |             expect(deleteStatusCode).toBe(204);
+  174 |
+  175 |             console.log(`Exchange with ID ${exchangeId} has been deleted successfully.`);
+  176 |         });
+  177 |
+  178 |         // Step 6: Verify the Deletion with GET
+  179 |         await test.step('Step 6: Verify the Deletion with GET', async () => {
+  180 |             const getAfterDeleteResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges/${exchangeId}`, {
+  181 |                 headers: {
+  182 |                     "Authorization": `${config.nucleusPortalToken}`
+  183 |                 }
+  184 |             });
+  185 |
+  186 |             await logResponse(getAfterDeleteResponse, testInfo, "GET");
+  187 |             const getAfterDeleteStatusCode = getAfterDeleteResponse.status();
+  188 |             expect(getAfterDeleteStatusCode).toBe(404);
+  189 |
+  190 |             console.log(`Verified Exchange Deletion (404): ${exchangeId}`);
+  191 |         });
+  192 |     });
+```

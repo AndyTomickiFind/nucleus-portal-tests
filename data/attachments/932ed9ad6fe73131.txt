@@ -1,0 +1,269 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PARTNERS/EXCHANGES subpage - dev >> Check Random Exchanges and a Specific Exchange
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:32:9
+
+# Error details
+
+```
+Error: User is authorized to access this resource
+
+expect(received).not.toContain(expected) // indexOf
+
+Expected value: not 401
+Received array:     [401, 403]
+    at getExchanges (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:42:87)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:51:35
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:50:43
+```
+
+# Page snapshot
+
+```yaml
+- alert
+- link "Home":
+  - button "Home"
+- link "Toplists":
+  - button "Toplists"
+- link "Short Reviews":
+  - button "Short Reviews"
+- button "Partners"
+- button "Database"
+- button "Admin"
+- button "User profile picture QA":
+  - img "User profile picture"
+  - paragraph: QA
+- heading "Exchanges" [level=5]
+- text: Name
+- textbox "Name"
+- grid:
+  - row "Name Status Created at Updated at Sort":
+    - columnheader "Name"
+    - columnheader "Status"
+    - columnheader "Created at"
+    - columnheader "Updated at Sort":
+      - text: Updated at
+      - button "Sort"
+  - rowgroup:
+    - row "[QA] 3 Exchange used by ROBOTS - do not edit - 2025-04-10T11:40:43.524Z Published 6/14/2024, 7:30:53 AM 4/10/2025, 11:40:47 AM":
+      - gridcell "[QA] 3 Exchange used by ROBOTS - do not edit - 2025-04-10T11:40:43.524Z"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/10/2025, 11:40:47 AM"
+    - row "Coinbase Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Coinbase"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Binance Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Binance"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Coincheck Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Coincheck"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Gate.io Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Gate.io"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Binance US Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Binance US"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Bitfinex Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Bitfinex"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Name Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Name"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Bithumb Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Bithumb"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Bitstamp Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Bitstamp"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Crypto.com Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Crypto.com"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+    - row "Gemini Published 6/14/2024, 7:30:53 AM 4/9/2025, 10:00:42 PM":
+      - gridcell "Gemini"
+      - gridcell "Published"
+      - gridcell "6/14/2024, 7:30:53 AM"
+      - gridcell "4/9/2025, 10:00:42 PM"
+- paragraph: "Rows per page:"
+- 'combobox "Rows per page: 15"': "15"
+- paragraph: 1–15 of 73
+- button "Go to previous page" [disabled]
+- button "Go to next page"
+- link "New":
+  - button "New"
+```
+
+# Test source
+
+```ts
+   1 | import {test} from "../../fixtures/fixtures";
+   2 | import {expect} from "@playwright/test";
+   3 | import config from "../../../playwright.config";
+   4 | import {timeDifference} from "../../common/helpers";
+   5 |
+   6 | test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.name}`]}, () => {
+   7 |
+   8 |     test.beforeEach(async ({ExchangesPage, menuComponent}) => {
+   9 |         await ExchangesPage.page.goto(`https://${config.baseUrl}`);
+   10 |         await menuComponent.menubarItem_Partners.click();
+   11 |         await menuComponent.subPartnersMenuItem_Exchanges.click();
+   12 |         await ExchangesPage.page.waitForLoadState();
+   13 |     });
+   14 |
+   15 |     test('Check the title and url', async ({ExchangesPage}) => {
+   16 |         await ExchangesPage.page.waitForURL('**/partners/exchanges');
+   17 |         expect(await ExchangesPage.page.title()).toBe('Nucleus Portal');
+   18 |         expect(ExchangesPage.page.url()).toBe(`https://${config.baseUrl}/partners/exchanges`);
+   19 |     });
+   20 |
+   21 |     test('Verify that the expected menu items are displayed and clickable', async ({menuComponent}) => {
+   22 |         await menuComponent.checkMenuItems();
+   23 |         await menuComponent.checkDataPointItems();
+   24 |     });
+   25 |
+   26 |     test('Check the data grid', async ({components}) => {
+   27 |         await test.step("Data grid table to be visible", async () => {
+   28 |             await expect(components.dataGrid).toBeVisible();
+   29 |         });
+   30 |     });
+   31 |
+   32 |     test('Check Random Exchanges and a Specific Exchange', async ({request, components,ExchangesPage,menuComponent}) => {
+   33 |         async function getExchanges(): Promise<string[]> {
+   34 |             const response = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/exchanges`, {
+   35 |                 params: {size: 10000},
+   36 |                 headers: {
+   37 |                     "Authorization": `${config.nucleusPortalToken}`,
+   38 |                     "Content-Type": "application/json"
+   39 |                 }
+   40 |             });
+   41 |
+>  42 |             expect.soft([401, 403], "User is authorized to access this resource").not.toContain(response.status());
+      |                                                                                       ^ Error: User is authorized to access this resource
+   43 |             expect(response.status(), "Response status is expected to be 200, was " + response.status()).toBe(200);
+   44 |
+   45 |             const data = await response.json();
+   46 |             return data.items.map((item) => item.name);
+   47 |         }
+   48 |
+   49 |         // Randomly select 5 exchanges
+   50 |         const randomExchanges: string[] = await (async () => {
+   51 |             const allExchanges = (await getExchanges()).filter(exchange => !exchange.toLowerCase().includes("do not edit")); // Exclude exchanges with "do not edit" in the name
+   52 |             const selectedExchanges = new Set<string>();
+   53 |             while (selectedExchanges.size < 5 && allExchanges.length > selectedExchanges.size) {
+   54 |                 const randomExchange = allExchanges[Math.floor(Math.random() * allExchanges.length)];
+   55 |                 if (!selectedExchanges.has(randomExchange)) {
+   56 |                     selectedExchanges.add(randomExchange);
+   57 |                 }
+   58 |             }
+   59 |             return [...Array.from(selectedExchanges)];
+   60 |         })();
+   61 |
+   62 |         for (const exchangeName of randomExchanges) {
+   63 |             await test.step(`Testing Exchange "${exchangeName}"`, async () => {
+   64 |                 await test.step("Search for the Exchange", async () => {
+   65 |                     await menuComponent.menubarItem_Partners.click();
+   66 |                     await menuComponent.subPartnersMenuItem_Exchanges.click();
+   67 |                     await ExchangesPage.filterByExchangeName(exchangeName);
+   68 |                     await expect.soft(components.dataGridCell("name", 1)).toBeVisible();
+   69 |                     await expect.soft(components.dataGridCell("status", 1)).toBeVisible();
+   70 |                     await expect.soft(components.dataGridCell("createdAt", 1)).toBeVisible();
+   71 |                     await expect.soft(components.dataGridCell("updatedAt", 1)).toBeVisible();
+   72 |                 });
+   73 |
+   74 |                 await ExchangesPage.openExchange(exchangeName);
+   75 |
+   76 |                 await test.step("Check header dropdowns", async () => {
+   77 |                         await expect.soft(ExchangesPage.selectedDomainsDropdown).toBeVisible();
+   78 |                         await expect.soft(ExchangesPage.selectedContentLanguagesDropdown).toBeVisible();
+   79 |                         await expect.soft(ExchangesPage.statusDropdown).toBeVisible();
+   80 |                     }
+   81 |                 );
+   82 |
+   83 |                 await test.step("Check all accordion dropdowns", async () => {
+   84 |                     const dropdowns = [
+   85 |                         'details-header',
+   86 |                         'images-header',
+   87 |                         'scores-header',
+   88 |                         'reviewBy-header',
+   89 |                         'insurance-header',
+   90 |                         'prosCons-header',
+   91 |                         'fees-header',
+   92 |                         'extras-header',
+   93 |                     ];
+   94 |                     for (const dropdown of dropdowns) {
+   95 |                         await components.openDropdown(dropdown);
+   96 |                         await expect.soft(components.dropdownHeader(dropdown)).toBeVisible();
+   97 |                     }
+   98 |                 });
+   99 |
+  100 |                 await test.step("Check the Tabs", async () => {
+  101 |                     const tabs = ['General Information', 'Datapoints', 'Affiliate Links'];
+  102 |                     for (const tab of tabs) {
+  103 |                         const tabLocator = ExchangesPage.getTabLocator(tab);
+  104 |                         await tabLocator.click();
+  105 |                     }
+  106 |                 });
+  107 |             });
+  108 |         }
+  109 |     });
+  110 |
+  111 |     test('Pagination and Data Grid items', async ({components}) => {
+  112 |         await test.step("Select 25 items per page", async () => {
+  113 |             await components.checkRowsInDataGrid(25, ["name", "createdAt", "updatedAt"]);
+  114 |             await expect(components.displayedRowsLabel).toContainText("1–25 of ");
+  115 |         });
+  116 |         await test.step("Select 15 items per page", async () => {
+  117 |             await components.checkRowsInDataGrid(15, ["name", "createdAt", "updatedAt"]);
+  118 |             await expect(components.displayedRowsLabel).toContainText("1–15 of ");
+  119 |         });
+  120 |         await test.step("Select 10 items per page", async () => {
+  121 |             await components.checkRowsInDataGrid(10, ["name", "createdAt", "updatedAt"]);
+  122 |             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
+  123 |         });
+  124 |         await test.step("Check Next Page and Previous Page buttons", async () => {
+  125 |             await components.nextPageButton.click();
+  126 |             await expect(components.displayedRowsLabel).toContainText("11–20 of ");
+  127 |             await components.nextPageButton.click();
+  128 |             await expect(components.displayedRowsLabel).toContainText("21–30 of ");
+  129 |             await components.previousPageButton.click();
+  130 |             await expect(components.displayedRowsLabel).toContainText("11–20 of ");
+  131 |             await components.previousPageButton.click();
+  132 |             await expect(components.displayedRowsLabel).toContainText("1–10 of ");
+  133 |         });
+  134 |     });
+  135 |
+  136 |     test('Update/edit a Specific Exchange', async ({components, ExchangesPage, menuComponent}) => {
+  137 |         const exchangeName = `[QA] 3 Exchange used by ROBOTS - do not edit`;
+  138 |         await test.step(`Updating Exchange "${exchangeName}"`, async () => {
+  139 |
+  140 |             await menuComponent.menubarItem_Partners.click();
+  141 |             await menuComponent.subPartnersMenuItem_Exchanges.click();
+  142 |             await ExchangesPage.openExchange(exchangeName);
+```

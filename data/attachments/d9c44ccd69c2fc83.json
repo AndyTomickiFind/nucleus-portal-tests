@@ -1,0 +1,14 @@
+{
+  "landingPage": "/toplists",
+  "failedCharacters": [
+    ">",
+    "(",
+    "[",
+    "$",
+    ".",
+    "g",
+    ".",
+    "-",
+    "@"
+  ]
+}

@@ -1,0 +1,159 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API payment-types - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud_api_paymentTypes.spec.ts:10:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud_api_paymentTypes.spec.ts:32:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud_api_paymentTypes.spec.ts:12:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from '../../../playwright.config';
+   4 |
+   5 | test.describe(`CRUD e2e API payment-types - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let paymentTypeId: string;
+   7 |     let paymentTypeName: string;
+   8 |     let updatedPaymentTypeName: string;
+   9 |
+   10 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   11 |         // Step 1: Create a New Payment Type
+   12 |         await test.step('Step 1: Create a New Payment Type', async () => {
+   13 |             paymentTypeName = `[QA] RoboPaymentType - ${crypto.randomUUID()}`;
+   14 |
+   15 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types`, {
+   16 |                 headers: {
+   17 |                     Authorization: `${config.nucleusPortalToken}`,
+   18 |                     'Content-Type': 'application/json',
+   19 |                 },
+   20 |                 data: {
+   21 |                     name: [
+   22 |                         {
+   23 |                             language: 'en',
+   24 |                             text: paymentTypeName,
+   25 |                         },
+   26 |                     ],
+   27 |                 },
+   28 |             });
+   29 |
+   30 |             await logResponse(createResponse, testInfo, 'POST');
+   31 |             const createStatusCode = createResponse.status();
+>  32 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   33 |
+   34 |             const responseBody = await createResponse.json();
+   35 |             paymentTypeId = responseBody._id; // Assuming `_id` is returned in the response
+   36 |             expect(paymentTypeId).toBeTruthy();
+   37 |             expect.soft(responseBody.name[0].text).toBe(paymentTypeName); // Verifying name with language
+   38 |             console.log(`Created Payment Type ID: ${paymentTypeId}`);
+   39 |         });
+   40 |
+   41 |         // Step 2: Verify the created payment type appears in the list of all payment types
+   42 |         await test.step('Step 2: Verify the Payment Type is in the list of all payment types', async () => {
+   43 |             const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types?page=0&size=100&sortField=createdAt&sortOrder=desc&name=${paymentTypeName}`, {
+   44 |                 headers: {
+   45 |                     Authorization: `${config.nucleusPortalToken}`,
+   46 |                 },
+   47 |             });
+   48 |
+   49 |             await logResponse(getAllResponse, testInfo, 'GET');
+   50 |             const getAllStatusCode = getAllResponse.status();
+   51 |             expect(getAllStatusCode).toBe(200);
+   52 |
+   53 |             const responseBody = await getAllResponse.json();
+   54 |
+   55 |             expect.soft(responseBody[0]).toHaveProperty('_id', paymentTypeId);
+   56 |         });
+   57 |
+   58 |         // Step 3: Verify the Created Payment Type with GET
+   59 |         await test.step('Step 3: Verify the Created Payment Type with GET', async () => {
+   60 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types/${paymentTypeId}`, {
+   61 |                 headers: {
+   62 |                     Authorization: `${config.nucleusPortalToken}`,
+   63 |                 },
+   64 |             });
+   65 |
+   66 |             await logResponse(getCreatedResponse, testInfo, 'GET');
+   67 |             const getCreatedStatusCode = getCreatedResponse.status();
+   68 |             expect(getCreatedStatusCode).toBe(200);
+   69 |
+   70 |             const getCreatedBody = await getCreatedResponse.json();
+   71 |             expect.soft(getCreatedBody).toHaveProperty('_id', paymentTypeId);
+   72 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('text', paymentTypeName); // Verifying translated text
+   73 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('language', 'en'); // Verifying language
+   74 |             console.log(`Verified Payment Type via GET: ${paymentTypeId}`);
+   75 |         });
+   76 |
+   77 |         // Step 4: Update the Payment Type using PATCH
+   78 |         await test.step('Step 4: Update the Payment Type using PATCH', async () => {
+   79 |             updatedPaymentTypeName = `${paymentTypeName} - Updated`;
+   80 |
+   81 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types/${paymentTypeId}`, {
+   82 |                 headers: {
+   83 |                     Authorization: `${config.nucleusPortalToken}`,
+   84 |                     'Content-Type': 'application/json',
+   85 |                 },
+   86 |                 data: {
+   87 |                     name: [
+   88 |                         {
+   89 |                             language: 'en',
+   90 |                             text: updatedPaymentTypeName,
+   91 |                         },
+   92 |                     ],
+   93 |                 },
+   94 |             });
+   95 |
+   96 |             await logResponse(patchResponse, testInfo, 'PATCH');
+   97 |             const patchStatusCode = patchResponse.status();
+   98 |             expect(patchStatusCode).toBe(204);
+   99 |
+  100 |             console.log(`Updated Payment Type Name via PATCH: ${updatedPaymentTypeName}`);
+  101 |         });
+  102 |
+  103 |         // Step 5: Verify the Updated Payment Type with GET
+  104 |         await test.step('Step 5: Verify the Updated Payment Type with GET', async () => {
+  105 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types/${paymentTypeId}`, {
+  106 |                 headers: {
+  107 |                     Authorization: `${config.nucleusPortalToken}`,
+  108 |                 },
+  109 |             });
+  110 |
+  111 |             await logResponse(getUpdatedResponse, testInfo, 'GET');
+  112 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  113 |             expect(getUpdatedStatusCode).toBe(200);
+  114 |
+  115 |             const getUpdatedBody = await getUpdatedResponse.json();
+  116 |             expect(getUpdatedBody).toHaveProperty('_id', paymentTypeId);
+  117 |             expect(getUpdatedBody.name[0]).toHaveProperty('text', updatedPaymentTypeName); // Verifying translated text
+  118 |             expect(getUpdatedBody.name[0]).toHaveProperty('language', 'en'); // Verifying language
+  119 |             console.log(`Verified Updated Payment Type via GET: ${paymentTypeId}`);
+  120 |         });
+  121 |
+  122 |         // Step 6: Delete the Payment Type
+  123 |         await test.step('Step 6: Delete the Payment Type', async () => {
+  124 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/payment-types/${paymentTypeId}`, {
+  125 |                 headers: {
+  126 |                     Authorization: `${config.nucleusPortalToken}`,
+  127 |                 },
+  128 |             });
+  129 |
+  130 |             await logResponse(deleteResponse, testInfo, 'DELETE');
+  131 |             const deleteStatusCode = deleteResponse.status();
+  132 |             expect(deleteStatusCode).toBe(204);
+```

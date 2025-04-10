@@ -1,0 +1,165 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CRUD e2e API currencies - dev >> CRUD operations executed sequentially
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_currencies.spec.ts:12:9
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_currencies.spec.ts:38:38
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/api/nucleusPortalAPI/crud-api_currencies.spec.ts:14:9
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from '@playwright/test';
+   2 | import { logResponse } from '../../../src/logger';
+   3 | import config from '../../../playwright.config';
+   4 |
+   5 | test.describe(`CRUD e2e API currencies - ${config.name}`, { tag: [`@${config.name}`] }, () => {
+   6 |     let currencyId: string;
+   7 |     let currencyName: string;
+   8 |     let updatedCurrencyName: string;
+   9 |     let shortName: string;
+   10 |     let logo: string;
+   11 |
+   12 |     test(`CRUD operations executed sequentially`, async ({ request }, testInfo) => {
+   13 |         // Step 1: Create a New Currency
+   14 |         await test.step('Step 1: Create a New Currency', async () => {
+   15 |             currencyName = `[QA] RoboCurrency - ${crypto.randomUUID()}`;
+   16 |             shortName = `[QA]CURR-${Math.floor(Math.random() * 10000)}`;
+   17 |             logo = `logo_${Math.floor(Math.random() * 10000)}`; // Example logo placeholder
+   18 |
+   19 |             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/currencies`, {
+   20 |                 headers: {
+   21 |                     Authorization: `${config.nucleusPortalToken}`,
+   22 |                     'Content-Type': 'application/json',
+   23 |                 },
+   24 |                 data: {
+   25 |                     name: [
+   26 |                         {
+   27 |                             language: 'en',
+   28 |                             text: currencyName,
+   29 |                         },
+   30 |                     ],
+   31 |                     shortName: shortName,
+   32 |                     logo: logo,
+   33 |                 },
+   34 |             });
+   35 |
+   36 |             await logResponse(createResponse, testInfo, 'POST');
+   37 |             const createStatusCode = createResponse.status();
+>  38 |             expect(createStatusCode).toBe(201);
+      |                                      ^ Error: expect(received).toBe(expected) // Object.is equality
+   39 |
+   40 |             const responseBody = await createResponse.json();
+   41 |             currencyId = responseBody._id; // Assuming `_id` is returned in the response
+   42 |             expect(currencyId).toBeTruthy();
+   43 |             expect.soft(responseBody.name[0].text).toBe(currencyName); // Verifying name with language
+   44 |             expect.soft(responseBody.shortName).toBe(shortName);
+   45 |             console.log(`Created Currency ID: ${currencyId}`);
+   46 |         });
+   47 |
+   48 |         // Step 2: Verify the created currency appears in the list of all currencies
+   49 |         await test.step('Step 2: Verify the Currency is in the list of all currencies', async () => {
+   50 |             const getAllResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/currencies?page=0&size=100&sortField=createdAt&sortOrder=desc&name=${currencyName}`, {
+   51 |                 headers: {
+   52 |                     Authorization: `${config.nucleusPortalToken}`,
+   53 |                 },
+   54 |             });
+   55 |
+   56 |             await logResponse(getAllResponse, testInfo, 'GET');
+   57 |             const getAllStatusCode = getAllResponse.status();
+   58 |             expect(getAllStatusCode).toBe(200);
+   59 |
+   60 |             const responseBody = await getAllResponse.json();
+   61 |
+   62 |             expect(responseBody.items[0]._id, `New Currency must be in the list of all currencies: ${currencyId}`).toBe(currencyId);
+   63 |         });
+   64 |
+   65 |         // Step 3: Verify the Created Currency with GET
+   66 |         await test.step('Step 3: Verify the Created Currency with GET', async () => {
+   67 |             const getCreatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/currencies/${currencyId}`, {
+   68 |                 headers: {
+   69 |                     Authorization: `${config.nucleusPortalToken}`,
+   70 |                 },
+   71 |             });
+   72 |
+   73 |             await logResponse(getCreatedResponse, testInfo, 'GET');
+   74 |             const getCreatedStatusCode = getCreatedResponse.status();
+   75 |             expect(getCreatedStatusCode).toBe(200);
+   76 |
+   77 |             const getCreatedBody = await getCreatedResponse.json();
+   78 |             expect.soft(getCreatedBody).toHaveProperty('_id', currencyId);
+   79 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('text', currencyName); // Verifying translated text
+   80 |             expect.soft(getCreatedBody.name[0]).toHaveProperty('language', 'en'); // Verifying language
+   81 |             expect.soft(getCreatedBody).toHaveProperty('shortName', shortName);
+   82 |             expect.soft(getCreatedBody).toHaveProperty('logo', logo);
+   83 |             console.log(`Verified Currency via GET: ${currencyId}`);
+   84 |         });
+   85 |
+   86 |         // Step 4: Update the Currency using PATCH
+   87 |         await test.step('Step 4: Update the Currency using PATCH', async () => {
+   88 |             updatedCurrencyName = `${currencyName} - Updated`;
+   89 |
+   90 |             const patchResponse = await request.patch(`https://${config.nucleusPortalServiceUri}/api/v1/currencies/${currencyId}`, {
+   91 |                 headers: {
+   92 |                     Authorization: `${config.nucleusPortalToken}`,
+   93 |                     'Content-Type': 'application/json',
+   94 |                 },
+   95 |                 data: {
+   96 |                     name: [
+   97 |                         {
+   98 |                             language: 'en',
+   99 |                             text: updatedCurrencyName,
+  100 |                         },
+  101 |                     ],
+  102 |                     shortName: `${shortName}-UPD`, // Example update to short name
+  103 |                     logo: `${logo}_updated`, // Updated logo
+  104 |                 },
+  105 |             });
+  106 |
+  107 |             await logResponse(patchResponse, testInfo, 'PATCH');
+  108 |             const patchStatusCode = patchResponse.status();
+  109 |             expect(patchStatusCode).toBe(204);
+  110 |
+  111 |             console.log(`Updated Currency Name via PATCH: ${updatedCurrencyName}`);
+  112 |         });
+  113 |
+  114 |         // Step 5: Verify the Updated Currency with GET
+  115 |         await test.step('Step 5: Verify the Updated Currency with GET', async () => {
+  116 |             const getUpdatedResponse = await request.get(`https://${config.nucleusPortalServiceUri}/api/v1/currencies/${currencyId}`, {
+  117 |                 headers: {
+  118 |                     Authorization: `${config.nucleusPortalToken}`,
+  119 |                 },
+  120 |             });
+  121 |
+  122 |             await logResponse(getUpdatedResponse, testInfo, 'GET');
+  123 |             const getUpdatedStatusCode = getUpdatedResponse.status();
+  124 |             expect(getUpdatedStatusCode).toBe(200);
+  125 |
+  126 |             const getUpdatedBody = await getUpdatedResponse.json();
+  127 |             expect(getUpdatedBody).toHaveProperty('_id', currencyId);
+  128 |             expect(getUpdatedBody.name[0]).toHaveProperty('text', updatedCurrencyName); // Verifying translated text
+  129 |             expect(getUpdatedBody).toHaveProperty('shortName', `${shortName}-UPD`);
+  130 |             expect(getUpdatedBody).toHaveProperty('logo', `${logo}_updated`);
+  131 |             console.log(`Verified Updated Currency via GET: ${currencyId}`);
+  132 |         });
+  133 |
+  134 |         // Step 6: Delete the Currency
+  135 |         await test.step('Step 6: Delete the Currency', async () => {
+  136 |             const deleteResponse = await request.delete(`https://${config.nucleusPortalServiceUri}/api/v1/currencies/${currencyId}`, {
+  137 |                 headers: {
+  138 |                     Authorization: `${config.nucleusPortalToken}`,
+```
