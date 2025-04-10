@@ -47,10 +47,9 @@ const defaultConfig: PlaywrightTestConfig = {
     forbidOnly: !!process.env.CI,
 
     /* Retry configuration. See https://playwright.dev/docs/test-configuration#retry-failed-tests. */
-    retries: process.env.CI ? 2 : 0,
+    retries: process.env.CI ? 4 : 2,
 
-    /* Opt out of parallel tests on CI. */
-    workers: process.env.CI ? 6 : undefined,
+    workers: process.env.CI ? 6 : 6,
 
 
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -61,7 +60,7 @@ const defaultConfig: PlaywrightTestConfig = {
                 outputFile: `./playwright-report/results.json`
             }],
             ['html', {outputFolder: `playwright-report`, open: 'never'}],
-          //  ['blob', {outputFile: `report.zip`}],
+            ['blob', {outputFile: `report.zip`}],
             ['github'],
             ['allure-playwright']
         ] :
