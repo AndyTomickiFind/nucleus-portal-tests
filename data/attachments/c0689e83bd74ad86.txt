@@ -1,6 +1,0 @@
-Created Order Type ID: 67f7bf3bc844c94cafd0de1e
-Verified Order Type via GET: 67f7bf3bc844c94cafd0de1e
-Updated Order Type Name via PATCH: [QA] Order Type created by robots cf112051-a737-4c1a-8975-b21360655923 - Updated
-Verified Updated Order Type via GET: 67f7bf3bc844c94cafd0de1e
-Order Type with ID 67f7bf3bc844c94cafd0de1e has been deleted successfully.
-Verified Order Type Deletion (404): 67f7bf3bc844c94cafd0de1e

@@ -1,6 +1,0 @@
-Created Casino ID: 67f7bf36c844c94cafd0dc6d
-Verified Casino via GET: 67f7bf36c844c94cafd0dc6d
-Updated Casino: Name - [QA] Casino Created by eb5428ce-c43d-4b85-862b-741f949eecd2 - Updated
-Verified Updated Casino via GET: 67f7bf36c844c94cafd0dc6d
-Casino with ID 67f7bf36c844c94cafd0dc6d has been deleted successfully.
-Verified Casino Deletion (404): 67f7bf36c844c94cafd0dc6d

@@ -1,0 +1,6 @@
+Created Community Social ID: 67f7c168c844c94caff6e159
+Verified Community Social via GET: 67f7c168c844c94caff6e159
+Updated Community Social Name via PATCH: [QA] Community Social created by robots 950670a5-f35f-4852-bf68-9a4b80c2b4a9 - Updated
+Verified Updated Community Social via GET: 67f7c168c844c94caff6e159
+Community Social with ID 67f7c168c844c94caff6e159 has been deleted successfully.
+Verified Community Social Deletion (404): 67f7c168c844c94caff6e159

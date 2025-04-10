@@ -1,0 +1,216 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: PARTNERS/EXCHANGES subpage - dev >> Exchange Allowed/Excluded Countries
+- Location: /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:191:9
+
+# Error details
+
+```
+TimeoutError: locator.dblclick: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator('//div[@data-rowindex="0"]')
+    - locator resolved to <div role="row" data-rowindex="0" aria-rowindex="2" aria-selected="false" data-id="674eebc3976c1ca6dc9b9ad7" class="MuiDataGrid-row MuiDataGrid-row--firstVisible MuiDataGrid-row--lastVisible">…</div>
+  - attempting dblclick action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - element is not visible
+  - retrying dblclick action
+    - waiting for element to be visible, enabled and stable
+  - element was detached from the DOM, retrying
+
+    at ExchangesPage.dblClickDataGridRow (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/page-objects/exchanges.page.ts:68:19)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/page-objects/exchanges.page.ts:109:32
+    at ExchangesPage.openExchange (/home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/page-objects/exchanges.page.ts:103:9)
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:202:13
+    at /home/runner/work/nucleus-portal-tests/nucleus-portal-tests/tests/sanity/nucleus-portal/exchangesPage.spec.ts:199:9
+```
+
+# Page snapshot
+
+```yaml
+- alert
+- link "Home":
+  - button "Home"
+- link "Toplists":
+  - button "Toplists"
+- link "Short Reviews":
+  - button "Short Reviews"
+- button "Partners"
+- button "Database"
+- button "Admin"
+- button "User profile picture QA":
+  - img "User profile picture"
+  - paragraph: QA
+- heading "Update Exchange" [level=5]
+- text: Selected Domains *
+- button "[QA] GeneralTestDomain"
+- combobox "Selected Domains *"
+- button "Open"
+- text: Selected Content Languages *
+- button "English"
+- combobox "Selected Content Languages *"
+- button "Open"
+- text: Status *
+- combobox "Status * Published": Published
+- tablist "Versions tabs":
+  - tab "General Information" [selected]
+  - tab "Datapoints"
+  - tab "Affiliate Links"
+- tabpanel "General Information":
+  - text: Name *
+  - textbox "Name *": "[QA] 4 Exchange used by ROBOTS - do not edit"
+  - text: Homepage URL *
+  - textbox "Homepage URL *": https://hp
+  - heading "Details" [level=3]:
+    - button "Details"
+  - heading "Images" [level=3]:
+    - button "Images"
+  - heading "Scores" [level=3]:
+    - button "Scores"
+  - heading "Review By" [level=3]:
+    - button "Review By"
+  - heading "Insurance" [level=3]:
+    - button "Insurance"
+  - heading "Pros and Cons" [level=3]:
+    - button "Pros and Cons"
+  - heading "Fees" [level=3]:
+    - button "Fees"
+  - heading "Extras" [level=3]:
+    - button "Extras"
+- button "Cancel"
+- button "Save"
+```
+
+# Test source
+
+```ts
+   1 | import {BasePage} from "./base.page";
+   2 | import {BrowserContext, expect, Locator, Page, TestInfo} from "@playwright/test";
+   3 | import {test} from "../fixtures/fixtures";
+   4 |
+   5 | export class ExchangesPage extends BasePage {
+   6 |     readonly testInfo: TestInfo;
+   7 |     readonly topHeader: Locator;
+   8 |     readonly exchangeNameFilterField: Locator;
+   9 |     readonly sortButton: Locator;
+   10 |     readonly saveButton: Locator;
+   11 |     readonly newExchangeButton: Locator;
+   12 |     readonly firstDomainButton: Locator;
+   13 |     readonly domainButton: (label: string) => Locator;
+   14 |     readonly exchangeNameField: Locator;
+   15 |     readonly clearFieldButton: (name: string) => Locator;
+   16 |     readonly exchangeDatapointsDropdownField: (label: string) => Locator;
+   17 |     readonly exchangeDatapointsValidationLabel: (name: string) => Locator;
+   18 |     readonly dataGridRow: (rowIndex: number) => Locator;
+   19 |     readonly allowedCountriesField : Locator;
+   20 |     readonly excludedCountriesField : Locator;
+   21 |     readonly allowedCountriesSelecAllButton : Locator;
+   22 |     readonly excludedCountriesSelecAllButton : Locator;
+   23 |     readonly selectedContentLanguagesDropdown: Locator;
+   24 |     readonly selectedDomainsDropdown: Locator;
+   25 |     readonly statusDropdown: Locator;
+   26 |
+   27 |
+   28 |
+   29 |     constructor(page: Page, context: BrowserContext, testInfo: TestInfo) {
+   30 |         super(page, context);
+   31 |         this.testInfo = testInfo;
+   32 |
+   33 |         // Mapping locators in the constructor
+   34 |         this.topHeader = page.locator('//h5');
+   35 |         this.exchangeNameFilterField = page.locator(`//input[@id='exchange-name-filter-field']`);
+   36 |         this.sortButton = page.locator("button[aria-label='Sort']");
+   37 |         this.saveButton = page.getByTestId(`exchange-submit-button`);
+   38 |         this.newExchangeButton = page.locator("button[data-testid='add-exchange-button']");
+   39 |         this.firstDomainButton = page.locator("//div[contains(@data-testid, 'exchange-bonuses-form-domain-chip-')]").first();
+   40 |         this.domainButton = (label: string) =>
+   41 |             page.locator(`//div[contains(@data-testid, 'exchange-bonuses-form-domain-chip-')and .='${label}']`);
+   42 |         this.exchangeNameField = page.locator('//input[@id="exchange-general-info-form-name"]');
+   43 |         this.clearFieldButton = (label: string) =>
+   44 |             this.exchangeDatapointsDropdownField(label).locator(" //*[@data-testid='CloseIcon']");
+   45 |         this.exchangeDatapointsDropdownField = (label: string) =>
+   46 |             page.locator(`//label[.='${label}']/..`);
+   47 |         this.exchangeDatapointsValidationLabel = (name: string) =>
+   48 |             page.locator(`//p[@id='exchange-datapoints-form-${name}-autocomplete-field-helper-text']`);
+   49 |         this.dataGridRow = (rowIndex: number) =>
+   50 |             page.locator(`//div[@data-rowindex="${rowIndex}"]`);
+   51 |
+   52 |         this.allowedCountriesField = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-field`);
+   53 |         this.excludedCountriesField = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-field`);
+   54 |         this.allowedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-allowed-countries-autocomplete-select-all-button`);
+   55 |         this.excludedCountriesSelecAllButton = page.getByTestId(`exchange-general-info-form-excluded-countries-autocomplete-select-all-button`);
+   56 |         this.selectedContentLanguagesDropdown = page.getByTestId(`exchange-content-languages-codes-autocomplete`);
+   57 |         this.selectedDomainsDropdown = page.getByTestId(`exchange-domains-autocomplete-field`);
+   58 |         this.statusDropdown = page.getByTestId(`exchange-status-select`);
+   59 |
+   60 |     }
+   61 |
+   62 |     /**
+   63 |      * Double-click a data grid row
+   64 |      * @param rowIndex - Index of the row to double-click (1-based index)
+   65 |      */
+   66 |     async dblClickDataGridRow(rowIndex: number) {
+   67 |         const row = this.dataGridRow(rowIndex);
+>  68 |         await row.dblclick();
+      |                   ^ TimeoutError: locator.dblclick: Timeout 8000ms exceeded.
+   69 |     }
+   70 |
+   71 |     /**
+   72 |      * Filter by Exchange Name
+   73 |      * @param exchangeName - Name of the exchange
+   74 |      */
+   75 |     async filterByExchangeName(exchangeName: string) {
+   76 |         await this.exchangeNameFilterField.fill(exchangeName);
+   77 |         await this.page.waitForLoadState('domcontentloaded');
+   78 |         await this.page.waitForTimeout(300);
+   79 |         await this.exchangeNameFilterField.press("Enter");
+   80 |     }
+   81 |
+   82 |     getTabLocator(tabName: string): Locator {
+   83 |         const tabTestId = `exchange-${tabName.toLowerCase().replace(/\s+/g, '-')}-tab`;
+   84 |         return this.page.locator(`button[data-testid='${tabTestId}']`);
+   85 |     }
+   86 |
+   87 |     async exchangeDatapointsClearField(fieldName: string) {
+   88 |         await test.step("Removing all items in: " + fieldName, async () => {
+   89 |             await this.exchangeDatapointsDropdownField(fieldName).click();
+   90 |             if (await this.exchangeDatapointsDropdownField(fieldName).getByTestId("CancelIcon").count() > 0) {
+   91 |                 await this.clearFieldButton(fieldName).click();
+   92 |             }
+   93 |             await this.page.keyboard.press("Escape");
+   94 |         });
+   95 |     }
+   96 |
+   97 |     async openExchange(exchangeName: string) {
+   98 |         await test.step("Search for the Exchange " + exchangeName, async () => {
+   99 |             await this.filterByExchangeName(exchangeName);
+  100 |         });
+  101 |
+  102 |         // Open the exchange details page
+  103 |         await test.step("Open the Exchange", async () => {
+  104 |             await this.page.waitForLoadState('domcontentloaded');
+  105 |             for (let attempt = 0; attempt < 3; attempt++) {
+  106 |                 if (await this.topHeader.textContent() === "Update Exchange") {
+  107 |                     break;
+  108 |                 } else {
+  109 |                     await this.dblClickDataGridRow(0);
+  110 |                     await this.page.waitForTimeout(350);
+  111 |                 }
+  112 |             }
+  113 |         });
+  114 |         await this.page.waitForLoadState('domcontentloaded');
+  115 |         await expect(this.topHeader).toBeVisible();
+  116 |         await expect(this.topHeader).toBeEnabled();
+  117 |         await expect.soft(this.topHeader).toContainText("Update Exchange");
+  118 |     }
+  119 |
+  120 | }
+```
