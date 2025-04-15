@@ -45,4 +45,4 @@ jobs:
         run: echo "${{secrets.DOT_ENV}}" > .env
 
       - name: Run Playwright tests
-        run: allurectl watch -- npx playwright test --config=playwright.config.ts --token=${{ ALLURE_TOKEN }}
+        run: allurectl watch -- npx playwright test --config=playwright.config.ts --token=${{ALLURE_TOKEN}}
