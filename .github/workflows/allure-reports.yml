@@ -43,8 +43,7 @@ jobs:
 
       - name: Run Playwright tests
         env:
-          ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
-          ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+          ALLURE_TOKEN: ${{secrets.ALLURE_TOKEN}}
           ALLURE_ENDPOINT: https://findco.testops.cloud/
           ALLURE_PROJECT_ID: 166
           ALLURE_RESULTS: allure-results
@@ -52,7 +51,6 @@ jobs:
           allurectl watch \
             -- npx playwright test --config=playwright.config.ts \
             --token="${{ env.ALLURE_TOKEN }}" \
-            --job-run-id="${{ env.ALLURE_JOB_RUN_ID }}" \
             --endpoint="${{ env.ALLURE_ENDPOINT }}" \
             --project-id="${{ env.ALLURE_PROJECT_ID }}" \
             --results-dir="${{ env.ALLURE_RESULTS }}"
