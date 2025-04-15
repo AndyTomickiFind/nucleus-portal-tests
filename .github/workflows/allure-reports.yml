@@ -39,7 +39,7 @@ jobs:
         uses: allure-framework/setup-allurectl@v1
         with:
           allure-endpoint: ${{ env.ALLURE_ENDPOINT }}
-          allure-token: ${{ secrets.ALLURE_TOKEN }}
+          allure-token: ${{ env.ALLURE_TOKEN }}
           allure-project-id: ${{ env.ALLURE_PROJECT_ID }}
 
       - name: Install dependencies
@@ -54,7 +54,7 @@ jobs:
       - name: Run Playwright tests
         run: |
           export ALLURE_ENDPOINT=${{ env.ALLURE_ENDPOINT }}
-          export ALLURE_TOKEN=${{ secrets.ALLURE_TOKEN }}
+          export ALLURE_TOKEN=${{ env.ALLURE_TOKEN }}
           export ALLURE_PROJECT_ID=${{ env.ALLURE_PROJECT_ID }}
           export ALLURE_LAUNCH_NAME="Hello, world"
           export ALLURE_RESULTS=${{ env.ALLURE_RESULTS }}
