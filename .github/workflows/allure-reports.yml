@@ -33,7 +33,12 @@ jobs:
           node-version: lts/*
 
       - name: Create .env file
-        run: echo "${{secrets.DOT_ENV}}" > .env
+        run: |
+          if [ "${{ github.event.inputs.environment }}" = "staging" ]; then
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env
+          elif [ "${{ github.event.inputs.environment }}" = "dev" ]; then
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env
+          fi
 
       - name: Ensure environment variables are set
         run: echo $ALLURE_TOKEN $ALLURE_JOB_RUN_ID $ALLURE_ENDPOINT $ALLURE_PROJECT_ID $ALLURE_RESULTS
