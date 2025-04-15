@@ -45,4 +45,4 @@ jobs:
         run: echo "${{secrets.DOT_ENV}}" > .env
 
       - name: Run Playwright tests
-        run: allurectl watch -- `TEST_ENV=${{github.event.inputs.environment}} npx playwright test`
+        run: allurectl watch -- `TEST_ENV=${{github.event.inputs.environment}} npx playwright test --config=$TEST_ENV.playwright.config.ts`
