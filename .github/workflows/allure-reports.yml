@@ -54,7 +54,7 @@ jobs:
       - name: Run Playwright tests
         run: |
           allurectl watch \
-            -- npx playwright test --config=playwright.config.ts \
+            -- "npx playwright test --config=playwright.config.ts" \
             --token=74a17ee3-3c96-45e5-acff-ca47464009ad \
             --job-run-id=${{ env.ALLURE_JOB_RUN_ID }} \
             --endpoint=${{ env.ALLURE_ENDPOINT }} \
