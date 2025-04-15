@@ -32,24 +32,20 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: Create .env file
+        run: echo "${{secrets.DOT_ENV}}" > .env
+
       - name: Ensure environment variables are set
         run: echo $ALLURE_TOKEN $ALLURE_JOB_RUN_ID $ALLURE_ENDPOINT $ALLURE_PROJECT_ID $ALLURE_RESULTS
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
-        with:
-          allure-endpoint: ${{ env.ALLURE_ENDPOINT }}
-          allure-token: ${{ env.ALLURE_TOKEN }}
-          allure-project-id: ${{ env.ALLURE_PROJECT_ID }}
 
       - name: Install dependencies
         run: npm ci
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-
-      - name: Create .env file
-        run: echo "${{secrets.DOT_ENV}}" > .env
 
       - name: Run Playwright tests
         run: |
