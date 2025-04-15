@@ -3,6 +3,7 @@
 /.idea/
 /allure-results/
 /node_modules/
-/.env
+/.env.dev
+/.env.staging
 /playwright/.auth/user.json
 /eslint.config.mjs

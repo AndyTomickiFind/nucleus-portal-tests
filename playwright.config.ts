@@ -8,7 +8,7 @@ dotenv.config();
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
 const headless = true;
-const runAuth = false;
+const runAuth = true;
 
 
 interface TestConfig extends PlaywrightTestConfig {
@@ -20,6 +20,9 @@ interface TestConfig extends PlaywrightTestConfig {
     defaultPaymentTypeId?: string;
     staticPage?: { username?: string; password?: string };
 }
+
+// Load the appropriate .env.dev file
+dotenv.config({ path: `.env.${environment}` });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -133,17 +136,8 @@ const defaultConfig: PlaywrightTestConfig = {
         {
             name: 'api-nucleus-portal',
             testMatch: 'api/nucleusPortalAPI/*.spec.ts',
-        },
-    ],
-
-    /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-    // outputDir: 'test-results/',
-
-    /* Run your local dev server before starting the tests */
-    // webServer: {
-    //   command: 'npm run start',
-    //   port: 3000,
-    // },
+        }
+    ]
 };
 
 
@@ -155,8 +149,8 @@ const prodConfig: TestConfig = {
     toplistServiceV1Uri: '',
     name: `prod`,
     staticPage: {
-        username: process.env.DEV_STATIC_PAGE_USER,
-        password: process.env.DEV_STATIC_PAGE_PASSWORD,
+        username: process.env.NUCLEUS_STATIC_PAGE_USER,
+        password: process.env.NUCLEUS_STATIC_PAGE_PASSWORD,
     },
     expect: {
         timeout: 6000
@@ -164,8 +158,8 @@ const prodConfig: TestConfig = {
     use: {
         ...defaultConfig.use,
         httpCredentials: {
-            username: process.env.PROD_USER,
-            password: process.env.PROD_PASS,
+            username: process.env.NUCLEUS_USER,
+            password: process.env.NUCLEUS_PASS,
         }
     }
 };
@@ -175,12 +169,12 @@ const devConfig: TestConfig = {
     baseUrl: 'portal.dev.nucleusmvp.com',
     toplistServiceV1Uri: 'dev.nucleusmvp.com',
     nucleusPortalServiceUri: 'portal-be.dev.nucleusmvp.com',
-    nucleusPortalToken: process.env.DEV_NUCLEUS_PORTAL_TOKEN,
-    defaultDomainId: process.env.DEV_DEFAULT_DOMAIN_ID,
-    defaultPaymentTypeId: process.env.DEV_DEFAULT_PAYMENT_TYPE,
+    nucleusPortalToken: process.env.NUCLEUS_PORTAL_TOKEN,
+    defaultDomainId: process.env.DEFAULT_DOMAIN_ID,
+    defaultPaymentTypeId: process.env.DEFAULT_PAYMENT_TYPE,
     staticPage: {
-        username: process.env.DEV_STATIC_PAGE_USER,
-        password: process.env.DEV_STATIC_PAGE_PASSWORD,
+        username: process.env.STATIC_PAGE_USER,
+        password: process.env.STATIC_PAGE_PASSWORD,
     },
     name: `dev`,
     expect: {
@@ -189,8 +183,8 @@ const devConfig: TestConfig = {
     use: {
         ...defaultConfig.use,
         httpCredentials: {
-            username: process.env.DEV_USER,
-            password: process.env.DEV_PASS,
+            username: process.env.NUCLEUS_USER,
+            password: process.env.NUCLEUS_PASS,
         }
     }
 };
@@ -200,12 +194,12 @@ const stagingConfig: TestConfig = {
     baseUrl: `portal.staging.nucleusmvp.com`,
     toplistServiceV1Uri: 'staging.nucleusmvp.com',
     nucleusPortalServiceUri: 'portal-be.staging.nucleusmvp.com',
-    nucleusPortalToken: process.env.STAGING_NUCLEUS_PORTAL_TOKEN,
-    defaultDomainId: process.env.STAGING_DEFAULT_DOMAIN_ID,
-    defaultPaymentTypeId: process.env.STAGING_DEFAULT_PAYMENT_TYPE,
+    nucleusPortalToken: process.env.NUCLEUS_PORTAL_TOKEN,
+    defaultDomainId: process.env.DEFAULT_DOMAIN_ID,
+    defaultPaymentTypeId: process.env.DEFAULT_PAYMENT_TYPE,
     staticPage: {
-        username: process.env.STAGING_STATIC_PAGE_USER,
-        password: process.env.STAGING_STATIC_PAGE_PASSWORD,
+        username: process.env.STATIC_PAGE_USER,
+        password: process.env.STATIC_PAGE_PASSWORD,
     },
     name: `staging`,
     expect: {
@@ -214,11 +208,10 @@ const stagingConfig: TestConfig = {
     use: {
         ...defaultConfig.use,
         httpCredentials: {
-            username: process.env.STAGING_USER,
-            password: process.env.STAGING_PASS,
+            username: process.env.NUCLEUS_USER,
+            password: process.env.NUCLEUS_PASS,
         },
     }
-
 };
 
 

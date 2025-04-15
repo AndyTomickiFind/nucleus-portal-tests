@@ -32,16 +32,13 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Create .env file
+      - name: Create .env.${{ github.event.inputs.environment }} file
         run: |
           if [ "${{ github.event.inputs.environment }}" = "staging" ]; then
-            echo "${{ secrets.STAGING_DOT_ENV }}" > .env
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.${{ github.event.inputs.environment }}
           elif [ "${{ github.event.inputs.environment }}" = "dev" ]; then
-            echo "${{ secrets.DEV_DOT_ENV }}" > .env
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env.${{ github.event.inputs.environment }}
           fi
-
-      - name: Ensure environment variables are set
-        run: echo $ALLURE_TOKEN $ALLURE_JOB_RUN_ID $ALLURE_ENDPOINT $ALLURE_PROJECT_ID $ALLURE_RESULTS
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
@@ -57,7 +54,7 @@ jobs:
           export ALLURE_ENDPOINT=${{ env.ALLURE_ENDPOINT }}
           export ALLURE_TOKEN=${{ secrets.ALLURE_TOKEN }}
           export ALLURE_PROJECT_ID=${{ env.ALLURE_PROJECT_ID }}
-          export ALLURE_LAUNCH_NAME="Hello, world"
+          export ALLURE_LAUNCH_NAME="Nucleus regression suite - ${{ github.event.inputs.environment }}"
           export ALLURE_RESULTS=${{ env.ALLURE_RESULTS }}
-          export ALLURE_LAUNCH_TAGS="release, critical"
-          allurectl watch -- `npx playwright test` 
+          export ALLURE_LAUNCH_TAGS=""
+          allurectl watch -- `TEST_ENV=${{github.event.inputs.environment}} npx playwright test` 
