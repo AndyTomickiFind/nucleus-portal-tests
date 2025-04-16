@@ -32,6 +32,7 @@ jobs:
           fi
           echo "sta: ${{ secrets.STAGING_DOT_ENV }}"
           echo "dev: ${{ secrets.DEV_DOT_ENV }}"
+          echo "tok: ${{ secrets.ALLURE_TOKEN }}"
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
