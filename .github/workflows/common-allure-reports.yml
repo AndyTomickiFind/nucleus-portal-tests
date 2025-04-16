@@ -23,7 +23,12 @@ jobs:
           node-version: lts/*
 
       - name: Create .env file
-        run: echo "${{ secrets[inputs.environment | upper]_DOT_ENV }}" > .env.${{ inputs.environment }}
+        run: |
+          if [ "${{ inputs.environment }}" == "dev" ]; then
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev
+          elif [ "${{ inputs.environment }}" == "staging" ]; then
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
+          fi
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
