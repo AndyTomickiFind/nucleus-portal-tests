@@ -12,8 +12,6 @@ on:
       ALLURE_TOKEN:
         required: true
 
-
-
 jobs:
   test:
     timeout-minutes: 15
@@ -26,9 +24,9 @@ jobs:
 
       - name: Create .env file
         run: |
-          if [ "${{ inputs.environment }}" == "dev" ]; then
+          if "${{ inputs.environment }}" == "dev" then
             echo ${{ secrets.DEV_DOT_ENV }} > .env
-          elif [ "${{ inputs.environment }}" == "staging" ]; then
+          elif "${{ inputs.environment }}" == "staging" then
             echo ${{ secrets.STAGING_DOT_ENV }} > .env
           fi
 
