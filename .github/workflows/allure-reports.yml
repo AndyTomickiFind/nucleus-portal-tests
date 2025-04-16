@@ -35,9 +35,9 @@ jobs:
       - name: Create .env.${{ github.event.inputs.environment }} file
         run: |
           if [ "${{ github.event.inputs.environment }}" = "staging" ]; then
-            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.${{ github.event.inputs.environment }}
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
           elif [ "${{ github.event.inputs.environment }}" = "dev" ]; then
-            echo "${{ secrets.DEV_DOT_ENV }}" > .env.${{ github.event.inputs.environment }}
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev
           fi
 
       - name: Install allurectl
