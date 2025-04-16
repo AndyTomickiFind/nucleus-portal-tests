@@ -22,12 +22,14 @@ jobs:
         with:
           node-version: lts/*
 
+
       - name: Create .env file
+        if: ${{ inputs.environment == 'dev' || inputs.environment == 'staging' }}
         run: |
-          if "${{ inputs.environment }}" == "dev" then
-            echo ${{ secrets.DEV_DOT_ENV }} > .env
-          elif "${{ inputs.environment }}" == "staging" then
-            echo ${{ secrets.STAGING_DOT_ENV }} > .env
+          if [ "${{ inputs.environment }}" == "dev" ]; then
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env
+          elif [ "${{ inputs.environment }}" == "staging" ]; then
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env
           fi
 
       - name: Install allurectl
