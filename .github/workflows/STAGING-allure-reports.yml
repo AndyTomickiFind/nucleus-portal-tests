@@ -1,6 +1,11 @@
 name: Playwright Tests - Allure TestOps (Staging)
 on:
   workflow_dispatch:
+    inputs:
+      ALLURE_JOB_RUN_ID:
+        description: ALLURE_JOB_RUN_ID service parameter. Leave blank.
+      ALLURE_USERNAME:
+        description: ALLURE_USERNAME service parameter. Leave blank.
 
 jobs:
   call-common:
