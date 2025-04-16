@@ -1,4 +1,4 @@
-name: Playwright Tests - Allure TestOps - ${{ github.event.inputs.environment }} ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+name: Playwright Tests - Allure TestOps
 on:
   workflow_dispatch:
     inputs:
@@ -17,7 +17,7 @@ on:
 
 env:
   ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
-  ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+  #ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
   ALLURE_ENDPOINT: https://findco.testops.cloud/
   ALLURE_PROJECT_ID: 166
   ALLURE_RESULTS: allure-results
@@ -46,8 +46,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - name: Install Playwright Browsers (only edge)
+        run: npx playwright install msedge --with-deps
 
       - name: Run Playwright tests
         run: |
