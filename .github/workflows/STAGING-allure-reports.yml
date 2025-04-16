@@ -7,11 +7,15 @@ on:
       ALLURE_USERNAME:
         description: ALLURE_USERNAME service parameter. Leave blank.
 
+env:
+  ALLURE_RESULTS: "allure-results"
+  ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+
 jobs:
   call-common:
     uses: ./.github/workflows/common-allure-reports.yml
     with:
       environment: staging
-      allure_launch_name: "Nucleus regression suite - staging"
+      allure_launch_name: "[Staging] Nucleus regression suite"
     secrets:
       ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
