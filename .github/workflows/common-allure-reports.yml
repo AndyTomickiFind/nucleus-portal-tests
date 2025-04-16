@@ -1,0 +1,45 @@
+name: Common Allure Reports
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      allure_launch_name:
+        required: true
+        type: string
+    secrets:
+      ALLURE_TOKEN:
+        required: true
+
+jobs:
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Create .env file
+        run: echo "${{ secrets[inputs.environment | upper]_DOT_ENV }}" > .env.${{ inputs.environment }}
+
+      - name: Install allurectl
+        uses: allure-framework/setup-allurectl@v1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers (only edge)
+        run: npx playwright install msedge --with-deps
+
+      - name: Run Playwright tests
+        run: |
+          export ALLURE_ENDPOINT=https://findco.testops.cloud/
+          export ALLURE_TOKEN=${{ secrets.ALLURE_TOKEN }}
+          export ALLURE_PROJECT_ID=166
+          export ALLURE_LAUNCH_NAME="${{ inputs.allure_launch_name }}"
+          export ALLURE_RESULTS=allure-results
+          export ALLURE_LAUNCH_TAGS=""
+          allurectl watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test`
