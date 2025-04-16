@@ -1,6 +1,0 @@
-Created Crypto Pair ID: 67f7d5bbb6b4b2f051484e46
-Verified Crypto Pair via GET: 67f7d5bbb6b4b2f051484e46
-Updated Crypto Pair Name via PATCH: [QA] Crypto Pair created by robots 146a2001-5e74-4515-a01b-f334153b3f83 - Updated
-Verified Updated Crypto Pair via GET: 67f7d5bbb6b4b2f051484e46
-Crypto Pair with ID 67f7d5bbb6b4b2f051484e46 has been deleted successfully.
-Verified Crypto Pair Deletion (404): 67f7d5bbb6b4b2f051484e46
