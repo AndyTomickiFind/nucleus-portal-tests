@@ -12,6 +12,10 @@ on:
       ALLURE_TOKEN:
         required: true
 
+env:
+  ALLURE_RESULTS: "allure-results"
+  ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
+
 jobs:
   test:
     timeout-minutes: 15
