@@ -1,4 +1,4 @@
-name: [Dev] Playwright Tests - Allure TestOps
+name: Dev - Playwright Tests - Allure TestOps
 on:
   workflow_dispatch:
     inputs:
