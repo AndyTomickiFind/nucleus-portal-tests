@@ -2,12 +2,6 @@ name: Common Allure Reports
 on:
   workflow_call:
     inputs:
-      ALLURE_JOB_RUN_ID:
-        description: ALLURE_JOB_RUN_ID service parameter. Leave blank.
-        type: string
-      ALLURE_USERNAME:
-        description: ALLURE_USERNAME service parameter. Leave blank.
-        type: string
       environment:
         required: true
         type: string

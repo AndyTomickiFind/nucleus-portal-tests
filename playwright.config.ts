@@ -8,7 +8,7 @@ dotenv.config();
 const environment = process.env.TEST_ENV || 'dev';
 const browser = 'msedge'; //firefox, chromium
 const headless = true;
-const runAuth = true;
+const runAuth = false;
 
 
 interface TestConfig extends PlaywrightTestConfig {
