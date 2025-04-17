@@ -27,6 +27,8 @@ jobs:
         run: |
             echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev;
             echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging;
+            echo "${{ secrets.STAGING_DOT_ENV }}"
+            echo "${{ secrets.SDEV_DOT_ENV }}"
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
