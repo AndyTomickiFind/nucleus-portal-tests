@@ -3,6 +3,6 @@
 /.idea/
 /allure-results/
 /node_modules/
-/.env.dev
-/.env.staging
+/.secrets/.env.dev
+/.secrets/.env.staging
 /eslint.config.mjs

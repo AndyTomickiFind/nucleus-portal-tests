@@ -12,6 +12,16 @@ env:
   ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
 
 jobs:
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Create .env file
+        run: echo ${{ secrets.STAGING_DOT_ENV }} > .env.staging;
   call-common:
     uses: ./.github/workflows/common-allure-reports.yml
     with:
