@@ -93,6 +93,7 @@ const defaultConfig: PlaywrightTestConfig = {
         // Setup project
         {
             name: 'setup',
+            dependencies: runAuth ? ['setup'] : [],
             testMatch: /.*\.setup\.ts/,
             use: {
                 ...devices['Desktop ' + browser], channel: browser,
@@ -105,7 +106,7 @@ const defaultConfig: PlaywrightTestConfig = {
 
         {
             name: 'nucleus-portal-sanity',
-            dependencies: runAuth ? ['setup'] : [],
+            //dependencies: runAuth ? ['setup'] : [],
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop ' + browser], channel: browser,
