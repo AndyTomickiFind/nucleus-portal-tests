@@ -16,6 +16,6 @@ jobs:
     uses: ./.github/workflows/common-allure-reports.yml
     with:
       environment: dev
-      allure_launch_name: "[Staging] Nucleus regression suite"
+      allure_launch_name: "[Dev] Nucleus regression suite"
     secrets:
       ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
