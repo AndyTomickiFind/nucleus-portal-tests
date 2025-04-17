@@ -21,8 +21,8 @@ interface TestConfig extends PlaywrightTestConfig {
     staticPage?: { username?: string; password?: string };
 }
 
-// Load the appropriate .env.dev file
-dotenv.config({ path: `.env.${environment}` });
+// Load the appropriate .env file
+dotenv.config({ path: `.env` });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
