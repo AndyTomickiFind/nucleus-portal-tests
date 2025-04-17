@@ -109,7 +109,7 @@ const defaultConfig: PlaywrightTestConfig = {
             testMatch: 'sanity/nucleus-portal/*.spec.ts',
             use: {
                 ...devices['Desktop ' + browser], channel: browser,
-                storageState: 'playwright/.auth/user.json',
+                storageState: `playwright/.auth/${environment}_user.json`,
                 viewport: {
                     width: 1600,
                     height: 800
@@ -122,7 +122,7 @@ const defaultConfig: PlaywrightTestConfig = {
             testMatch: 'sanity/toplists-ui/*.spec.ts',
             use: {
                 ...devices['Desktop ' + browser], channel: browser,
-                storageState: 'playwright/.auth/user.json',
+                storageState: `playwright/.auth/${environment}_user.json`,
                 viewport: {
                     width: 1600,
                     height: 800

@@ -4,7 +4,7 @@ import config from "../playwright.config";
 import {getOTP} from "./totpGenerator";
 
 
-const authFile = path.join(__dirname, '../playwright/.auth/user.json');
+const authFile = path.join(__dirname, `../playwright/.auth/${config.name === 'dev' ? 'dev_user.json' : 'staging_user.json'}`);
 
 setup('authenticate', async ({page}) => {
     await page.setExtraHTTPHeaders({
