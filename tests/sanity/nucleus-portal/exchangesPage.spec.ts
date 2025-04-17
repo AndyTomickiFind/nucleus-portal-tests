@@ -134,7 +134,7 @@ test.describe(`PARTNERS/EXCHANGES subpage - ${config.name}`, {tag: [`@${config.n
     });
 
     test('Update/edit a Specific Exchange', async ({components, ExchangesPage, menuComponent}) => {
-        const exchangeName = `[QA] 3 Exchange used by ROBOTS - do not edit`;
+        const exchangeName = `[QA] 5 Exchange used by ROBOTS - do not edit`;
         await test.step(`Updating Exchange "${exchangeName}"`, async () => {
 
             await menuComponent.menubarItem_Partners.click();

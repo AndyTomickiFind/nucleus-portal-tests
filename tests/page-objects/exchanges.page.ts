@@ -95,21 +95,14 @@ export class ExchangesPage extends BasePage {
     }
 
     async openExchange(exchangeName: string) {
-        await test.step("Search for the Exchange " + exchangeName, async () => {
+        await test.step("Search for the Exchange : " + exchangeName, async () => {
             await this.filterByExchangeName(exchangeName);
         });
 
         // Open the exchange details page
         await test.step("Open the Exchange", async () => {
             await this.page.waitForLoadState('domcontentloaded');
-            for (let attempt = 0; attempt < 3; attempt++) {
-                if (await this.topHeader.textContent() === "Update Exchange") {
-                    break;
-                } else {
-                    await this.dblClickDataGridRow(0);
-                    await this.page.waitForTimeout(350);
-                }
-            }
+            await this.dblClickDataGridRow(0);
         });
         await this.page.waitForLoadState('domcontentloaded');
         await expect(this.topHeader).toBeVisible();
