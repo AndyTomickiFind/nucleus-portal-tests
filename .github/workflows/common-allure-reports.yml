@@ -31,7 +31,10 @@ jobs:
             echo "${{ secrets.DEV_DOT_ENV }}"
             ls
             echo "Contents of .env.dev file:"
-            cat .env.dev            
+            cat .env.dev     
+            echo "${{secrets.DOT_ENV}}" > .env
+            echo "Contents of .env file:"
+            cat .env     
 
 
       - name: Install allurectl
