@@ -24,6 +24,7 @@ jobs:
         run: |
           echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
           ls -la
+          cat .env.staging
   call-common:
     uses: ./.github/workflows/common-allure-reports.yml
     with:
