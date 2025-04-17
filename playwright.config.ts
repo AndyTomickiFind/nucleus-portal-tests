@@ -22,7 +22,7 @@ interface TestConfig extends PlaywrightTestConfig {
 }
 
 // Load the appropriate .env file
-dotenv.config({ path: `.env` });
+dotenv.config({ path: `.env.${environment}` });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
