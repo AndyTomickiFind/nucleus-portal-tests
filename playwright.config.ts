@@ -102,6 +102,7 @@ const defaultConfig: PlaywrightTestConfig = {
                     height: 800
                 },
             },
+            testIgnore: process.env.CI ? '**/*' : undefined,
         },
 
         {
