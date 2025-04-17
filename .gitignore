@@ -6,3 +6,4 @@
 /.secrets/.env.dev
 /.secrets/.env.staging
 /eslint.config.mjs
+/.secrets/
