@@ -3,7 +3,7 @@
 /.idea/
 /allure-results/
 /node_modules/
-/.secrets/.env.dev
-/.secrets/.env.staging
+/_secrets/.env.dev
+/_secrets/.env.staging
 /eslint.config.mjs
-/.secrets/
+/_secrets/
