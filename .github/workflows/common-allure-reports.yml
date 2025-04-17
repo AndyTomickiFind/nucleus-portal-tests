@@ -47,4 +47,4 @@ jobs:
           export ALLURE_LAUNCH_NAME="${{ inputs.allure_launch_name }}"
           export ALLURE_RESULTS=allure-results
           export ALLURE_LAUNCH_TAGS=""
-          allurectl watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test --verbose --retries=3 --reporter=allure-playwright`
+          allurectl --verbose watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright`
