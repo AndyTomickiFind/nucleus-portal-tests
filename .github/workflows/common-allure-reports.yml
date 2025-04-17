@@ -30,7 +30,9 @@ jobs:
             echo "${{ secrets.STAGING_DOT_ENV }}"
             echo "${{ secrets.DEV_DOT_ENV }}"
             ls
-            echo .env.dev
+            echo "Contents of .env.dev file:"
+            cat .env.dev            
+
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
