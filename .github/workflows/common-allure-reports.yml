@@ -50,9 +50,9 @@ jobs:
           ALLURE_RESULTS: allure-results
           ALLURE_JOB_UID: ${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          allurectl watch --verbose \
+          allurectl watch -- TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright \
+            --log DEBUG \
             --job-uid "$ALLURE_JOB_UID" \
             --job-name "${{ github.workflow }}" \
             --launch-name "$ALLURE_LAUNCH_NAME" \
             --launch-tags "${{ inputs.environment }}" \
-            -- TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright
