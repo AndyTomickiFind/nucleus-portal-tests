@@ -26,6 +26,8 @@ export class NewToplistPage extends BasePage {
     readonly newDepositMethodCancelButton: Locator;
     readonly newDepositMethodCreateButton: Locator;
     readonly promotionTypesCombobox: Locator;
+    readonly provablyFairCombobox: Locator;
+    readonly anonymousPlayCombobox: Locator;
     readonly addOverrideButton: Locator;
     readonly cancelButton: Locator;
     readonly createButton: Locator;
@@ -57,6 +59,8 @@ export class NewToplistPage extends BasePage {
         this.newDepositMethodCancelButton = page.getByTestId("deposit-method-cancel-button");
         this.newDepositMethodCreateButton = page.getByTestId("deposit-method-submit-button");
         this.promotionTypesCombobox = page.getByTestId("toplist-form-filters-casinos-promotion-types-autocomplete");
+        this.provablyFairCombobox = page.getByTestId("toplist-form-filters-provably-fair-filter-select");
+        this.anonymousPlayCombobox = page.getByTestId("toplist-form-filters-anonymous-play-filter-select");
         this.addOverrideButton = page.getByTestId("add-override-button");
         this.cancelButton = page.getByTestId("toplist-cancel-button");
         this.createButton = page.getByTestId("toplist-submit-button");

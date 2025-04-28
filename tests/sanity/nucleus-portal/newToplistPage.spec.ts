@@ -18,7 +18,13 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
         await menuComponent.checkDataPointItems();
     });
 
-    test('check all elements', async ({NewToplistPage, components}) => {
+    test('check all elements', {
+        annotation: {
+            type: 'issue',
+            description:
+                'https://findco.atlassian.net/browse/DEV-6132' // [nucleus-portal] Boolean filters - neutral state.
+        },
+    }, async ({NewToplistPage, components}) => {
 
         await NewToplistPage.checkNewToplistHeader("New Toplist");
         await test.step("Check horizontal dividers", async () => {
@@ -49,6 +55,7 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
         });
 
         await test.step("Check Casinos Filters", async () => {
+
             await NewToplistPage.advancedFiltersAccordion.click();
             await components.checkDividers(["Promotions"]);
             await components.checkCombobox(NewToplistPage.casinoProductsCombobox, ["Live Dealer", "Roulette", "Lotteries", "Dice"]);
@@ -59,8 +66,14 @@ test.describe(`NEW TOPLIST subpage - ${config.name} `, {tag: [`@${config.name}`]
             await components.checkCombobox(NewToplistPage.sportsCombobox, ["Age of Empires", "Archery", "Angry Birds"]);
             await components.clickItemFromCombobox(NewToplistPage.appliesToProductCombobox, ["ccn.com"]);
             await components.checkCombobox(NewToplistPage.promotionTypesCombobox, ["Free bet", "Welcome package", "Cashback", "Free spins", "First deposit"]);
-            await NewToplistPage.anonymousPlayCheckbox.click();
-            await NewToplistPage.provablyFairCheckbox.click();
+
+            // https://findco.atlassian.net/browse/DEV-6132
+            await components.checkCombobox(NewToplistPage.provablyFairCombobox, ["- No filter applied -", "Yes", "No"]);
+            await components.checkCombobox(NewToplistPage.anonymousPlayCombobox, ["- No filter applied -", "Yes", "No"]);
+
+            // Commented out due to: https://findco.atlassian.net/browse/DEV-6132
+            //await NewToplistPage.anonymousPlayCheckbox.click();
+            //await NewToplistPage.provablyFairCheckbox.click();
         });
 
 
