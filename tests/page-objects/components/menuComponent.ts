@@ -3,7 +3,7 @@ import {BasePage} from "../base.page";
 
 
 async function verifyAndClickMenuItem(menuItem: Locator, expectedText: string): Promise<void> {
-    await expect(menuItem, `Menu item should contain text:"${expectedText}"`).toContainText(expectedText);
+    await expect(menuItem, `Menu item should contain text: "${expectedText}"`).toContainText(expectedText);
     await menuItem.click({trial: true});
 }
 
@@ -17,12 +17,14 @@ export class MenuComponent extends BasePage {
     readonly menubarItem_ShortReviews: Locator;
     readonly menubarItem_Partners: Locator;
     readonly menubarItem_Database: Locator;
+    readonly menubarItem_Datapoints: Locator;
     readonly subToplistsMenuItem_Search: Locator;
     readonly subToplistsMenuItem_New: Locator;
     readonly subShortReviewsMenuItem_Search: Locator;
     readonly subPartnersMenuItem_Casinos: Locator;
     readonly subPartnersMenuItem_Exchanges: Locator;
     readonly subDatabaseMenuItem_Datapoints: Locator;
+    readonly subDatapointsMenuItem_Search: Locator;
     readonly menubarItem_User: Locator;
     readonly subUserMenuItem_LogOut: Locator;
 
@@ -40,6 +42,7 @@ export class MenuComponent extends BasePage {
         this.menubarItem_ShortReviews = page.locator("//a[.='Short Reviews']");
         this.menubarItem_Partners = page.locator("//button[.='Partners']");
         this.menubarItem_Database = page.locator("//button[.='Database']");
+        this.menubarItem_Datapoints = page.locator("//button[.='Datapoints']");
         this.menubarItem_User = page.getByRole('button', { name: `User profile picture ${process.env.GOOGLE_UI_USERNAME}` })
 
         //SubMenus
@@ -48,7 +51,8 @@ export class MenuComponent extends BasePage {
         this.subShortReviewsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
         this.subPartnersMenuItem_Casinos = page.locator("//a[contains(@role, 'menuitem') and text() = 'Casinos']");
         this.subPartnersMenuItem_Exchanges = page.locator("//a[contains(@role, 'menuitem') and text() = 'Exchanges']");
-        this.subDatabaseMenuItem_Datapoints = page.getByLabel('Home').getByText('Datapoints')
+        this.subDatabaseMenuItem_Datapoints = page.getByLabel('Home').getByText('Datapoints');
+        this.subDatapointsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
         this.subUserMenuItem_LogOut = page.getByRole('menuitem', { name: 'Log out' });
     }
 
@@ -65,6 +69,7 @@ export class MenuComponent extends BasePage {
         await verifyAndClickMenuItem(this.menubarItem_ShortReviews, "Short Reviews");
         await verifyAndClickMenuItem(this.menubarItem_Partners, "Partners");
         await verifyAndClickMenuItem(this.menubarItem_Database, "Database");
+        await verifyAndClickMenuItem(this.menubarItem_Datapoints, "Datapoints");
 
 
         // SubMenu TOPLISTS
@@ -79,10 +84,15 @@ export class MenuComponent extends BasePage {
         // SubMenu PARTNERS
         await this.menubarItem_Partners.hover();
         await verifyAndClickMenuItem(this.subPartnersMenuItem_Casinos, "Casinos");
+        await verifyAndClickMenuItem(this.subPartnersMenuItem_Exchanges, "Exchanges");
 
         // SubMenu DATABASE
         await this.menubarItem_Database.hover();
         await verifyAndClickMenuItem(this.subDatabaseMenuItem_Datapoints, "Datapoints");
+
+        // SubMenu DATAPOINTS
+        await this.menubarItem_Datapoints.hover();
+        await verifyAndClickMenuItem(this.subDatapointsMenuItem_Search, "Search");
     }
 
     async checkDataPointItems() {
