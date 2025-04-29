@@ -48,7 +48,7 @@ export class MenuComponent extends BasePage {
         this.subShortReviewsMenuItem_Search = page.locator("//a[contains(@role, 'menuitem') and text() = 'Search']");
         this.subPartnersMenuItem_Casinos = page.locator("//a[contains(@role, 'menuitem') and text() = 'Casinos']");
         this.subPartnersMenuItem_Exchanges = page.locator("//a[contains(@role, 'menuitem') and text() = 'Exchanges']");
-        this.subDatabaseMenuItem_Datapoints = page.getByText('Datapoints');
+        this.subDatabaseMenuItem_Datapoints = page.getByLabel('Home').getByText('Datapoints')
         this.subUserMenuItem_LogOut = page.getByRole('menuitem', { name: 'Log out' });
     }
 
