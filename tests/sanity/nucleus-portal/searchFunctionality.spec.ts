@@ -29,6 +29,10 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
         {
             path: '/toplists',
             searchFieldSelector: 'toplist-name-filter-field'
+        },
+        {
+            path: '/datapoints',
+            searchFieldSelector: 'datapoint-name-filter-field'
         }
     ];
 
