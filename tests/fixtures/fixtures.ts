@@ -5,6 +5,7 @@ import {ToplistsPage} from "../page-objects/toplists.page";
 import {components} from "../page-objects/components/components";
 import {NewToplistPage} from "../page-objects/newToplist.page";
 import {ShortReviewsPage} from "../page-objects/shortReviews.page";
+import {DatapointsPage} from "../page-objects/datapoints.page";
 import {CasinosPage} from "../page-objects/casinos.page";
 import {ExchangesPage} from "../page-objects/exchanges.page";
 import {ToplistsUI} from "../page-objects/toplists-ui.page";
@@ -18,6 +19,7 @@ export const test = base.extend<{
     components: components,
     NewToplistPage: NewToplistPage,
     ShortReviewsPage: ShortReviewsPage,
+    DatapointsPage: DatapointsPage,
     CasinosPage: CasinosPage,
     ExchangesPage: ExchangesPage,
     ToplistsUI: ToplistsUI,
@@ -33,6 +35,9 @@ export const test = base.extend<{
     },
     ShortReviewsPage: async ({ page, context }, use, testInfo) => {
         await use(new ShortReviewsPage(page, context, testInfo));
+    },
+    DatapointsPage: async ({ page, context }, use, testInfo) => {
+        await use(new DatapointsPage(page, context, testInfo));
     },
     CasinosPage: async ({ page, context }, use, testInfo) => {
         await use(new CasinosPage(page, context, testInfo));

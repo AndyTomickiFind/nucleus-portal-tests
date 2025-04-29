@@ -3,7 +3,6 @@ import {expect} from "@playwright/test";
 import config from "../../../playwright.config";
 import {timeDifference} from "../../common/helpers";
 
-
 test.describe(`SHORT REVIEWS subpage - ${config.name} `, {tag: [`@${config.name}`]}, () => {
 
     test.beforeEach(async ({ShortReviewsPage}) => {
