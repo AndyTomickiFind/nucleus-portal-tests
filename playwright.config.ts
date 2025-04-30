@@ -10,7 +10,6 @@ const browser = 'msedge'; //firefox, chromium
 const headless = true;
 const runAuth = false;
 
-
 interface TestConfig extends PlaywrightTestConfig {
     baseUrl?: string;
     toplistServiceV1Uri?: string;
