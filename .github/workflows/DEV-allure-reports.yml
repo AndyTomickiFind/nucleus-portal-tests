@@ -29,3 +29,5 @@ jobs:
       allure_launch_name: "[Dev] Nucleus regression suite"
     secrets:
       ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
+      DEV_DOT_ENV: ${{ secrets.DEV_DOT_ENV }}
+      STAGING_DOT_ENV: ${{ secrets.STAGING_DOT_ENV }}
