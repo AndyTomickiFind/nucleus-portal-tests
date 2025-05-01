@@ -28,16 +28,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers (only edge)
-        run: npx playwright install msedge --with-deps
+#      - name: Install Playwright Browsers (only edge)
+#        run: npx playwright install msedge --with-deps
 
       - name: Create .env file
         run: |
             echo "Script executed from: ${PWD}"
             touch .env.dev
             touch .env.staging
-            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev
-            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
+            echo ${{ secrets.DEV_DOT_ENV }} > .env.dev
+            echo ${{ secrets.STAGING_DOT_ENV }} > .env.staging
             ls -alh .env.dev
             ls -alh .env.staging
 
