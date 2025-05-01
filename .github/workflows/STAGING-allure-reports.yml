@@ -22,7 +22,6 @@ jobs:
           node-version: lts/*
       - name: Create .env file
         run: |
-          cd../.. 
           echo "Script executed from: ${PWD}"
           echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
   call-common:
