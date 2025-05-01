@@ -22,13 +22,10 @@ jobs:
         with:
           node-version: lts/*
 
-
 #      - name: Create .env file
 #        run: |
 #            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev;
 #            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging;
-
-
 
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
@@ -51,5 +48,6 @@ jobs:
           echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
           echo "${{ secrets.STAGING_DOT_ENV }}" > staging.txt
           cat staging.txt
+          cat README.md
           ls -la
           allurectl watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright` --log DEBUG
