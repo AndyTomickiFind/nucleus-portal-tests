@@ -48,5 +48,6 @@ jobs:
           export ALLURE_RESULTS=allure-results
           export ALLURE_LAUNCH_TAGS=""
           echo "Script executed from: ${PWD}"
+          echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
           ls -la
           allurectl watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright` --log DEBUG
