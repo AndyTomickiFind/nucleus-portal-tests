@@ -37,7 +37,6 @@ jobs:
           touch .env.dev
           touch .env.staging
           echo ${{ secrets.DEV_DOT_ENV }} > .env.dev
-          echo "123456" > .env.dev
           echo ${{ secrets.STAGING_DOT_ENV }} > .env.staging
           ls -alh .env.dev
           ls -alh .env.staging
