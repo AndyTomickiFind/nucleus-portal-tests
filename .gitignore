@@ -7,3 +7,5 @@
 /_secrets/.env.staging
 /eslint.config.mjs
 /_secrets/
+.env.dev
+.env.staging
