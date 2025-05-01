@@ -22,11 +22,6 @@ jobs:
         with:
           node-version: lts/*
 
-#      - name: Create .env file
-#        run: |
-#            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev;
-#            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging;
-
       - name: Install allurectl
         uses: allure-framework/setup-allurectl@v1
 
@@ -36,6 +31,13 @@ jobs:
       - name: Install Playwright Browsers (only edge)
         run: npx playwright install msedge --with-deps
 
+      - name: Create .env file
+        run: |
+            echo "Script executed from: ${PWD}"
+            echo "${{ secrets.DEV_DOT_ENV }}" > .env.dev;
+            echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging;
+            ls -la
+
       - name: Run Playwright tests
         run: |
           export ALLURE_ENDPOINT=https://findco.testops.cloud/
@@ -44,10 +46,4 @@ jobs:
           export ALLURE_LAUNCH_NAME="${{ inputs.allure_launch_name }}"
           export ALLURE_RESULTS=allure-results
           export ALLURE_LAUNCH_TAGS=""
-          echo "Script executed from: ${PWD}"
-          echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
-          echo "${{ secrets.STAGING_DOT_ENV }}" > staging.txt
-          cat staging.txt
-          cat README.md
-          ls -la
           allurectl watch -- `TEST_ENV=${{ inputs.environment }} npx playwright test --retries=3 --reporter=allure-playwright` --log DEBUG
