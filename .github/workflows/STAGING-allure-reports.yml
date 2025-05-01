@@ -21,7 +21,10 @@ jobs:
         with:
           node-version: lts/*
       - name: Create .env file
-        run: echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
+        run: |
+          cd../.. 
+          echo "Script executed from: ${PWD}"
+          echo "${{ secrets.STAGING_DOT_ENV }}" > .env.staging
   call-common:
     uses: ./.github/workflows/common-allure-reports.yml
     with:
