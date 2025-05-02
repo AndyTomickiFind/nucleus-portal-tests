@@ -6,7 +6,9 @@ import fs from "fs";
 test(`[${config.name.toUpperCase()}] Toplist auto updater - Toplist relevancy`, {
     annotation: {
         type: 'issue',
-        description: 'https://findco.atlassian.net/browse/DEV-5629',  //[nucleus-portal-be] Toplists auto update process changes
+        description:
+            'https://findco.atlassian.net/browse/DEV-5629, ' + //[nucleus-portal-be] Toplists auto update process changes
+            'https://findco.atlassian.net/browse/DEV-6157'     //[db-module] Add new Sub-Vertical datapoint schema
     },
 }, async ({request}, testInfo) => {
 

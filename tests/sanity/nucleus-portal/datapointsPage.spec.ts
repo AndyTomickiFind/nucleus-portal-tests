@@ -53,7 +53,8 @@ test.describe(`DATAPOINTS subpage - ${config.name} `, {tag: [`@${config.name}`]}
         });
     });
 
-    test('check the Multi Grid', async ({components, DatapointsPage}) => {
+    //skipped due to the lack of data
+    test.skip('check the Multi Grid', async ({components, DatapointsPage}) => {
         await components.clickItemFromCombobox(DatapointsPage.datapointTypeCombobox, ["Languages"]);
         await test.step("Check each of the fields in a row", async () => {
             await expect(components.dataGridCell("name", 1)).toContainText("QA Toplist");
