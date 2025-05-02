@@ -105,7 +105,8 @@ test.describe(`CRUD e2e API casinos - ${config.name}`, { tag: [`@${config.name}`
                         "url": "https://general-affil-link-QAGeneralTestDomain"
                     }
                 ],
-                "affiliateLinks": []
+                "affiliateLinks": [],
+                "subVerticals": []
             };
 
             const createResponse = await request.post(`https://${config.nucleusPortalServiceUri}/api/v1/casinos`, {

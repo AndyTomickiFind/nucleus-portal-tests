@@ -54,6 +54,7 @@ test.describe(`CRUD e2e API toplists - ${config.name}`, {tag: [`@${config.name}`
                         "depositMethods": [],
                         "sports": [],
                         "promotionTypes": [],
+                        "subVerticals": [],
                         "anonymousPlay": false,
                         "provablyFair": false
                     }
