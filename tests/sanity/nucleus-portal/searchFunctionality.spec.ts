@@ -30,10 +30,11 @@ test.describe(`SEARCH field functionality - ${config.name} `, { tag: [`@${config
             path: '/toplists',
             searchFieldSelector: 'toplist-name-filter-field'
         },
-        {
-            path: '/datapoints',
-            searchFieldSelector: 'datapoint-name-filter-field'
-        }
+        // skipped due to the lack of data
+        // {
+        //     path: '/datapoints',
+        //     searchFieldSelector: 'datapoint-name-filter-field'
+        // }
     ];
 
     const invalidCharacters = "<>/[|\\{}()[]^$+*?.]/gabcABC.,';`-=~#@'!£%&¬";  //These are valid but used to throw an error

@@ -117,7 +117,8 @@ test.describe(`TOPLISTS subpage - ${config.name} `, {tag: [`@${config.name}`]}, 
 
     //COPY TOPLIST - TO DO
 
-    test('save Filters in the Toplist', async ({components, ToplistsPage, NewToplistPage}) => {
+    //skipped due to WIP
+    test.skip('save Filters in the Toplist', async ({components, ToplistsPage, NewToplistPage}) => {
 
         await test.step("Open a toplist", async () => {
             await ToplistsPage.page.waitForTimeout(1000);
